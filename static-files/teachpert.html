@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PERT — Interactieve Leerwebpagina</title>
+  <style>
+    /* ─── SUB / SUP FIX ─────────────────────────────────────── */
+    sub { vertical-align: sub;   font-size: .75em; }
+    sup { vertical-align: super; font-size: .75em; }
+
+    /* ─── DESIGN TOKENS ─────────────────────────────────────── */
+    :root {
+      --primary:  #1e2a4a;
+      --accent:   #e63946;
+      --green:    #2a9d8f;
+      --blue:     #457b9d;
+      --orange:   #e76f51;
+      --bg:       #f0f2f5;
+      --card:     #ffffff;
+      --border:   #dde2ea;
+      --text:     #1a1a2e;
+      --muted:    #6b7280;
+    }
+
+    /* ─── RESET & BASE ──────────────────────────────────────── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    /* ─── NAVIGATION ────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      padding: 0 1.5rem;
+      box-shadow: 0 2px 14px rgba(0,0,0,.3);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    nav::-webkit-scrollbar { display: none; }
+
+    .nav-logo {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 4px;
+      padding: 0.85rem 1.25rem 0.85rem 0;
+      border-right: 1px solid rgba(255,255,255,.2);
+      margin-right: 0.5rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link {
+      color: rgba(255,255,255,.6);
+      text-decoration: none;
+      padding: 0.85rem 0.8rem;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: color .15s;
+      flex-shrink: 0;
+    }
+    .nav-link:hover          { color: #fff; }
+    .nav-link.active         { color: #fff; border-bottom-color: var(--accent); }
+    .nav-link.disabled       { color: rgba(255,255,255,.3); cursor: default; pointer-events: none; }
+
+    /* ─── LAYOUT ────────────────────────────────────────────── */
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 5rem;
+    }
+
+    /* ─── SECTION HEADER ────────────────────────────────────── */
+    .section-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 0.22rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.55rem;
+    }
+    .section-header h1 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+    }
+    .section-header p {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    /* ─── CARDS ─────────────────────────────────────────────── */
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 1.75rem;
+      margin-bottom: 1.25rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 6px rgba(0,0,0,.05);
+    }
+    .card-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* ─── DEFINITIE BLOCK ───────────────────────────────────── */
+    .definitie {
+      background: #eef5fb;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+      padding: 1.1rem 1.4rem;
+      margin-bottom: 1.25rem;
+    }
+    .definitie .def-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--blue);
+      margin-bottom: 0.35rem;
+    }
+    .definitie p { font-size: 0.95rem; }
+
+    /* ─── DETAILS (collapsible) ─────────────────────────────── */
+    details { margin-top: 0.85rem; }
+    summary {
+      font-size: 0.87rem;
+      color: var(--blue);
+      cursor: pointer;
+      font-weight: 600;
+      list-style: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      user-select: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::before { content: '▸'; display: inline-block; transition: transform .2s; }
+    details[open] summary::before { transform: rotate(90deg); }
+    .detail-body {
+      margin-top: 0.75rem;
+      padding: 0.9rem 1.1rem;
+      background: var(--bg);
+      border-radius: 8px;
+      font-size: 0.87rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ─── NODE ANATOMY ──────────────────────────────────────── */
+    .node-anatomy {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .node-svg-wrap { flex-shrink: 0; text-align: center; }
+    .node-hint { font-size: 0.77rem; color: var(--muted); margin-top: 0.4rem; }
+
+    /* SVG section hover/active */
+    .node-section { transition: opacity .2s, filter .2s; cursor: pointer; }
+    .node-section:hover { filter: brightness(.88); }
+
+    /* Info panel */
+    .node-info-panel { flex: 1; min-width: 220px; }
+    .nip-item { display: none; }
+    .nip-item.active { display: block; animation: fadeIn .2s ease; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+    .nip-tag {
+      display: inline-block;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: .4px;
+      margin-bottom: 0.6rem;
+    }
+    .nip-tag-label { background: #e9ecef; color: #495057; }
+    .nip-tag-te    { background: #d4edda; color: #155724; }
+    .nip-tag-tl    { background: #cce5ff; color: #004085; }
+
+    .nip-item h3 { font-size: .98rem; font-weight: 700; color: var(--primary); margin-bottom: .4rem; }
+    .nip-item p  { font-size: .88rem; color: var(--muted); }
+
+    .nip-rule {
+      margin-top: .75rem;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: .6rem .9rem;
+      font-size: .85rem;
+      color: #92400e;
+    }
+    .nip-placeholder { color: var(--muted); font-size: .9rem; padding: 1rem; background: var(--bg); border-radius: 8px; text-align: center; }
+
+    /* ─── CONCEPTS GRID ─────────────────────────────────────── */
+    .concepts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 1rem;
+    }
+    .concept-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      text-align: center;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .concept-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 3px 12px rgba(69,123,157,.12);
+    }
+    .concept-card svg { display: block; margin: 0 auto .9rem; overflow: visible; }
+    .concept-card h3  { font-size: .92rem; font-weight: 700; color: var(--primary); margin-bottom: .35rem; }
+    .concept-card p   { font-size: .82rem; color: var(--muted); line-height: 1.5; }
+
+    /* ─── TIME FORMULA ──────────────────────────────────────── */
+    .formula-display {
+      background: var(--primary);
+      color: #fff;
+      border-radius: 10px;
+      padding: 1.1rem 1.5rem;
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.3rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .time-types {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .75rem;
+      margin-bottom: 1.5rem;
+    }
+    .time-type-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .85rem .5rem;
+      text-align: center;
+    }
+    .time-type-card .sym  { font-size: 1.15rem; font-weight: 800; margin-bottom: .25rem; }
+    .time-type-card .name { font-size: .78rem; font-weight: 600; color: var(--text); margin-bottom: .15rem; }
+    .time-type-card .desc { font-size: .74rem; color: var(--muted); line-height: 1.4; }
+    .sym-to { color: var(--green); }
+    .sym-tl { color: var(--blue); }
+    .sym-tp { color: var(--orange); }
+
+    /* ─── CALCULATOR ────────────────────────────────────────── */
+    .calc-wrap {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+    .calc-label-row {
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: .5rem;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr auto 1.3fr;
+      gap: .75rem;
+      align-items: end;
+    }
+    .calc-field label {
+      display: block;
+      font-size: .76rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: .3rem;
+      text-align: center;
+    }
+    .calc-field input {
+      width: 100%;
+      padding: .55rem .4rem;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      font-size: 1rem;
+      text-align: center;
+      font-family: inherit;
+      background: #fff;
+      transition: border-color .15s;
+    }
+    .calc-field input:focus { outline: none; border-color: var(--blue); }
+
+    .calc-arrow { font-size: 1.4rem; color: var(--muted); text-align: center; padding-bottom: .45rem; }
+
+    .calc-result-box {
+      background: #fff;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      padding: .55rem .75rem;
+      text-align: center;
+      transition: border-color .25s;
+    }
+    .calc-result-box.has-value { border-color: var(--green); }
+    .calc-result-box .res-label   { font-size: .76rem; font-weight: 700; color: var(--muted); margin-bottom: .15rem; }
+    .calc-result-box .res-value   { font-size: 1.5rem; font-weight: 800; color: var(--green); }
+    .calc-result-box .res-formula { font-size: .7rem; color: var(--muted); margin-top: .1rem; min-height: 1em; }
+
+    /* ─── FORWARD / BACKWARD PASS ───────────────────────────── */
+    .pass-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .pass-card { border-radius: 10px; padding: 1.25rem; }
+    .pass-card.forward  { background: #ecfdf5; border: 1px solid #a7f3d0; }
+    .pass-card.backward { background: #eff6ff; border: 1px solid #bfdbfe; }
+
+    .pass-title {
+      font-size: .95rem; font-weight: 700; color: var(--primary);
+      margin-bottom: .6rem; display: flex; align-items: center; gap: .4rem;
+    }
+    .pass-desc { font-size: .84rem; color: var(--muted); margin-bottom: .75rem; }
+    .pass-rule {
+      background: rgba(255,255,255,.8);
+      border-radius: 8px;
+      padding: .6rem .85rem;
+      font-size: .85rem;
+      margin-bottom: .5rem;
+    }
+    .pass-rule:last-child { margin-bottom: 0; }
+
+    /* ─── SLACK TABLE ───────────────────────────────────────── */
+    .slack-formula {
+      background: var(--primary);
+      color: #fff;
+      border-radius: 10px;
+      padding: .9rem 1.5rem;
+      text-align: center;
+      font-family: Georgia, serif;
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+    .slack-table { width: 100%; border-collapse: collapse; font-size: .87rem; }
+    .slack-table thead th {
+      padding: .7rem 1rem;
+      text-align: left;
+      font-size: .74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      background: var(--primary);
+      color: #fff;
+    }
+    .slack-table thead th:first-child  { border-radius: 8px 0 0 0; }
+    .slack-table thead th:last-child   { border-radius: 0 8px 0 0; }
+    .slack-table tbody td { padding: .75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    .slack-table tbody tr:last-child td { border-bottom: none; }
+
+    .slack-pos  { background: #f0fdf4; }
+    .slack-zero { background: #fff1f2; }
+    .slack-neg  { background: #fffbeb; }
+
+    .badge { display: inline-block; padding: .2rem .65rem; border-radius: 20px; font-size: .78rem; font-weight: 700; }
+    .badge-pos  { background: #16a34a; color: #fff; }
+    .badge-zero { background: var(--accent); color: #fff; }
+    .badge-neg  { background: #d97706; color: #fff; }
+
+    /* ─── CRITICAL PATH ─────────────────────────────────────── */
+    .crit-list { list-style: none; margin-top: .75rem; }
+    .crit-list li {
+      padding: .5rem .75rem .5rem 2rem;
+      border-bottom: 1px solid var(--border);
+      font-size: .88rem;
+      color: var(--muted);
+      position: relative;
+    }
+    .crit-list li::before {
+      content: '→';
+      color: var(--accent);
+      font-weight: 700;
+      position: absolute;
+      left: .75rem;
+      top: .5rem;
+    }
+    .crit-list li:last-child { border-bottom: none; }
+
+    /* ─── VIDEO SECTION ─────────────────────────────────────── */
+    .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+    .video-wrap { aspect-ratio: 16/9; border-radius: 10px; overflow: hidden; background: #000; }
+    .video-wrap iframe { width: 100%; height: 100%; border: none; }
+
+    /* ─── PLACEHOLDERS ──────────────────────────────────────── */
+    .section-placeholder {
+      background: var(--card);
+      border-radius: 14px;
+      border: 2px dashed var(--border);
+      padding: 3rem;
+      text-align: center;
+      margin-top: 3rem;
+      color: var(--muted);
+    }
+    .section-placeholder .ph-emoji { font-size: 2.5rem; margin-bottom: .75rem; }
+    .section-placeholder h2  { color: var(--primary); margin-bottom: .5rem; }
+    .section-placeholder p   { font-size: .9rem; }
+
+    /* ─── RESPONSIVE ────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .pass-grid        { grid-template-columns: 1fr; }
+      .calc-grid        { grid-template-columns: 1fr 1fr 1fr; }
+      .calc-arrow       { display: none; }
+      .calc-result-box  { grid-column: 1 / -1; }
+      .concepts-grid    { grid-template-columns: 1fr 1fr; }
+      .node-anatomy     { gap: 1.25rem; }
+    }
+    @media (max-width: 400px) {
+      .concepts-grid { grid-template-columns: 1fr; }
+      .time-types    { grid-template-columns: 1fr; }
+    }
+
+    /* ─── DEMO SECTION ──────────────────────────────────────── */
+    .demo-card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 1.75rem;
+      margin-bottom: 1.25rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 6px rgba(0,0,0,.05);
+    }
+    .demo-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-bottom: 1.25rem;
+    }
+    .demo-step-counter { font-size: .78rem; font-weight: 700; color: var(--muted); letter-spacing: .8px; text-transform: uppercase; }
+    .demo-card-title   { font-size: 1rem; font-weight: 700; color: var(--primary); margin-top: .2rem; }
+
+    .demo-phase-badge {
+      display: inline-block;
+      padding: .25rem .85rem;
+      border-radius: 20px;
+      font-size: .78rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .phase-start    { background: #e9ecef; color: #495057; }
+    .phase-forward  { background: #d4edda; color: #155724; }
+    .phase-backward { background: #cce5ff; color: #004085; }
+    .phase-result   { background: #fde8e8; color: #9b1c1c; }
+
+    .demo-network-wrap {
+      background: #f8f9fb;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+    }
+    .demo-network-wrap svg { display: block; width: 100%; height: auto; }
+
+    .demo-explanation {
+      background: var(--bg);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      padding: .9rem 1.1rem;
+      font-size: .9rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      min-height: 72px;
+    }
+    .demo-nav {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .demo-dots {
+      display: flex;
+      gap: .3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex: 1;
+    }
+    .demo-dot {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--border);
+      transition: background .2s, transform .15s;
+      cursor: default;
+    }
+    .demo-dot.done   { background: #86efac; }
+    .demo-dot.active { background: var(--blue); transform: scale(1.4); }
+
+    .demo-btn {
+      padding: .55rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: .88rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background .15s, opacity .15s;
+      white-space: nowrap;
+    }
+    .demo-btn:disabled { opacity: .35; cursor: not-allowed; }
+    .demo-btn-prev { background: var(--bg); color: var(--text); border: 1px solid var(--border); }
+    .demo-btn-prev:not(:disabled):hover { background: #e2e5ea; }
+    .demo-btn-next { background: var(--blue); color: #fff; }
+    .demo-btn-next:not(:disabled):hover { background: #2d6a8f; }
+    .demo-btn-reset {
+      background: none; border: none;
+      font-size: .8rem; color: var(--muted);
+      cursor: pointer; font-family: inherit;
+      text-decoration: underline; padding: 0;
+    }
+    .demo-btn-reset:hover { color: var(--text); }
+
+    .demo-footer { text-align: center; margin-top: .75rem; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  NAVIGATION                                               -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<nav>
+  <div class="nav-logo">PERT</div>
+  <a href="#theorie"   class="nav-link active">Theorie</a>
+  <a href="#demo"      class="nav-link">Demo</a>
+  <a href="#oefening1" class="nav-link disabled">Oefening 1</a>
+  <a href="#oefening2" class="nav-link disabled">Oefening 2</a>
+  <a href="#oefening3" class="nav-link disabled">Oefening 3</a>
+  <a href="#oefening4" class="nav-link disabled">Oefening 4</a>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  MAIN CONTENT                                             -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<main>
+
+  <!-- ────────────────────────────────────────────────────── -->
+  <!--  SECTIE 1 — THEORIE                                    -->
+  <!-- ────────────────────────────────────────────────────── -->
+  <section id="theorie">
+
+    <div class="section-header">
+      <div class="section-badge">Sectie 1</div>
+      <h1>Theorie</h1>
+      <p>Leer de basisconcepten van PERT: knooppunten, activiteiten, tijdsberekeningen en het kritieke pad.</p>
+    </div>
+
+    <!-- ── DEFINITIE ─────────────────────────────────────── -->
+    <div class="definitie">
+      <div class="def-label">Definitie — PERT</div>
+      <p>
+        <strong>PERT</strong> (Program Evaluation and Review Technique) is een hulpmiddel voor de
+        bedrijfsleiding bij de analyse en planning van projecten. Hierbij wordt gebruik gemaakt van
+        een grafische voorstelling — het <strong>netwerk</strong> — om de samenhang tussen de
+        verschillende werkzaamheden aan te geven.
+      </p>
+      <details>
+        <summary>Wist je dat? — Geschiedenis van PERT</summary>
+        <div class="detail-body">
+          De PERT-methode werd uitgevonden door de <em>United States Department of Defense's US Navy
+          Special Projects Office</em> in <strong>1958</strong> als onderdeel van het
+          <strong>Polaris-project</strong> (de ontwikkeling van nucleaire onderzeeërs).
+          PERT lijkt sterk op de <em>kritieke pad methode</em> (CPM), maar bij PERT wordt een
+          kansberekening toegepast op de duurtijden, terwijl CPM uitgaat van vaste tijden.
+        </div>
+      </details>
+    </div>
+
+    <!-- ── CARD: KNOOPPUNT ANATOMIE ──────────────────────── -->
+    <div class="card">
+      <div class="card-title">🔵 Anatomie van een knooppunt</div>
+      <p style="color:var(--muted); font-size:.9rem; margin-bottom:1.4rem;">
+        Een <strong>knooppunt</strong> (milestone) is een cirkel verdeeld in drie vlakken.
+        Klik op een vlak om de betekenis ervan te bekijken.
+      </p>
+
+      <div class="node-anatomy">
+
+        <!-- Interactive SVG node -->
+        <div class="node-svg-wrap">
+          <svg id="anatomy-svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Interactief knooppunt">
+            <defs>
+              <clipPath id="clip-left">
+                <rect x="0"  y="0"  width="80" height="160"/>
+              </clipPath>
+              <clipPath id="clip-top-right">
+                <rect x="80" y="0"  width="80" height="80"/>
+              </clipPath>
+              <clipPath id="clip-bot-right">
+                <rect x="80" y="80" width="80" height="80"/>
+              </clipPath>
+            </defs>
+
+            <!-- Coloured background sections (clipped to each third) -->
+            <circle id="bg-label" cx="80" cy="80" r="72"
+                    fill="#e9ecef" clip-path="url(#clip-left)"
+                    class="node-section" data-section="label"/>
+            <circle id="bg-te"    cx="80" cy="80" r="72"
+                    fill="#d4edda" clip-path="url(#clip-top-right)"
+                    class="node-section" data-section="te"/>
+            <circle id="bg-tl"    cx="80" cy="80" r="72"
+                    fill="#cce5ff" clip-path="url(#clip-bot-right)"
+                    class="node-section" data-section="tl"/>
+
+            <!-- Outer border -->
+            <circle cx="80" cy="80" r="72" fill="none" stroke="#333" stroke-width="2.5"/>
+
+            <!-- Dividing lines -->
+            <line x1="80" y1="8"   x2="80" y2="152" stroke="#333" stroke-width="2"/>
+            <line x1="80" y1="80"  x2="152" y2="80" stroke="#333" stroke-width="2"/>
+
+            <!-- Static text labels -->
+            <text x="43"  y="84"  text-anchor="middle" font-family="Segoe UI,sans-serif"
+                  font-size="15" font-weight="700" fill="#444" pointer-events="none">MS</text>
+            <text x="116" y="54"  text-anchor="middle" font-family="Segoe UI,sans-serif"
+                  font-size="14" font-weight="700" fill="#155724" pointer-events="none">T<tspan font-size="10" dy="2">E</tspan></text>
+            <text x="116" y="112" text-anchor="middle" font-family="Segoe UI,sans-serif"
+                  font-size="14" font-weight="700" fill="#004085" pointer-events="none">T<tspan font-size="10" dy="2">L</tspan></text>
+
+            <!-- Transparent click targets on top -->
+            <circle cx="80" cy="80" r="72" fill="transparent"
+                    clip-path="url(#clip-left)"      class="node-click" data-section="label" style="cursor:pointer"/>
+            <circle cx="80" cy="80" r="72" fill="transparent"
+                    clip-path="url(#clip-top-right)" class="node-click" data-section="te"    style="cursor:pointer"/>
+            <circle cx="80" cy="80" r="72" fill="transparent"
+                    clip-path="url(#clip-bot-right)" class="node-click" data-section="tl"    style="cursor:pointer"/>
+          </svg>
+          <p class="node-hint">↑ Klik op een vlak</p>
+        </div>
+
+        <!-- Info panel -->
+        <div class="node-info-panel">
+
+          <div class="nip-item active" id="nip-default">
+            <p class="nip-placeholder">Selecteer een vlak van het knooppunt om de betekenis ervan te bekijken.</p>
+          </div>
+
+          <div class="nip-item" id="nip-label">
+            <span class="nip-tag nip-tag-label">Naam / Nummer</span>
+            <h3>Knooppuntnaam (MS)</h3>
+            <p>
+              Het linker vlak bevat de naam of het volgnummer van het knooppunt
+              (<em>milestone</em>). Een knooppunt stelt het <strong>begin of einde</strong> van
+              een activiteit voor. Het neemt zelf <strong>geen tijd, arbeid of grondstoffen</strong>
+              in beslag — het is een moment, geen taak.
+            </p>
+          </div>
+
+          <div class="nip-item" id="nip-te">
+            <span class="nip-tag nip-tag-te">T<sub>E</sub> — Vroegst mogelijke tijdstip</span>
+            <h3>Earliest Expected Time</h3>
+            <p>
+              Het vroegst mogelijke tijdstip waarop dit knooppunt bereikt kan worden.
+              Berekend via de <strong>voorwaartse gang</strong> (links → rechts):
+              tel de duurtijden van alle inkomende activiteiten op bij de T<sub>E</sub>
+              van het vorige knooppunt.
+            </p>
+            <div class="nip-rule">
+              📌 <strong>Regel:</strong> Bij meerdere inkomende paden neem je de
+              <strong>grootste</strong> som (= het traagste pad bepaalt de vroegste aankomst).
+            </div>
+          </div>
+
+          <div class="nip-item" id="nip-tl">
+            <span class="nip-tag nip-tag-tl">T<sub>L</sub> — Laatste toelaatbare tijdstip</span>
+            <h3>Latest Allowable Time</h3>
+            <p>
+              Het laatste tijdstip waarop dit knooppunt bereikt <em>mag</em> worden zonder de
+              globale projectduur te overschrijden. Berekend via de
+              <strong>achterwaartse gang</strong> (rechts → links):
+              trek de duurtijden van de uitgaande activiteiten af van de T<sub>L</sub>
+              van het volgende knooppunt.
+            </p>
+            <div class="nip-rule">
+              📌 <strong>Regel:</strong> Bij meerdere uitgaande activiteiten neem je de
+              <strong>kleinste</strong> waarde (= de strengste deadline bepaalt de T<sub>L</sub>).
+            </div>
+          </div>
+
+        </div><!-- /node-info-panel -->
+      </div><!-- /node-anatomy -->
+    </div><!-- /card -->
+
+    <!-- ── CARD: BEGRIPPEN ───────────────────────────────── -->
+    <div class="card">
+      <div class="card-title">📖 Begrippen</div>
+      <div class="concepts-grid">
+
+        <!-- 1. Knooppunt -->
+        <div class="concept-card">
+          <svg width="110" height="90" viewBox="0 0 110 90">
+            <circle cx="55" cy="45" r="36" fill="#fff" stroke="#333" stroke-width="2"/>
+            <line x1="55" y1="9"  x2="55" y2="81" stroke="#333" stroke-width="1.5"/>
+            <line x1="55" y1="45" x2="91" y2="45" stroke="#333" stroke-width="1.5"/>
+            <text x="35" y="49" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#444">MS</text>
+            <text x="73" y="33" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#155724">T<tspan font-size="8" dy="1">E</tspan></text>
+            <text x="73" y="62" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#004085">T<tspan font-size="8" dy="1">L</tspan></text>
+          </svg>
+          <h3>Knooppunt</h3>
+          <p>Begin of einde van een activiteit. Neemt geen tijd, arbeid of grondstoffen in beslag.</p>
+        </div>
+
+        <!-- 2. Activiteit -->
+        <div class="concept-card">
+          <svg width="180" height="70" viewBox="0 0 180 70">
+            <!-- left node -->
+            <circle cx="22" cy="35" r="18" fill="#fff" stroke="#333" stroke-width="2"/>
+            <line x1="22" y1="17" x2="22" y2="53" stroke="#333" stroke-width="1.5"/>
+            <line x1="22" y1="35" x2="40" y2="35" stroke="#333" stroke-width="1.5"/>
+            <!-- arrow -->
+            <line x1="41" y1="35" x2="130" y2="35" stroke="#333" stroke-width="2"/>
+            <polygon points="130,29 144,35 130,41" fill="#333"/>
+            <text x="87" y="24" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" fill="#555">Activiteit X — 5 weken</text>
+            <!-- right node -->
+            <circle cx="158" cy="35" r="18" fill="#fff" stroke="#333" stroke-width="2"/>
+            <line x1="158" y1="17" x2="158" y2="53" stroke="#333" stroke-width="1.5"/>
+            <line x1="158" y1="35" x2="176" y2="35" stroke="#333" stroke-width="1.5"/>
+          </svg>
+          <h3>Activiteit</h3>
+          <p>Uitvoering van een taak. Vraagt tijd, mensen en middelen. Voorgesteld door een pijl.</p>
+        </div>
+
+        <!-- 3. Netwerk -->
+        <div class="concept-card">
+          <svg width="180" height="90" viewBox="0 0 180 90">
+            <!-- nodes: A, B, C, D -->
+            <circle cx="20"  cy="45" r="14" fill="#fff" stroke="#333" stroke-width="1.8"/>
+            <circle cx="80"  cy="20" r="14" fill="#fff" stroke="#333" stroke-width="1.8"/>
+            <circle cx="80"  cy="70" r="14" fill="#fff" stroke="#333" stroke-width="1.8"/>
+            <circle cx="160" cy="45" r="14" fill="#fff" stroke="#333" stroke-width="1.8"/>
+            <!-- arrows -->
+            <line x1="34"  y1="39" x2="64"  y2="24" stroke="#333" stroke-width="1.5"/>
+            <polygon points="64,24 57,30 68,32" fill="#333"/>
+            <line x1="34"  y1="51" x2="64"  y2="66" stroke="#333" stroke-width="1.5"/>
+            <polygon points="64,66 57,60 68,58" fill="#333"/>
+            <line x1="94"  y1="24" x2="142" y2="40" stroke="#333" stroke-width="1.5"/>
+            <polygon points="142,40 134,36 138,46" fill="#333"/>
+            <line x1="94"  y1="66" x2="142" y2="51" stroke="#333" stroke-width="1.5"/>
+            <polygon points="142,51 134,54 138,44" fill="#333"/>
+            <!-- labels -->
+            <text x="20"  y="49" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" fill="#555">I</text>
+            <text x="80"  y="24" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" fill="#555">II</text>
+            <text x="80"  y="74" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" fill="#555">III</text>
+            <text x="160" y="49" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" fill="#555">IV</text>
+          </svg>
+          <h3>Netwerk</h3>
+          <p>Brengt de logische volgorde van activiteiten in beeld: welke gaan vooraf, volgen of verlopen gelijktijdig.</p>
+        </div>
+
+        <!-- 4. Schijnactiviteit -->
+        <div class="concept-card">
+          <svg width="180" height="70" viewBox="0 0 180 70">
+            <circle cx="22"  cy="35" r="18" fill="#fff" stroke="#333" stroke-width="2"/>
+            <line x1="22"  y1="17" x2="22"  y2="53" stroke="#333" stroke-width="1.5"/>
+            <line x1="22"  y1="35" x2="40"  y2="35" stroke="#333" stroke-width="1.5"/>
+            <!-- dashed arrow -->
+            <line x1="41" y1="35" x2="130" y2="35" stroke="#555" stroke-width="2" stroke-dasharray="7,5"/>
+            <polygon points="130,29 144,35 130,41" fill="#555"/>
+            <text x="87" y="24" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="11" fill="#555" font-style="italic">wachttijd</text>
+            <circle cx="158" cy="35" r="18" fill="#fff" stroke="#333" stroke-width="2"/>
+            <line x1="158" y1="17" x2="158" y2="53" stroke="#333" stroke-width="1.5"/>
+            <line x1="158" y1="35" x2="176" y2="35" stroke="#333" stroke-width="1.5"/>
+          </svg>
+          <h3>Schijnactiviteit</h3>
+          <p>Technische wachttijd. Neemt <em>alleen tijd</em> in beslag, geen mankracht of materialen.</p>
+        </div>
+
+        <!-- 5. Relatielijn (0-lijn) -->
+        <div class="concept-card">
+          <svg width="180" height="70" viewBox="0 0 180 70">
+            <circle cx="22"  cy="35" r="18" fill="#fff" stroke="#333" stroke-width="2"/>
+            <line x1="22"  y1="17" x2="22"  y2="53" stroke="#333" stroke-width="1.5"/>
+            <line x1="22"  y1="35" x2="40"  y2="35" stroke="#333" stroke-width="1.5"/>
+            <!-- dashed 0-line -->
+            <line x1="41" y1="35" x2="130" y2="35" stroke="#888" stroke-width="2" stroke-dasharray="5,4"/>
+            <polygon points="130,29 144,35 130,41" fill="#888"/>
+            <text x="87" y="24" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#888">0</text>
+            <circle cx="158" cy="35" r="18" fill="#fff" stroke="#333" stroke-width="2"/>
+            <line x1="158" y1="17" x2="158" y2="53" stroke="#333" stroke-width="1.5"/>
+            <line x1="158" y1="35" x2="176" y2="35" stroke="#333" stroke-width="1.5"/>
+          </svg>
+          <h3>Relatielijn (0-lijn)</h3>
+          <p>Geeft een noodzakelijk verband aan. Neemt <em>geen tijd, mensen of middelen</em> in beslag.</p>
+        </div>
+
+      </div><!-- /concepts-grid -->
+    </div><!-- /card -->
+
+    <!-- ── CARD: TIJDSFACTOR ──────────────────────────────── -->
+    <div class="card">
+      <div class="card-title">⏱ Tijdsfactor &amp; t<sub>e</sub>-berekening</div>
+      <p style="color:var(--muted); font-size:.9rem; margin-bottom:1.1rem;">
+        Bij PERT worden <strong>drie schattingen</strong> gebruikt om de verwachte duurtijd van
+        een activiteit te berekenen — zo wordt rekening gehouden met onzekerheid.
+      </p>
+
+      <div class="formula-display">
+        t<sub>e</sub> = (t<sub>o</sub> + 4 · t<sub>l</sub> + t<sub>p</sub>) / 6
+      </div>
+
+      <div class="time-types">
+        <div class="time-type-card">
+          <div class="sym sym-to">t<sub>o</sub></div>
+          <div class="name">Optimistisch</div>
+          <div class="desc">De kortst mogelijke duurtijd (best case scenario)</div>
+        </div>
+        <div class="time-type-card">
+          <div class="sym sym-tl">t<sub>l</sub></div>
+          <div class="name">Realistisch</div>
+          <div class="desc">De meest waarschijnlijke duurtijd (most likely)</div>
+        </div>
+        <div class="time-type-card">
+          <div class="sym sym-tp">t<sub>p</sub></div>
+          <div class="name">Pessimistisch</div>
+          <div class="desc">De langst mogelijke duurtijd (worst case scenario)</div>
+        </div>
+      </div>
+
+      <!-- Calculator -->
+      <div class="calc-wrap">
+        <p class="calc-label-row">🧮 Mini-calculator — vul de drie schattingen in:</p>
+        <div class="calc-grid">
+          <div class="calc-field">
+            <label>t<sub>o</sub> (optimistisch)</label>
+            <input type="number" id="calc-to" placeholder="0" min="0" step="0.5"/>
+          </div>
+          <div class="calc-field">
+            <label>t<sub>l</sub> (realistisch)</label>
+            <input type="number" id="calc-tl" placeholder="0" min="0" step="0.5"/>
+          </div>
+          <div class="calc-field">
+            <label>t<sub>p</sub> (pessimistisch)</label>
+            <input type="number" id="calc-tp" placeholder="0" min="0" step="0.5"/>
+          </div>
+          <div class="calc-arrow">→</div>
+          <div class="calc-result-box" id="calc-result-box">
+            <div class="res-label">t<sub>e</sub> (verwacht)</div>
+            <div class="res-value" id="calc-result">—</div>
+            <div class="res-formula" id="calc-formula"></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /card -->
+
+    <!-- ── CARD: VOORWAARTSE & ACHTERWAARTSE GANG ─────────── -->
+    <div class="card">
+      <div class="card-title">🔄 Voorwaartse en achterwaartse gang</div>
+      <p style="color:var(--muted); font-size:.9rem; margin-bottom:1.1rem;">
+        Om T<sub>E</sub> en T<sub>L</sub> te berekenen, doorloop je het netwerk twee keer:
+        eerst van links naar rechts, daarna van rechts naar links.
+      </p>
+
+      <div class="pass-grid">
+
+        <div class="pass-card forward">
+          <div class="pass-title">➡ Voorwaartse gang</div>
+          <p class="pass-desc">
+            Bereken <strong>T<sub>E</sub></strong> voor elk knooppunt, van links naar rechts.
+          </p>
+          <div class="pass-rule">
+            📍 Startpunt: T<sub>E</sub> van het eerste knooppunt = <strong>0</strong>.
+          </div>
+          <div class="pass-rule">
+            📐 Bereken: T<sub>E</sub>(vorig) + duurtijd activiteit voor elk inkomend pad.
+          </div>
+          <div class="pass-rule">
+            ✅ <strong>Neem de grootste waarde</strong> bij meerdere inkomende paden.
+          </div>
+        </div>
+
+        <div class="pass-card backward">
+          <div class="pass-title">⬅ Achterwaartse gang</div>
+          <p class="pass-desc">
+            Bereken <strong>T<sub>L</sub></strong> voor elk knooppunt, van rechts naar links.
+          </p>
+          <div class="pass-rule">
+            📍 Eindpunt: T<sub>L</sub> van het laatste knooppunt = T<sub>E</sub> van dat knooppunt.
+          </div>
+          <div class="pass-rule">
+            📐 Bereken: T<sub>L</sub>(volgend) − duurtijd activiteit voor elke uitgaande activiteit.
+          </div>
+          <div class="pass-rule">
+            ✅ <strong>Neem de kleinste waarde</strong> bij meerdere uitgaande activiteiten.
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /card -->
+
+    <!-- ── CARD: SPELING ──────────────────────────────────── -->
+    <div class="card">
+      <div class="card-title">📊 Speling (Slack)</div>
+      <p style="color:var(--muted); font-size:.9rem; margin-bottom:1rem;">
+        Speling is de maximale vertraging die een activiteit mag oplopen
+        zonder de totale projectduur te beïnvloeden.
+      </p>
+
+      <div class="slack-formula">
+        Speling = T<sub>L</sub> − T<sub>E</sub>
+      </div>
+
+      <table class="slack-table">
+        <thead>
+          <tr>
+            <th>Type speling</th>
+            <th>Formule</th>
+            <th>Betekenis &amp; gevolg</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="slack-pos">
+            <td><span class="badge badge-pos">Positief</span></td>
+            <td>T<sub>L</sub> &gt; T<sub>E</sub></td>
+            <td>De activiteit mag uitgesteld worden. Minder mensen en middelen nodig.</td>
+          </tr>
+          <tr class="slack-zero">
+            <td><span class="badge badge-zero">Nul → kritiek</span></td>
+            <td>T<sub>L</sub> = T<sub>E</sub></td>
+            <td>Geen vertraging toegestaan. Dit knooppunt ligt op het <strong>kritieke pad</strong>.</td>
+          </tr>
+          <tr class="slack-neg">
+            <td><span class="badge badge-neg">Negatief</span></td>
+            <td>T<sub>L</sub> &lt; T<sub>E</sub></td>
+            <td>De activiteit moet versneld worden. Meer mensen en middelen inzetten.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!-- /card -->
+
+    <!-- ── CARD: KRITIEKE PAD ─────────────────────────────── -->
+    <div class="card">
+      <div class="card-title">🔴 Kritieke pad</div>
+      <p style="font-size:.9rem; margin-bottom:.25rem;">
+        Het <strong>kritieke pad</strong> is het langste pad van het begin- naar het eindknooppunt.
+        Elke vertraging op dit pad heeft rechtstreeks invloed op de totale projectduur.
+      </p>
+      <div class="slack-formula" style="font-size:.95rem; margin-bottom:1rem;">
+        Speling op het kritieke pad = T<span style="font-size:.7em; vertical-align:sub;">L</span> − T<span style="font-size:.7em; vertical-align:sub;">E</span> = 0
+      </div>
+      <ul class="crit-list">
+        <li>Alle knooppunten op het kritieke pad hebben een <strong>speling van 0</strong>, dus de deadline en vroegste aankomst vallen samen.</li>
+        <li>Het kritieke pad wordt aangeduid met een <span style="color:var(--accent);font-weight:700;">rode pijl</span> in het netwerk.</li>
+        <li>Er kunnen meerdere kritieke paden bestaan als twee paden dezelfde maximale duurtijd hebben.</li>
+        <li>De totale projectduur is gelijk aan het vroegst mogelijke tijdstip van het laatste knooppunt.</li>
+      </ul>
+    </div><!-- /card -->
+
+  </section><!-- /theorie -->
+
+  <!-- ────────────────────────────────────────────────────── -->
+  <!--  SECTIE 2 — DEMO                                       -->
+  <!-- ────────────────────────────────────────────────────── -->
+  <section id="demo" style="margin-top:3rem;">
+
+    <div class="section-header">
+      <div class="section-badge">Sectie 2</div>
+      <h1>Demo</h1>
+      <p>Stap voor stap door een PERT-netwerk: T<sub>E</sub> (links→rechts) en T<sub>L</sub> (rechts→links).</p>
+    </div>
+
+    <div class="definitie" style="margin-bottom:1.25rem;">
+      <div class="def-label">Netwerk — Lancering van een mobiele app</div>
+      <p>Een softwarebedrijf wil een app lanceren. Er zijn twee parallelle ontwikkeltrajecten (iOS en Android),
+         een relatielijn en een gezamenlijke release. Doorloop het netwerk stap voor stap.</p>
+    </div>
+
+    <!-- Relatielijn detail -->
+    <div class="card">
+      <div class="card-title">🔗 De relatielijn (0-lijn) in detail</div>
+      <p style="color:var(--muted); font-size:.9rem; margin-bottom:1.1rem;">
+        In dit netwerk loopt er een relatielijn van knooppunt II naar knooppunt III.
+        Hieronder zie je precies wat dat betekent en hoe je ermee rekent.
+      </p>
+
+      <!-- Vergelijkingstabel -->
+      <table class="slack-table" style="margin-bottom:1.25rem;">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Symbool</th>
+            <th>Tijd</th>
+            <th>Mankracht / middelen</th>
+            <th>Gebruik</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Activiteit</strong></td>
+            <td>Volle pijl</td>
+            <td>Ja (duurtijd &gt; 0)</td>
+            <td>Ja</td>
+            <td>Een echte taak (bv. iOS bouwen)</td>
+          </tr>
+          <tr style="background:#fffbeb;">
+            <td><strong>Schijnactiviteit</strong></td>
+            <td>Stippelpijl</td>
+            <td>Ja (wachttijd)</td>
+            <td>Nee</td>
+            <td>Technische wachttijd (bv. beton uitharden)</td>
+          </tr>
+          <tr style="background:#eef5fb;">
+            <td><strong>Relatielijn</strong></td>
+            <td>Stippelpijl met <strong>0</strong></td>
+            <td><strong>Nee</strong> (duurtijd = 0)</td>
+            <td>Nee</td>
+            <td>Noodzakelijk logisch verband zonder tijdskost</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Hoe rekenen -->
+      <div class="pass-grid">
+        <div class="pass-card forward">
+          <div class="pass-title">➡ Voorwaartse gang via relatielijn</div>
+          <p class="pass-desc">
+            De relatielijn <strong>II → III</strong> heeft duurtijd 0.
+            Dat betekent dat knooppunt III ook bereikt kan worden via II:
+          </p>
+          <div class="pass-rule">
+            T<sub>E</sub>(III) via II = T<sub>E</sub>(II) + <strong>0</strong> = 4 + 0 = 4
+          </div>
+          <div class="pass-rule">
+            T<sub>E</sub>(III) via I (Act 2) = T<sub>E</sub>(I) + 8 = 0 + 8 = <strong>8</strong>
+          </div>
+          <div class="pass-rule">
+            📌 Neem de <strong>grootste</strong>: T<sub>E</sub>(III) = <strong>8</strong>
+          </div>
+        </div>
+        <div class="pass-card backward">
+          <div class="pass-title">⬅ Achterwaartse gang via relatielijn</div>
+          <p class="pass-desc">
+            In de achterwaartse gang gaat de relatielijn <em>omgekeerd</em>
+            (III → II). We trekken de duurtijd 0 af:
+          </p>
+          <div class="pass-rule">
+            T<sub>L</sub>(II) = T<sub>L</sub>(III) − <strong>0</strong> = 8 − 0 = <strong>8</strong>
+          </div>
+          <div class="pass-rule" style="margin-top:.5rem;">
+            Speling knooppunt II = T<sub>L</sub> − T<sub>E</sub> = 8 − 4 = <strong>4</strong>
+            → positieve speling, <em>niet kritiek</em>.
+          </div>
+          <div class="pass-rule" style="margin-top:.5rem; background:#fee2e2;">
+            ⚠️ De relatielijn zelf is <strong>niet kritiek</strong> omdat knooppunt II
+            speling heeft. Ze propageert wel de T<sub>L</sub>-waarde.
+          </div>
+        </div>
+      </div>
+    </div><!-- /card relatielijn -->
+
+    <div class="demo-card">
+
+      <!-- Header -->
+      <div class="demo-header">
+        <div>
+          <div class="demo-step-counter" id="demo-step-counter">Stap 0 van 9</div>
+          <div class="demo-card-title" id="demo-title">Leeg netwerk</div>
+        </div>
+        <span class="demo-phase-badge phase-start" id="demo-phase-badge">Start</span>
+      </div>
+
+      <!-- SVG Network -->
+      <div class="demo-network-wrap">
+        <svg viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <!-- Arrowhead markers -->
+            <marker id="m-def"   markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#888"/></marker>
+            <marker id="m-act"   markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#457b9d"/></marker>
+            <marker id="m-crit"  markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#e63946"/></marker>
+            <marker id="m-relay" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#bbb"/></marker>
+            <marker id="m-r-act" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#457b9d"/></marker>
+            <!-- Shared clip paths for demo nodes (local coords, center at 0,0 r=36) -->
+            <clipPath id="dcl-l" ><rect x="-36" y="-36" width="36" height="72"/></clipPath>
+            <clipPath id="dcl-tr"><rect x="0"   y="-36" width="36" height="36"/></clipPath>
+            <clipPath id="dcl-br"><rect x="0"   y="0"   width="36" height="36"/></clipPath>
+          </defs>
+
+          <!-- ── ARROWS (behind nodes) ───────────────────────────── -->
+
+          <!-- I → II  Act 1: iOS 4w -->
+          <g id="d-arr-I-II">
+            <line id="d-line-I-II" x1="122" y1="140" x2="236" y2="86"
+                  stroke="#888" stroke-width="1.8" marker-end="url(#m-def)"/>
+            <text id="d-lbl-I-II" x="172" y="97" text-anchor="middle"
+                  font-family="Segoe UI,sans-serif" font-size="11" fill="#999">Act 1: iOS — 4w</text>
+          </g>
+
+          <!-- I → III  Act 2: Android 8w -->
+          <g id="d-arr-I-III">
+            <line id="d-line-I-III" x1="122" y1="170" x2="236" y2="224"
+                  stroke="#888" stroke-width="1.8" marker-end="url(#m-def)"/>
+            <text id="d-lbl-I-III" x="163" y="220" text-anchor="middle"
+                  font-family="Segoe UI,sans-serif" font-size="11" fill="#999">Act 2: Android — 8w</text>
+          </g>
+
+          <!-- II → III  Relatielijn 0 -->
+          <g id="d-arr-II-III">
+            <line id="d-line-II-III" x1="270" y1="106" x2="270" y2="204"
+                  stroke="#bbb" stroke-width="1.6" stroke-dasharray="6,4"
+                  marker-end="url(#m-relay)"/>
+            <text id="d-lbl-II-III" x="284" y="160" text-anchor="start"
+                  font-family="Georgia,serif" font-size="15" font-weight="700" fill="#bbb">0</text>
+          </g>
+
+          <!-- III → IV  Act 3: Release 2w -->
+          <g id="d-arr-III-IV">
+            <line id="d-line-III-IV" x1="303" y1="225" x2="425" y2="170"
+                  stroke="#888" stroke-width="1.8" marker-end="url(#m-def)"/>
+            <text id="d-lbl-III-IV" x="375" y="214" text-anchor="middle"
+                  font-family="Segoe UI,sans-serif" font-size="11" fill="#999">Act 3: Release — 2w</text>
+          </g>
+
+          <!-- ── NODES ──────────────────────────────────────────── -->
+
+          <!-- Node I  (90, 155) -->
+          <g transform="translate(90,155)">
+            <circle r="36" fill="#eef0f2" clip-path="url(#dcl-l)"/>
+            <circle r="36" fill="#e8f5e9" clip-path="url(#dcl-tr)"/>
+            <circle r="36" fill="#e3f0fb" clip-path="url(#dcl-br)"/>
+            <circle r="36" fill="none" stroke="#333" stroke-width="2.5" id="d-bdr-I"/>
+            <line x1="0" y1="-36" x2="0"  y2="36"  stroke="#555" stroke-width="1.6"/>
+            <line x1="0" y1="0"   x2="36" y2="0"   stroke="#555" stroke-width="1.6"/>
+            <text x="-14" y="5" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="15" font-weight="700" fill="#333">I</text>
+            <text id="d-te-I" x="18" y="-11" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+            <text id="d-tl-I" x="18" y="16"  text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+          </g>
+
+          <!-- Node II  (270, 70) -->
+          <g transform="translate(270,70)">
+            <circle r="36" fill="#eef0f2" clip-path="url(#dcl-l)"/>
+            <circle r="36" fill="#e8f5e9" clip-path="url(#dcl-tr)"/>
+            <circle r="36" fill="#e3f0fb" clip-path="url(#dcl-br)"/>
+            <circle r="36" fill="none" stroke="#333" stroke-width="2.5" id="d-bdr-II"/>
+            <line x1="0" y1="-36" x2="0"  y2="36"  stroke="#555" stroke-width="1.6"/>
+            <line x1="0" y1="0"   x2="36" y2="0"   stroke="#555" stroke-width="1.6"/>
+            <text x="-13" y="5" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#333">II</text>
+            <text id="d-te-II" x="18" y="-11" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+            <text id="d-tl-II" x="18" y="16"  text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+          </g>
+
+          <!-- Node III  (270, 240) -->
+          <g transform="translate(270,240)">
+            <circle r="36" fill="#eef0f2" clip-path="url(#dcl-l)"/>
+            <circle r="36" fill="#e8f5e9" clip-path="url(#dcl-tr)"/>
+            <circle r="36" fill="#e3f0fb" clip-path="url(#dcl-br)"/>
+            <circle r="36" fill="none" stroke="#333" stroke-width="2.5" id="d-bdr-III"/>
+            <line x1="0" y1="-36" x2="0"  y2="36"  stroke="#555" stroke-width="1.6"/>
+            <line x1="0" y1="0"   x2="36" y2="0"   stroke="#555" stroke-width="1.6"/>
+            <text x="-13" y="5" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#333">III</text>
+            <text id="d-te-III" x="18" y="-11" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+            <text id="d-tl-III" x="18" y="16"  text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+          </g>
+
+          <!-- Node IV  (460, 155) -->
+          <g transform="translate(460,155)">
+            <circle r="36" fill="#eef0f2" clip-path="url(#dcl-l)"/>
+            <circle r="36" fill="#e8f5e9" clip-path="url(#dcl-tr)"/>
+            <circle r="36" fill="#e3f0fb" clip-path="url(#dcl-br)"/>
+            <circle r="36" fill="none" stroke="#333" stroke-width="2.5" id="d-bdr-IV"/>
+            <line x1="0" y1="-36" x2="0"  y2="36"  stroke="#555" stroke-width="1.6"/>
+            <line x1="0" y1="0"   x2="36" y2="0"   stroke="#555" stroke-width="1.6"/>
+            <text x="-13" y="5" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#333">IV</text>
+            <text id="d-te-IV" x="18" y="-11" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+            <text id="d-tl-IV" x="18" y="16"  text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+          </g>
+
+          <!-- Slack labels (result step only) -->
+          <g id="d-slack" opacity="0" style="transition:opacity .3s;">
+            <rect x="55"  y="198" width="72" height="18" rx="9" fill="#16a34a"/>
+            <text x="91"  y="211" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">speling = 0</text>
+            <rect x="310" y="55"  width="72" height="18" rx="9" fill="#2563eb"/>
+            <text x="346" y="68"  text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">speling = 4</text>
+            <rect x="230" y="283" width="72" height="18" rx="9" fill="#16a34a"/>
+            <text x="266" y="296" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">speling = 0</text>
+            <rect x="420" y="198" width="72" height="18" rx="9" fill="#16a34a"/>
+            <text x="456" y="211" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">speling = 0</text>
+          </g>
+
+        </svg>
+      </div><!-- /demo-network-wrap -->
+
+      <!-- Explanation -->
+      <div class="demo-explanation" id="demo-explanation">
+        Dit netwerk heeft <strong>4 knooppunten</strong> (I–IV) en <strong>3 activiteiten</strong> + 1 relatielijn.
+        Klik op <strong>Volgende →</strong> om te starten.
+      </div>
+
+      <!-- Navigation -->
+      <div class="demo-nav">
+        <button class="demo-btn demo-btn-prev" id="demo-prev" disabled>← Vorige</button>
+        <div class="demo-dots" id="demo-dots"></div>
+        <button class="demo-btn demo-btn-next" id="demo-next">Volgende →</button>
+      </div>
+      <div class="demo-footer">
+        <button class="demo-btn-reset" id="demo-reset">↺ Opnieuw beginnen</button>
+      </div>
+
+    </div><!-- /demo-card -->
+  </section><!-- /demo -->
+
+  <div id="oefening1" class="section-placeholder">
+    <div class="ph-emoji">✏️</div>
+    <h2>Oefening 1</h2>
+    <p>Wordt binnenkort uitgewerkt: bepaal de doorlooptijd en het kritieke pad.</p>
+  </div>
+
+  <div id="oefening2" class="section-placeholder">
+    <div class="ph-emoji">✏️</div>
+    <h2>Oefening 2</h2>
+    <p>Wordt binnenkort uitgewerkt: netwerk met relatieliinen.</p>
+  </div>
+
+  <div id="oefening3" class="section-placeholder">
+    <div class="ph-emoji">✏️</div>
+    <h2>Oefening 3 — De piramide van de farao</h2>
+    <p>Wordt binnenkort uitgewerkt: t<sub>e</sub>-berekening + netwerk.</p>
+  </div>
+
+  <div id="oefening4" class="section-placeholder">
+    <div class="ph-emoji">✏️</div>
+    <h2>Oefening 4 — H. Oessers digitalisering</h2>
+    <p>Wordt binnenkort uitgewerkt: groot netwerk met 14 activiteiten.</p>
+  </div>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--  JAVASCRIPT                                               -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<script>
+  /* ── NODE ANATOMY INTERACTION ──────────────────────────── */
+  (function () {
+    const clicks   = document.querySelectorAll('.node-click');
+    const sections = document.querySelectorAll('.node-section');
+    const nipItems = document.querySelectorAll('.nip-item');
+    let active = null;
+
+    function showSection(name) {
+      // Highlight selected bg section, dim others
+      sections.forEach(s => {
+        if (s.dataset.section === name) {
+          s.style.opacity = '1';
+          s.style.filter  = 'brightness(.82)';
+        } else {
+          s.style.opacity = '.45';
+          s.style.filter  = 'brightness(1)';
+        }
+      });
+      // Show correct info panel
+      nipItems.forEach(el => el.classList.remove('active'));
+      const target = document.getElementById('nip-' + name);
+      if (target) target.classList.add('active');
+    }
+
+    function resetSections() {
+      sections.forEach(s => {
+        s.style.opacity = '1';
+        s.style.filter  = 'brightness(1)';
+      });
+      nipItems.forEach(el => el.classList.remove('active'));
+      document.getElementById('nip-default').classList.add('active');
+    }
+
+    clicks.forEach(el => {
+      el.addEventListener('click', () => {
+        const name = el.dataset.section;
+        if (active === name) {
+          // toggle off
+          active = null;
+          resetSections();
+        } else {
+          active = name;
+          showSection(name);
+        }
+      });
+
+      el.addEventListener('mouseenter', () => {
+        if (!active) {
+          sections.forEach(s => {
+            s.style.filter = s.dataset.section === el.dataset.section
+              ? 'brightness(.88)' : 'brightness(1)';
+          });
+        }
+      });
+
+      el.addEventListener('mouseleave', () => {
+        if (!active) {
+          sections.forEach(s => { s.style.filter = 'brightness(1)'; });
+        }
+      });
+    });
+  })();
+
+  /* ── te CALCULATOR ─────────────────────────────────────── */
+  (function () {
+    const inputs     = ['calc-to', 'calc-tl', 'calc-tp'].map(id => document.getElementById(id));
+    const resultEl   = document.getElementById('calc-result');
+    const formulaEl  = document.getElementById('calc-formula');
+    const boxEl      = document.getElementById('calc-result-box');
+
+    function round2(n) { return Math.round(n * 100) / 100; }
+
+    function update() {
+      const [to, tl, tp] = inputs.map(i => parseFloat(i.value));
+      if ([to, tl, tp].some(isNaN)) {
+        resultEl.textContent  = '—';
+        formulaEl.textContent = '';
+        boxEl.classList.remove('has-value');
+        return;
+      }
+      const te = (to + 4 * tl + tp) / 6;
+      resultEl.textContent  = round2(te);
+      formulaEl.textContent = `(${to} + 4×${tl} + ${tp}) / 6`;
+      boxEl.classList.add('has-value');
+    }
+
+    inputs.forEach(i => i.addEventListener('input', update));
+  })();
+
+  /* ── DEMO SECTION ──────────────────────────────────────── */
+  (function () {
+    const NODES  = ['I','II','III','IV'];
+    const ARROWS = ['I-II','I-III','II-III','III-IV'];
+    const DASHED = new Set(['II-III']);
+
+    const STEPS = [
+      { phase:'start',    lbl:'Start',
+        title:'Leeg netwerk',
+        expl:'Dit netwerk heeft 4 knooppunten (I–IV) en 3 activiteiten + 1 relatielijn (stippellijn).' +
+             ' Klik op <strong>Volgende →</strong> om te starten met de voorwaartse gang (T<sub>E</sub>, links→rechts).',
+        te:{}, tl:{}, hi:[], ha:[], crit:[] },
+
+      { phase:'forward',  lbl:'➡ Voorwaartse gang',
+        title:'Stap 1 — Knooppunt I',
+        expl:'Het <strong>startpunt</strong> heeft altijd <strong>T<sub>E</sub>(I) = 0</strong>.' +
+             ' Er zijn geen inkomende activiteiten.',
+        te:{I:0}, tl:{}, hi:['I'], ha:[], crit:[] },
+
+      { phase:'forward',  lbl:'➡ Voorwaartse gang',
+        title:'Stap 2 — Knooppunt II',
+        expl:'Één inkomend pad via Act 1 (iOS, 4w):<br>' +
+             '<strong>T<sub>E</sub>(II) = T<sub>E</sub>(I) + 4 = 0 + 4 = 4</strong>',
+        te:{I:0,II:4}, tl:{}, hi:['II'], ha:['I-II'], crit:[] },
+
+      { phase:'forward',  lbl:'➡ Voorwaartse gang',
+        title:'Stap 3 — Knooppunt III',
+        expl:'Twee inkomende paden:<br>' +
+             '&bull; Via Act 2 (Android, 8w): T<sub>E</sub>(I) + 8 = <strong>8</strong><br>' +
+             '&bull; Via relatielijn van II (0w): T<sub>E</sub>(II) + 0 = 4<br>' +
+             '📌 Neem de <strong>grootste</strong>: <strong>T<sub>E</sub>(III) = 8</strong>',
+        te:{I:0,II:4,III:8}, tl:{}, hi:['III'], ha:['I-III','II-III'], crit:[] },
+
+      { phase:'forward',  lbl:'➡ Voorwaartse gang',
+        title:'Stap 4 — Knooppunt IV (voorwaartse gang klaar)',
+        expl:'Één inkomend pad via Act 3 (Release, 2w):<br>' +
+             '<strong>T<sub>E</sub>(IV) = T<sub>E</sub>(III) + 2 = 8 + 2 = 10</strong><br>' +
+             '✅ De totale verwachte projectduur is <strong>10 weken</strong>.',
+        te:{I:0,II:4,III:8,IV:10}, tl:{}, hi:['IV'], ha:['III-IV'], crit:[] },
+
+      { phase:'backward', lbl:'⬅ Achterwaartse gang',
+        title:'Stap 5 — Knooppunt IV',
+        expl:'We starten de achterwaartse gang bij het eindpunt.<br>' +
+             'T<sub>L</sub> van het laatste knooppunt = T<sub>E</sub>:<br>' +
+             '<strong>T<sub>L</sub>(IV) = T<sub>E</sub>(IV) = 10</strong>',
+        te:{I:0,II:4,III:8,IV:10}, tl:{IV:10}, hi:['IV'], ha:[], crit:[] },
+
+      { phase:'backward', lbl:'⬅ Achterwaartse gang',
+        title:'Stap 6 — Knooppunt III',
+        expl:'Één uitgaande activiteit (Act 3, 2w):<br>' +
+             '<strong>T<sub>L</sub>(III) = T<sub>L</sub>(IV) − 2 = 10 − 2 = 8</strong>',
+        te:{I:0,II:4,III:8,IV:10}, tl:{IV:10,III:8}, hi:['III'], ha:['III-IV'], crit:[] },
+
+      { phase:'backward', lbl:'⬅ Achterwaartse gang',
+        title:'Stap 7 — Knooppunt II',
+        expl:'Één uitgaande verbinding (relatielijn naar III, 0w):<br>' +
+             '<strong>T<sub>L</sub>(II) = T<sub>L</sub>(III) − 0 = 8 − 0 = 8</strong>',
+        te:{I:0,II:4,III:8,IV:10}, tl:{IV:10,III:8,II:8}, hi:['II'], ha:['II-III'], crit:[] },
+
+      { phase:'backward', lbl:'⬅ Achterwaartse gang',
+        title:'Stap 8 — Knooppunt I (achterwaartse gang klaar)',
+        expl:'Twee uitgaande activiteiten:<br>' +
+             '&bull; Via Act 1 naar II: T<sub>L</sub>(II) − 4 = 8 − 4 = 4<br>' +
+             '&bull; Via Act 2 naar III: T<sub>L</sub>(III) − 8 = 8 − 8 = <strong>0</strong><br>' +
+             '📌 Neem de <strong>kleinste</strong>: <strong>T<sub>L</sub>(I) = 0</strong>',
+        te:{I:0,II:4,III:8,IV:10}, tl:{IV:10,III:8,II:8,I:0}, hi:['I'], ha:['I-II','I-III'], crit:[] },
+
+      { phase:'result',   lbl:'🔴 Resultaat',
+        title:'Stap 9 — Speling &amp; kritiek pad',
+        expl:'Speling = T<sub>L</sub> − T<sub>E</sub>:<br>' +
+             '&bull; I:  0 − 0 = <strong>0</strong> ✅ kritiek<br>' +
+             '&bull; II: 8 − 4 = <strong>4</strong> (positieve speling, niet kritiek)<br>' +
+             '&bull; III: 8 − 8 = <strong>0</strong> ✅ kritiek<br>' +
+             '&bull; IV: 10 − 10 = <strong>0</strong> ✅ kritiek<br>' +
+             '🔴 <strong>Kritiek pad: I → III → IV</strong>',
+        te:{I:0,II:4,III:8,IV:10}, tl:{IV:10,III:8,II:8,I:0},
+        hi:[], ha:[], crit:['I','III','IV','I-III','III-IV'] }
+    ];
+
+    const PHASE_CLS = { start:'phase-start', forward:'phase-forward', backward:'phase-backward', result:'phase-result' };
+    let cur = 0;
+
+    /* Build progress dots */
+    const dotsEl = document.getElementById('demo-dots');
+    STEPS.forEach((_, i) => {
+      const d = document.createElement('div');
+      d.className = 'demo-dot';
+      dotsEl.appendChild(d);
+    });
+
+    function render(idx) {
+      const s = STEPS[idx];
+
+      /* Header */
+      document.getElementById('demo-step-counter').textContent = `Stap ${idx} van ${STEPS.length - 1}`;
+      document.getElementById('demo-title').innerHTML = s.title;
+      document.getElementById('demo-explanation').innerHTML = s.expl;
+      const badge = document.getElementById('demo-phase-badge');
+      badge.textContent = s.lbl;
+      badge.className   = 'demo-phase-badge ' + (PHASE_CLS[s.phase] || 'phase-start');
+
+      /* TE / TL values */
+      NODES.forEach(n => {
+        const te = document.getElementById('d-te-' + n);
+        const tl = document.getElementById('d-tl-' + n);
+        if (te) { const v = s.te[n]; te.textContent = v !== undefined ? v : '—'; te.setAttribute('fill', v !== undefined ? '#155724' : '#ccc'); }
+        if (tl) { const v = s.tl[n]; tl.textContent = v !== undefined ? v : '—'; tl.setAttribute('fill', v !== undefined ? '#004085' : '#ccc'); }
+      });
+
+      /* Node borders */
+      NODES.forEach(n => {
+        const bdr = document.getElementById('d-bdr-' + n);
+        if (!bdr) return;
+        const isCrit = s.crit.includes(n);
+        const isHi   = s.hi.includes(n);
+        bdr.setAttribute('stroke',       isCrit ? '#e63946' : isHi ? '#457b9d' : '#555');
+        bdr.setAttribute('stroke-width', isCrit ? '4'       : isHi ? '3.5'    : '2');
+      });
+
+      /* Arrows */
+      ARROWS.forEach(a => {
+        const line = document.getElementById('d-line-' + a);
+        const lbl  = document.getElementById('d-lbl-' + a);
+        if (!line) return;
+        const isDash = DASHED.has(a);
+        const isCrit = s.crit.includes(a);
+        const isHi   = s.ha.includes(a);
+        let col, w, mk;
+        if (isCrit)      { col = '#e63946'; w = '3';   mk = 'url(#m-crit)'; }
+        else if (isHi)   { col = '#457b9d'; w = '2.5'; mk = isDash ? 'url(#m-r-act)' : 'url(#m-act)'; }
+        else             { col = isDash ? '#ccc' : '#aaa'; w = isDash ? '1.4' : '1.8'; mk = isDash ? 'url(#m-relay)' : 'url(#m-def)'; }
+        line.setAttribute('stroke',       col);
+        line.setAttribute('stroke-width', w);
+        line.setAttribute('marker-end',   mk);
+        if (lbl) lbl.setAttribute('fill', isCrit ? '#e63946' : isHi ? '#457b9d' : '#ccc');
+      });
+
+      /* Slack labels */
+      const slk = document.getElementById('d-slack');
+      if (slk) slk.setAttribute('opacity', s.phase === 'result' ? '1' : '0');
+
+      /* Buttons & dots */
+      document.getElementById('demo-prev').disabled = idx === 0;
+      document.getElementById('demo-next').disabled = idx === STEPS.length - 1;
+      document.querySelectorAll('.demo-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === idx);
+        d.classList.toggle('done',   i < idx);
+      });
+    }
+
+    document.getElementById('demo-next').addEventListener('click',  () => { if (cur < STEPS.length - 1) render(++cur); });
+    document.getElementById('demo-prev').addEventListener('click',  () => { if (cur > 0)                render(--cur); });
+    document.getElementById('demo-reset').addEventListener('click', () => { cur = 0; render(0); });
+
+    render(0);
+  })();
+
+  /* ── NAV: highlight active link on scroll ──────────────── */
+  (function () {
+    const links    = document.querySelectorAll('.nav-link:not(.disabled)');
+    const sections = ['theorie','demo','oefening1','oefening2','oefening3','oefening4']
+                      .map(id => document.getElementById(id))
+                      .filter(Boolean);
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(l => l.classList.remove('active'));
+          const match = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+          if (match) match.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+  })();
+</script>
+
+</body>
+</html>

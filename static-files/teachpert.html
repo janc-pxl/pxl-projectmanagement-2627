@@ -535,6 +535,111 @@
     .demo-btn-reset:hover { color: var(--text); }
 
     .demo-footer { text-align: center; margin-top: .75rem; }
+
+    /* ─── EXERCISE 1 ───────────────────────────────────────── */
+    .ex1-wrap {
+      background: #f8f9fb;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+    .ex1-wrap svg { display: block; width: 100%; height: auto; }
+
+    .ex1-input {
+      width: 32px;
+      height: 20px;
+      border: 1.5px solid var(--border);
+      border-radius: 4px;
+      font-size: 11px;
+      font-family: 'Segoe UI', sans-serif;
+      font-weight: 700;
+      text-align: center;
+      background: #fff;
+      padding: 0;
+      outline: none;
+      transition: border-color .2s, background .2s;
+      -moz-appearance: textfield;
+    }
+    .ex1-input::-webkit-inner-spin-button,
+    .ex1-input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    .ex1-input:focus { border-color: var(--blue); }
+    .ex1-input.correct { border-color: #16a34a; background: #f0fdf4; }
+    .ex1-input.wrong   { border-color: #dc2626; background: #fef2f2; color: #dc2626; }
+    .ex1-input.readonly { background: #e9ecef; color: var(--muted); cursor: default; }
+
+    .ex1-edge-hit {
+      cursor: pointer;
+      stroke: transparent;
+      stroke-width: 18;
+      fill: none;
+    }
+    .ex1-edge-hit:hover + line,
+    .ex1-edge-hit:hover + path { stroke: var(--blue); stroke-width: 2.5; }
+
+    .ex1-edge-line { pointer-events: none; transition: stroke .2s, stroke-width .2s; }
+    .ex1-edge-line.selected { stroke: var(--accent) !important; stroke-width: 3 !important; }
+
+    .ex1-edge-lbl { pointer-events: none; transition: fill .2s; }
+    .ex1-edge-lbl.selected { fill: var(--accent) !important; }
+
+    .ex1-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .ex1-check-btn {
+      padding: .6rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: .9rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      background: var(--blue);
+      color: #fff;
+      transition: background .15s;
+    }
+    .ex1-check-btn:hover { background: #2d6a8f; }
+    .ex1-reset-btn {
+      background: none; border: none;
+      font-size: .82rem; color: var(--muted);
+      cursor: pointer; font-family: inherit;
+      text-decoration: underline; padding: 0;
+    }
+    .ex1-reset-btn:hover { color: var(--text); }
+
+    .ex1-feedback {
+      flex: 1;
+      font-size: .88rem;
+      font-weight: 600;
+      min-width: 200px;
+    }
+    .ex1-feedback.success { color: #16a34a; }
+    .ex1-feedback.partial { color: #d97706; }
+    .ex1-feedback.fail    { color: #dc2626; }
+
+    .ex1-correct-overlay {
+      position: absolute;
+      font-size: 9px;
+      font-weight: 700;
+      color: #dc2626;
+      pointer-events: none;
+      display: none;
+    }
+
+    .ex1-instructions {
+      background: var(--bg);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 8px 8px 0;
+      padding: .8rem 1.1rem;
+      font-size: .88rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      color: var(--muted);
+    }
   </style>
 </head>
 <body>
@@ -546,7 +651,7 @@
   <div class="nav-logo">PERT</div>
   <a href="#theorie"   class="nav-link active">Theorie</a>
   <a href="#demo"      class="nav-link">Demo</a>
-  <a href="#oefening1" class="nav-link disabled">Oefening 1</a>
+  <a href="#oefening1" class="nav-link">Oefening 1</a>
   <a href="#oefening2" class="nav-link disabled">Oefening 2</a>
   <a href="#oefening3" class="nav-link disabled">Oefening 3</a>
   <a href="#oefening4" class="nav-link disabled">Oefening 4</a>
@@ -1221,11 +1326,53 @@
     </div><!-- /demo-card -->
   </section><!-- /demo -->
 
-  <div id="oefening1" class="section-placeholder">
-    <div class="ph-emoji">✏️</div>
-    <h2>Oefening 1</h2>
-    <p>Wordt binnenkort uitgewerkt: bepaal de doorlooptijd en het kritieke pad.</p>
-  </div>
+  <!-- ────────────────────────────────────────────────────── -->
+  <!--  SECTIE 3 — OEFENING 1                                 -->
+  <!-- ────────────────────────────────────────────────────── -->
+  <section id="oefening1" style="margin-top:3rem;">
+
+    <div class="section-header">
+      <div class="section-badge">Oefening 1</div>
+      <h1>Vul het PERT-netwerk in</h1>
+      <p>Vul de T<sub>E</sub> en T<sub>L</sub> waarden in voor elk knooppunt en selecteer het kritieke pad.</p>
+    </div>
+
+    <div class="ex1-instructions">
+      <strong>Opdracht:</strong> Hieronder zie je een PERT-netwerk met 11 knooppunten en 14 activiteiten.
+      <strong>(1)</strong> Vul voor elk knooppunt de T<sub>E</sub> (vroegst mogelijke tijdstip) en T<sub>L</sub> (laatste toelaatbare tijdstip) in.
+      <strong>(2)</strong> Klik op de pijlen die op het <span style="color:var(--accent);font-weight:700;">kritieke pad</span> liggen.
+      <strong>(3)</strong> Klik op <em>Controleer</em> om je antwoorden te checken.
+    </div>
+
+    <div class="card">
+      <div class="card-title">🔵 PERT-netwerk</div>
+
+      <div class="ex1-wrap" id="ex1-wrap">
+        <svg id="ex1-svg" viewBox="0 0 940 500" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="ex1-m-def" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#888"/></marker>
+            <marker id="ex1-m-sel" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#e63946"/></marker>
+            <!-- Clip paths for nodes (center 0,0, r=34) -->
+            <clipPath id="ex1-cl"><rect x="-34" y="-34" width="34" height="68"/></clipPath>
+            <clipPath id="ex1-ctr"><rect x="0" y="-34" width="34" height="34"/></clipPath>
+            <clipPath id="ex1-cbr"><rect x="0" y="0" width="34" height="34"/></clipPath>
+          </defs>
+
+          <!-- Edges will be drawn by JS -->
+          <g id="ex1-edges"></g>
+          <!-- Nodes will be drawn by JS -->
+          <g id="ex1-nodes"></g>
+        </svg>
+      </div>
+
+      <div class="ex1-controls">
+        <button class="ex1-check-btn" id="ex1-check">Controleer</button>
+        <button class="ex1-reset-btn" id="ex1-reset">Opnieuw beginnen</button>
+        <div class="ex1-feedback" id="ex1-feedback"></div>
+      </div>
+
+    </div><!-- /card -->
+  </section><!-- /oefening1 -->
 
   <div id="oefening2" class="section-placeholder">
     <div class="ph-emoji">✏️</div>
@@ -1495,6 +1642,310 @@
     document.getElementById('demo-reset').addEventListener('click', () => { cur = 0; render(0); });
 
     render(0);
+  })();
+
+  /* ── EXERCISE 1 ───────────────────────────────────────── */
+  (function () {
+    const NODES = [
+      { id:1,  label:'BE',  x:70,  y:120, te:0,  tl:0,  crit:true,  readonly_te:true },
+      { id:2,  label:'NL',  x:70,  y:380, te:0,  tl:4,  crit:false, readonly_te:true },
+      { id:3,  label:'3',   x:250, y:180, te:10, tl:10, crit:true },
+      { id:4,  label:'4',   x:250, y:380, te:5,  tl:21, crit:false },
+      { id:5,  label:'5',   x:430, y:100, te:16, tl:16, crit:true },
+      { id:6,  label:'6',   x:380, y:290, te:15, tl:18, crit:false },
+      { id:7,  label:'7',   x:380, y:420, te:7,  tl:23, crit:false },
+      { id:8,  label:'8',   x:570, y:240, te:21, tl:21, crit:true },
+      { id:9,  label:'9',   x:610, y:90,  te:23, tl:28, crit:false },
+      { id:10, label:'10',  x:730, y:340, te:29, tl:29, crit:true },
+      { id:11, label:'END', x:860, y:190, te:33, tl:33, crit:true }
+    ];
+
+    const EDGES = [
+      { from:1,  to:3,  dur:10 },
+      { from:2,  to:3,  dur:6  },
+      { from:2,  to:4,  dur:5  },
+      { from:3,  to:5,  dur:6  },
+      { from:3,  to:6,  dur:5  },
+      { from:4,  to:7,  dur:2  },
+      { from:6,  to:10, dur:1  },
+      { from:5,  to:8,  dur:5  },
+      { from:5,  to:9,  dur:7  },
+      { from:6,  to:8,  dur:3  },
+      { from:7,  to:10, dur:6  },
+      { from:8,  to:10, dur:8  },
+      { from:9,  to:11, dur:5  },
+      { from:10, to:11, dur:4  }
+    ];
+
+    const CRITICAL_EDGES = new Set(['1-3','3-5','5-8','8-10','10-11']);
+    const R = 34;
+    const svg = document.getElementById('ex1-svg');
+    const edgesG = document.getElementById('ex1-edges');
+    const nodesG = document.getElementById('ex1-nodes');
+    const nodeMap = {};
+    NODES.forEach(n => nodeMap[n.id] = n);
+
+    const inputEls = {};   // { '3-te': inputEl, '3-tl': inputEl, ... }
+    const edgeEls = {};    // { '1-3': { hit, line, lbl, selected } }
+
+    // ── Draw edges ──
+    EDGES.forEach(e => {
+      const fn = nodeMap[e.from], tn = nodeMap[e.to];
+      const dx = tn.x - fn.x, dy = tn.y - fn.y;
+      const dist = Math.sqrt(dx*dx + dy*dy);
+      const ux = dx/dist, uy = dy/dist;
+      const x1 = fn.x + ux * R, y1 = fn.y + uy * R;
+      const x2 = tn.x - ux * (R + 10), y2 = tn.y - uy * (R + 10);
+      const mx = (x1+x2)/2, my = (y1+y2)/2;
+      const key = e.from + '-' + e.to;
+
+      // Visible line
+      const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+      line.setAttribute('x1',x1); line.setAttribute('y1',y1);
+      line.setAttribute('x2',x2); line.setAttribute('y2',y2);
+      line.setAttribute('stroke','#888'); line.setAttribute('stroke-width','1.8');
+      line.setAttribute('marker-end','url(#ex1-m-def)');
+      line.classList.add('ex1-edge-line');
+      edgesG.appendChild(line);
+
+      // Duration label - offset perpendicular to avoid overlap
+      const perpX = -uy * 14, perpY = ux * 14;
+      const lbl = document.createElementNS('http://www.w3.org/2000/svg','text');
+      lbl.setAttribute('x', mx + perpX); lbl.setAttribute('y', my + perpY);
+      lbl.setAttribute('text-anchor','middle');
+      lbl.setAttribute('font-family','Segoe UI,sans-serif');
+      lbl.setAttribute('font-size','11'); lbl.setAttribute('font-weight','600');
+      lbl.setAttribute('fill','#666');
+      lbl.classList.add('ex1-edge-lbl');
+      lbl.textContent = e.dur + 'd';
+      edgesG.appendChild(lbl);
+
+      // Invisible hit area
+      const hit = document.createElementNS('http://www.w3.org/2000/svg','line');
+      hit.setAttribute('x1',x1); hit.setAttribute('y1',y1);
+      hit.setAttribute('x2',x2); hit.setAttribute('y2',y2);
+      hit.classList.add('ex1-edge-hit');
+      edgesG.appendChild(hit);
+
+      edgeEls[key] = { hit, line, lbl, selected: false };
+
+      hit.addEventListener('click', () => {
+        const ed = edgeEls[key];
+        ed.selected = !ed.selected;
+        ed.line.classList.toggle('selected', ed.selected);
+        ed.lbl.classList.toggle('selected', ed.selected);
+        ed.line.setAttribute('marker-end', ed.selected ? 'url(#ex1-m-sel)' : 'url(#ex1-m-def)');
+      });
+    });
+
+    // ── Draw nodes ──
+    NODES.forEach(n => {
+      const g = document.createElementNS('http://www.w3.org/2000/svg','g');
+      g.setAttribute('transform', `translate(${n.x},${n.y})`);
+
+      // Background sections
+      const bgL = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      bgL.setAttribute('r',R); bgL.setAttribute('fill','#eef0f2');
+      bgL.setAttribute('clip-path','url(#ex1-cl)');
+      g.appendChild(bgL);
+
+      const bgTR = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      bgTR.setAttribute('r',R); bgTR.setAttribute('fill','#e8f5e9');
+      bgTR.setAttribute('clip-path','url(#ex1-ctr)');
+      g.appendChild(bgTR);
+
+      const bgBR = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      bgBR.setAttribute('r',R); bgBR.setAttribute('fill','#e3f0fb');
+      bgBR.setAttribute('clip-path','url(#ex1-cbr)');
+      g.appendChild(bgBR);
+
+      // Border
+      const border = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      border.setAttribute('r',R); border.setAttribute('fill','none');
+      border.setAttribute('stroke','#333'); border.setAttribute('stroke-width','2.5');
+      g.appendChild(border);
+
+      // Dividers
+      const lineV = document.createElementNS('http://www.w3.org/2000/svg','line');
+      lineV.setAttribute('x1',0); lineV.setAttribute('y1',-R);
+      lineV.setAttribute('x2',0); lineV.setAttribute('y2',R);
+      lineV.setAttribute('stroke','#555'); lineV.setAttribute('stroke-width','1.6');
+      g.appendChild(lineV);
+
+      const lineH = document.createElementNS('http://www.w3.org/2000/svg','line');
+      lineH.setAttribute('x1',0); lineH.setAttribute('y1',0);
+      lineH.setAttribute('x2',R); lineH.setAttribute('y2',0);
+      lineH.setAttribute('stroke','#555'); lineH.setAttribute('stroke-width','1.6');
+      g.appendChild(lineH);
+
+      // Label text
+      const txt = document.createElementNS('http://www.w3.org/2000/svg','text');
+      txt.setAttribute('x',-R/2); txt.setAttribute('y',5);
+      txt.setAttribute('text-anchor','middle');
+      txt.setAttribute('font-family','Segoe UI,sans-serif');
+      txt.setAttribute('font-size', n.label.length > 2 ? '11' : '14');
+      txt.setAttribute('font-weight','700'); txt.setAttribute('fill','#333');
+      txt.textContent = n.label;
+      g.appendChild(txt);
+
+      // TE/TL input fields via foreignObject
+      // TE input (top-right quadrant)
+      const foTE = document.createElementNS('http://www.w3.org/2000/svg','foreignObject');
+      foTE.setAttribute('x', 2); foTE.setAttribute('y', -R + 4);
+      foTE.setAttribute('width', R - 4); foTE.setAttribute('height', R - 4);
+      const teInput = document.createElement('input');
+      teInput.type = 'number'; teInput.className = 'ex1-input';
+      teInput.placeholder = '?'; teInput.setAttribute('aria-label', `TE knooppunt ${n.label}`);
+      if (n.readonly_te) {
+        teInput.value = n.te;
+        teInput.readOnly = true;
+        teInput.classList.add('readonly');
+      }
+      foTE.appendChild(teInput);
+      g.appendChild(foTE);
+      inputEls[n.id + '-te'] = teInput;
+
+      // TL input (bottom-right quadrant)
+      const foTL = document.createElementNS('http://www.w3.org/2000/svg','foreignObject');
+      foTL.setAttribute('x', 2); foTL.setAttribute('y', 2);
+      foTL.setAttribute('width', R - 4); foTL.setAttribute('height', R - 4);
+      const tlInput = document.createElement('input');
+      tlInput.type = 'number'; tlInput.className = 'ex1-input';
+      tlInput.placeholder = '?'; tlInput.setAttribute('aria-label', `TL knooppunt ${n.label}`);
+      foTL.appendChild(tlInput);
+      g.appendChild(foTL);
+      inputEls[n.id + '-tl'] = tlInput;
+
+      // Small TE/TL labels
+      const teLbl = document.createElementNS('http://www.w3.org/2000/svg','text');
+      teLbl.setAttribute('x', R - 4); teLbl.setAttribute('y', -R + 12);
+      teLbl.setAttribute('text-anchor','end');
+      teLbl.setAttribute('font-family','Segoe UI,sans-serif');
+      teLbl.setAttribute('font-size','7'); teLbl.setAttribute('fill','#155724');
+      teLbl.setAttribute('pointer-events','none');
+      teLbl.textContent = 'TE';
+      g.appendChild(teLbl);
+
+      const tlLbl = document.createElementNS('http://www.w3.org/2000/svg','text');
+      tlLbl.setAttribute('x', R - 4); tlLbl.setAttribute('y', R - 4);
+      tlLbl.setAttribute('text-anchor','end');
+      tlLbl.setAttribute('font-family','Segoe UI,sans-serif');
+      tlLbl.setAttribute('font-size','7'); tlLbl.setAttribute('fill','#004085');
+      tlLbl.setAttribute('pointer-events','none');
+      tlLbl.textContent = 'TL';
+      g.appendChild(tlLbl);
+
+      nodesG.appendChild(g);
+
+      // Store border ref for validation highlighting
+      n._border = border;
+    });
+
+    // ── Validation ──
+    function validate() {
+      let correct = 0, total = 0;
+      const feedback = document.getElementById('ex1-feedback');
+
+      // Check TE/TL values
+      NODES.forEach(n => {
+        // TE
+        const teEl = inputEls[n.id + '-te'];
+        const teVal = teEl.value.trim() === '' ? NaN : parseInt(teEl.value, 10);
+        total++;
+        if (teVal === n.te) {
+          teEl.classList.remove('wrong');
+          teEl.classList.add('correct');
+          correct++;
+        } else {
+          teEl.classList.remove('correct');
+          teEl.classList.add('wrong');
+          teEl.value = teEl.value.trim() === '' ? '' : teEl.value;
+          teEl.title = 'Fout';
+        }
+
+        // TL
+        const tlEl = inputEls[n.id + '-tl'];
+        const tlVal = tlEl.value.trim() === '' ? NaN : parseInt(tlEl.value, 10);
+        total++;
+        if (tlVal === n.tl) {
+          tlEl.classList.remove('wrong');
+          tlEl.classList.add('correct');
+          correct++;
+        } else {
+          tlEl.classList.remove('correct');
+          tlEl.classList.add('wrong');
+          tlEl.title = 'Fout';
+        }
+      });
+
+      // Check critical path edges
+      let edgesCorrect = 0, edgesTotal = CRITICAL_EDGES.size;
+      let wrongSelections = 0;
+
+      Object.keys(edgeEls).forEach(key => {
+        const ed = edgeEls[key];
+        const shouldBeCrit = CRITICAL_EDGES.has(key);
+        if (shouldBeCrit && ed.selected) edgesCorrect++;
+        if (!shouldBeCrit && ed.selected) wrongSelections++;
+      });
+
+      const pathPerfect = edgesCorrect === edgesTotal && wrongSelections === 0;
+      total += edgesTotal;
+      correct += edgesCorrect;
+      // Penalize wrong selections
+      if (wrongSelections > 0) {
+        // Don't subtract from correct, just note it
+      }
+
+
+      // Feedback message
+      const pct = Math.round(correct / total * 100);
+      let msg = `Score: ${correct}/${total} (${pct}%)`;
+      if (pathPerfect) msg += ' — Kritiek pad correct!';
+      else if (wrongSelections > 0) msg += ` — Kritiek pad: ${wrongSelections} fout geselecteerd.`;
+      else msg += ` — Kritiek pad: ${edgesTotal - edgesCorrect} ontbrekend.`;
+
+      feedback.textContent = msg;
+      if (correct === total && pathPerfect) {
+        feedback.className = 'ex1-feedback success';
+      } else if (pct >= 60) {
+        feedback.className = 'ex1-feedback partial';
+      } else {
+        feedback.className = 'ex1-feedback fail';
+      }
+    }
+
+    function reset() {
+      NODES.forEach(n => {
+        const teEl = inputEls[n.id + '-te'];
+        const tlEl = inputEls[n.id + '-tl'];
+        if (!n.readonly_te) { teEl.value = ''; }
+        tlEl.value = '';
+        teEl.classList.remove('correct','wrong');
+        tlEl.classList.remove('correct','wrong');
+        teEl.title = '';
+        tlEl.title = '';
+        n._border.setAttribute('stroke','#333');
+        n._border.setAttribute('stroke-width','2.5');
+      });
+
+      Object.keys(edgeEls).forEach(key => {
+        const ed = edgeEls[key];
+        ed.selected = false;
+        ed.line.classList.remove('selected');
+        ed.lbl.classList.remove('selected');
+        ed.line.setAttribute('stroke','#888');
+        ed.line.setAttribute('stroke-width','1.8');
+        ed.line.setAttribute('marker-end','url(#ex1-m-def)');
+        ed.line.removeAttribute('stroke-dasharray');
+      });
+
+      document.getElementById('ex1-feedback').textContent = '';
+      document.getElementById('ex1-feedback').className = 'ex1-feedback';
+    }
+
+    document.getElementById('ex1-check').addEventListener('click', validate);
+    document.getElementById('ex1-reset').addEventListener('click', reset);
   })();
 
   /* ── NAV: highlight active link on scroll ──────────────── */

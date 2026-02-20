@@ -1,5 +1,5 @@
 ---
-{"publish":true,"title":"002 Projectplanning","created":"2024-10-11T11:46:22.532+02:00","modified":"2025-09-11T11:56:49.275+02:00","cssclasses":""}
+{"publish":true,"title":"002 Projectplanning","created":"2025-08-26T10:37:01.252+02:00","modified":"2026-02-20T11:54:56.937+01:00","cssclasses":""}
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -34,7 +34,7 @@ Om een goede projectplanning te maken kan gebruik gemaakt worden van software vo
 > [!note] DEFINITIE: PERT
 > PERT (Program Evaluation and Review Technique) is een hulpmiddel voor de bedrijfsleiding bij de analyse en planning van projecten. Hierbij wordt gebruik gemaakt van een grafische voorstelling, het netwerk, om de samenhang tussen de verschillende werkzaamheden aan te geven. [[References/@schegget.hamelink_1993]]
 
-Projecten zijn opgebouwd uit een aantal activiteiten. Sommige activiteiten dienen achter elkaar te worden uitgevoerd, andere mogen gelijktijdig worden uitgevoerd. Meestal is het zo dat de duur van het project globaal genomen afhankelijk is van een aantal op elkaar aansluitende activiteiten. Indien de tijd voorzien voor de uitvoering van deze activiteiten kan ingekort worden, kan heel het project vroeger klaar zijn. Van andere activiteiten mag de uitvoeringstijd variëren zonder de duur van het project te beïnvloeden.
+Projecten zijn opgebouwd uit een aantal activiteiten. Sommige activiteiten dienen achter elkaar te worden uitgevoerd, andere mogen gelijktijdig worden uitgevoerd. Meestal is het zo dat de duur van het project globaal genomen afhankelijk is van een aantal op elkaar aansluitende activiteiten. Indien de tijd voorzien voor de uitvoering van deze activiteiten kan ingekort worden, kan heel het project vroeger klaar zijn. Van andere activiteiten mag de uitvoeringstijd variëren, zonder de duur van het project te beïnvloeden.
 
 Belangrijke voordelen van netwerkplanning zijn:
 
@@ -322,7 +322,7 @@ In het geval dat de werken vooruit lopen (de droom van iedere projectleider), ka
 
 ##### Taken en taakniveaus
 
-We willen een blokhut plaatsen in de tuin. De blokhut hebben we gekocht als een bouwpakket. De bouwelementen zullen voorhanden zijn vanaf de leveringsdatum: dinsdag 8 oktober 2024.
+We willen een blokhut plaatsen in de tuin. De blokhut hebben we gekocht als een bouwpakket. De bouwelementen zullen voorhanden zijn vanaf de leveringsdatum: dinsdag 14 oktober 2025.
 
 Materialen die eveneens aangekocht werden zijn zand, kiezelstenen en cement. De blokhut zal gebouwd worden met drie personen, ze zullen beginnen te bouwen op de dag van de levering.
 
@@ -363,7 +363,7 @@ De volgende taken zullen uitgevoerd moeten worden
 
 - Creëer een nieuw projectplan.
 - Geef de projectgegevens in.
-- De vaste startdatum is voorzien op `dinsdag 8 oktober 2024`.
+- De vaste startdatum is voorzien op `dinsdag 14 oktober 2025`.
 - De titel van het project, extra informatie, de naam van de auteur en de manager mag je zelf bepalen.
 - Nu moeten de taken voorzien worden van hun geschatte tijdsduur (t$_e$) en ook de taakafhankelijkheden moeten aangebracht worden:
 	- Zorg eerst voor een goede uitlijning van de taakniveaus (hoofd- en subtaken).
@@ -409,7 +409,7 @@ Tot nu toe hebben we verondersteld te werken met de basiskalender, zoals die sta
 
 Voor onze werklieden dient deze basiskalender aangepast te worden. We beginnen ’s morgens te werken om 8:30 uur en we werken tot 17:00 met een half uur middagpauze.
 
-Donderdag 10 oktober is een collectieve sluitingsdag en daardoor wordt er dan niet gewerkt. Peter neemt, bijkomend, verlof op vrijdag 11 oktober.
+Donderdag 16 oktober is een collectieve sluitingsdag en daardoor wordt er dan niet gewerkt. Peter neemt, bijkomend, verlof op vrijdag 17 oktober.
 
 Hieronder vind je opnieuw de taken, maar nu met de toewijzingen van resources.
 
@@ -454,9 +454,8 @@ Hieronder vind je opnieuw de taken, maar nu met de toewijzingen van resources.
 
 Let, bij het toewijzen van resources, op de bijkomende elementen:
 
-• Taak `4. Plan bespreken met werklieden` is een taak die niet in tijdsduur afneemt als er meer resources aan worden toegewezen. Alle resources werken voor 100% mee aan deze taak.
-
-• Taak `33. Eindcontrole voor oplevering` is eveneens een taak die nooit in duur zal afnemen, ongeacht het aantal toegewezen resources.
+- Taak `4. Plan bespreken met werklieden` is een taak die niet in tijdsduur afneemt als er meer resources aan worden toegewezen. Alle resources werken voor 100% mee aan deze taak.
+- Taak `33. Eindcontrole voor oplevering` is eveneens een taak die nooit in duur zal afnemen, ongeacht het aantal toegewezen resources.
 
 ##### Vaste duur/ Vast Werk
 
@@ -474,11 +473,9 @@ Let, bij het toewijzen van resources, op de bijkomende elementen:
 - Zoek in de projectstatistieken op over hoeveel dagen het project zal uitgestrekt worden.
 - In de projectstatistieken vind je eveneens het aantal uren dat gepresteerd dienen te worden tijdens die periode?
 - Lees in de statistieken af hoeveel de totaal geschatte kost bedraagt van dit bouwproject?
-- Kunnen de resources niet efficiënter toegewezen worden? Omwille van het verlof van Peter worden de taken waaraan Peter toegewezen is lang opgeschort en daardoor is de doorlooptijd van het project groter dan nodig. Verwijder Peter uit de lijst van resources voor deze taken en wijs, eventueel, Koen aan deze taken toe.
-- Als je de `Resource Graph` (nl: `Resourcegrafiek`) bekijkt, zie je dat Koen en Jan dagen hebben met een overbezetting. Maak gebruik van `Resource Leveling` (nl: `Resource herverdeling`) om de overuren weg te werken.
+- Kunnen de resources niet efficiënter toegewezen worden? Omwille van het verlof van Peter worden de taken waaraan Peter toegewezen is lang opgeschort en daardoor is de doorlooptijd van het project groter dan nodig. Verwijder Peter uit de lijst van resources voor deze taken en pas de duur van de taak aan in functie van de wijziging.
 - Hoeveel bedraagt de doorlooptijd van het totale project, na deze wijzigingen? De totaal gepresteerde uren van Koen, Jan en Peter vind je terug via de weergave `Resource Usage` (nl: `Resourcegebruik`). De kosten van het gebruik van de beschikbare resources vind je in de `Resource Sheet` (nl: `Resourceformulier`) -> Rechtermuis `Costs` (nl: `Kosten`).
 - In grote organisaties wordt aan meerdere projecten tegelijkertijd gewerkt. De resources mogen dan niet toegekend worden aan één project, maar moeten gedeeld worden door alle uitvoerbare projecten. Deze resources worden dan ook niet opgenomen in het project zelf, maar worden ter beschikking gesteld in een resourcepool. Bij het toewijzen van resources aan taken in een project gebruiken de uitvoerbare projecten de resources uit de pool.  
-	- Los bovenstaande oefening opnieuw op, maar maak nu gebruik van een “Resourcepool”.
 
 ##### Voortgangscontrole en beheer van kosten
 
@@ -497,13 +494,13 @@ De werkelijke voortgang kan op meerdere manieren aangegeven worden
 
 - Automatisch
 
-    - Zet de statusdatum op 10 oktober 2024 en kies voor automatisch bijwerken. Alle taken worden dan verondersteld om uitgevoerd te zijn binnen de geschatte planning. Deze methode kan natuurlijk alleen gebruikt worden indien de uitvoering vrijwel gelijk loopt met de planning. Indien dit niet zo is, vullen we de gepresteerde werktijden beter zelf aan. Dit laatste zullen we doen voor de rest van de uitvoering.
+    - Zet de statusdatum op 16 oktober 2025 en kies voor automatisch bijwerken. Alle taken worden dan verondersteld om uitgevoerd te zijn binnen de geschatte planning. Deze methode kan natuurlijk alleen gebruikt worden indien de uitvoering vrijwel gelijk loopt met de planning. Indien dit niet zo is, vullen we de gepresteerde werktijden beter zelf aan. Dit laatste zullen we doen voor de rest van de uitvoering.
         - Voeg een voortgangslijn in.
         - Zoek in de projectstatistieken op voor hoeveel procent ons project al voltooid is. Kijk eveneens eens naar de kosten die al gemaakt zijn en de kosten die nog zullen ontstaan.
 
 -  Manueel
 
-    -  Voor de taken die nog uitgevoerd moeten worden op vrijdag 11 oktober, zullen we de voortgang zelf invullen. We veronderstellen dat de tijdsduur van alle taken, behalve voor het plaatsen van de ramen en deuren, correct geschat is. Voor het plaatsen van de ramen en deuren heeft Jan een half uur meer nodig dan voorzien. Het manueel invoeren van gewerkte tijden kan je best doen via de weergave “Taakbeheer”
+    -  Voor de taken die nog uitgevoerd moeten worden op vrijdag 17 oktober, zullen we de voortgang zelf invullen. We veronderstellen dat de tijdsduur van alle taken, behalve voor het plaatsen van de ramen en deuren, correct geschat is. Voor het plaatsen van de ramen en deuren heeft Jan een half uur meer nodig dan voorzien. Het manueel invoeren van gewerkte tijden kan je best doen via de weergave “Taakbeheer”
         - Zoek in de projectstatistieken op of er extra kosten gemaakt werden door het extra half uur aan werk.
 
 ##### Beheer van kosten

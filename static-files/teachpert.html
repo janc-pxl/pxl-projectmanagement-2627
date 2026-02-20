@@ -1324,6 +1324,213 @@
       </div>
 
     </div><!-- /demo-card -->
+
+    <!-- ── DEMO 2: RELATIELIJN (0-LIJN) ────────────────────── -->
+    <div class="definitie" style="margin-top:2rem; margin-bottom:1.25rem;">
+      <div class="def-label">Demo 2 — Waarom heb je een relatielijn (0-lijn) nodig?</div>
+      <p>Studenten vragen zich vaak af: <em>wanneer</em> gebruik je een relatielijn? Dit voorbeeld toont stap voor stap
+         waarom een 0-lijn soms <strong>onmisbaar</strong> is om afhankelijkheden correct voor te stellen.</p>
+    </div>
+
+    <!-- Probleemschets -->
+    <div class="card">
+      <div class="card-title">🏗 Voorbeeld — Renovatie van een klaslokaal</div>
+      <p style="color:var(--muted); font-size:.9rem; margin-bottom:1rem;">
+        Een school renoveert een klaslokaal. Er zijn vier activiteiten:
+      </p>
+      <table class="slack-table" style="margin-bottom:1.25rem;">
+        <thead>
+          <tr><th>Activiteit</th><th>Beschrijving</th><th>Duurtijd</th><th>Hangt af van</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Act 1</strong></td><td>Elektriciteit vernieuwen</td><td>4 weken</td><td>—</td></tr>
+          <tr><td><strong>Act 2</strong></td><td>Muren schilderen</td><td>3 weken</td><td>—</td></tr>
+          <tr><td><strong>Act 3</strong></td><td>Verlichting ophangen</td><td>2 weken</td><td>Act 1</td></tr>
+          <tr style="background:#eef5fb;">
+            <td><strong>Act 4</strong></td><td>Meubels plaatsen</td><td>1 week</td>
+            <td><strong>Act 1 én Act 2</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pass-grid" style="margin-bottom:1.25rem;">
+        <div class="pass-card forward" style="background:#fff8f0; border-color:#fed7aa;">
+          <div class="pass-title" style="color:#9a3412;">⚠ Het probleem</div>
+          <p class="pass-desc">
+            Act 4 hangt af van <strong>zowel</strong> Act 1 als Act 2. Maar Act 3 hangt <strong>enkel</strong> af van Act 1.
+          </p>
+          <div class="pass-rule" style="background:#fef3c7;">
+            Als je Act 1 en Act 2 naar <em>hetzelfde</em> knooppunt laat lopen, dan zou Act 3 óók afhangen van Act 2 — en dat klopt niet!
+          </div>
+        </div>
+        <div class="pass-card backward" style="background:#f0fdf4; border-color:#bbf7d0;">
+          <div class="pass-title" style="color:#166534;">✅ De oplossing</div>
+          <p class="pass-desc">
+            Gebruik een <strong>relatielijn (0-lijn)</strong> van knooppunt II naar III.
+          </p>
+          <div class="pass-rule" style="background:#dcfce7;">
+            De 0-lijn legt vast dat Act 4 pas kan starten als Act 1 klaar is, <strong>zonder</strong> dat Act 3 ook van Act 2 afhangt.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-card">
+
+      <!-- Header -->
+      <div class="demo-header">
+        <div>
+          <div class="demo-step-counter" id="demo2-step-counter">Stap 0 van 9</div>
+          <div class="demo-card-title" id="demo2-title">Netwerk met relatielijn</div>
+        </div>
+        <span class="demo-phase-badge phase-start" id="demo2-phase-badge">Start</span>
+      </div>
+
+      <!-- SVG Network -->
+      <div class="demo-network-wrap">
+        <svg id="demo2-svg" viewBox="0 0 560 340" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="d2-m-def"   markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#888"/></marker>
+            <marker id="d2-m-act"   markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#457b9d"/></marker>
+            <marker id="d2-m-crit"  markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#e63946"/></marker>
+            <marker id="d2-m-relay" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#bbb"/></marker>
+            <marker id="d2-m-r-act" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#457b9d"/></marker>
+            <clipPath id="d2cl-l" ><rect x="-36" y="-36" width="36" height="72"/></clipPath>
+            <clipPath id="d2cl-tr"><rect x="0"   y="-36" width="36" height="36"/></clipPath>
+            <clipPath id="d2cl-br"><rect x="0"   y="0"   width="36" height="36"/></clipPath>
+          </defs>
+
+          <!-- ── ARROWS ─────────────────────────────────────────── -->
+
+          <!-- I → II  Act 1: Elektriciteit 4w -->
+          <g id="d2-arr-I-II">
+            <line id="d2-line-I-II" x1="122" y1="140" x2="236" y2="86"
+                  stroke="#888" stroke-width="1.8" marker-end="url(#d2-m-def)"/>
+            <text id="d2-lbl-I-II" x="160" y="97" text-anchor="middle"
+                  font-family="Segoe UI,sans-serif" font-size="11" fill="#999">Act 1: Elektriciteit — 4w</text>
+          </g>
+
+          <!-- I → III  Act 2: Schilderen 3w -->
+          <g id="d2-arr-I-III">
+            <line id="d2-line-I-III" x1="122" y1="175" x2="236" y2="234"
+                  stroke="#888" stroke-width="1.8" marker-end="url(#d2-m-def)"/>
+            <text id="d2-lbl-I-III" x="155" y="230" text-anchor="middle"
+                  font-family="Segoe UI,sans-serif" font-size="11" fill="#999">Act 2: Schilderen — 3w</text>
+          </g>
+
+          <!-- II → III  Relatielijn 0 -->
+          <g id="d2-arr-II-III">
+            <line id="d2-line-II-III" x1="270" y1="106" x2="270" y2="204"
+                  stroke="#bbb" stroke-width="1.6" stroke-dasharray="6,4"
+                  marker-end="url(#d2-m-relay)"/>
+            <text id="d2-lbl-II-III" x="284" y="160" text-anchor="start"
+                  font-family="Georgia,serif" font-size="15" font-weight="700" fill="#bbb">0</text>
+          </g>
+
+          <!-- II → IV  Act 3: Verlichting 2w -->
+          <g id="d2-arr-II-IV">
+            <line id="d2-line-II-IV" x1="303" y1="62" x2="425" y2="132"
+                  stroke="#888" stroke-width="1.8" marker-end="url(#d2-m-def)"/>
+            <text id="d2-lbl-II-IV" x="380" y="78" text-anchor="middle"
+                  font-family="Segoe UI,sans-serif" font-size="11" fill="#999">Act 3: Verlichting — 2w</text>
+          </g>
+
+          <!-- III → IV  Act 4: Meubels 1w -->
+          <g id="d2-arr-III-IV">
+            <line id="d2-line-III-IV" x1="303" y1="232" x2="425" y2="175"
+                  stroke="#888" stroke-width="1.8" marker-end="url(#d2-m-def)"/>
+            <text id="d2-lbl-III-IV" x="380" y="224" text-anchor="middle"
+                  font-family="Segoe UI,sans-serif" font-size="11" fill="#999">Act 4: Meubels — 1w</text>
+          </g>
+
+          <!-- ── NODES ────────────────────────────────────────────── -->
+
+          <!-- Node I  (90, 155) -->
+          <g transform="translate(90,155)">
+            <circle r="36" fill="#eef0f2" clip-path="url(#d2cl-l)"/>
+            <circle r="36" fill="#e8f5e9" clip-path="url(#d2cl-tr)"/>
+            <circle r="36" fill="#e3f0fb" clip-path="url(#d2cl-br)"/>
+            <circle r="36" fill="none" stroke="#333" stroke-width="2.5" id="d2-bdr-I"/>
+            <line x1="0" y1="-36" x2="0"  y2="36"  stroke="#555" stroke-width="1.6"/>
+            <line x1="0" y1="0"   x2="36" y2="0"   stroke="#555" stroke-width="1.6"/>
+            <text x="-14" y="5" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="15" font-weight="700" fill="#333">I</text>
+            <text id="d2-te-I" x="18" y="-11" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+            <text id="d2-tl-I" x="18" y="16"  text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+          </g>
+
+          <!-- Node II  (270, 70) -->
+          <g transform="translate(270,70)">
+            <circle r="36" fill="#eef0f2" clip-path="url(#d2cl-l)"/>
+            <circle r="36" fill="#e8f5e9" clip-path="url(#d2cl-tr)"/>
+            <circle r="36" fill="#e3f0fb" clip-path="url(#d2cl-br)"/>
+            <circle r="36" fill="none" stroke="#333" stroke-width="2.5" id="d2-bdr-II"/>
+            <line x1="0" y1="-36" x2="0"  y2="36"  stroke="#555" stroke-width="1.6"/>
+            <line x1="0" y1="0"   x2="36" y2="0"   stroke="#555" stroke-width="1.6"/>
+            <text x="-13" y="5" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#333">II</text>
+            <text id="d2-te-II" x="18" y="-11" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+            <text id="d2-tl-II" x="18" y="16"  text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+          </g>
+
+          <!-- Node III  (270, 240) -->
+          <g transform="translate(270,240)">
+            <circle r="36" fill="#eef0f2" clip-path="url(#d2cl-l)"/>
+            <circle r="36" fill="#e8f5e9" clip-path="url(#d2cl-tr)"/>
+            <circle r="36" fill="#e3f0fb" clip-path="url(#d2cl-br)"/>
+            <circle r="36" fill="none" stroke="#333" stroke-width="2.5" id="d2-bdr-III"/>
+            <line x1="0" y1="-36" x2="0"  y2="36"  stroke="#555" stroke-width="1.6"/>
+            <line x1="0" y1="0"   x2="36" y2="0"   stroke="#555" stroke-width="1.6"/>
+            <text x="-13" y="5" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#333">III</text>
+            <text id="d2-te-III" x="18" y="-11" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+            <text id="d2-tl-III" x="18" y="16"  text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+          </g>
+
+          <!-- Node IV  (460, 155) -->
+          <g transform="translate(460,155)">
+            <circle r="36" fill="#eef0f2" clip-path="url(#d2cl-l)"/>
+            <circle r="36" fill="#e8f5e9" clip-path="url(#d2cl-tr)"/>
+            <circle r="36" fill="#e3f0fb" clip-path="url(#d2cl-br)"/>
+            <circle r="36" fill="none" stroke="#333" stroke-width="2.5" id="d2-bdr-IV"/>
+            <line x1="0" y1="-36" x2="0"  y2="36"  stroke="#555" stroke-width="1.6"/>
+            <line x1="0" y1="0"   x2="36" y2="0"   stroke="#555" stroke-width="1.6"/>
+            <text x="-13" y="5" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="13" font-weight="700" fill="#333">IV</text>
+            <text id="d2-te-IV" x="18" y="-11" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+            <text id="d2-tl-IV" x="18" y="16"  text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="12" font-weight="700" fill="#ccc">—</text>
+          </g>
+
+          <!-- Slack labels (result step only) -->
+          <g id="d2-slack" opacity="0" style="transition:opacity .3s;">
+            <rect x="55"  y="198" width="72" height="18" rx="9" fill="#16a34a"/>
+            <text x="91"  y="211" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">speling = 0</text>
+            <rect x="310" y="55"  width="72" height="18" rx="9" fill="#16a34a"/>
+            <text x="346" y="68"  text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">speling = 0</text>
+            <rect x="230" y="283" width="72" height="18" rx="9" fill="#2563eb"/>
+            <text x="266" y="296" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">speling = 1</text>
+            <rect x="420" y="198" width="72" height="18" rx="9" fill="#16a34a"/>
+            <text x="456" y="211" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">speling = 0</text>
+          </g>
+
+        </svg>
+      </div><!-- /demo-network-wrap -->
+
+      <!-- Explanation -->
+      <div class="demo-explanation" id="demo2-explanation">
+        Dit netwerk heeft <strong>4 knooppunten</strong>, <strong>4 activiteiten</strong> en een <strong>relatielijn (0-lijn)</strong>.
+        De 0-lijn van II naar III zorgt ervoor dat Act 4 (meubels) pas kan starten als <em>zowel</em> het schilderen (Act 2) <em>als</em> de elektriciteit (Act 1) klaar zijn — terwijl Act 3 (verlichting) <em>enkel</em> afhangt van Act 1.
+        Klik op <strong>Volgende →</strong> om te starten.
+      </div>
+
+      <!-- Navigation -->
+      <div class="demo-nav">
+        <button class="demo-btn demo-btn-prev" id="demo2-prev" disabled>← Vorige</button>
+        <div class="demo-dots" id="demo2-dots"></div>
+        <button class="demo-btn demo-btn-next" id="demo2-next">Volgende →</button>
+      </div>
+      <div class="demo-footer">
+        <button class="demo-btn-reset" id="demo2-reset">↺ Opnieuw beginnen</button>
+      </div>
+
+    </div><!-- /demo-card demo2 -->
+
   </section><!-- /demo -->
 
   <!-- ────────────────────────────────────────────────────── -->
@@ -1640,6 +1847,169 @@
     document.getElementById('demo-next').addEventListener('click',  () => { if (cur < STEPS.length - 1) render(++cur); });
     document.getElementById('demo-prev').addEventListener('click',  () => { if (cur > 0)                render(--cur); });
     document.getElementById('demo-reset').addEventListener('click', () => { cur = 0; render(0); });
+
+    render(0);
+  })();
+
+  /* ── DEMO 2: RELATIELIJN ──────────────────────────────── */
+  (function () {
+    const NODES  = ['I','II','III','IV'];
+    const ARROWS = ['I-II','I-III','II-III','II-IV','III-IV'];
+    const DASHED = new Set(['II-III']);
+
+    const STEPS = [
+      { phase:'start', lbl:'Start',
+        title:'Netwerk met relatielijn',
+        expl:'Dit netwerk heeft <strong>4 knooppunten</strong>, <strong>4 activiteiten</strong> en een <strong>relatielijn (0-lijn)</strong> van II naar III.' +
+             '<br><br>De 0-lijn zorgt ervoor dat Act 4 (meubels plaatsen) pas kan starten als <em>zowel</em> de elektriciteit (Act 1) <em>als</em> het schilderen (Act 2) klaar is — terwijl Act 3 (verlichting) <em>enkel</em> afhangt van Act 1.' +
+             '<br><br>Klik op <strong>Volgende →</strong> om te starten.',
+        te:{}, tl:{}, hi:[], ha:[], crit:[] },
+
+      { phase:'start', lbl:'⚠ Probleem',
+        title:'Waarom is de 0-lijn nodig?',
+        expl:'<strong>Zonder de 0-lijn:</strong><br>' +
+             'Als Act 1 en Act 2 naar <em>hetzelfde</em> knooppunt zouden lopen, dan zou Act 3 (verlichting) ook afhangen van Act 2 (schilderen). Maar dat klopt niet — de verlichting hangt <em>enkel</em> af van de elektriciteit!<br><br>' +
+             '<strong>Met de 0-lijn:</strong><br>' +
+             'Act 1 komt aan in knooppunt II. Van daaruit vertrekt Act 3 (enkel afhankelijk van Act 1). De 0-lijn stuurt het signaal "<em>Act 1 is klaar</em>" door naar knooppunt III, waar Act 4 ook wacht op Act 2.',
+        te:{}, tl:{}, hi:[], ha:['II-III'], crit:[] },
+
+      { phase:'forward', lbl:'➡ Voorwaartse gang',
+        title:'Stap 1 — Knooppunt I',
+        expl:'Het <strong>startpunt</strong> heeft altijd <strong>T<sub>E</sub>(I) = 0</strong>.',
+        te:{I:0}, tl:{}, hi:['I'], ha:[], crit:[] },
+
+      { phase:'forward', lbl:'➡ Voorwaartse gang',
+        title:'Stap 2 — Knooppunt II',
+        expl:'Één inkomend pad via Act 1 (Elektriciteit, 4w):<br>' +
+             '<strong>T<sub>E</sub>(II) = T<sub>E</sub>(I) + 4 = 0 + 4 = 4</strong>',
+        te:{I:0,II:4}, tl:{}, hi:['II'], ha:['I-II'], crit:[] },
+
+      { phase:'forward', lbl:'➡ Voorwaartse gang',
+        title:'Stap 3 — Knooppunt III ⭐',
+        expl:'Twee inkomende paden:<br>' +
+             '&bull; Via Act 2 (Schilderen, 3w): T<sub>E</sub>(I) + 3 = <strong>3</strong><br>' +
+             '&bull; Via <strong>relatielijn</strong> van II (0w): T<sub>E</sub>(II) + 0 = <strong>4</strong><br><br>' +
+             '📌 Neem de <strong>grootste</strong>: <strong>T<sub>E</sub>(III) = 4</strong><br><br>' +
+             '💡 <em>Zonder de 0-lijn zou T<sub>E</sub>(III) = 3 zijn. Dan zou Act 4 op week 3 starten, terwijl de elektriciteit pas op week 4 klaar is!</em>',
+        te:{I:0,II:4,III:4}, tl:{}, hi:['III'], ha:['I-III','II-III'], crit:[] },
+
+      { phase:'forward', lbl:'➡ Voorwaartse gang',
+        title:'Stap 4 — Knooppunt IV',
+        expl:'Twee inkomende paden:<br>' +
+             '&bull; Via Act 3 (Verlichting, 2w): T<sub>E</sub>(II) + 2 = 4 + 2 = <strong>6</strong><br>' +
+             '&bull; Via Act 4 (Meubels, 1w): T<sub>E</sub>(III) + 1 = 4 + 1 = 5<br><br>' +
+             '📌 Neem de <strong>grootste</strong>: <strong>T<sub>E</sub>(IV) = 6</strong><br>' +
+             '✅ Totale projectduur: <strong>6 weken</strong>.',
+        te:{I:0,II:4,III:4,IV:6}, tl:{}, hi:['IV'], ha:['II-IV','III-IV'], crit:[] },
+
+      { phase:'backward', lbl:'⬅ Achterwaartse gang',
+        title:'Stap 5 — Knooppunt IV',
+        expl:'T<sub>L</sub> van het laatste knooppunt = T<sub>E</sub>:<br>' +
+             '<strong>T<sub>L</sub>(IV) = T<sub>E</sub>(IV) = 6</strong>',
+        te:{I:0,II:4,III:4,IV:6}, tl:{IV:6}, hi:['IV'], ha:[], crit:[] },
+
+      { phase:'backward', lbl:'⬅ Achterwaartse gang',
+        title:'Stap 6 — Knooppunt III',
+        expl:'Één uitgaande activiteit (Act 4, 1w):<br>' +
+             '<strong>T<sub>L</sub>(III) = T<sub>L</sub>(IV) − 1 = 6 − 1 = 5</strong>',
+        te:{I:0,II:4,III:4,IV:6}, tl:{IV:6,III:5}, hi:['III'], ha:['III-IV'], crit:[] },
+
+      { phase:'backward', lbl:'⬅ Achterwaartse gang',
+        title:'Stap 7 — Knooppunt II ⭐',
+        expl:'Twee uitgaande verbindingen:<br>' +
+             '&bull; Via Act 3 naar IV: T<sub>L</sub>(IV) − 2 = 6 − 2 = <strong>4</strong><br>' +
+             '&bull; Via <strong>relatielijn</strong> naar III: T<sub>L</sub>(III) − 0 = 5 − 0 = 5<br><br>' +
+             '📌 Neem de <strong>kleinste</strong>: <strong>T<sub>L</sub>(II) = 4</strong><br><br>' +
+             '💡 <em>De 0-lijn propageert ook in de achterwaartse richting! Ze geeft de T<sub>L</sub>-waarde van III door naar II.</em>',
+        te:{I:0,II:4,III:4,IV:6}, tl:{IV:6,III:5,II:4}, hi:['II'], ha:['II-IV','II-III'], crit:[] },
+
+      { phase:'backward', lbl:'⬅ Achterwaartse gang',
+        title:'Stap 8 — Knooppunt I',
+        expl:'Twee uitgaande activiteiten:<br>' +
+             '&bull; Via Act 1 naar II: T<sub>L</sub>(II) − 4 = 4 − 4 = <strong>0</strong><br>' +
+             '&bull; Via Act 2 naar III: T<sub>L</sub>(III) − 3 = 5 − 3 = 2<br><br>' +
+             '📌 Neem de <strong>kleinste</strong>: <strong>T<sub>L</sub>(I) = 0</strong>',
+        te:{I:0,II:4,III:4,IV:6}, tl:{IV:6,III:5,II:4,I:0}, hi:['I'], ha:['I-II','I-III'], crit:[] },
+
+      { phase:'result', lbl:'🔴 Resultaat',
+        title:'Stap 9 — Speling &amp; kritiek pad',
+        expl:'Speling = T<sub>L</sub> − T<sub>E</sub>:<br>' +
+             '&bull; I:   0 − 0 = <strong>0</strong> ✅ kritiek<br>' +
+             '&bull; II:  4 − 4 = <strong>0</strong> ✅ kritiek<br>' +
+             '&bull; III: 5 − 4 = <strong>1</strong> (positieve speling)<br>' +
+             '&bull; IV:  6 − 6 = <strong>0</strong> ✅ kritiek<br><br>' +
+             '🔴 <strong>Kritiek pad: I → II → IV</strong> (Act 1 → Act 3, totaal 6 weken)<br><br>' +
+             '💡 De 0-lijn zelf ligt <em>niet</em> op het kritieke pad — knooppunt III heeft speling 1. Maar zonder de 0-lijn zou de berekening fout zijn!',
+        te:{I:0,II:4,III:4,IV:6}, tl:{IV:6,III:5,II:4,I:0},
+        hi:[], ha:[], crit:['I','II','IV','I-II','II-IV'] }
+    ];
+
+    const PHASE_CLS = { start:'phase-start', forward:'phase-forward', backward:'phase-backward', result:'phase-result' };
+    let cur = 0;
+
+    const dotsEl = document.getElementById('demo2-dots');
+    STEPS.forEach(() => {
+      const d = document.createElement('div');
+      d.className = 'demo-dot';
+      dotsEl.appendChild(d);
+    });
+
+    function render(idx) {
+      const s = STEPS[idx];
+      document.getElementById('demo2-step-counter').textContent = `Stap ${idx} van ${STEPS.length - 1}`;
+      document.getElementById('demo2-title').innerHTML = s.title;
+      document.getElementById('demo2-explanation').innerHTML = s.expl;
+      const badge = document.getElementById('demo2-phase-badge');
+      badge.textContent = s.lbl;
+      badge.className = 'demo-phase-badge ' + (PHASE_CLS[s.phase] || 'phase-start');
+
+      NODES.forEach(n => {
+        const te = document.getElementById('d2-te-' + n);
+        const tl = document.getElementById('d2-tl-' + n);
+        if (te) { const v = s.te[n]; te.textContent = v !== undefined ? v : '—'; te.setAttribute('fill', v !== undefined ? '#155724' : '#ccc'); }
+        if (tl) { const v = s.tl[n]; tl.textContent = v !== undefined ? v : '—'; tl.setAttribute('fill', v !== undefined ? '#004085' : '#ccc'); }
+      });
+
+      NODES.forEach(n => {
+        const bdr = document.getElementById('d2-bdr-' + n);
+        if (!bdr) return;
+        const isCrit = s.crit.includes(n);
+        const isHi   = s.hi.includes(n);
+        bdr.setAttribute('stroke',       isCrit ? '#e63946' : isHi ? '#457b9d' : '#555');
+        bdr.setAttribute('stroke-width', isCrit ? '4'       : isHi ? '3.5'    : '2');
+      });
+
+      ARROWS.forEach(a => {
+        const line = document.getElementById('d2-line-' + a);
+        const lbl  = document.getElementById('d2-lbl-' + a);
+        if (!line) return;
+        const isDash = DASHED.has(a);
+        const isCrit = s.crit.includes(a);
+        const isHi   = s.ha.includes(a);
+        let col, w, mk;
+        if (isCrit)      { col = '#e63946'; w = '3';   mk = 'url(#d2-m-crit)'; }
+        else if (isHi)   { col = '#457b9d'; w = '2.5'; mk = isDash ? 'url(#d2-m-r-act)' : 'url(#d2-m-act)'; }
+        else             { col = isDash ? '#ccc' : '#aaa'; w = isDash ? '1.4' : '1.8'; mk = isDash ? 'url(#d2-m-relay)' : 'url(#d2-m-def)'; }
+        line.setAttribute('stroke',       col);
+        line.setAttribute('stroke-width', w);
+        line.setAttribute('marker-end',   mk);
+        if (lbl) lbl.setAttribute('fill', isCrit ? '#e63946' : isHi ? '#457b9d' : '#ccc');
+      });
+
+      const slk = document.getElementById('d2-slack');
+      if (slk) slk.setAttribute('opacity', s.phase === 'result' ? '1' : '0');
+
+      document.getElementById('demo2-prev').disabled = idx === 0;
+      document.getElementById('demo2-next').disabled = idx === STEPS.length - 1;
+      document.querySelectorAll('#demo2-dots .demo-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === idx);
+        d.classList.toggle('done',   i < idx);
+      });
+    }
+
+    document.getElementById('demo2-next').addEventListener('click',  () => { if (cur < STEPS.length - 1) render(++cur); });
+    document.getElementById('demo2-prev').addEventListener('click',  () => { if (cur > 0)                render(--cur); });
+    document.getElementById('demo2-reset').addEventListener('click', () => { cur = 0; render(0); });
 
     render(0);
   })();

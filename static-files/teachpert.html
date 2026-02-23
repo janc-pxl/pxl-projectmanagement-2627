@@ -708,6 +708,18 @@
     .ex3-popup-ok { background: var(--blue); color: #fff; }
     .ex3-popup-ok:hover { background: #2d6a8f; }
     .ex3-popup-cancel { background: var(--bg); color: var(--text); border: 1px solid var(--border) !important; }
+
+    .ex3-locked { position: relative; pointer-events: none; opacity: .45; filter: grayscale(.4); }
+    .ex3-lock-overlay {
+      position: absolute; inset: 0; z-index: 5; display: flex; align-items: center; justify-content: center;
+      background: rgba(240,242,245,.7); border-radius: 14px; pointer-events: auto;
+    }
+    .ex3-lock-msg {
+      background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem 1.8rem;
+      text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,.08);
+    }
+    .ex3-lock-msg strong { color: var(--primary); }
+    .ex3-lock-msg p { font-size: .88rem; color: var(--muted); margin-top: .3rem; }
   </style>
 </head>
 <body>
@@ -1701,7 +1713,13 @@
     </div>
 
     <!-- STAP 2: Netwerk bouwen -->
-    <div class="card" id="ex3-builder-card">
+    <div class="card ex3-locked" id="ex3-builder-card">
+      <div class="ex3-lock-overlay" id="ex3-lock-overlay">
+        <div class="ex3-lock-msg">
+          <strong>🔒 Stap 2 is vergrendeld</strong>
+          <p>Voltooi eerst Stap 1 (alle t<sub>e</sub> waarden correct).</p>
+        </div>
+      </div>
       <div class="card-title">🔨 Stap 2 — Bouw het PERT-netwerk</div>
       <div class="ex1-instructions" style="margin-bottom:1rem;">
         <strong>Instructies:</strong>
@@ -2354,25 +2372,6 @@
       g.appendChild(foTL);
       inputEls[n.id + '-tl'] = tlInput;
 
-      // Small TE/TL labels
-      const teLbl = document.createElementNS('http://www.w3.org/2000/svg','text');
-      teLbl.setAttribute('x', R - 4); teLbl.setAttribute('y', -R + 12);
-      teLbl.setAttribute('text-anchor','end');
-      teLbl.setAttribute('font-family','Segoe UI,sans-serif');
-      teLbl.setAttribute('font-size','7'); teLbl.setAttribute('fill','#155724');
-      teLbl.setAttribute('pointer-events','none');
-      teLbl.textContent = 'TE';
-      g.appendChild(teLbl);
-
-      const tlLbl = document.createElementNS('http://www.w3.org/2000/svg','text');
-      tlLbl.setAttribute('x', R - 4); tlLbl.setAttribute('y', R - 4);
-      tlLbl.setAttribute('text-anchor','end');
-      tlLbl.setAttribute('font-family','Segoe UI,sans-serif');
-      tlLbl.setAttribute('font-size','7'); tlLbl.setAttribute('fill','#004085');
-      tlLbl.setAttribute('pointer-events','none');
-      tlLbl.textContent = 'TL';
-      g.appendChild(tlLbl);
-
       nodesG.appendChild(g);
 
       // Store border ref for validation highlighting
@@ -2645,24 +2644,6 @@
       g.appendChild(foTL);
       node._tlInput = tlInput;
 
-      // Small TE/TL labels
-      var teLbl = document.createElementNS('http://www.w3.org/2000/svg','text');
-      teLbl.setAttribute('x', R - 3); teLbl.setAttribute('y', -R + 10);
-      teLbl.setAttribute('text-anchor','end');
-      teLbl.setAttribute('font-family','Segoe UI,sans-serif');
-      teLbl.setAttribute('font-size','6'); teLbl.setAttribute('fill','#155724');
-      teLbl.setAttribute('pointer-events','none');
-      teLbl.textContent = 'TE';
-      g.appendChild(teLbl);
-      var tlLbl = document.createElementNS('http://www.w3.org/2000/svg','text');
-      tlLbl.setAttribute('x', R - 3); tlLbl.setAttribute('y', R - 3);
-      tlLbl.setAttribute('text-anchor','end');
-      tlLbl.setAttribute('font-family','Segoe UI,sans-serif');
-      tlLbl.setAttribute('font-size','6'); tlLbl.setAttribute('fill','#004085');
-      tlLbl.setAttribute('pointer-events','none');
-      tlLbl.textContent = 'TL';
-      g.appendChild(tlLbl);
-
       nodesG.appendChild(g);
       node.gEl = g;
       nodes.push(node);
@@ -2786,10 +2767,7 @@
       popupDur.value = edge.dur || '';
       popupAct.focus();
 
-      popupAct.onchange = function() {
-        var act = ACTIVITIES.find(function(a) { return a.id === popupAct.value; });
-        if (act) popupDur.value = act.te;
-      };
+      popupAct.onchange = null;
     }
 
     function hideEdgePopup() {
@@ -2959,7 +2937,12 @@
       fb.textContent = 'Score: ' + correct + '/' + ACTIVITIES.length;
       if (correct === ACTIVITIES.length) {
         fb.className = 'ex1-feedback success';
-        fb.textContent += ' — Alle t\u2091 waarden correct!';
+        fb.textContent += ' — Alle t\u2091 waarden correct! Stap 2 is nu ontgrendeld.';
+        // Unlock Stap 2
+        var builderCard = document.getElementById('ex3-builder-card');
+        builderCard.classList.remove('ex3-locked');
+        var lockOverlay = document.getElementById('ex3-lock-overlay');
+        if (lockOverlay) lockOverlay.remove();
       } else {
         fb.className = correct >= 5 ? 'ex1-feedback partial' : 'ex1-feedback fail';
       }

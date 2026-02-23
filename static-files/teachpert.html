@@ -2486,8 +2486,9 @@
       const pct = Math.round(correct / total * 100);
       let msg = `Score: ${correct}/${total} (${pct}%)`;
       if (pathPerfect) msg += ' — Kritiek pad correct!';
-      else if (wrongSelections > 0) msg += ` — Kritiek pad: ${wrongSelections} fout geselecteerd.`;
-      else msg += ` — Kritiek pad: ${edgesTotal - edgesCorrect} ontbrekend.`;
+      else if (wrongSelections > 0) msg += ' — Kritiek pad: niet correct.';
+      else if (edgesCorrect === 0) msg += ' — Kritiek pad: niet aangeduid.';
+      else msg += ' — Kritiek pad: niet volledig.';
 
       feedback.textContent = msg;
       if (correct === total && pathPerfect) {
@@ -2756,8 +2757,9 @@
       const pct = Math.round(correct / total * 100);
       let msg = `Score: ${correct}/${total} (${pct}%)`;
       if (pathPerfect) msg += ' \u2014 Kritiek pad correct!';
-      else if (wrongSelections > 0) msg += ` \u2014 Kritiek pad: ${wrongSelections} fout geselecteerd.`;
-      else msg += ` \u2014 Kritiek pad: ${edgesTotal - edgesCorrect} ontbrekend.`;
+      else if (wrongSelections > 0) msg += ' \u2014 Kritiek pad: niet correct.';
+      else if (edgesCorrect === 0) msg += ' \u2014 Kritiek pad: niet aangeduid.';
+      else msg += ' \u2014 Kritiek pad: niet volledig.';
 
       feedback.textContent = msg;
       if (correct === total && pathPerfect) {

@@ -1,5 +1,5 @@
 ---
-{"publish":true,"title":"004 Kwaliteitsmanagement","created":"2025-08-26T10:37:01.262+02:00","modified":"2025-11-13T14:07:46.339+01:00","cssclasses":""}
+{"publish":true,"title":"004 Kwaliteitsmanagement","created":"2025-08-26T10:37:01.262+02:00","modified":"2026-02-24T09:05:14.993+01:00","cssclasses":""}
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -437,10 +437,10 @@ Het correlatiediagram toont de gemiddelde hoeveelheid verkeer en de gemiddelde s
 ![](https://i.imgur.com/1LAxvq8.png)
 Welke uitspraak beschrijft best de relatie tussen gemiddelde hoeveelheid verkeer en de gemiddelde snelheid?
 
-A. Als de hoeveelheid verkeer stijgt, stijgt de snelheid. 
-B. Als de hoeveelheid verkeer stijgt, daalt de snelheid.
-C. Als de hoeveelheid verkeer stijgt, stijgt de snelheid in eerste instantie, maar vervolgens daalt ze.
-D. Als de hoeveelheid verkeer stijgt, daalt de snelheid in eerste instantie, maar later versnelt ze.
+- A. Als de hoeveelheid verkeer stijgt, stijgt de snelheid. 
+- B. Als de hoeveelheid verkeer stijgt, daalt de snelheid.
+- C. Als de hoeveelheid verkeer stijgt, stijgt de snelheid in eerste instantie, maar vervolgens daalt ze.
+- D. Als de hoeveelheid verkeer stijgt, daalt de snelheid in eerste instantie, maar later versnelt ze.
 
 **Oefening 2:**
 
@@ -450,10 +450,10 @@ Gebruik het onderstaande correlatiediagram om de vraag te beantwoorden
 Het politiekantoor van Zichen-Zussen-Bolder noteerde voor de voorbije 8 weken het aantal mensen dat parkeerboetes uitschreef (*Number of Ticket Writers*) en het aantal boetes gegeven (*Number of Tickets Issued*).
 Welke uitspraak is waar?
 
-A. Meer mensen die parkeerboetes uitschrijven betekent minder boetes.
-B. Er werden elke week 50 boetes gegeven.
-C. Indien er 10 mensen parkeerboetes uitschrijven, geeft men 800 boetes.
-D. Meer mensen die parkeerboetes uitschrijven betekent meer boetes.
+- A. Meer mensen die parkeerboetes uitschrijven betekent minder boetes.
+- B. Er werden elke week 50 boetes gegeven.
+- C. Indien er 10 mensen parkeerboetes uitschrijven, geeft men 800 boetes.
+- D. Meer mensen die parkeerboetes uitschrijven betekent meer boetes.
 
 **Oefening 3**
 
@@ -469,10 +469,10 @@ Gebruik onderstaande grid om de uitkomst te tekenen
 
 Gebaseerd op deze info, kies welke uitspraak het beste de relatie tussen aantal studenten en aantal vrije worpen beschrijft?
 
-A. Positief lineair
-B. Geen relatie
-C. Negatief lineair
-D. Kwadratisch
+- A. Positief lineair
+- B. Geen relatie
+- C. Negatief lineair
+- D. Kwadratisch
 
 **Oefening 4**
 

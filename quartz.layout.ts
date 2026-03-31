@@ -24,19 +24,19 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
   ],
   left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-      ],
-    }),
-    Component.Explorer(),
+    // Component.PageTitle(),
+    // Component.MobileOnly(Component.Spacer()),
+    // Component.Flex({
+    //   components: [
+    //     {
+    //       Component: Component.Search(),
+    //       grow: true,
+    //     },
+    //     { Component: Component.Darkmode() },
+    //     { Component: Component.ReaderMode() },
+    //   ],
+    // }),
+    // Component.Explorer(),
   ],
   right: [
     Component.Graph(),

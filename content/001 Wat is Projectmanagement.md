@@ -1,5 +1,8 @@
 ---
-{"publish":true,"title":"001 Wat is ProjectManagement?","created":"2025-08-26T10:37:01.247+02:00","modified":"2025-09-11T15:10:32.157+02:00","cssclasses":""}
+publish: true
+title: 001 Wat is ProjectManagement?
+created: 2024-09-19T17:05:27.991+02:00
+modified: 2026-04-01T09:20:50.283+02:00
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -26,13 +29,13 @@ De belangrijkste sectoren waar projectmanagement zijn oorsprong vond:
 **1. Bouw en civiele techniek**
 Projectmanagement werd gebruikt voor het plannen van grote bouwprojecten zoals bruggen, tunnels en gebouwen. Dit omvatte budgettering, tijdschema's, risicobeheer en kwaliteitscontrole.
 
-**2. Defensie en ruimtevaart** 
+**2. Defensie en ruimtevaart**
 Cruciale rol in militaire projecten en ruimtevaartprogramma's zoals raketontwikkeling en satellietlanceringen waar precisie levensbelangrijk is.
 
 **3. Productie en techniek**
 Toegepast op het ontwikkelen van nieuwe producten, het verbeteren van productieprocessen en het beheren van complexe technische projecten.
 
-**4. Onderzoek en ontwikkeling (R&D)**
+**4. Onderzoek en ontwikkeling (R\&D)**
 Organisatie van onderzoeksprojecten, ontwikkeling van nieuwe technologieën en implementatie van innovatieve oplossingen.
 
 **5. Informatietechnologie (IT)**
@@ -44,14 +47,14 @@ Vandaag wordt projectmanagement toegepast in vrijwel elke sector:
 
 - **IT-sector**: Ontwikkeling van apps, websites, softwarepakketten
 - **Gezondheidszorg**: Implementatie van elektronische patiëntendossiers
-- **Financiële dienstverlening**: Lancering van nieuwe betaalplatforms  
+- **Financiële dienstverlening**: Lancering van nieuwe betaalplatforms
 - **Onderwijs**: Digitalisering van lesmaterialen
 - **Marketing**: Rebranding campagnes en productlanceringen
 - **Energie**: Implementatie van hernieuwbare energie-oplossingen
 - **Retail**: Implementatie van nieuwe e-commerce platformen
 
 > [!QUESTION] Het Gezin PeeTers (GPT)
-> Heb je meer vragen over ProjectManagement? Ontdek [[Use The Bot/+ 001 ProjectManagement#Vragen die je kan stellen over ProjectManagement\|hier]] welke vragen je nog kan stellen.
+> Heb je meer vragen over ProjectManagement? Ontdek [[+ 001 ProjectManagement#Vragen die je kan stellen over ProjectManagement|hier]] welke vragen je nog kan stellen.
 
 ### Definitie van Projectmanagement
 
@@ -72,7 +75,7 @@ In organisaties heeft iedereen dagelijkse taken. Maar wanneer iets totaal nieuws
 **Praktijkvoorbeelden voor IT-studenten:**
 
 - **Webapplicatie ontwikkelen**: Een nieuwe e-commerce site bouwen voor een lokale winkel
-- **Mobile app**: Een fitness-tracking app ontwikkelen voor Android en iOS  
+- **Mobile app**: Een fitness-tracking app ontwikkelen voor Android en iOS
 - **Systeem migratie**: Overstappen van een oude database naar een moderne cloud-oplossing
 - **Cybersecurity implementatie**: Een beveiligingssysteem implementeren voor een bedrijf
 - **API ontwikkeling**: Een REST API bouwen voor een bestaande webservice
@@ -97,17 +100,15 @@ Een project bestaat uit meerdere componenten, waarbij elk component een specifie
 
 De planning wordt opgedeeld in verschillende tijdvakken. Deze tijdvakken noemen we **fasen**. Aan het einde van elke fase wordt een **mijlpaal** bereikt, wat aangeeft dat een of meerdere opleveringen voltooid zijn.
 
-> [!caption] 
->  ![](https://i.imgur.com/7tDMfqf.png)
-> Afbeelding: Iteraties in projecten
+![](https://i.imgur.com/7tDMfqf.png)
+Afbeelding: Iteraties in projecten
 
 Na elke fase overlegt de projectleider met de opdrachtgever om te beslissen of het project volgens plan voortgezet kan worden. Soms is het nodig om een fase te herhalen of aan te passen om het gewenste resultaat te bereiken. Dit proces van aanpassing en herhaling noemen we **iteratie**.
 
 Om de kosten efficiënt te beheren, is het gebruikelijk om bij een project vooraf de mogelijke risico's in te schatten. Een goede projectleider zorgt ervoor dat er een specifiek budget gereserveerd wordt om dergelijke onverwachte risico's aan te kunnen. Dit budget en de bijbehorende strategie staan beschreven in een **contingentieplan**.
 
-> [!caption] 
-> ![](https://i.imgur.com/RAoUlUH.jpg)
-> Afbeelding: Prince 2 methodiek
+![](https://i.imgur.com/RAoUlUH.jpg)
+Afbeelding: Prince 2 methodiek
 
 Veel organisaties gebruiken een bepaalde projectmanagementmethodiek als ze projecten uitvoeren. Zo'n methodiek beschrijft wat er in welke fase moet gebeuren en aan welke dingen gedacht moet worden. Een veelgebruikte **projectmethodiek** is Prince2, maar we zien er later nog veel meer.
 
@@ -116,29 +117,28 @@ Veel organisaties gebruiken een bepaalde projectmanagementmethodiek als ze proje
 > [!note] DEFINITIE: De Duivelsdriehoek
 > De duivelsdriehoek toont hoe de drie belangrijkste projectvariabelen zich verhouden: **tijd**, **geld** en **kwaliteit**. Het managen van projecten gaat dus om het managen van deze drie variabelen.
 
-> [!caption] 
-> ![](https://i.imgur.com/602iRyY.png)
-> Afbeelding: Duivelsdriehoek [[References/@stevenblom_2018]]
+![](https://i.imgur.com/602iRyY.png)
+Afbeelding: Duivelsdriehoek [[@stevenblom_2018]]
 
 Als je probeert te besparen op de kosten, dus meer te doen met minder geld, leidt dat onvermijdelijk tot concessies op het gebied van kwaliteit (het eindproduct zal van mindere kwaliteit zijn) of tijd (het project zal meer tijd in beslag nemen), of een combinatie van beide. Het is ook belangrijk te realiseren dat binnen een project slechts twee van deze drie aspecten tegelijkertijd optimaal benut kunnen worden.
 
 **Praktijkvoorbeeld**: Bij de ontwikkeling van een webshop kun je slechts twee van de drie aspecten optimaliseren:
+
 - Snel én goedkoop = lagere kwaliteit (minder features, basis design)
 - Snel én hoge kwaliteit = duurder (meer developers, overtime)
 - Goedkoop én hoge kwaliteit = meer tijd nodig
 
 ### Van Driehoek naar Vierkant
 
-Het klassieke model van de **Duivelsdriehoek** schiet vaak tekort in echte projectmanagementscenarios. Daarom introduceren we het concept van een **Duivelsvierkant** met de **opdracht** (scope) als vierde variabele. [[References/@pradeepProjectManagement2024]]
+Het klassieke model van de **Duivelsdriehoek** schiet vaak tekort in echte projectmanagementscenarios. Daarom introduceren we het concept van een **Duivelsvierkant** met de **opdracht** (scope) als vierde variabele. [[@pradeepProjectManagement2024]]
 
-> [!caption] 
-> ![](https://i.imgur.com/Dww0uEV.png)
-> Afbeelding: Duivelsvierkant [[References/@sjoerdoldebijvank_2010]]
+![](https://i.imgur.com/Dww0uEV.png)
+Afbeelding: Duivelsvierkant [[@sjoerdoldebijvank_2010]]
 
 In de praktijk staat de opdracht of scope van een project zelden vanaf het begin vast. Veranderingen in de projectomvang beïnvloeden significant de andere drie variabelen: tijd, kwaliteit en budget.
 
 Het uitbreiden van de opdracht tijdens een project, bekend als **scope creep**, kan leiden tot hogere kosten en vertragingen. Het is cruciaal deze uitbreidingen strikt te monitoren.
-[[References/@ScopeCreep2024]]
+[[@ScopeCreep2024]]
 
 **IT-voorbeeld**: Een eenvoudige website wordt tijdens ontwikkeling uitgebreid met een webshop, gebruikersaccounts en een mobiele app - dit vereist herziening van tijd, budget en/of kwaliteit.
 
@@ -159,9 +159,10 @@ Het uitbreiden van de opdracht tijdens een project, bekend als **scope creep**, 
 > ![](https://i.imgur.com/2XwzA1x.png)
 > Afbeelding: Elementen van een business case
 
-De **business case** rechtvaardigt het project. Het bevat alle informatie om te beoordelen of een project levensvatbaar en haalbaar is, en of het de moeite waard is om erin te investeren. Tijdens het project wordt de business case voortdurend geactualiseerd met actuele schattingen van de te realiseren voordelen. [[References/@vlaanderenintern_2014]]
+De **business case** rechtvaardigt het project. Het bevat alle informatie om te beoordelen of een project levensvatbaar en haalbaar is, en of het de moeite waard is om erin te investeren. Tijdens het project wordt de business case voortdurend geactualiseerd met actuele schattingen van de te realiseren voordelen. [[@vlaanderenintern_2014]]
 
 **IT-voorbeeld**: Een bedrijf overweegt een nieuwe klantendatabase te ontwikkelen:
+
 - **Kosten**: €50.000 ontwikkeling + €10.000 jaarlijks onderhoud
 - **Baten**: €30.000 jaarlijkse besparing door efficiëntie + €20.000 extra omzet
 - **ROI**: Project betaalt zichzelf terug in 1 jaar
@@ -171,7 +172,7 @@ We stellen de business case op tijdens de 'Opstart'-fase, met input van alle bet
 Een belangrijke deliverable is het uitwerken van het **projectcharter**. Dit charter is het officiële startpunt en vormt het contract tussen alle betrokken partijen zoals de opdrachtgever, het projectteam en sponsors. Het beschrijft op een abstract niveau de krijtlijnen waarbinnen het project moet worden uitgevoerd.
 
 > [!QUESTION] Het Gezin PeeTers (GPT)
-> Heb je meer vragen over een Project? Ontdek [[Use The Bot/+ 001 ProjectManagement#Vragen die je kan stellen over een Project\|hier]] welke vragen je nog kan stellen.
+> Heb je meer vragen over een Project? Ontdek [[+ 001 ProjectManagement#Vragen die je kan stellen over een Project|hier]] welke vragen je nog kan stellen.
 
 ## De Scope van een Project
 
@@ -185,7 +186,8 @@ Bij het vastleggen van de projectscope moeten we onderscheid maken tussen de **p
 > **Productscope**: De functies en kenmerken die een product of dienst definiëren.
 > **Projectscope**: Het werk dat moet worden gedaan om een product te leveren volgens de productscope (vereiste functies en kenmerken).
 
-**IT-voorbeeld**: 
+**IT-voorbeeld**:
+
 - **Productscope**: Een webshop met productcatalogus, winkelwagen, betaling en gebruikersaccounts
 - **Projectscope**: Analyse, design, programmeren, testen, documentatie en training
 
@@ -205,18 +207,21 @@ Producten hebben een levenscyclus met meerdere fasen: eerst wordt het product be
 
 Belangrijk is dat een product alleen kan worden ontwikkeld binnen een project. Tijdens de levenscyclus van een product kunnen meerdere projecten plaatsvinden.
 
-**IT-voorbeeld**: 
+**IT-voorbeeld**:
+
 - **Product**: Instagram app
 - **Projecten**: Versie 1.0 ontwikkeling, Stories feature toevoegen, Reels implementeren, iOS 17 compatibiliteit
 
 In tegenstelling tot een project heeft een product geen duidelijke definitie van wat er geleverd moet worden. De behoeften van klanten evolueren, en producten moeten mee-evolueren om aan deze veranderende behoeften te voldoen.
-[[References/@gomez_2021]]
+[[@gomez_2021]]
+
 ### Productportfolio
 
 Het **productportfolio** omvat alle producten en diensten die een bedrijf aan de doelmarkt aanbiedt. Dit bevat zowel de producten die bij het begin van het merk werden gelanceerd als de producten die momenteel op de markt zijn en de producten die nog in ontwikkeling zijn.
-[[References/@hiteshbhasin_2015]]
+[[@hiteshbhasin_2015]]
 
 **IT-voorbeeld**: Microsoft's productportfolio bevat:
+
 - **Bestaande producten**: Windows, Office, Azure Cloud Services
 - **Producten in ontwikkeling**: Nieuwe versies van deze producten
 - **Projecten per product**: Security updates, nieuwe features, compatibiliteit verbeteringen
@@ -232,12 +237,13 @@ Het **productportfolio** omvat alle producten en diensten die een bedrijf aan de
 Voor het verzamelen van de vereisten bestaan verschillende technieken:
 
 - **Interviews** met eindgebruikers
-- **Workshops** met stakeholders  
+- **Workshops** met stakeholders
 - **Vragenlijsten** voor grote groepen
 - **Observatie** van bestaande werkwijzen
 - **Prototyping** en feedback sessies
 
 **IT-voorbeeld**: Voor een nieuwe learning management systeem:
+
 - Interview met docenten over huidige problemen
 - Workshop met studenten over gewenste features
 - Vragenlijst naar IT-beheerders over technische eisen
@@ -253,7 +259,7 @@ Het **plan van aanpak** is de eerste belangrijke deliverable die helpt bij het o
 > Een **plan van aanpak**, ook bekend als **projectplan** of **project scope statement**, beschrijft de voorwaarden waaronder het project wordt uitgevoerd. Dit document komt voor het eerst aan bod in de initiatie van een project en vormt de basis voor de andere projectfasen.
 
 > [!caption]
-> ![](https://i.imgur.com/p7Fn1nJ.png)
+> ![](https://i.imgur.com/OaC04K0.jpeg)
 > Afbeelding: Plan van Aanpak overzicht
 
 ### Mogelijke onderdelen van de template
@@ -282,6 +288,7 @@ Korte omschrijving van het eindproduct.
 Prioriteitenlijst van deliverables die doorheen het project dienen uitgewerkt en opgeleverd te worden. Men kan dat high-level houden of gedetailleerd uitwerken. Best in de project scope statement algemeen, en meer in detail in de WBS.
 
 **IT-voorbeeld webshop project**:
+
 1. **Hoge prioriteit**: Productcatalogus, winkelwagen, checkout proces
 2. **Gemiddelde prioriteit**: Gebruikersaccounts, orderhistorie, basis reporting
 3. **Lage prioriteit**: Geavanceerde zoekfilters, wishlist functionaliteit, reviews systeem
@@ -291,7 +298,8 @@ Prioriteitenlijst van deliverables die doorheen het project dienen uitgewerkt en
 Alle al gekende veronderstellingen of beperkingen dienen neergeschreven te worden. Deze bepalen mee de grenzen van de project scope.
 
 **IT-voorbeelden**:
-- **Veronderstellingen**: 
+
+- **Veronderstellingen**:
   - Klant levert alle productdata in Excel formaat aan
   - Bestaande hosting infrastructuur is voldoende performant
   - Team heeft toegang tot test omgeving binnen 2 weken
@@ -304,7 +312,8 @@ Alle al gekende veronderstellingen of beperkingen dienen neergeschreven te worde
 
 Alle items die gekend zijn en duidelijk uitgesloten zijn van de project scope worden hier opgelijst. Deze worden ook vaak 'out-of-scope'-items genoemd.
 
-**IT-voorbeeld**: 
+**IT-voorbeeld**:
+
 - Mobiele apps (alleen responsive website)
 - Integratie met bestaand ERP systeem
 - Meertalige ondersteuning (alleen Nederlands/Engels)
@@ -328,14 +337,15 @@ Kosten-, tijd-, kwaliteits- en andere meetbare objectieven. De objectieven diene
 > Afbeelding: SMART doelstellingen
 
 > [!caption]
->![](https://i.imgur.com/99GTS3D.jpeg)
->Afbeelding: SMART uitgelegd
+> ![](https://i.imgur.com/99GTS3D.jpeg)
+> Afbeelding: SMART uitgelegd
 
 #### Voorbeeld van een doelstelling
 
 **Business case**: AuthenticClothes wil een online kledingwinkel opzetten genaamd "DigiClothes". Dit bedrijfsidee richt zich op het verkopen van trendy kleding voor jonge volwassenen.
 
 **SMART doelstelling Marketing**:
+
 - **Specifiek**: Verhoog de naamsbekendheid van AuthenticClothes door middel van sociale media marketing
 - **Meetbaar**: Verkrijg minimaal 10.000 volgers op Instagram binnen zes maanden
 - **Acceptabel**: Investeer in betaalde advertenties en samenwerkingen met influencers
@@ -343,6 +353,7 @@ Kosten-, tijd-, kwaliteits- en andere meetbare objectieven. De objectieven diene
 - **Tijdsgebonden**: Bereik de doelstelling van 10.000 volgers binnen zes maanden na lancering
 
 **SMART doelstelling Financiën**:
+
 - **Specifiek**: Verhoog de winstgevendheid van DigiClothes door operationele kosten te verlagen
 - **Meetbaar**: Verminder voorraadkosten met 15% binnen het eerste jaar
 - **Acceptabel**: Optimaliseer voorraadbeheersoftware en onderhandel met leveranciers
@@ -358,10 +369,10 @@ In het project scope statement worden de belangrijkste deliverables op het hoogs
 De **Work Breakdown Structure (WBS)** is een grafische weergave, vaak in de vorm van een boomstructuur, die de projectscope in deelcomponenten opsplitst. Deze deelcomponenten zijn de deliverables van het project. Het laagste niveau van de WBS heet werkpakketten. De WBS kan eventueel worden aangevuld met een WBS-dictionary.
 
 > [!caption]
-> ![](https://i.imgur.com/VzeScMn.png)
+> ![](https://i.imgur.com/mi2EAzs.jpeg)
 > Afbeelding: Voorbeeld van een Work Breakdown Structure
 
-[[References/@jurcicWorkBreakdown2025]]
+[[@jurcicWorkBreakdown2025]]
 
 **IT-voorbeeld: Website Development Project**
 
@@ -400,18 +411,19 @@ RACI-informatie laat toe voor een WBS-element aan te geven:
 - Wie **C**onsulted zal worden (geraadpleegd)
 - Wie **I**nformed dient te worden (geïnformeerd)
 
-> [!caption] 
+> [!caption]
 > ![](https://i.imgur.com/fzfwnAv.gif)
 > Afbeelding: Voorbeeld van een RACI-matrix
 
 **Richtlijnen van een RACI-matrix**:
+
 - Per op te leveren resultaat/proces is er precies één A
 - De persoon met de A-rol moet ook de autoriteit hebben om beslissingen te nemen
 - Per op te leveren resultaat/proces is/zijn er één of enkele personen R
 - De A- en C-rollen hebben impliciet ook de I-rol
 - Minimaliseer het aantal C- en I-rollen
 - In de matrix zo min mogelijk A, R, C en I's invullen, maar wel zodanig dat het werk gebeurt
-[[References/@RACIMatrix2024]]
+  [[@RACIMatrix2024]]
 
 ## Projectmanagement en taken van een Projectmanager
 
@@ -422,6 +434,7 @@ RACI-informatie laat toe voor een WBS-element aan te geven:
 Projectmanagement is het wikken en wegen van middelen, kwaliteit, inzet, risico's, kosten en baten, informatie, organisatie om te komen tot een gewenst eindproduct.
 
 **Kernprincipes**:
+
 - Duidelijke planning
 - Duidelijke doelstellingen
 - Goede organisatie
@@ -459,8 +472,9 @@ Hoe wordt gerapporteerd over de voortgang van het project en over eventuele knel
 Bij het samenstellen van een projectteam is het essentieel om mensen te selecteren die specifieke taken binnen het project kunnen uitvoeren. Dit betekent dat je vaak experts nodig hebt. Managers of beleidsmedewerkers zijn meestal niet geschikt voor dit werk. Als projectleider moet je er altijd zeker van zijn dat de mensen die je wilt betrekken ook daadwerkelijk beschikbaar zijn.
 
 **IT-voorbeeld teamsamenstelling**:
+
 - **Lead Developer**: Technische leiding en architectuur
-- **Frontend Developer**: UI/UX implementatie  
+- **Frontend Developer**: UI/UX implementatie
 - **Backend Developer**: Server-side logica en database
 - **QA Tester**: Kwaliteitscontrole en testing
 - **DevOps Engineer**: Deployment en infrastructuur
@@ -479,7 +493,7 @@ In tegenstelling tot een algemene manager, richt je je als projectmanager op een
 Projectmanagers werken in diverse sectoren, van ICT tot de bouw:
 
 - **IT-sector**: Een machinefabriek krijgt de opdracht om een speciale machine te produceren die niet tot de standaard productielijn behoort
-- **Software development**: Het administratieve softwarepakket van een bedrijf moet opnieuw ontworpen en ontwikkeld worden  
+- **Software development**: Het administratieve softwarepakket van een bedrijf moet opnieuw ontworpen en ontwikkeld worden
 - **Marketing**: Een kledingfabrikant wil een nieuwe catalogus voor de nieuwste collectie uitbrengen
 - **Web development**: Een restaurant keten wil een online bestelsysteem implementeren
 - **Mobile development**: Een ziekenhuis wil een patiënten-app ontwikkelen voor afspraken
@@ -492,7 +506,7 @@ Een project doorloopt verschillende fasen, waarbij de focus van de projectmanage
 
 **1. Afspraken maken over Doelstellingen en Randvoorwaarden**
 
-Als projectmanager moet je duidelijk weten wat de reden en doelstelling van het project is. Als dit nog niet helder is, kun je de opdrachtgever hierbij adviseren. Wat moet het eindresultaat opleveren? 
+Als projectmanager moet je duidelijk weten wat de reden en doelstelling van het project is. Als dit nog niet helder is, kun je de opdrachtgever hierbij adviseren. Wat moet het eindresultaat opleveren?
 
 In de beginfase zijn doelstellingen vaak vaag geformuleerd. Stel bijvoorbeeld: een uitgever wil de kookboekenmarkt veroveren. Dit is nog te algemeen en moet specifieker worden gemaakt, zoals: 'Over drie jaar willen we vijf kookboeken op de markt hebben, elk over gerechten uit een ander land'. Zo'n duidelijke doelstelling wordt ook wel een SMART-doelstelling genoemd.
 
@@ -509,6 +523,7 @@ Met een duidelijke doelstelling kun je een projectontwerp maken. In de ontwerpfa
 - Welke producten worden in welke fase opgeleverd?
 
 **IT-voorbeeld**: Voor een e-commerce project:
+
 - **Fase 1**: Analyse en design (mijlpaal: goedgekeurd design document)
 - **Fase 2**: Backend development (mijlpaal: werkende API)
 - **Fase 3**: Frontend development (mijlpaal: complete UI)
@@ -518,9 +533,10 @@ In deze fase doe je ook veel voorbereidende inhoudelijke werkzaamheden. Je moet 
 
 **3. Het Project Starten**
 
-Het kan zijn dat je externen moet inhuren en sollicitatiegesprekken voert. Vervolgens moeten alle betrokken partijen goed worden geïnformeerd en gemotiveerd. Vaak zijn er één of meerdere bijeenkomsten waarin de teamleden kennismaken en jij hen informeert over het project. 
+Het kan zijn dat je externen moet inhuren en sollicitatiegesprekken voert. Vervolgens moeten alle betrokken partijen goed worden geïnformeerd en gemotiveerd. Vaak zijn er één of meerdere bijeenkomsten waarin de teamleden kennismaken en jij hen informeert over het project.
 
 **Praktische activiteiten**:
+
 - Kickoff meeting organiseren
 - Taken en verantwoordelijkheden verdelen
 - Communicatiekanalen instellen (Slack, Teams, etc.)
@@ -531,17 +547,19 @@ Je zorgt voor een sterke teamgeest, waardoor iedereen gemotiveerd is om het proj
 
 **4. Het Beheersen van de Voortgang**
 
-Dit vormt een groot deel van je werk. Als projectmanager heb je de leiding over de dagelijkse gang van zaken. Je zorgt ervoor dat iedereen zich aan de regels houdt en dat tussentijdse deadlines worden gehaald. 
+Dit vormt een groot deel van je werk. Als projectmanager heb je de leiding over de dagelijkse gang van zaken. Je zorgt ervoor dat iedereen zich aan de regels houdt en dat tussentijdse deadlines worden gehaald.
 
 Dit vereist vaak improvisatie, omdat er altijd onverwachte problemen kunnen opduiken:
+
 - **Extra kosten**: Hardware blijkt duurder dan verwacht
 - **Leverancier problemen**: Cloud provider heeft storing
 - **Personeel uitval**: Ziek teamlid tijdens kritieke fase
 - **Scope wijzigingen**: Klant wil extra features tussentijds
 
 **IT-specifieke uitdagingen**:
+
 - Bug fixes die langer duren dan gepland
-- Integratie problemen tussen systemen  
+- Integratie problemen tussen systemen
 - Performance issues die optimalisatie vereisen
 - Security vulnerabilities die aandacht vragen
 
@@ -568,11 +586,12 @@ Sommige projectleiders worden door hun werkgever uitgezonden en werken in een ti
 Er is ook een grote groep freelance projectmanagers die via bemiddelingsbureaus steeds bij andere opdrachtgevers werken. Dit is vooral populair in de IT-sector waar specialistische kennis zeer gewild is.
 
 **Sectoren**
-De functie van projectmanager is niet beperkt tot een bepaalde sector van het bedrijfsleven. Een project kan dan ook van alles inhouden: de ontwikkeling van een softwarepakket, het opstellen van een beleidsadvies, het bouwen van een kantorencomplex, een expeditie naar de noordpool. 
+De functie van projectmanager is niet beperkt tot een bepaalde sector van het bedrijfsleven. Een project kan dan ook van alles inhouden: de ontwikkeling van een softwarepakket, het opstellen van een beleidsadvies, het bouwen van een kantorencomplex, een expeditie naar de noordpool.
 
 Ook gemeentelijke overheden en regionale politiekorpsen werken tegenwoordig projectmatig. Het meeste vind je projectmanagers waarschijnlijk in:
+
 - **Bouw en civiele techniek**
-- **Consultancy** 
+- **Consultancy**
 - **ICT-sector**
 - **Financiële dienstverlening**
 - **Farmacie en biotechnologie**
@@ -582,6 +601,7 @@ Ook gemeentelijke overheden en regionale politiekorpsen werken tegenwoordig proj
 Als projectleider heb je een opdrachtgever of baas boven je. Zelf geef je leiding aan een of meerdere mensen. Het kan zijn dat dit team waaraan je leiding geeft vrij klein is en dat je vooral op 'horizontaal niveau' werkt. Dat wil zeggen met mensen van andere afdelingen en ook externe partijen zoals leveranciers.
 
 **IT-voorbeeld organisatiestructuur**:
+
 - **Boven je**: IT Manager of CTO
 - **Je team**: Developers, testers, business analist
 - **Horizontaal**: Marketing (voor requirements), Sales (voor timing), Operations (voor deployment)
@@ -628,22 +648,22 @@ De **projectlevenscyclus** is een reeks opeenvolgende fasen die een project door
 Zelfs al zijn projecten vaak uniek en onvoorspelbaar, ze volgen meestal een standaard structuur, de projectlevenscyclus. Deze cyclus bestaat uit de volgende fasen:
 
 - **Initiatiefase: De Start**
-   In de initiatiefase draait alles om het definiëren en goedkeuren van het project. De projectmanager verzamelt de eerste informatie en stelt een projectcharter of plan van aanpak op.
+  In de initiatiefase draait alles om het definiëren en goedkeuren van het project. De projectmanager verzamelt de eerste informatie en stelt een projectcharter of plan van aanpak op.
 
 - **Planningsfase: Voorbereiden**
-   Deze fase richt zich op het ontwikkelen van een gedetailleerd plan over hoe het project uitgevoerd gaat worden. Het doel is om een heldere strategie te creëren die leidt naar een succesvol project.
+  Deze fase richt zich op het ontwikkelen van een gedetailleerd plan over hoe het project uitgevoerd gaat worden. Het doel is om een heldere strategie te creëren die leidt naar een succesvol project.
 
 - **Uitvoeringsfase: Implementeren**
-   Hier wordt het plan werkelijkheid. De geplande activiteiten en beslissingen worden uitgevoerd. De projectmanager houdt een oogje in het zeil om ervoor te zorgen dat alles goed verloopt en eventuele problemen snel worden opgelost.
+  Hier wordt het plan werkelijkheid. De geplande activiteiten en beslissingen worden uitgevoerd. De projectmanager houdt een oogje in het zeil om ervoor te zorgen dat alles goed verloopt en eventuele problemen snel worden opgelost.
 
 - **Monitoringfase: Controleren en Bijsturen**
-   Tijdens de monitoringfase wordt het project voortdurend gecontroleerd en geëvalueerd. De projectmanager gebruikt prestatie-indicatoren en rapportages om de voortgang te volgen en bij te sturen waar nodig. Deze fase is essentieel om ervoor te zorgen dat het project op schema blijft en binnen budget uitgevoerd wordt.
+  Tijdens de monitoringfase wordt het project voortdurend gecontroleerd en geëvalueerd. De projectmanager gebruikt prestatie-indicatoren en rapportages om de voortgang te volgen en bij te sturen waar nodig. Deze fase is essentieel om ervoor te zorgen dat het project op schema blijft en binnen budget uitgevoerd wordt.
 
 - **Beëindigingsfase: Het Slot**
-   Dit is de laatste fase van elk project en markeert de officiële afronding ervan. Hier worden de resultaten geëvalueerd, documenten afgerond en wordt gezorgd voor een soepele overdracht aan de opdrachtgever of het operationele team.
+  Dit is de laatste fase van elk project en markeert de officiële afronding ervan. Hier worden de resultaten geëvalueerd, documenten afgerond en wordt gezorgd voor een soepele overdracht aan de opdrachtgever of het operationele team.
 
 > [!caption]
-> ![](https://i.imgur.com/AWlrNFV.png) 
+> ![](https://i.imgur.com/AWlrNFV.png)
 > Afbeelding: Project Life Cycle
 
 ### Generieke kenmerken van de levenscyclusstructuur
@@ -659,7 +679,7 @@ Risico's en onzekerheid zijn op hun hoogtepunt aan het begin van het project. De
 Het vermogen om het eindproduct van het project te beïnvloeden zonder de kosten drastisch te beïnvloeden, is het hoogst aan het begin van het project en neemt af naarmate het project vordert naar voltooiing. Uit figuur "Risico's in verhouding met wijzigende requirements" blijkt duidelijk dat de kosten voor het aanbrengen van nieuwe wijzigingen en het corrigeren van fouten toenemen naarmate het project zijn voltooiing nadert.
 
 > [!caption]
-> ![](https://i.imgur.com/VhU0U6l.png) 
+> ![](https://i.imgur.com/VhU0U6l.png)
 > Afbeelding: Risico's in verhouding met wijzigende requirements
 
 **Praktische implicatie**: Wijzigingen zijn aan het begin goedkoop en gemakkelijk, maar worden steeds duurder en complexer naarmate het project vordert.
@@ -704,9 +724,10 @@ De Closing Process Group bestaat uit processen die worden uitgevoerd om alle act
 
 ## Side-note: Gartner Hype Cycle (geen leerstof)
 
-*Het volgende onderdeel is ter informatie en valt niet onder de verplichte leerstof.*
+_Het volgende onderdeel is ter informatie en valt niet onder de verplichte leerstof._
 
 Zie ook [dit filmpje](https://www.youtube.com/watch?v=jB1RDz9jaj09)
+
 ### Technologie-adoptie voorspellen
 
 Marketeers en CEO's worstelen met de vraag: op welke nieuwe technologie moeten we investeren? Gartner ontwikkelde rond 1995 de **Hype Cycle** om dit te helpen beantwoorden.
@@ -718,17 +739,18 @@ Marketeers en CEO's worstelen met de vraag: op welke nieuwe technologie moeten w
 ### De 5 fases van technologie-adoptie
 
 1. **Technology Trigger**: Proof-of-concepts trekken aandacht, geen bruikbare producten nog
-2. **Peak of Inflated Expectations**: Hype hoogtepunt, eerste succesverhalen maar ook mislukkingen  
+2. **Peak of Inflated Expectations**: Hype hoogtepunt, eerste succesverhalen maar ook mislukkingen
 3. **Trough of Disillusionment**: Interest verdwijnt, mislukte experimenten, alleen succesvolle bedrijven gaan door
 4. **Slope of Enlightenment**: Duidelijkheid over mogelijkheden, tweede/derde versies, eerste pilots
 5. **Plateau of Productivity**: Grootschalige adoptie, duidelijke business case, mainstream acceptatie
 
 > [!caption]
 > ![](https://i.imgur.com/bj6IAQT.png)
-> Afbeelding: Gedetailleerde Hype Cycle [[References/@vaneekhout_2018]]
+> Afbeelding: Gedetailleerde Hype Cycle [[@vaneekhout_2018]]
 
 **IT-voorbeelden**:
-- **Blockchain** (2017): Peak of Inflated Expectations  
+
+- **Blockchain** (2017): Peak of Inflated Expectations
 - **Cloud Computing** (2023): Plateau of Productivity
 - **Artificial Intelligence** (2023): Verschillende fases per toepassing
 - **Virtual Reality** (2023): Trough of Disillusionment
@@ -751,14 +773,13 @@ Het volgende hoofdstuk gaat dieper in op projectplanning en de tools die daarbij
 
 # Bibliografie
 
-- [[References/@ScopeCreep2024\|@ScopeCreep2024]]: _'Scope Creep: Wat is het en hoe krijg je het onder de knie? (Wiki)'_ -  **(2024)** https://tryve.eu/nl/wiki/scope-creep/<br/><br/>
-- [[References/@RACIMatrix2024\|@RACIMatrix2024]]: _'RACI Matrix: Wat is het en hoe krijg je het onder de knie? (Wiki)'_ -  **(2024)** https://tryve.eu/nl/wiki/raci-matrix/<br/><br/>
-- [[References/@jurcicWorkBreakdown2025\|@jurcicWorkBreakdown2025]]: _'Work Breakdown Structure in Project Management: Short Guide'_ -  ** Jurčić, Marin(2025)** https://productive.io/blog/work-breakdown-structure-in-project-management<br/><br/>
-- [[References/@pradeepProjectManagement2024\|@pradeepProjectManagement2024]]: _'The Project Management Diamond: A Comprehensive Guide to Balancing Scope, Time, Cost, and Quality'_ -  ** Pradeep, (2024)** https://www.jiitak.com/blog/project-management-diamond-guide<br/><br/>
-- [[References/@gomez_2021\|@gomez_2021]]: _'The Difference Between Product and Project Management'_ -  **Gomez, Jose(2021)** https://www.koombea.com/blog/the-difference-between-product-and-project-management/<br/><br/>
-- [[References/@hiteshbhasin_2015\|@hiteshbhasin_2015]]: _'What is Product portfolio management ?'_ -  **Hitesh Bhasin,(2015)** https://www.marketing91.com/product-portfolio/<br/><br/>
-- [[References/@sjoerdoldebijvank_2010\|@sjoerdoldebijvank_2010]]: _'House of Control'_ -  **Sjoerd Olde Bijvank(2010)** https://www.house-of-control.nl/duivelsdriehoek-duivelsvierkant.html<br/><br/>
-- [[References/@stevenblom_2018\|@stevenblom_2018]]: _'Moeten we kiezen tussen de klant en de medewerker?'_ -  **Steven Blom(2018)** https://www.blomconsultancy.nl/kiezen-tussen-klant-en-medewerker/<br/><br/>
-- [[References/@vaneekhout_2018\|@vaneekhout_2018]]: _'De Gartner Hype Cycle: welke technologie blijft plakken en welke gaat nodeloos ten onder?'_ -  **van Eekhout, Robert(2018)** https://robertvaneekhout.nl/2018/04/gartner-hype-cycle-welke-technologie-blijft-plakken-en-welke-gaat-nodeloos<br/><br/>
-- [[References/@vlaanderenintern_2014\|@vlaanderenintern_2014]]: _'Business Case'_ -  **vlaanderen intern(2014)** https://overheid.vlaanderen.be/organisatie/projectmanagement/business-case<br/><br/>
-
+- [[References/@ScopeCreep2024.md|@ScopeCreep2024]]: _'Scope Creep: Wat is het en hoe krijg je het onder de knie? (Wiki)'_ -  **(2024)** https://tryve.eu/nl/wiki/scope-creep/<br/><br/>
+- [[References/@RACIMatrix2024.md|@RACIMatrix2024]]: _'RACI Matrix: Wat is het en hoe krijg je het onder de knie? (Wiki)'_ -  **(2024)** https://tryve.eu/nl/wiki/raci-matrix/<br/><br/>
+- [[References/@jurcicWorkBreakdown2025.md|@jurcicWorkBreakdown2025]]: _'Work Breakdown Structure in Project Management: Short Guide'_ -  \*\* Jurčić, Marin(2025)\*\* https://productive.io/blog/work-breakdown-structure-in-project-management<br/><br/>
+- [[References/@pradeepProjectManagement2024.md|@pradeepProjectManagement2024]]: _'The Project Management Diamond: A Comprehensive Guide to Balancing Scope, Time, Cost, and Quality'_ -  \*\* Pradeep, (2024)\*\* https://www.jiitak.com/blog/project-management-diamond-guide<br/><br/>
+- [[References/@gomez_2021.md|@gomez_2021]]: _'The Difference Between Product and Project Management'_ -  **Gomez, Jose(2021)** https://www.koombea.com/blog/the-difference-between-product-and-project-management/<br/><br/>
+- [[References/@hiteshbhasin_2015.md|@hiteshbhasin_2015]]: _'What is Product portfolio management ?'_ -  **Hitesh Bhasin,(2015)** https://www.marketing91.com/product-portfolio/<br/><br/>
+- [[References/@sjoerdoldebijvank_2010.md|@sjoerdoldebijvank_2010]]: _'House of Control'_ -  **Sjoerd Olde Bijvank(2010)** https://www.house-of-control.nl/duivelsdriehoek-duivelsvierkant.html<br/><br/>
+- [[References/@stevenblom_2018.md|@stevenblom_2018]]: _'Moeten we kiezen tussen de klant en de medewerker?'_ -  **Steven Blom(2018)** https://www.blomconsultancy.nl/kiezen-tussen-klant-en-medewerker/<br/><br/>
+- [[References/@vaneekhout_2018.md|@vaneekhout_2018]]: _'De Gartner Hype Cycle: welke technologie blijft plakken en welke gaat nodeloos ten onder?'_ -  **van Eekhout, Robert(2018)** https://robertvaneekhout.nl/2018/04/gartner-hype-cycle-welke-technologie-blijft-plakken-en-welke-gaat-nodeloos<br/><br/>
+- [[References/@vlaanderenintern_2014.md|@vlaanderenintern_2014]]: _'Business Case'_ -  **vlaanderen intern(2014)** https://overheid.vlaanderen.be/organisatie/projectmanagement/business-case<br/><br/>

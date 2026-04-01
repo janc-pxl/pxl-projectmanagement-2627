@@ -2,7 +2,7 @@
 publish: true
 title: 001 Wat is ProjectManagement?
 created: 2024-09-19T17:05:27.991+02:00
-modified: 2026-04-01T11:06:56.477+02:00
+modified: 2026-04-01T11:17:39.919+02:00
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -100,17 +100,13 @@ Een project bestaat uit meerdere componenten, waarbij elk component een specifie
 
 De planning wordt opgedeeld in verschillende tijdvakken. Deze tijdvakken noemen we **fasen**. Aan het einde van elke fase wordt een **mijlpaal** bereikt, wat aangeeft dat een of meerdere opleveringen voltooid zijn.
 
-![](https://i.imgur.com/7tDMfqf.png)
-
-Afbeelding: Iteraties in projecten
+![600](https://i.imgur.com/7tDMfqf.png)
 
 Na elke fase overlegt de projectleider met de opdrachtgever om te beslissen of het project volgens plan voortgezet kan worden. Soms is het nodig om een fase te herhalen of aan te passen om het gewenste resultaat te bereiken. Dit proces van aanpassing en herhaling noemen we **iteratie**.
 
 Om de kosten efficiënt te beheren, is het gebruikelijk om bij een project vooraf de mogelijke risico's in te schatten. Een goede projectleider zorgt ervoor dat er een specifiek budget gereserveerd wordt om dergelijke onverwachte risico's aan te kunnen. Dit budget en de bijbehorende strategie staan beschreven in een **contingentieplan**.
 
-![](https://i.imgur.com/RAoUlUH.jpg)
-
-Afbeelding: Prince 2 methodiek
+![300](https://i.imgur.com/RAoUlUH.jpg)
 
 Veel organisaties gebruiken een bepaalde projectmanagementmethodiek als ze projecten uitvoeren. Zo'n methodiek beschrijft wat er in welke fase moet gebeuren en aan welke dingen gedacht moet worden. Een veelgebruikte **projectmethodiek** is Prince2, maar we zien er later nog veel meer.
 
@@ -119,9 +115,7 @@ Veel organisaties gebruiken een bepaalde projectmanagementmethodiek als ze proje
 > [!note] DEFINITIE: De Duivelsdriehoek
 > De duivelsdriehoek toont hoe de drie belangrijkste projectvariabelen zich verhouden: **tijd**, **geld** en **kwaliteit**. Het managen van projecten gaat dus om het managen van deze drie variabelen.
 
-![](https://i.imgur.com/602iRyY.png)
-
-Afbeelding: Duivelsdriehoek [[@stevenblom_2018]]
+![600](https://i.imgur.com/602iRyY.png)
 
 Als je probeert te besparen op de kosten, dus meer te doen met minder geld, leidt dat onvermijdelijk tot concessies op het gebied van kwaliteit (het eindproduct zal van mindere kwaliteit zijn) of tijd (het project zal meer tijd in beslag nemen), of een combinatie van beide. Het is ook belangrijk te realiseren dat binnen een project slechts twee van deze drie aspecten tegelijkertijd optimaal benut kunnen worden.
 
@@ -135,9 +129,7 @@ Als je probeert te besparen op de kosten, dus meer te doen met minder geld, leid
 
 Het klassieke model van de **Duivelsdriehoek** schiet vaak tekort in echte projectmanagementscenarios. Daarom introduceren we het concept van een **Duivelsvierkant** met de **opdracht** (scope) als vierde variabele. [[@pradeepProjectManagement2024]]
 
-![](https://i.imgur.com/Dww0uEV.png)
-
-Afbeelding: Duivelsvierkant [[@sjoerdoldebijvank_2010]]
+![300](https://i.imgur.com/Dww0uEV.png)
 
 In de praktijk staat de opdracht of scope van een project zelden vanaf het begin vast. Veranderingen in de projectomvang beïnvloeden significant de andere drie variabelen: tijd, kwaliteit en budget.
 
@@ -146,9 +138,7 @@ Het uitbreiden van de opdracht tijdens een project, bekend als **scope creep**, 
 
 **IT-voorbeeld**: Een eenvoudige website wordt tijdens ontwikkeling uitgebreid met een webshop, gebruikersaccounts en een mobiele app - dit vereist herziening van tijd, budget en/of kwaliteit.
 
-> [!caption]
-> ![](https://i.imgur.com/rsiO7l5.png)
-> Afbeelding: Effect van veranderingen aan projectvariabelen
+![500](https://i.imgur.com/rsiO7l5.png)
 
 ### Uitdagingen
 
@@ -159,9 +149,7 @@ Het uitbreiden van de opdracht tijdens een project, bekend als **scope creep**, 
 
 **Doel**: Het gaat hier om een bedrijfseconomische evaluatie, de **business case** van een idee of project.
 
-> [!caption]
-> ![](https://i.imgur.com/2XwzA1x.png)
-> Afbeelding: Elementen van een business case
+![600](https://i.imgur.com/2XwzA1x.png)
 
 De **business case** rechtvaardigt het project. Het bevat alle informatie om te beoordelen of een project levensvatbaar en haalbaar is, en of het de moeite waard is om erin te investeren. Tijdens het project wordt de business case voortdurend geactualiseerd met actuele schattingen van de te realiseren voordelen. [[@vlaanderenintern_2014]]
 
@@ -197,9 +185,7 @@ Bij het vastleggen van de projectscope moeten we onderscheid maken tussen de **p
 
 Zodra de scope is geschreven en gevalideerd, hebben we een duidelijk beeld van wat het project moet opleveren. Dit fundament wordt per fase herbekeken, maar het blijft een onmisbare input voor de andere planningsactiviteiten.
 
-> [!caption]
-> ![](https://i.imgur.com/OirwoFx.png)
-> Afbeelding: Product- en projectlevenscyclus
+![500](https://i.imgur.com/OirwoFx.png)
 
 ### Product vs Project Levenscyclus
 
@@ -230,9 +216,7 @@ Het **productportfolio** omvat alle producten en diensten die een bedrijf aan de
 - **Producten in ontwikkeling**: Nieuwe versies van deze producten
 - **Projecten per product**: Security updates, nieuwe features, compatibiliteit verbeteringen
 
-> [!caption]
-> ![](https://i.imgur.com/pBi8aFH.png)
-> Afbeelding: Portfolio/Product/Project relatie
+![400](https://i.imgur.com/pBi8aFH.png)
 
 ## Verzamelen van Klantenbehoeften
 
@@ -262,9 +246,7 @@ Het **plan van aanpak** is de eerste belangrijke deliverable die helpt bij het o
 > [!note] DEFINITIE: Plan van Aanpak/Project Scope Statement
 > Een **plan van aanpak**, ook bekend als **projectplan** of **project scope statement**, beschrijft de voorwaarden waaronder het project wordt uitgevoerd. Dit document komt voor het eerst aan bod in de initiatie van een project en vormt de basis voor de andere projectfasen.
 
-> [!caption]
-> ![](https://i.imgur.com/OaC04K0.jpeg)
-> Afbeelding: Plan van Aanpak overzicht
+![600](https://i.imgur.com/OaC04K0.jpeg)
 
 ### Mogelijke onderdelen van de template
 
@@ -336,13 +318,9 @@ Kosten-, tijd-, kwaliteits- en andere meetbare objectieven. De objectieven diene
 | **Realistisch** | Haalbaar binnen mogelijkheden | "3 maanden ontwikkeltijd met 2 developers" |
 | **Tijdsgebonden** | Duidelijke deadline | "Lancering op 1 september 2024" |
 
-> [!caption]
-> ![](https://i.imgur.com/uKTEVe5.png)
-> Afbeelding: SMART doelstellingen
+![600](https://i.imgur.com/uKTEVe5.png)
 
-> [!caption]
-> ![](https://i.imgur.com/99GTS3D.jpeg)
-> Afbeelding: SMART uitgelegd
+![450](https://i.imgur.com/99GTS3D.jpeg)
 
 #### Voorbeeld van een doelstelling
 
@@ -372,9 +350,7 @@ In het project scope statement worden de belangrijkste deliverables op het hoogs
 
 De **Work Breakdown Structure (WBS)** is een grafische weergave, vaak in de vorm van een boomstructuur, die de projectscope in deelcomponenten opsplitst. Deze deelcomponenten zijn de deliverables van het project. Het laagste niveau van de WBS heet werkpakketten. De WBS kan eventueel worden aangevuld met een WBS-dictionary.
 
-> [!caption]
-> ![](https://i.imgur.com/mi2EAzs.jpeg)
-> Afbeelding: Voorbeeld van een Work Breakdown Structure
+![500](https://i.imgur.com/mi2EAzs.jpeg)
 
 [[@jurcicWorkBreakdown2025]]
 
@@ -415,9 +391,7 @@ RACI-informatie laat toe voor een WBS-element aan te geven:
 - Wie **C**onsulted zal worden (geraadpleegd)
 - Wie **I**nformed dient te worden (geïnformeerd)
 
-> [!caption]
-> ![](https://i.imgur.com/fzfwnAv.gif)
-> Afbeelding: Voorbeeld van een RACI-matrix
+![500](https://i.imgur.com/fzfwnAv.gif)
 
 **Richtlijnen van een RACI-matrix**:
 
@@ -637,9 +611,7 @@ Een hoge werkdruk maakt het verleidelijk om buiten kantooruren door te werken. D
 
 Een nieuw project betekent voor de betrokken partijen nieuwe verplichtingen, nieuwe kansen op een hogere status of meer salaris, maar misschien ook nieuwe bedreigingen. Om alle partijen gemotiveerd te krijgen, moeten ze het gevoel hebben dat de eindbalans voor hen positief is. Een goede projectleider krijgt snel inzicht in dit nieuwe veld van belangen en kan, in het ideale geval, iedereen de garantie geven dat ze iets te winnen hebben bij een enthousiaste deelname aan het project.
 
-> [!caption]
-> ![](https://i.imgur.com/FAzdgs7.jpeg)
-> Afbeelding: Projectmanagement success - ter inspiratie (geen leerstof)
+![500](https://i.imgur.com/FAzdgs7.jpeg)
 
 ## Wat is een Project Life Cycle en wat zijn de karakteristieken?
 
@@ -666,25 +638,19 @@ Zelfs al zijn projecten vaak uniek en onvoorspelbaar, ze volgen meestal een stan
 - **Beëindigingsfase: Het Slot**
   Dit is de laatste fase van elk project en markeert de officiële afronding ervan. Hier worden de resultaten geëvalueerd, documenten afgerond en wordt gezorgd voor een soepele overdracht aan de opdrachtgever of het operationele team.
 
-> [!caption]
-> ![](https://i.imgur.com/AWlrNFV.png)
-> Afbeelding: Project Life Cycle
+![600](https://i.imgur.com/AWlrNFV.png)
 
 ### Generieke kenmerken van de levenscyclusstructuur
 
 In het begin zijn de kosten en het personeelsbestand laag en bereiken ze een hoogtepunt wanneer het werk in uitvoering is. Het daalt daarentegen weer snel als het project in de afsluitende fase zit.
 
-> [!caption]
-> ![](https://i.imgur.com/dgvltBG.png)
-> Afbeelding: Projectmanagement output tijdens levenscyclus
+![500](https://i.imgur.com/dgvltBG.png)
 
 Risico's en onzekerheid zijn op hun hoogtepunt aan het begin van het project. Deze factoren dalen tijdens de levenscyclus van het project naarmate beslissingen worden genomen en de resultaten worden geaccepteerd.
 
 Het vermogen om het eindproduct van het project te beïnvloeden zonder de kosten drastisch te beïnvloeden, is het hoogst aan het begin van het project en neemt af naarmate het project vordert naar voltooiing. Uit figuur "Risico's in verhouding met wijzigende requirements" blijkt duidelijk dat de kosten voor het aanbrengen van nieuwe wijzigingen en het corrigeren van fouten toenemen naarmate het project zijn voltooiing nadert.
 
-> [!caption]
-> ![](https://i.imgur.com/VhU0U6l.png)
-> Afbeelding: Risico's in verhouding met wijzigende requirements
+![500](https://i.imgur.com/VhU0U6l.png)
 
 **Praktische implicatie**: Wijzigingen zijn aan het begin goedkoop en gemakkelijk, maar worden steeds duurder en complexer naarmate het project vordert.
 
@@ -736,9 +702,7 @@ Zie ook [dit filmpje](https://www.youtube.com/watch?v=jB1RDz9jaj09)
 
 Marketeers en CEO's worstelen met de vraag: op welke nieuwe technologie moeten we investeren? Gartner ontwikkelde rond 1995 de **Hype Cycle** om dit te helpen beantwoorden.
 
-> [!caption]
-> ![](https://i.imgur.com/ObAvY21.png)
-> Afbeelding: De Gartner Hype Cycle
+![500](https://i.imgur.com/ObAvY21.png)
 
 ### De 5 fases van technologie-adoptie
 
@@ -748,9 +712,7 @@ Marketeers en CEO's worstelen met de vraag: op welke nieuwe technologie moeten w
 4. **Slope of Enlightenment**: Duidelijkheid over mogelijkheden, tweede/derde versies, eerste pilots
 5. **Plateau of Productivity**: Grootschalige adoptie, duidelijke business case, mainstream acceptatie
 
-> [!caption]
-> ![](https://i.imgur.com/bj6IAQT.png)
-> Afbeelding: Gedetailleerde Hype Cycle [[@vaneekhout_2018]]
+![500](https://i.imgur.com/bj6IAQT.png)
 
 **IT-voorbeelden**:
 
@@ -783,7 +745,4 @@ Het volgende hoofdstuk gaat dieper in op projectplanning en de tools die daarbij
 - [[References/@pradeepProjectManagement2024.md|@pradeepProjectManagement2024]]: _'The Project Management Diamond: A Comprehensive Guide to Balancing Scope, Time, Cost, and Quality'_ -  \*\* Pradeep, (2024)\*\* https://www.jiitak.com/blog/project-management-diamond-guide<br/><br/>
 - [[References/@gomez_2021.md|@gomez_2021]]: _'The Difference Between Product and Project Management'_ -  **Gomez, Jose(2021)** https://www.koombea.com/blog/the-difference-between-product-and-project-management/<br/><br/>
 - [[References/@hiteshbhasin_2015.md|@hiteshbhasin_2015]]: _'What is Product portfolio management ?'_ -  **Hitesh Bhasin,(2015)** https://www.marketing91.com/product-portfolio/<br/><br/>
-- [[References/@sjoerdoldebijvank_2010.md|@sjoerdoldebijvank_2010]]: _'House of Control'_ -  **Sjoerd Olde Bijvank(2010)** https://www.house-of-control.nl/duivelsdriehoek-duivelsvierkant.html<br/><br/>
-- [[References/@stevenblom_2018.md|@stevenblom_2018]]: _'Moeten we kiezen tussen de klant en de medewerker?'_ -  **Steven Blom(2018)** https://www.blomconsultancy.nl/kiezen-tussen-klant-en-medewerker/<br/><br/>
-- [[References/@vaneekhout_2018.md|@vaneekhout_2018]]: _'De Gartner Hype Cycle: welke technologie blijft plakken en welke gaat nodeloos ten onder?'_ -  **van Eekhout, Robert(2018)** https://robertvaneekhout.nl/2018/04/gartner-hype-cycle-welke-technologie-blijft-plakken-en-welke-gaat-nodeloos<br/><br/>
 - [[References/@vlaanderenintern_2014.md|@vlaanderenintern_2014]]: _'Business Case'_ -  **vlaanderen intern(2014)** https://overheid.vlaanderen.be/organisatie/projectmanagement/business-case<br/><br/>

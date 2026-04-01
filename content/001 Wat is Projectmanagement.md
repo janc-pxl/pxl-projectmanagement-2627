@@ -2,7 +2,7 @@
 publish: true
 title: 001 Wat is ProjectManagement?
 created: 2024-09-19T17:05:27.991+02:00
-modified: 2026-04-01T09:20:50.283+02:00
+modified: 2026-04-01T11:06:56.477+02:00
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -101,6 +101,7 @@ Een project bestaat uit meerdere componenten, waarbij elk component een specifie
 De planning wordt opgedeeld in verschillende tijdvakken. Deze tijdvakken noemen we **fasen**. Aan het einde van elke fase wordt een **mijlpaal** bereikt, wat aangeeft dat een of meerdere opleveringen voltooid zijn.
 
 ![](https://i.imgur.com/7tDMfqf.png)
+
 Afbeelding: Iteraties in projecten
 
 Na elke fase overlegt de projectleider met de opdrachtgever om te beslissen of het project volgens plan voortgezet kan worden. Soms is het nodig om een fase te herhalen of aan te passen om het gewenste resultaat te bereiken. Dit proces van aanpassing en herhaling noemen we **iteratie**.
@@ -108,6 +109,7 @@ Na elke fase overlegt de projectleider met de opdrachtgever om te beslissen of h
 Om de kosten efficiënt te beheren, is het gebruikelijk om bij een project vooraf de mogelijke risico's in te schatten. Een goede projectleider zorgt ervoor dat er een specifiek budget gereserveerd wordt om dergelijke onverwachte risico's aan te kunnen. Dit budget en de bijbehorende strategie staan beschreven in een **contingentieplan**.
 
 ![](https://i.imgur.com/RAoUlUH.jpg)
+
 Afbeelding: Prince 2 methodiek
 
 Veel organisaties gebruiken een bepaalde projectmanagementmethodiek als ze projecten uitvoeren. Zo'n methodiek beschrijft wat er in welke fase moet gebeuren en aan welke dingen gedacht moet worden. Een veelgebruikte **projectmethodiek** is Prince2, maar we zien er later nog veel meer.
@@ -118,6 +120,7 @@ Veel organisaties gebruiken een bepaalde projectmanagementmethodiek als ze proje
 > De duivelsdriehoek toont hoe de drie belangrijkste projectvariabelen zich verhouden: **tijd**, **geld** en **kwaliteit**. Het managen van projecten gaat dus om het managen van deze drie variabelen.
 
 ![](https://i.imgur.com/602iRyY.png)
+
 Afbeelding: Duivelsdriehoek [[@stevenblom_2018]]
 
 Als je probeert te besparen op de kosten, dus meer te doen met minder geld, leidt dat onvermijdelijk tot concessies op het gebied van kwaliteit (het eindproduct zal van mindere kwaliteit zijn) of tijd (het project zal meer tijd in beslag nemen), of een combinatie van beide. Het is ook belangrijk te realiseren dat binnen een project slechts twee van deze drie aspecten tegelijkertijd optimaal benut kunnen worden.
@@ -133,6 +136,7 @@ Als je probeert te besparen op de kosten, dus meer te doen met minder geld, leid
 Het klassieke model van de **Duivelsdriehoek** schiet vaak tekort in echte projectmanagementscenarios. Daarom introduceren we het concept van een **Duivelsvierkant** met de **opdracht** (scope) als vierde variabele. [[@pradeepProjectManagement2024]]
 
 ![](https://i.imgur.com/Dww0uEV.png)
+
 Afbeelding: Duivelsvierkant [[@sjoerdoldebijvank_2010]]
 
 In de praktijk staat de opdracht of scope van een project zelden vanaf het begin vast. Veranderingen in de projectomvang beïnvloeden significant de andere drie variabelen: tijd, kwaliteit en budget.

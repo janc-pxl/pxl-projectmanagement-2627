@@ -1,7 +1,8 @@
 @use "./base.scss";
 
 // put your custom CSS here!
-.page > #quartz-body .center {
+.page > #quartz-body .center,
+.page > #quartz-body .sidebar.right {
   max-width: 750px;
   min-width: 0;
   margin-left: auto !important;

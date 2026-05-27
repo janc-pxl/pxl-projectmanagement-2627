@@ -1,5 +1,8 @@
 ---
-{"publish":true,"title":"002 Projectplanning","created":"2025-08-26T10:37:01.252+02:00","modified":"2026-02-20T11:54:56.937+01:00","cssclasses":""}
+publish: true
+title: 002 Projectplanning
+created: 2026-02-26T10:19:08.244+01:00
+modified: 2026-05-27T15:22:35.197+02:00
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -14,25 +17,28 @@
 <div style="page-break-after: always;"></div>
 
 ## Inleiding
+
 ![](https://i.imgur.com/humdHtI.png)
 
 > [!note] DEFINITIE: Projectplanning
 > Een projectplanning is een hulpmiddel om de voortgang en de resultaten van een project te bewaken en te sturen. Een projectplanning is niet hetzelfde als een projectplan, dat de scope en de doelstellingen van het project bepaalt.
 
 Een projectplanning bestaat uit verschillende onderdelen, zoals:
+
 - Het volgen van het **project scope statement (PSS)**, dat de verwachtingen en eisen van de opdrachtgever en de stakeholders vastlegt.
 - De **fasering**, die aangeeft uit welke stappen of fases het project bestaat en wat er in elke fase gebeurt. Een bekende methode voor fasering is PRINCE 2, die zeven fases onderscheidt: starten, initiëren, sturen, beheersen, managen productoplevering, managen faseovergang en afsluiten.
 - De **tijd**, die aangeeft wanneer elke fase of activiteit moet beginnen en eindigen, hoeveel speling er is per fase of activiteit en wat het kritieke pad is. Het kritieke pad is de langste route van activiteiten die bepalend is voor de duur van het hele project. Als er vertraging optreedt op het kritieke pad, heeft dat direct invloed op de einddatum van het project.
 - Het **geld**, dat aangeeft welk budget er beschikbaar is voor het project, welk budget er nodig is voor elke fase of activiteit, wanneer het geld nodig is en wat de verwachte opbrengsten zijn. Het geld wordt ook gebruikt om de kosten en baten van het project te analyseren en te bewaken.
 - De **informatie**, die aangeeft hoe er gecommuniceerd wordt over het project met alle betrokkenen. Dit omvat onder andere hoe vaak er gerapporteerd wordt over de voortgang en eventuele knelpunten van het project, wie verantwoordelijk is voor welke informatie en welke communicatiemiddelen er gebruikt worden.
 
-Om een goede projectplanning te maken kan gebruik gemaakt worden van software voor projectplanning. Deze software kan helpen om alle aspecten van een project in kaart te brengen, te visualiseren en te beheren. [[References/@kypproject_2023]] [[References/@teamleader_2018]]
+Om een goede projectplanning te maken kan gebruik gemaakt worden van software voor projectplanning. Deze software kan helpen om alle aspecten van een project in kaart te brengen, te visualiseren en te beheren. [[@kypproject_2023]] [[@teamleader_2018]]
 
 ## PERT
+
 ![](https://i.imgur.com/7khHgSS.png)
 
 > [!note] DEFINITIE: PERT
-> PERT (Program Evaluation and Review Technique) is een hulpmiddel voor de bedrijfsleiding bij de analyse en planning van projecten. Hierbij wordt gebruik gemaakt van een grafische voorstelling, het netwerk, om de samenhang tussen de verschillende werkzaamheden aan te geven. [[References/@schegget.hamelink_1993]]
+> PERT (Program Evaluation and Review Technique) is een hulpmiddel voor de bedrijfsleiding bij de analyse en planning van projecten. Hierbij wordt gebruik gemaakt van een grafische voorstelling, het netwerk, om de samenhang tussen de verschillende werkzaamheden aan te geven. [[@schegget.hamelink_1993]]
 
 Projecten zijn opgebouwd uit een aantal activiteiten. Sommige activiteiten dienen achter elkaar te worden uitgevoerd, andere mogen gelijktijdig worden uitgevoerd. Meestal is het zo dat de duur van het project globaal genomen afhankelijk is van een aantal op elkaar aansluitende activiteiten. Indien de tijd voorzien voor de uitvoering van deze activiteiten kan ingekort worden, kan heel het project vroeger klaar zijn. Van andere activiteiten mag de uitvoeringstijd variëren, zonder de duur van het project te beïnvloeden.
 
@@ -44,10 +50,12 @@ Belangrijke voordelen van netwerkplanning zijn:
 
 > [!INFO] Geschiedenis
 > De PERT methode is uitgevonden door de United States Department of Defense's US Navy Special Projects Office in 1958 als een onderdeel van het Polaris project. De PERT methode lijkt sterk op de kritieke pad methode. Bij de kritische pad methode wordt uitgegaan van de gesommeerde duur van het kritieke pad, terwijl in de PERT methode een kansberekening wordt toegepast.
-[[References/@geeksforgeeksDifferencePERT2025]]
+> [[@geeksforgeeksDifferencePERT2025]]
 
 ### Hoofdbegrippen
+
 #### Knooppunt
+
 - Gebeurtenis
 - Aanvang of einde van een taak, werkzaamheid of bewerking
 - Neemt geen tijd, arbeid of grondstoffen in beslag
@@ -55,7 +63,7 @@ Belangrijke voordelen van netwerkplanning zijn:
 
 ![](https://i.imgur.com/i1yrEop.png)
 
-#### Activiteit 
+#### Activiteit
 
 - Uitvoering van een taak
 - Er zijn mensen, materialen, hulpmiddelen en tijd voor nodig
@@ -88,21 +96,26 @@ Belangrijke voordelen van netwerkplanning zijn:
 
 Voor een goede uitleg, zie volgende filmpjes
 
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://pxl.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=33b773cd-3e9d-42df-ae3d-b45700dc2886&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Dummy-Activity-in-Network-Diagram-Projec_Media_ChF6FkW4I6c_001_1080p"></iframe>
+</div>
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ChF6FkW4I6c?si=SeOOBYwy3jkfx5Ht" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/J2YJwGa4rsc?si=YzRRjTJM29Jcq9kC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ##### Handig referentieschema
+
 ![](https://i.imgur.com/nnauqcl.gif)
+
 #### Afstemmingslijn
 
 - Geeft een gewenst verband weer
 - Voorgesteld door een stippellijn met een A
 
-
 ### Tijdsfactor
 
-Eens het netwerk opgesteld moet men bepalen hoeveel tijd elk van de activiteiten in beslag neemt. 
+Eens het netwerk opgesteld moet men bepalen hoeveel tijd elk van de activiteiten in beslag neemt.
 
 Voor het berekenen van de verwachte tijd van een activiteit gebruiken we drie schattingen:
 
@@ -112,19 +125,19 @@ Voor het berekenen van de verwachte tijd van een activiteit gebruiken we drie sc
 
 formule verwachte tijd:
 
-$$t_e= \frac{(t_o+ 4t_l + t_p)}{6}$$
+$t_e= \frac{(t_o+ 4t_l + t_p)}{6}$
 
 ### Verwachte tijdstippen
 
 Eens alle activiteiten en knooppunten getekend zijn, gaan we het netwerk analyseren.
 
-*T$_E$ = Earliest expected time*
+_T$_E$ = Earliest expected time_
 
 In de voorwaartse gang berekenen we het vroegst mogelijke begin. Dit is het vroegst mogelijke tijdstip waarop een bepaald knooppunt kan bereikt worden, en meteen ook het vroegste begin van de activiteiten die vertrekken in dit knooppunt.
 
 Voor elk pad (aaneenschakeling van activiteiten) dat in een bepaald knooppunt toekomt berekenen wij de som van de T$_E$’s van de activiteiten op dat pad. De grootste som wordt de T$_E$ van het beschouwde knooppunt.
 
-*T$_L$ = Latest allowable time*
+_T$_L$ = Latest allowable time_
 
 In de achterwaartse gang berekenen we het laatst toelaatbare eindtijdstip. Als een activiteit niet voltooid is op dit tijdstip wordt de globale duur van het project overschreden.
 
@@ -134,7 +147,7 @@ De T$_L$ wordt bepaald door de berekening te beginnen vanaf het laatste knooppun
 
 Speling of “slack” is de maximale vertraging die een bepaalde activiteit mag oplopen, zonder dat een vertraging voor het hele project ontstaat.
 
-$${Slack} = T_L – T_E$$
+${Slack} = T_L – T_E$
 
 De speling kan zowel positief, nul als negatief zijn:
 
@@ -143,7 +156,6 @@ De speling kan zowel positief, nul als negatief zijn:
 | de start van deze activiteit kan uitgesteld worden                                                 | bij deze activiteit geen vertraging mag optreden        | de uitvoering van de activiteit moet worden versneld indien we het project binnen de gestelde tijdsduur willen beëindigen |
 | de uitvoering van deze activiteit mag vertraagd worden door minder mensen en middelen in te zetten | de juiste hoeveelheid mankracht en materiaal is ingezet | meer mensen en middelen moeten ingezet worden                                                                             |
 |                                                                                                    |                                                         |                                                                                                                           |
-
 
 ### Kritieke pad
 
@@ -158,12 +170,14 @@ Indien de T$_L$ en de T$_E$ van het hele project aan elkaar gelijk gesteld worde
 Maak die, afhankelijk van je creatief talent, op papier, op een tablet of door middel van een tekenapplicatie zoals https://app.diagrams.net/
 
 #### Oefening 1
+
 ![](https://i.imgur.com/JdvdiUn.png)
 
 1. Bepaal de doorlooptijd
 2. Duid het kritieke pad aan
 
 #### Oefening 2
+
 ![](https://i.imgur.com/cfBQHVI.png)
 
 1. Bepaal de doorlooptijd
@@ -184,32 +198,30 @@ De volgende activiteiten kwamen van pas toen een farao een piramide wenste te bo
 | G    | Verplaats het beeld naar de voet van de piramide                       | E,F         | 3                                         | 7                                          | 5                                        |
 | H    | Vorm nu met de rotsblokken de piramide                                 | G           | 27                                        | 43                                         | 32                                       |
 
-
 1. Stel de activiteiten voor als een netwerk.
 2. Bepaal het kritieke pad.
 
 #### Oefening 4
 
-Een grote digitaliseringsproject bij het transportbedrijf *“H. Oessers”* omvat 14 activiteiten :
+Een grote digitaliseringsproject bij het transportbedrijf _“H. Oessers”_ omvat 14 activiteiten :
 
 1. Het uitvoeren van de **projectanalyse** (act1) moet zijn gebeurd voordat de andere activiteiten kunnen starten. (10 weken)
 2. Na de projectanalyse kan men beginnen met :
-	 - de **probleemanalyse** van het **CRM**-systeem(act 2; 10 weken)
-	 - de **probleemanalyse** van het **ERP**-systeem (act 3; 5 weken)
-	 - het **aanvragen** van **offertes** voor de computerinstallatie (act 4; 5 weken)
-	 - **werving en selectie** van **personeel** (act 5; 10 weken)
+   - de **probleemanalyse** van het **CRM**-systeem(act 2; 10 weken)
+   - de **probleemanalyse** van het **ERP**-systeem (act 3; 5 weken)
+   - het **aanvragen** van **offertes** voor de computerinstallatie (act 4; 5 weken)
+   - **werving en selectie** van **personeel** (act 5; 10 weken)
 3. Na voltooiing van act 2 kan men beginnen met :
-	 - de **bouw** van het **CRM**-systeem (act 6; 30 weken)
-	 - de **invoeringsvoorbereiding** van het **CRM**-systeem (act 7;20 weken)
+   - de **bouw** van het **CRM**-systeem (act 6; 30 weken)
+   - de **invoeringsvoorbereiding** van het **CRM**-systeem (act 7;20 weken)
 4. Na voltooiing van act 3 kan men beginnen met :
-	 - de **bouw** van het **ERP**-systeem (act 8; 30 weken)
-	 - de **invoeringsvoorbereiding** van het **ERP**-systeem (act 9; 20 weken)
+   - de **bouw** van het **ERP**-systeem (act 8; 30 weken)
+   - de **invoeringsvoorbereiding** van het **ERP**-systeem (act 9; 20 weken)
 5. Na voltooiing van act 4 kan men beginnen met act 10 : de **laptopkeuze**, gevolgd door de **levering** van de laptops. (45 weken)
 6. Nadat de laptops geleverd zijn en act 5 is voltooid, kan men act 11 uitvoeren: de **installatie** van de software. (5 **weken**)
 7. Na voltooiing van de activiteiten 6, 7, 11 kan men beginnen met act 12 : de **invoering** van het **CRM**-systeem. (10 weken)
 8. Na voltooiing van de activiteiten 8, 9, 11 kan men beginnen met de act 13 : de **invoering** van het **ERP**-systeem. (10 weken)
 9. Na invoering van beide systemen kan men act 14 starten: de **integratie** van het **ERP en CRM** systeem (10 weken)
-
 
 **Gevraagd**
 
@@ -223,7 +235,6 @@ Het bedrijf WalkerWhite wil een applicatie maken voor smartphones over de serie 
 Voor de ontwikkeling van de app heeft het bedrijf een kosten-batenanalyse uitgewerkt. De resources en tijd zijn echter beperkt.
 
 Op vraag van de zender stelt het bedrijf een planning op om een overzicht te krijgen van de verwachte opleverdatum. 3 projectmanagers van WalkerWhite gaan na de laatste meeting met HBO samen naar de lokale McDonald’s om een PERT-planning op te stellen.
-
 
 | Activiteit: Beschrijving     | Voorgaand | Junior ProjMgr Optimistic | Senior ProjMgr Most Likely | Junior ProjMgr Pessimistic |
 | ---------------------------- | --------- | ------------------------- | -------------------------- | -------------------------- |
@@ -239,9 +250,9 @@ Op vraag van de zender stelt het bedrijf een planning op om een overzicht te kri
 | Act 10: Testen software      | 4         | 10                        | 20                         | 30                         |
 | Act 11: Regressietesten      | 7,8,9     | 3                         | 10                         | 11                         |
 | Act 12: Afwerking/oplevering | 10,11     | 6                         | 15                         | 18                         |
+
 > [!remark] Opmerking
 > Ingeschatte duur per projectmanager in **dagen**
-
 
 **Gevraagd:**
 
@@ -250,6 +261,7 @@ Op vraag van de zender stelt het bedrijf een planning op om een overzicht te kri
 - Bepaal het kritieke pad. Solution : Act 1 – 4 – 6 – 9 – 11 – 12
 
 ## Gantt-grafiek
+
 ![](https://i.imgur.com/Z0njriK.png)
 Een Gantt-grafiek (Engels: Gantt-chart) is een grafiek ofwel diagram die gebruikt kan worden als hulpmiddel bij projectmanagement.
 
@@ -285,7 +297,8 @@ De blauwe balken zijn taken die uitgevoerd moeten worden. De pijlen geven condit
 ### Hulpprogramma's
 
 Er zijn verschillende programma's die gebruikt kunnen worden voor het maken van een Gantt-grafiek. Voor een simpel figuurtje volstaat het om een spreadsheet bepaalde cellen te kleuren. Voor geavanceerdere figuren kunnen programma's als het gratis Open Source Gantt-project, Microsoft Visio, Microsoft Project of de gebruikelijke projectmanagementpakketten gebruikt worden.
-[[References/@gillinghamWhatMicrosoft2023]]
+[[@gillinghamWhatMicrosoft2023]]
+
 ### Toewijzing van hulpmiddelen
 
 Aan elke activiteit kunnen we bepaalde hulpmiddelen toekennen (vb. computers, mensen, …).
@@ -294,8 +307,8 @@ Onder de bestaande “Gantt chart” wordt een extra diagram voorzien waarin we 
 
 Over- en onderbezettingen kunnen vervolgens weggewerkt worden, m.a.w. het gebruik van hulpmiddelen kan gespreid worden, door de activiteiten te verschuiven voor zover hun speling dit toelaat. Indien de capaciteit nog steeds overschreden is, na het spreiden van activiteiten, zijn er twee mogelijkheden:
 
--   Ofwel gaat men de doorlooptijd behouden en gaat men extra kosten doen om de capaciteit te verhogen (extra computers aankopen, externe mensen inhuren, …);
--   Ofwel mag men geen bijkomende kosten doen, zodat de speling voor sommige activiteiten wordt overschreden en de einddatum van het project uitgesteld wordt.
+- Ofwel gaat men de doorlooptijd behouden en gaat men extra kosten doen om de capaciteit te verhogen (extra computers aankopen, externe mensen inhuren, …);
+- Ofwel mag men geen bijkomende kosten doen, zodat de speling voor sommige activiteiten wordt overschreden en de einddatum van het project uitgesteld wordt.
 
 ### Projectkosten
 
@@ -331,44 +344,47 @@ De volgende taken zullen uitgevoerd moeten worden
 | Nr. | Naam taak                              | Duur | Voorafgaand |
 | --- | -------------------------------------- | ---- | ----------- |
 | 1   | **Bouw van een blokhut**               |      |             |
-| 2   | *Voorbereiding*                        |      |             |
+| 2   | _Voorbereiding_                        |      |             |
 | 3   | Onderdelen uitpakken en controleren    | 1,5h |             |
 | 4   | Plan bespreken met werklieden          | 1h   | 3           |
-| 5   | *Fundering*                            |      |             |
+| 5   | _Fundering_                            |      |             |
 | 6   | Uitgraven fundering                    | 4h   | 4           |
 | 7   | Plaatsen bekisting                     | 1h   | 6           |
 | 8   | Beton storten                          | 2h   | 7           |
 | 9   | Uitharden beton                        | 1d   | 8           |
 | 10  | Verwijderen bekisting                  | 0,5h | 9           |
-| 11  | *Wanden*                               |      |             |
+| 11  | _Wanden_                               |      |             |
 | 12  | Basislaag planken plaatsen             | 1h   | 10          |
 | 13  | Overige planken plaatsen               | 2h   | 12          |
 | 14  | Blokhut verankeren op fundering        | 0,5h | 13          |
-| 15  | *Dak*                                  |      |             |
+| 15  | _Dak_                                  |      |             |
 | 16  | Daknok- en latten bevestigen           | 2h   | 14          |
 | 17  | Houten platen leggen op het dak        | 1h   | 16          |
 | 18  | Roofing op lengte snijden              | 0,5h | 17          |
 | 19  | Roofing bevestigen op platen           | 2h   | 18          |
-| 20  | *Afwerking*                            |      |             |
+| 20  | _Afwerking_                            |      |             |
 | 21  | Vensters klaarmaken                    | 1h   | 4           |
 | 22  | Deur klaarmaken (slot, scharnieren, …) | 1h   | 4           |
 | 23  | Ramen en deur plaatsen                 | 1h   | 19;21;22    |
 | 24  | Vloeren in de blokhut                  | 1h   | 19          |
 | 25  | Blokhut vernissen                      | 5h   | 19          |
 | 26  | Gazon rondom bijwerken                 | 4h   | 23;24;25    |
-| 27  | *Oplevering*                           |      |             |
+| 27  | _Oplevering_                           |      |             |
 | 28  | Schoonmaken                            | 1h   | 26          |
 | 29  | Eindcontrole voor oplevering           | 0,5h | 28          |
 
-
 - Creëer een nieuw projectplan.
+
 - Geef de projectgegevens in.
+
 - De vaste startdatum is voorzien op `dinsdag 14 oktober 2025`.
+
 - De titel van het project, extra informatie, de naam van de auteur en de manager mag je zelf bepalen.
+
 - Nu moeten de taken voorzien worden van hun geschatte tijdsduur (t$_e$) en ook de taakafhankelijkheden moeten aangebracht worden:
-	- Zorg eerst voor een goede uitlijning van de taakniveaus (hoofd- en subtaken).
-	- Geef de duur, de eigenschappen en de afhankelijkheden van elke taak in.  ( **Let op:** taak 4 en taak 29 zijn taken van “vaste duur/fixed duration”.)
-	- Bij nader inzien is taak 9 geen echte taak, maar wel een wachttijd. Men kan pas 1 dag na het einde van taak 8 starten met taak 10. Taak 9 kan dus verwijderd worden en taak 10 start met een vertraging van 1 dag. De nummers van de taken zijn nu natuurlijk wel gewijzigd.
+  - Zorg eerst voor een goede uitlijning van de taakniveaus (hoofd- en subtaken).
+  - Geef de duur, de eigenschappen en de afhankelijkheden van elke taak in.  ( **Let op:** taak 4 en taak 29 zijn taken van “vaste duur/fixed duration”.)
+  - Bij nader inzien is taak 9 geen echte taak, maar wel een wachttijd. Men kan pas 1 dag na het einde van taak 8 starten met taak 10. Taak 9 kan dus verwijderd worden en taak 10 start met een vertraging van 1 dag. De nummers van de taken zijn nu natuurlijk wel gewijzigd.
 
 - Om een beter overzicht te krijgen van onze planning kunnen we best de tijdschaal in de Gantt-chart aanpassen. In de standaard weergave wordt de tijdschaal onderverdeeld in weken en per week in dagen. In het voorbeeld van de blokhut, zal het beter zijn om in de tijdschaal dagen en uren weer te geven, aangezien de taken eerder van korte duur zijn. Als je later een andere weergave (vb. Task Usage, Resource Usage, …) gaat gebruiken, zal de tijdschaal ook daar moeten aangepast worden.
 
@@ -377,8 +393,8 @@ De volgende taken zullen uitgevoerd moeten worden
 - Zorg ervoor dat het kritieke pad af te lezen is in de Gantt-chart.
 
 - Bijkomende informatie moet voorzien worden:
-	- Bij taak `4. Plan bespreken met werklieden` moet een hyperlink gelegd worden naar de website “gamma.be”.
-	- Bij punt `31. Oplevering` moet de volgende notitie toegevoegd worden: *“Niet vergeten een attentie klaar te zetten voor de werklieden.”*
+  - Bij taak `4. Plan bespreken met werklieden` moet een hyperlink gelegd worden naar de website “gamma.be”.
+  - Bij punt `31. Oplevering` moet de volgende notitie toegevoegd worden: _“Niet vergeten een attentie klaar te zetten voor de werklieden.”_
 
 - Wanneer zal de blokhut klaar zijn?
 
@@ -416,28 +432,28 @@ Hieronder vind je opnieuw de taken, maar nu met de toewijzingen van resources.
 | Nr. | Taak                                   | Duur  | Voorafgaand | Resources                                                            |
 | --- | -------------------------------------- | ----- | ----------- | -------------------------------------------------------------------- |
 | 1   | **Bouw van een blokhut**               |       |             |                                                                      |
-| 2   | *Voorbereiding*                        |       |             |                                                                      |
-| 3   | Onderdelen uitpakken en controleren    | 0,75h |             | Koen;Jan;Blokhut\[1\]                                                |
+| 2   | _Voorbereiding_                        |       |             |                                                                      |
+| 3   | Onderdelen uitpakken en controleren    | 0,75h |             | Koen;Jan;Blokhut\[1]                                                |
 | 4   | Plan bespreken met werklieden          | 1h    | 3           | Koen;Jan;Peter                                                       |
 | 5   | Einde voorbereiding                    | 0d    | 4           |                                                                      |
-| 6   | *Fundering*                            |       |             |                                                                      |
-| 7   | Uitgraven fundering                    | 2h    | 5           | Koen;Peter;Zand\[50/10kg\]; Kiezelstenen\[50/10kg\];Cement\[4/50kg\] |
+| 6   | _Fundering_                            |       |             |                                                                      |
+| 7   | Uitgraven fundering                    | 2h    | 5           | Koen;Peter;Zand\[50/10kg]; Kiezelstenen\[50/10kg];Cement\[4/50kg] |
 | 8   | Plaatsen bekisting                     | 0,5h  | 7           | Koen;Peter                                                           |
 | 9   | Beton storten                          | 0,67h | 8           | Koen;Jan;Peter                                                       |
 | 10  | Verwijderen bekisting                  | 0,25h | 9BE+1 dag   | Koen;Jan                                                             |
 | 11  | Einde fundering                        | 0d    | 10          |                                                                      |
-| 12  | *Wanden*                               |       |             |                                                                      |
+| 12  | _Wanden_                               |       |             |                                                                      |
 | 13  | Basislaag planken plaatsen             | 0,33h | 11          | Koen;Jan;Peter                                                       |
 | 14  | Overige planken plaatsen               | 0,67h | 13          | Koen;Jan;Peter                                                       |
 | 15  | Blokhut verankeren op fundering        | 0,17h | 14          | Koen;Jan;Peter                                                       |
 | 16  | Einde Wanden                           | 0d    | 15          |                                                                      |
-| 17  | *Dak*                                  |       |             |                                                                      |
+| 17  | _Dak_                                  |       |             |                                                                      |
 | 18  | Daknok- en latten bevestigen           | 0,67h | 16          | Koen;Jan;Peter                                                       |
 | 19  | Houten platen leggen op het dak        | 0,33h | 18          | Koen;Jan;Peter                                                       |
 | 20  | Roofing op lengte snijden              | 0,17h | 19          | Koen;Jan;Peter                                                       |
 | 21  | Roofing bevestigen op platen           | 0,83h | 20          | Koen;Jan;Peter                                                       |
-| 22  | Einde Dak                              | 0d    | 21          |                                                                      | 
-| 23  | *Afwerking*                            |       |             |                                                                      |
+| 22  | Einde Dak                              | 0d    | 21          |                                                                      |
+| 23  | _Afwerking_                            |       |             |                                                                      |
 | 24  | Vensters klaarmaken                    | 1h    | 5           | Jan                                                                  |
 | 25  | Deur klaarmaken (slot, scharnieren, …) | 1h    | 5           | Jan                                                                  |
 | 26  | Ramen en deur plaatsen                 | 1h    | 22;24;25    | Jan                                                                  |
@@ -445,12 +461,11 @@ Hieronder vind je opnieuw de taken, maar nu met de toewijzingen van resources.
 | 28  | Blokhut vernissen                      | 2,5h  | 22          | Koen;Jan                                                             |
 | 29  | Gazon rondom bijwerken                 | 2h    | 26;27;28    | Koen;Jan                                                             |
 | 30  | Einde Afwerking                        | 0d    | 29          |                                                                      |
-| 31  | *Oplevering*                           |       |             |                                                                      |
+| 31  | _Oplevering_                           |       |             |                                                                      |
 | 32  | Schoonmaken                            | 1h    | 30          | Koen                                                                 |
 | 33  | Eindcontrole voor oplevering           | 0,5h  | 32          | Koen                                                                 |
 | 34  | Einde oplevering                       | 0d    | 33          |                                                                      |
 | 35  | Einde project blokhut                  | 0d    | 34          |                                                                      |
-
 
 Let, bij het toewijzen van resources, op de bijkomende elementen:
 
@@ -461,7 +476,7 @@ Let, bij het toewijzen van resources, op de bijkomende elementen:
 
 > [!definitie] DEFINITIE: vaste duur/vast werk
 > **Vaste duur** (en: **Fixed duration**): Een taak die ongeacht het aantal resources even lang duurt. Voorbeeld: de Les Projectmanagement duurt 2 uur. Of er nu 6 of 35 studenten zijn maakt geen verschil, de les duurt nog steeds 2 uur. Wel ga je voor elke resource 2 uur werk tellen, dus Werk ga je zien verhogen met 2 uur voor elke resource die je toevoegt.
-> 
+>
 > **Vast werk** (en: **Fixed work**): Een taak die evenveel werk nodig heeft, ongeacht het aantal resources. Voorbeeld: een oprit aanleggen is 1 dag werk. Indien dit door 2 personen wordt uitgevoerd wordt er nog steeds 1 dag werk gepresteerd, maar de duurtijd (duration) wordt een halve dag (4 uur)
 
 ![](https://i.imgur.com/AtMAqDv.png)
@@ -475,7 +490,7 @@ Let, bij het toewijzen van resources, op de bijkomende elementen:
 - Lees in de statistieken af hoeveel de totaal geschatte kost bedraagt van dit bouwproject?
 - Kunnen de resources niet efficiënter toegewezen worden? Omwille van het verlof van Peter worden de taken waaraan Peter toegewezen is lang opgeschort en daardoor is de doorlooptijd van het project groter dan nodig. Verwijder Peter uit de lijst van resources voor deze taken en pas de duur van de taak aan in functie van de wijziging.
 - Hoeveel bedraagt de doorlooptijd van het totale project, na deze wijzigingen? De totaal gepresteerde uren van Koen, Jan en Peter vind je terug via de weergave `Resource Usage` (nl: `Resourcegebruik`). De kosten van het gebruik van de beschikbare resources vind je in de `Resource Sheet` (nl: `Resourceformulier`) -> Rechtermuis `Costs` (nl: `Kosten`).
-- In grote organisaties wordt aan meerdere projecten tegelijkertijd gewerkt. De resources mogen dan niet toegekend worden aan één project, maar moeten gedeeld worden door alle uitvoerbare projecten. Deze resources worden dan ook niet opgenomen in het project zelf, maar worden ter beschikking gesteld in een resourcepool. Bij het toewijzen van resources aan taken in een project gebruiken de uitvoerbare projecten de resources uit de pool.  
+- In grote organisaties wordt aan meerdere projecten tegelijkertijd gewerkt. De resources mogen dan niet toegekend worden aan één project, maar moeten gedeeld worden door alle uitvoerbare projecten. Deze resources worden dan ook niet opgenomen in het project zelf, maar worden ter beschikking gesteld in een resourcepool. Bij het toewijzen van resources aan taken in een project gebruiken de uitvoerbare projecten de resources uit de pool.
 
 ##### Voortgangscontrole en beheer van kosten
 
@@ -494,14 +509,14 @@ De werkelijke voortgang kan op meerdere manieren aangegeven worden
 
 - Automatisch
 
-    - Zet de statusdatum op 16 oktober 2025 en kies voor automatisch bijwerken. Alle taken worden dan verondersteld om uitgevoerd te zijn binnen de geschatte planning. Deze methode kan natuurlijk alleen gebruikt worden indien de uitvoering vrijwel gelijk loopt met de planning. Indien dit niet zo is, vullen we de gepresteerde werktijden beter zelf aan. Dit laatste zullen we doen voor de rest van de uitvoering.
-        - Voeg een voortgangslijn in.
-        - Zoek in de projectstatistieken op voor hoeveel procent ons project al voltooid is. Kijk eveneens eens naar de kosten die al gemaakt zijn en de kosten die nog zullen ontstaan.
+  - Zet de statusdatum op 16 oktober 2025 en kies voor automatisch bijwerken. Alle taken worden dan verondersteld om uitgevoerd te zijn binnen de geschatte planning. Deze methode kan natuurlijk alleen gebruikt worden indien de uitvoering vrijwel gelijk loopt met de planning. Indien dit niet zo is, vullen we de gepresteerde werktijden beter zelf aan. Dit laatste zullen we doen voor de rest van de uitvoering.
+    - Voeg een voortgangslijn in.
+    - Zoek in de projectstatistieken op voor hoeveel procent ons project al voltooid is. Kijk eveneens eens naar de kosten die al gemaakt zijn en de kosten die nog zullen ontstaan.
 
--  Manueel
+- Manueel
 
-    -  Voor de taken die nog uitgevoerd moeten worden op vrijdag 17 oktober, zullen we de voortgang zelf invullen. We veronderstellen dat de tijdsduur van alle taken, behalve voor het plaatsen van de ramen en deuren, correct geschat is. Voor het plaatsen van de ramen en deuren heeft Jan een half uur meer nodig dan voorzien. Het manueel invoeren van gewerkte tijden kan je best doen via de weergave “Taakbeheer”
-        - Zoek in de projectstatistieken op of er extra kosten gemaakt werden door het extra half uur aan werk.
+  - Voor de taken die nog uitgevoerd moeten worden op vrijdag 17 oktober, zullen we de voortgang zelf invullen. We veronderstellen dat de tijdsduur van alle taken, behalve voor het plaatsen van de ramen en deuren, correct geschat is. Voor het plaatsen van de ramen en deuren heeft Jan een half uur meer nodig dan voorzien. Het manueel invoeren van gewerkte tijden kan je best doen via de weergave “Taakbeheer”
+    - Zoek in de projectstatistieken op of er extra kosten gemaakt werden door het extra half uur aan werk.
 
 ##### Beheer van kosten
 
@@ -514,16 +529,18 @@ Er is ook nog een andere mogelijkheid om de kosten van het project in het oog te
 - In de Gantt-chart: Beeld `Tabellen/Gegevensinvoer` (en: `Entry`)
 
 - Voeg een nieuwe kolom toe en selecteer naam `Kosten1` (en: `Cost1`)
+
 - Klik op de kolomnaam met de rechtermuistoets en kies `veldinstellingen` (en: `Field settings`)
+
 - Kies bij `Veldnaam` voor `Kosten1` (en:`Cost1`) en geef als `Titel` de waarde `Budget`. Veel praktische waarde heeft deze kolom nog niet, je moet immers nog aangeven wat er getoond moet worden.
 
 - Ga staan op de kolom `Budget` en ga via de rechtermuisknop naar `Aangepaste velden` (en:`Custom Fields`). Klik bij `Veld` (en: `Field`) op `Kosten1` (en: `Cost1`). Klik bij `Kenmerken van aangepast veld` (en:`Custom Field Attributes`)  op `formule` en dan de knop `Veld` en verwijs hierin naar het gegeven `Afwijking van kosten` (en: `Cost Variance`).
 
 - Bij `Weer te geven waarde` klik je op de knop `Grafische Indicatoren`. In het venster dat je dan krijgt kan je het volgende weergeven:
 
-    - Indien `Kosten1` kleiner is dan 0, toon je een groene bol.
-    - Indien `Kosten1` gelijk is aan 0, toon je niets.
-    - Indien `Kosten1` groter is dan 0, toon je een rode bol.
+  - Indien `Kosten1` kleiner is dan 0, toon je een groene bol.
+  - Indien `Kosten1` gelijk is aan 0, toon je niets.
+  - Indien `Kosten1` groter is dan 0, toon je een rode bol.
 
 Vanaf het moment dat je extra kosten maakt, zie je een waarschuwing onder de vorm van een rode bol, besparingen worden getoond via een groene bol.
 
@@ -582,7 +599,6 @@ Tot nu toe heb je alle informatie bekeken op het scherm. Project biedt ook een g
 - Geef een overzicht van alle taken, waarbij de taken gegroepeerd worden op de geplande “baseline kosten”. De duurste taken moeten eerst getoond worden.
 - Druk een rapport af met daarop de toegewezen taken per resource.
 
-
 ### Extra oefeningen
 
 #### Oefening 1
@@ -591,17 +607,17 @@ Bij de ontwikkeling van het informatiesysteem voor de “BOEKENVERKOOP”, worde
 
 - FASE 0: INFORMATIEPLANNING (20)
 - FASE 1: DEFINITIESTUDIE BOEKENVERKOOP
-	- 1.1 Leg uitgangspunten vast en stel plan van aanpak op (2)
-	- 1.2 Verzamel gegevens over huidige en gewenste informatievoorziening (1)
-	- 1.3 Evalueer veranderingsbehoeften en definieer systeemeisen (8)
-	- 1.4 Evalueer organisatorische gevolgen (6)
-	- 1.5 Bepaal systeemconcept (10)
-	- 1.6 Bepaal systeemontwikkelomgeving en productie omgeving (2)
-	- 1.7 Evalueer oplossingen en selecteer (1)
-	- 1.8 Bepaal invoerings- en veranderingsproblemen en stel acceptatieprocedure vast (8)
-	- 1.9 Maak totaalplan en kosten/baten overzicht (5)
-	- 1.10 Valideer definitiestudie (1)
-	- 1.11 Stel rapport definitiestudie op (1)
+  - 1.1 Leg uitgangspunten vast en stel plan van aanpak op (2)
+  - 1.2 Verzamel gegevens over huidige en gewenste informatievoorziening (1)
+  - 1.3 Evalueer veranderingsbehoeften en definieer systeemeisen (8)
+  - 1.4 Evalueer organisatorische gevolgen (6)
+  - 1.5 Bepaal systeemconcept (10)
+  - 1.6 Bepaal systeemontwikkelomgeving en productie omgeving (2)
+  - 1.7 Evalueer oplossingen en selecteer (1)
+  - 1.8 Bepaal invoerings- en veranderingsproblemen en stel acceptatieprocedure vast (8)
+  - 1.9 Maak totaalplan en kosten/baten overzicht (5)
+  - 1.10 Valideer definitiestudie (1)
+  - 1.11 Stel rapport definitiestudie op (1)
 
 De volgende handelingen verlopen gelijktijdig:
 
@@ -609,15 +625,15 @@ De volgende handelingen verlopen gelijktijdig:
 2. 1.8 en 1.9
 
 - FASE 2: BASISONTWERP
-	- 2.1 Leg uitgangspunten vast en stel plan van aanpak op (2)
-	- 2.2 Geef toekomstige werkomgeving aan (3)
-	- 2.3 Bepaal basisgegevensstructuur (5)
-	- 2.4 Bepaal basisfunctiestructuur (7)
-	- 2.5 Specificeer de benodigde faciliteiten (2)
-	- 2.6 Bepaal de technische vormgeving (4)
-	- 2.7 Valideer Basisontwerp (1)
-	- 2.8 Vervaardig totaalplan en kosten/baten analyse (5)
-	- 2.9 Rapporteer over Basisontwerp (1)
+  - 2.1 Leg uitgangspunten vast en stel plan van aanpak op (2)
+  - 2.2 Geef toekomstige werkomgeving aan (3)
+  - 2.3 Bepaal basisgegevensstructuur (5)
+  - 2.4 Bepaal basisfunctiestructuur (7)
+  - 2.5 Specificeer de benodigde faciliteiten (2)
+  - 2.6 Bepaal de technische vormgeving (4)
+  - 2.7 Valideer Basisontwerp (1)
+  - 2.8 Vervaardig totaalplan en kosten/baten analyse (5)
+  - 2.9 Rapporteer over Basisontwerp (1)
 
 De volgende handelingen verlopen gelijktijdig:
 
@@ -654,12 +670,12 @@ Een nieuw amusementscomplex zal worden aangelegd op een oud industrieterrein nab
 
 Teken een PERT-diagram waarin rekening wordt gehouden met de volgende taken binnen de eigen onderneming:
 
--   D: offerteaanvraag infrastructuur (10 dagen)
--   E: offertes infrastructuur beoordelen (10 dagen)
--   F. G. Bouw van de attracties (170 dagen; tijdens de laatste 40 dagen moet de infrastructuur beschikbaar zijn): we noemen de eerste 130 dagen F, de volgende 40 dagen G
--   H. Perscampagne, afgesloten met feestelijke opening door de plaatselijke burgemeester (30 dagen)
--   I. Selectie en ontwerp van de attracties, inclusief kosten/batenanalyse (60 dagen)
--   J. Aanwerving personeel voor de uitbating (15 werkdagen, gespreid over 60 kalenderdagen: duur van taak J in PERT-diagram = 60 dagen)
+- D: offerteaanvraag infrastructuur (10 dagen)
+- E: offertes infrastructuur beoordelen (10 dagen)
+- F. G. Bouw van de attracties (170 dagen; tijdens de laatste 40 dagen moet de infrastructuur beschikbaar zijn): we noemen de eerste 130 dagen F, de volgende 40 dagen G
+- H. Perscampagne, afgesloten met feestelijke opening door de plaatselijke burgemeester (30 dagen)
+- I. Selectie en ontwerp van de attracties, inclusief kosten/batenanalyse (60 dagen)
+- J. Aanwerving personeel voor de uitbating (15 werkdagen, gespreid over 60 kalenderdagen: duur van taak J in PERT-diagram = 60 dagen)
 
 1. Wat is de doorlooptijd (in werkdagen)?
 2. Welke handelingen vormen het kritieke pad?
@@ -667,43 +683,42 @@ Teken een PERT-diagram waarin rekening wordt gehouden met de volgende taken binn
 
 Opmerking : bijkomende gegevens : toewijzing van de taken :
 
-1.  Lieve Aerts
-    1.  Offerte aanvraag
-    2.  Selectie en ontwerp attracties
+1. Lieve Aerts
+   1. Offerte aanvraag
+   2. Selectie en ontwerp attracties
 
-2.  Lut Nuyts
-    1.  Offerteaanvraag
-    2.  Selectie en ontwerp attracties
-    3.  Perscampagne
+2. Lut Nuyts
+   1. Offerteaanvraag
+   2. Selectie en ontwerp attracties
+   3. Perscampagne
 
-3.  Jan Peeters
-    1.  Offertes beoordelen
-    2.  Selectie en ontwerp attracties
+3. Jan Peeters
+   1. Offertes beoordelen
+   2. Selectie en ontwerp attracties
 
-4.  Anniek Schreurs
-    1.  Offertes beoordelen
-    2.  Selectie en ontwerp attracties
+4. Anniek Schreurs
+   1. Offertes beoordelen
+   2. Selectie en ontwerp attracties
 
-5.  Benny Put
-    1.  Selectie en ontwerp attracties
-    2.  Aanwerving personeel
+5. Benny Put
+   1. Selectie en ontwerp attracties
+   2. Aanwerving personeel
 
-6.  Pieter Bammens
-    1.  Opbouw attracties
-    2.  Afwerking attracties
+6. Pieter Bammens
+   1. Opbouw attracties
+   2. Afwerking attracties
 
-7.  Corneel Thijs
-    1.  Opbouw attracties
-    2.  Afwerking attracties
+7. Corneel Thijs
+   1. Opbouw attracties
+   2. Afwerking attracties
 
-8.  Luc Maex
-    1.  Opbouw attracties
+8. Luc Maex
+   1. Opbouw attracties
 
 # Bibliografie
 
-- [[References/@geeksforgeeksDifferencePERT2025\|@geeksforgeeksDifferencePERT2025]]: _'Difference Between PERT and CPM'_ -  ** geeksforgeeks(2025)** https://www.geeksforgeeks.org/software-engineering/difference-between-pert-and-cpm/<br/><br/>
-- [[References/@gillinghamWhatMicrosoft2023\|@gillinghamWhatMicrosoft2023]]: _'What is Microsoft Project? A Comprehensive Overview'_ -  ** Gillingham, Jacob(2023)** https://www.invensislearning.com/blog/what-is-microsoft-project/<br/><br/>
-- [[References/@kypproject_2023\|@kypproject_2023]]: _'Hoe maak je een projectplanning? | KYP Project'_ -  **kypproject,(2023)** https://kypproject.com/nl/blog/hoe-maak-je-een-projectplanning/<br/><br/>
-- [[References/@schegget.hamelink_1993\|@schegget.hamelink_1993]]: _'Netwerkplanning volgens PERT'_ -  **Schegget, ter, P.J.; Hamelink, L.J.(1993)** https://research.tue.nl/files/4340148/501362.pdf<br/><br/>
-- [[References/@teamleader_2018\|@teamleader_2018]]: _'Hoe stel je een projectplan op? (gratis template) | Teamleader'_ -  **Teamleader,(2018)** https://www.teamleader.be/nl-be/blog/projectplan-template<br/><br/>
-
+- [[References/@geeksforgeeksDifferencePERT2025.md|@geeksforgeeksDifferencePERT2025]]: _'Difference Between PERT and CPM'_ -  \*\* geeksforgeeks(2025)\*\* https://www.geeksforgeeks.org/software-engineering/difference-between-pert-and-cpm/<br/><br/>
+- [[References/@gillinghamWhatMicrosoft2023.md|@gillinghamWhatMicrosoft2023]]: _'What is Microsoft Project? A Comprehensive Overview'_ -  \*\* Gillingham, Jacob(2023)\*\* https://www.invensislearning.com/blog/what-is-microsoft-project/<br/><br/>
+- [[References/@kypproject_2023.md|@kypproject_2023]]: _'Hoe maak je een projectplanning? | KYP Project'_ -  **kypproject,(2023)** https://kypproject.com/nl/blog/hoe-maak-je-een-projectplanning/<br/><br/>
+- [[References/@schegget.hamelink_1993.md|@schegget.hamelink_1993]]: _'Netwerkplanning volgens PERT'_ -  **Schegget, ter, P.J.; Hamelink, L.J.(1993)** https://research.tue.nl/files/4340148/501362.pdf<br/><br/>
+- [[References/@teamleader_2018.md|@teamleader_2018]]: _'Hoe stel je een projectplan op? (gratis template) | Teamleader'_ -  **Teamleader,(2018)** https://www.teamleader.be/nl-be/blog/projectplan-template<br/><br/>

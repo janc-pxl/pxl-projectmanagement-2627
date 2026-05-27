@@ -2,7 +2,7 @@
 publish: true
 title: 002 Projectplanning
 created: 2026-02-26T10:19:08.244+01:00
-modified: 2026-05-27T15:22:35.197+02:00
+modified: 2026-05-27T15:29:34.592+02:00
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -97,17 +97,13 @@ Belangrijke voordelen van netwerkplanning zijn:
 Voor een goede uitleg, zie volgende filmpjes
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
-	<iframe src="https://pxl.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=33b773cd-3e9d-42df-ae3d-b45700dc2886&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Dummy-Activity-in-Network-Diagram-Projec_Media_ChF6FkW4I6c_001_1080p"></iframe>
+	<iframe src="https://pxl.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=33b773cd-3e9d-42df-ae3d-b45700dc2886&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Dummy-Activity-in-Network-Diagram-Projec_Media_ChF6FkW4I6c_001_1080p"></iframe>
 </div>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ChF6FkW4I6c?si=SeOOBYwy3jkfx5Ht" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/J2YJwGa4rsc?si=YzRRjTJM29Jcq9kC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://pxl.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=33b773cd-3e9d-42df-ae3d-b45700dc2886&autoplay=false&offerviewer=false&showtitle=false&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Dummy-Activity-in-Network-Diagram-Projec_Media_ChF6FkW4I6c_001_1080p"></iframe>
+</div>
 ##### Handig referentieschema
-
 ![](https://i.imgur.com/nnauqcl.gif)
-
 #### Afstemmingslijn
 
 - Geeft een gewenst verband weer

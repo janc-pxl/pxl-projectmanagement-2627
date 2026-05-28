@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 002 Projectplanning
-created: 2026-02-26T10:19:08.244+01:00
-modified: 2026-05-27T15:43:48.410+02:00
+created: 2026-05-27T15:51:21.318+02:00
+modified: 2026-05-28T15:15:54.863+02:00
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -40,13 +40,13 @@ Om een goede projectplanning te maken kan gebruik gemaakt worden van software vo
 > [!note] DEFINITIE: PERT
 > PERT (Program Evaluation and Review Technique) is een hulpmiddel voor de bedrijfsleiding bij de analyse en planning van projecten. Hierbij wordt gebruik gemaakt van een grafische voorstelling, het netwerk, om de samenhang tussen de verschillende werkzaamheden aan te geven. [[@schegget.hamelink_1993]]
 
-Projecten zijn opgebouwd uit een aantal activiteiten. Sommige activiteiten dienen achter elkaar te worden uitgevoerd, andere mogen gelijktijdig worden uitgevoerd. Meestal is het zo dat de duur van het project globaal genomen afhankelijk is van een aantal op elkaar aansluitende activiteiten. Indien de tijd voorzien voor de uitvoering van deze activiteiten kan ingekort worden, kan heel het project vroeger klaar zijn. Van andere activiteiten mag de uitvoeringstijd variëren, zonder de duur van het project te beïnvloeden.
+**Projecten bestaan uit verschillende activiteiten.** Sommige activiteiten moeten achtereenvolgens worden uitgevoerd, terwijl andere parallel kunnen lopen. Vaak wordt de totale duur van een project bepaald door een reeks opeenvolgende activiteiten. Als de tijd voor deze _kritieke_ activiteiten verkort kan worden, is het hele project eerder af. Andere activiteiten hebben een flexibele doorlooptijd en beïnvloeden de totale projectduur niet.
 
-Belangrijke voordelen van netwerkplanning zijn:
+**Netwerkplanning biedt belangrijke voordelen:**
 
-- Goede voortgangscontrole
-- Verbetering van de communicatie via het netwerk
-- Het opsporen van bottlenecks
+- **Voortgangscontrole:** Je houdt overzicht over de vorderingen.
+- **Betere communicatie:** Het netwerk visualiseert afhankelijkheden en verantwoordelijkheden.
+- **Bottlenecks opsporen:** Je identificeert snel knelpunten in het proces.
 
 > [!INFO] Geschiedenis
 > De PERT methode is uitgevonden door de United States Department of Defense's US Navy Special Projects Office in 1958 als een onderdeel van het Polaris project. De PERT methode lijkt sterk op de kritieke pad methode. Bij de kritische pad methode wordt uitgegaan van de gesommeerde duur van het kritieke pad, terwijl in de PERT methode een kansberekening wordt toegepast.

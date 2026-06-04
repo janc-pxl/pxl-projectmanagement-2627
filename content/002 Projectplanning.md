@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 002 Projectplanning
-created: 2026-05-27T15:51:21.318+02:00
-modified: 2026-05-28T15:15:54.863+02:00
+created: 2026-06-04T11:03:46.236+02:00
+modified: 2026-06-04T11:14:45.686+02:00
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -20,18 +20,19 @@ modified: 2026-05-28T15:15:54.863+02:00
 
 ![](https://i.imgur.com/humdHtI.png)
 
+In het vorige hoofdstuk zag je dat projectmanagement verloopt via vijf procesgroepen. De [[001 Wat is Projectmanagement#Planning Process Group|Planning Process Group]] is daarin het zwaartepunt. In die fase werk je de scope uit het [[001 Wat is Projectmanagement#Plan van Aanpak|Plan van Aanpak]] uit tot een concreet plan waarmee je het project kunt sturen. Dit hoofdstuk gaat verder op dat punt. We zoomen in op de kern van die planning: hoe breng je een project in de tijd in kaart, en hoe bewaak je die tijdlijn?
+
 > [!note] DEFINITIE: Projectplanning
-> Een projectplanning is een hulpmiddel om de voortgang en de resultaten van een project te bewaken en te sturen. Een projectplanning is niet hetzelfde als een projectplan, dat de scope en de doelstellingen van het project bepaalt.
+> Een projectplanning is een hulpmiddel om de voortgang en de resultaten van een project te bewaken en te sturen. Een projectplanning is niet hetzelfde als een projectplan (het [[001 Wat is Projectmanagement#Plan van Aanpak|Plan van Aanpak]] uit hoofdstuk 1). Dat projectplan legt de scope en de doelstellingen vast. Kort gezegd: het projectplan zegt _wat_ en _waarom_, de projectplanning zegt _wanneer_ en _in welke volgorde_.
 
-Een projectplanning bestaat uit verschillende onderdelen, zoals:
+Een volledige projectplanning raakt meerdere dimensies: scope, fasering, tijd, geld en informatie. Een aantal daarvan krijgt verderop een eigen hoofdstuk. Geld en rendement komen aan bod in [[005 Kosten en Batenanalyse|Kosten- en batenanalyse]] (hoofdstuk 5), onzekerheid in [[006 Risicomanagement|Risicomanagement]] (hoofdstuk 6) en communicatie in [[009 Informatiemanagement|Informatiemanagement]] (hoofdstuk 9). In dit hoofdstuk richten we ons op de **tijdsdimensie**. Dat is de ruggengraat waar je alle andere aspecten aan ophangt.
 
-- Het volgen van het **project scope statement (PSS)**, dat de verwachtingen en eisen van de opdrachtgever en de stakeholders vastlegt.
-- De **fasering**, die aangeeft uit welke stappen of fases het project bestaat en wat er in elke fase gebeurt. Een bekende methode voor fasering is PRINCE 2, die zeven fases onderscheidt: starten, initiëren, sturen, beheersen, managen productoplevering, managen faseovergang en afsluiten.
-- De **tijd**, die aangeeft wanneer elke fase of activiteit moet beginnen en eindigen, hoeveel speling er is per fase of activiteit en wat het kritieke pad is. Het kritieke pad is de langste route van activiteiten die bepalend is voor de duur van het hele project. Als er vertraging optreedt op het kritieke pad, heeft dat direct invloed op de einddatum van het project.
-- Het **geld**, dat aangeeft welk budget er beschikbaar is voor het project, welk budget er nodig is voor elke fase of activiteit, wanneer het geld nodig is en wat de verwachte opbrengsten zijn. Het geld wordt ook gebruikt om de kosten en baten van het project te analyseren en te bewaken.
-- De **informatie**, die aangeeft hoe er gecommuniceerd wordt over het project met alle betrokkenen. Dit omvat onder andere hoe vaak er gerapporteerd wordt over de voortgang en eventuele knelpunten van het project, wie verantwoordelijk is voor welke informatie en welke communicatiemiddelen er gebruikt worden.
+Daarvoor gebruiken we twee klassieke technieken die elkaar aanvullen:
 
-Om een goede projectplanning te maken kan gebruik gemaakt worden van software voor projectplanning. Deze software kan helpen om alle aspecten van een project in kaart te brengen, te visualiseren en te beheren. [[@kypproject_2023]] [[@teamleader_2018]]
+- **PERT (netwerkplanning)** toont de logische samenhang en de afhankelijkheden tussen activiteiten. Daarmee bereken je het **kritieke pad**: de reeks activiteiten die de minimale projectduur bepaalt.
+- **De Gantt-grafiek** zet diezelfde activiteiten op een tijdschaal. Zo zie je in één oogopslag wanneer wat loopt, en kun je de voortgang opvolgen.
+
+Je kunt beide met de hand opstellen. In de praktijk gebruik je meestal projectplanningssoftware. Die helpt om alle aspecten van een project in kaart te brengen, te visualiseren en te beheren. [[@kypproject_2023]] [[@teamleader_2018]]
 
 ## PERT
 

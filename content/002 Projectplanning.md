@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 002 Projectplanning
-created: 2026-06-05T14:24:17.541+02:00
-modified: 2026-06-05T14:24:17.542+02:00
+created: 2026-06-05T16:09:30.719+02:00
+modified: 2026-06-05T16:09:30.719+02:00
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -118,41 +118,52 @@ Voor een goede uitleg, zie volgende filmpjes
 
 ![](https://i.imgur.com/nnauqcl.gif)
 
-Met deze bouwstenen kun je elk project als een netwerk tekenen. Let vooral op het verschil tussen een wachttijd en een schijnactiviteit: een wachttijd kost wel tijd maar geen werk, terwijl een schijnactiviteit een noodzakelijk verband legt zonder dat er tijd of werk aan verbonden is. Zodra het netwerk volledig is, kun je de volgende stap zetten: bepalen hoeveel tijd elke activiteit nodig heeft. Dat is het onderwerp van de volgende paragraaf.
+Met deze bouwstenen kun je elk project als een netwerk tekenen. Let vooral op het verschil tussen een wachttijd en een schijnactiviteit: een wachttijd kost wel tijd maar geen werk, terwijl een schijnactiviteit een noodzakelijk verband legt zonder dat er tijd of werk aan verbonden is. Zodra het netwerk volledig is, kun je de volgende stap zetten: bepalen hoeveel tijd elke activiteit nodig heeft.
 
 ### Tijdsfactor
 
-Eens het netwerk opgesteld moet men bepalen hoeveel tijd elk van de activiteiten in beslag neemt.
+Zodra het netwerk er staat, bepaal je hoeveel tijd elke activiteit nodig heeft. In de praktijk ken je die duur zelden op voorhand exact. Daarom werkt PERT met drie schattingen per activiteit:
 
-Voor het berekenen van de verwachte tijd van een activiteit gebruiken we drie schattingen:
+1. t$_o$ = optimistische schatting (most optimistic time): alles loopt vlot
+2. t$_l$ = meest waarschijnlijke schatting (most likely time): de duur die je in normale omstandigheden verwacht
+3. t$_p$ = pessimistische schatting (most pessimistic time): er loopt veel tegen
 
-1. t$_o$ = optimistische schatting (most optimistic time)
-2. t$_l$ = gemiddelde schatting (most likely time)
-3. t$_p$ = pessimistische schatting (most pessimistic time)
-
-formule verwachte tijd:
+Uit die drie schattingen bereken je de verwachte tijd t$_e$:
 
 $t_e= \frac{(t_o+ 4t_l + t_p)}{6}$
 
+> [!tip] Waarom telt de meest waarschijnlijke schatting zwaarder?
+> De formule is een **gewogen gemiddelde**. Elke schatting krijgt een gewicht: de optimistische telt 1 keer mee, de meest waarschijnlijke 4 keer, en de pessimistische 1 keer. Samen is dat 1 + 4 + 1 = 6, en daarom deel je door 6.
+>
+> De meest waarschijnlijke duur krijgt het grootste gewicht omdat dat de uitkomst is die in de praktijk het vaakst voorkomt. De optimistische en de pessimistische duur zijn uitersten die je zelden haalt: ze begrenzen de schatting, maar bepalen ze niet. Door de middelste waarde 4 keer mee te tellen, ligt t$_e$ dicht bij die waarde en schuift ze alleen een beetje op naar de kant waar de meeste ruimte zit.
+>
+> Vergelijk het met een gewoon gemiddelde: dan zou er $(t_o + t_l + t_p)/3$ staan en zou elke schatting even zwaar tellen. De 4 en de 6 zorgen er net voor dat de meest waarschijnlijke schatting de uitkomst domineert, terwijl de twee uitersten ze licht bijsturen.
+
+Nu elke activiteit een verwachte duur t$_e$ heeft, kun je het netwerk analyseren. Dat gebeurt in twee gangen: eerst voorwaarts (de vroegste tijdstippen), daarna achterwaarts (de laatste tijdstippen). Daarna bereken je de speling en bepaal je het kritieke pad.
+
 ### Verwachte tijdstippen
 
-Eens alle activiteiten en knooppunten getekend zijn, gaan we het netwerk analyseren.
+Bij elk knooppunt berekenen we twee tijdstippen: het vroegst mogelijke en het laatst toelaatbare. Samen tonen ze hoeveel ruimte er in het netwerk zit.
+
+#### Voorwaartse gang: vroegste tijdstip (T$_E$)
 
 _T$_E$ = Earliest expected time_
 
-In de voorwaartse gang berekenen we het vroegst mogelijke begin. Dit is het vroegst mogelijke tijdstip waarop een bepaald knooppunt kan bereikt worden, en meteen ook het vroegste begin van de activiteiten die vertrekken in dit knooppunt.
+De voorwaartse gang geeft het vroegst mogelijke tijdstip waarop je een knooppunt kunt bereiken. Dat is meteen ook het vroegste begin van de activiteiten die in dat knooppunt vertrekken.
 
-Voor elk pad (aaneenschakeling van activiteiten) dat in een bepaald knooppunt toekomt berekenen wij de som van de T$_E$’s van de activiteiten op dat pad. De grootste som wordt de T$_E$ van het beschouwde knooppunt.
+Je werkt van het begin naar het einde van het netwerk. Het vroegste tijdstip van een knooppunt bereken je door bij het vroegste tijdstip van het vorige knooppunt de duur t$_e$ van de tussenliggende activiteit op te tellen. Komen er meerdere paden samen in een knooppunt, dan neem je het grootste resultaat, want alle voorgaande activiteiten moeten klaar zijn voor je verder kunt.
+
+#### Achterwaartse gang: laatste tijdstip (T$_L$)
 
 _T$_L$ = Latest allowable time_
 
-In de achterwaartse gang berekenen we het laatst toelaatbare eindtijdstip. Als een activiteit niet voltooid is op dit tijdstip wordt de globale duur van het project overschreden.
+De achterwaartse gang geeft het laatst toelaatbare tijdstip. Is een activiteit op dat tijdstip niet voltooid, dan loopt het hele project uit.
 
-De T$_L$ wordt bepaald door de berekening te beginnen vanaf het laatste knooppunt van het project. De T$_L$ van een bepaald knooppunt is dan gelijk aan de T$_L$ van het volgende knooppunt, min de duurtijd van de activiteit die de twee knooppunten verbindt. Als er in een bepaald knooppunt verscheidene activiteiten vertrekken, dan maken wij de berekening langs de verschillende paden en gebruiken het kleinste getal als T$_L$ van het beschouwd knooppunt.
+Je werkt nu van het einde naar het begin. Je start bij het laatste knooppunt van het project. Het laatste tijdstip van een knooppunt is gelijk aan het laatste tijdstip van het volgende knooppunt, min de duur van de activiteit die de twee knooppunten verbindt. Vertrekken er in een knooppunt verschillende activiteiten, dan reken je langs elk pad en houd je het kleinste getal aan als T$_L$.
 
 ### Speling
 
-Speling of “slack” is de maximale vertraging die een bepaalde activiteit mag oplopen, zonder dat een vertraging voor het hele project ontstaat.
+Speling of “slack” is de maximale vertraging die een bepaalde activiteit mag oplopen, zonder dat een vertraging voor het hele project ontstaat. Je berekent ze per knooppunt als het verschil tussen het laatste en het vroegste tijdstip:
 
 ${Slack} = T_L – T_E$
 
@@ -169,7 +180,7 @@ In het netwerk lopen verscheidene paden van de aanvangsfase naar de eindfase. He
 
 De CPM-techniek is een methode om die activiteiten te bepalen en te coördineren, die uitgevoerd worden om vastgestelde doeleinden te bereiken binnen een voorgeschreven tijd.
 
-Indien de T$_L$ en de T$_E$ van het hele project aan elkaar gelijk gesteld worden, is de speling op het kritieke pad overal gelijk aan 0.
+Indien de T$_L$ en de T$_E$ van het hele project aan elkaar gelijk gesteld worden, is de speling op het kritieke pad overal gelijk aan 0. Negatieve speling kom je dan ook alleen tegen als je een deadline oplegt die korter is dan het kritieke pad. In dat geval moet je activiteiten versnellen om die deadline nog te halen.
 
 ### Oefeningen
 

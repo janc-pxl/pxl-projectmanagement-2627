@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 002 Projectplanning
-created: 2026-06-04T11:03:46.236+02:00
-modified: 2026-06-05T10:21:26.703+02:00
+created: 2026-06-05T14:24:17.541+02:00
+modified: 2026-06-05T14:24:17.542+02:00
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -55,43 +55,52 @@ Je kunt beide met de hand opstellen. In de praktijk gebruik je meestal projectpl
 
 ### Hoofdbegrippen
 
+Een PERT-netwerk bouw je op met een klein aantal bouwstenen. Voor je een netwerk kunt tekenen of lezen, moet je deze begrippen kennen. Hieronder bespreken we ze één voor één, telkens met de manier waarop je ze in een diagram voorstelt.
+
 #### Knooppunt
 
-- Gebeurtenis
-- Aanvang of einde van een taak, werkzaamheid of bewerking
+Een knooppunt stelt een gebeurtenis voor: het moment waarop een activiteit begint of eindigt. Het markeert dus een punt in de tijd, geen werk.
+
 - Neemt geen tijd, arbeid of grondstoffen in beslag
-- Voorgesteld door een cirkel
+- Wordt voorgesteld door een cirkel
 
 ![](https://i.imgur.com/i1yrEop.png)
 
 #### Activiteit
 
-- Uitvoering van een taak
-- Er zijn mensen, materialen, hulpmiddelen en tijd voor nodig
-- Voorgesteld door een pijl met willekeurige lengte tussen twee knooppunten
+Een activiteit is de uitvoering van een taak. Anders dan een knooppunt kost een activiteit wél tijd en middelen.
+
+- Heeft mensen, materialen, hulpmiddelen en tijd nodig
+- Wordt voorgesteld door een pijl tussen twee knooppunten
+- De lengte van de pijl zegt niets over de duur van de activiteit
 
 ![](https://i.imgur.com/4l0mSXc.png)
 
-#### Netwerk:
+#### Netwerk
 
-- Brengt de logische opeenvolging van de activiteiten in beeld
-- Welke activiteiten gaan vooraf of volgen of verlopen simultaan
+Een netwerk brengt alle activiteiten en hun volgorde samen in één tekening. Zo zie je hoe de activiteiten van elkaar afhangen.
+
+- Toont de logische opeenvolging van de activiteiten
+- Maakt duidelijk welke activiteiten elkaar voorafgaan, volgen of tegelijk lopen
 
 ![](https://i.imgur.com/w6iVctQ.png)
 
-#### Schijnactiviteit
+#### Wachttijd
 
-- Een technisch noodzakelijke wachttijd veroorzaakt door een natuurlijk proces of een noodzakelijke wachttijd veroorzaakt door afspraken met derden
-- Neemt alleen tijd, geen mankracht of hulpmiddelen in beslag
+Een wachttijd is een periode waarin het project niet vooruitgaat door eigen werk, maar waarin je toch moet wachten voor je verder kunt. Er verstrijkt tijd, maar je zet er geen mensen of middelen op in. Strikt genomen is dit een gewone activiteit, alleen zonder inzet van mensen of middelen.
+
+- Ontstaat door een natuurlijk proces (bijvoorbeeld verf die droogt of beton dat uithardt) of door afspraken met derden (bijvoorbeeld wachten op een levering of een goedkeuring)
+- Neemt alleen tijd in beslag, geen mankracht of hulpmiddelen
 
 ![](https://i.imgur.com/MeK1nfw.png)
 
-#### Relatielijn (of 0-lijn)
+#### Schijnactiviteit
+
+Een schijnactiviteit (ook _relatielijn_, _0-lijn_ of _dummy activity_ genoemd) geeft een noodzakelijk verband tussen twee knooppunten aan, zonder dat er tijd of werk aan verbonden is. Ze is vooral handig om tekenproblemen op te lossen wanneer je de afhankelijkheden anders niet correct in beeld krijgt.
 
 - Geeft een noodzakelijk verband aan
-- Neemt geen tijd in beslag, geen mankracht en geen hulpmiddelen
-- Voorgesteld met een stippellijn tussen twee knooppunten met een 0
-- Handige oplossing voor tekenproblemen
+- Neemt geen tijd, mankracht of hulpmiddelen in beslag
+- Wordt voorgesteld door een stippellijn met een 0 tussen twee knooppunten
 
 ![](https://i.imgur.com/UAnJVmQ.png)
 
@@ -109,10 +118,7 @@ Voor een goede uitleg, zie volgende filmpjes
 
 ![](https://i.imgur.com/nnauqcl.gif)
 
-#### Afstemmingslijn
-
-- Geeft een gewenst verband weer
-- Voorgesteld door een stippellijn met een A
+Met deze bouwstenen kun je elk project als een netwerk tekenen. Let vooral op het verschil tussen een wachttijd en een schijnactiviteit: een wachttijd kost wel tijd maar geen werk, terwijl een schijnactiviteit een noodzakelijk verband legt zonder dat er tijd of werk aan verbonden is. Zodra het netwerk volledig is, kun je de volgende stap zetten: bepalen hoeveel tijd elke activiteit nodig heeft. Dat is het onderwerp van de volgende paragraaf.
 
 ### Tijdsfactor
 

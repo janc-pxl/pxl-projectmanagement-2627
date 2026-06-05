@@ -2,7 +2,7 @@
 publish: true
 title: 002 Projectplanning
 created: 2026-06-04T11:03:46.236+02:00
-modified: 2026-06-04T11:14:45.686+02:00
+modified: 2026-06-05T09:59:20.523+02:00
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -167,6 +167,8 @@ De CPM-techniek is een methode om die activiteiten te bepalen en te coördineren
 Indien de T$_L$ en de T$_E$ van het hele project aan elkaar gelijk gesteld worden, is de speling op het kritieke pad overal gelijk aan 0.
 
 ### Oefeningen
+
+<iframe src="https://janc-pxl.github.io/TeachBertPERT/"></iframe>
 
 Maak die, afhankelijk van je creatief talent, op papier, op een tablet of door middel van een tekenapplicatie zoals https://app.diagrams.net/
 

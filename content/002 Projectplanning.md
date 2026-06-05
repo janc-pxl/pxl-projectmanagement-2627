@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 002 Projectplanning
-created: 2026-06-05T16:09:30.719+02:00
-modified: 2026-06-05T16:09:30.719+02:00
+created: 2026-06-05T16:22:37.675+02:00
+modified: 2026-06-05T16:22:37.678+02:00
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -182,7 +182,25 @@ De CPM-techniek is een methode om die activiteiten te bepalen en te coördineren
 
 Indien de T$_L$ en de T$_E$ van het hele project aan elkaar gelijk gesteld worden, is de speling op het kritieke pad overal gelijk aan 0. Negatieve speling kom je dan ook alleen tegen als je een deadline oplegt die korter is dan het kritieke pad. In dat geval moet je activiteiten versnellen om die deadline nog te halen.
 
+### PERT samengevat
+
+Met PERT zet je een project om in een netwerk en bereken je hoe lang het minstens duurt. De techniek steunt op een paar bouwstenen en op een vaste werkwijze.
+
+Je begint met de bouwstenen: knooppunten (gebeurtenissen), activiteiten (taken die tijd en middelen kosten) en de bijzondere gevallen wachttijd en schijnactiviteit. Samen vormen ze het netwerk, dat de logische volgorde en de afhankelijkheden tussen de activiteiten toont.
+
+Daarna doorloop je telkens dezelfde stappen:
+
+1. Schat per activiteit de duur met drie schattingen en bereken de verwachte tijd t$_e$.
+2. Bereken in de voorwaartse gang het vroegste tijdstip (T$_E$) van elk knooppunt.
+3. Bereken in de achterwaartse gang het laatste tijdstip (T$_L$) van elk knooppunt.
+4. Bepaal per knooppunt de speling (T$_L$ − T$_E$).
+5. Verbind de knooppunten zonder speling: dat is het kritieke pad, en dat bepaalt de totale projectduur.
+
+Zo zie je in één oogopslag welke activiteiten kritiek zijn en waar er ruimte zit om te schuiven. Een vertraging op het kritieke pad vertraagt het hele project, terwijl activiteiten met speling wat kunnen uitlopen zonder gevolgen voor de einddatum.
+
 ### Oefeningen
+
+Je krijgt de theorie pas echt onder de knie door ze zelf toe te passen. Op de oefenpagina loop je spelenderwijs en op je eigen tempo nog eens door alle begrippen en termen. Daarna werk je stap voor stap via oefeningen naar de praktische uitwerking van PERT: je leert een netwerk tekenen, de tijden berekenen en het kritieke pad bepalen.
 
 Maak de oefeningen op [deze pagina](https://janc-pxl.github.io/TeachBertPERT/)
 

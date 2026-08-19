@@ -2,7 +2,7 @@
 publish: true
 title: 005 Kosten- en batenanalyse
 created: 2026-06-04T11:13:31.731Z
-modified: 2026-06-04T11:13:31.731Z
+modified: 2026-08-19T12:09:36.706Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -473,18 +473,26 @@ De primaire methode voor het beoordelen van investeringen blijft de netto contan
 
 ### Ondersteunende Video's
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2HXwiCoYM8o?si=LbFkqhAYQJSbyfTO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://pxl.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=a0575ab7-1a85-44f7-8739-b4ab00c75d3c&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Cost-Benefit-Net-Present-Value_720p"></iframe>
+</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zfK3HhkXC_I?si=4LehvTGgunabDSbj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://pxl.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6f7a99d3-efdf-4406-b7b7-b4ab00c75ac0&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Cost-Benefit-Internal-Rate-of-Return_720p"></iframe>
+</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/X5yaXdTwfLE?si=nR_gYZjH_JI7a8-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://pxl.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=f20461d0-e4af-4afb-9932-b4ab00c75acb&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Benefit-Cost-Ratio-and-Payback_720p"></iframe>
+</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7w-UWuDi0fY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://pxl.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=3472ac20-6ed6-420e-a5ec-b4ab00c75ac4&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="3-Minutes-Internal-Rate-of-Return-IRR_720p"></iframe>
+</div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Fw5-wccViOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://pxl.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=d0b60fe3-1fb1-4814-8e5e-b4ab00c75ac2&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="NPV-and-IRR-explained_720p"></iframe>
+</div>
 ## Een uitgewerkt voorbeeld
-
 ![](https://i.imgur.com/ODumMrG.png)
 
 **Electroshop N.V. wil de administratie van het hoofdfiliaal volledig automatiseren.**

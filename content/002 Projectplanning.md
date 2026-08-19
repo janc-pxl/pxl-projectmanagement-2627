@@ -2,7 +2,7 @@
 publish: true
 title: 002 Projectplanning
 created: 2026-06-14T09:36:27.958Z
-modified: 2026-06-14T09:36:27.958Z
+modified: 2026-08-19T14:21:31.452Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -209,71 +209,335 @@ Maak de oefeningen op [deze pagina](https://janc-pxl.github.io/TeachBertPERT/)
 ## Gantt-grafiek
 
 ![](https://i.imgur.com/Z0njriK.png)
-Een Gantt-grafiek (Engels: Gantt-chart) is een grafiek ofwel diagram die gebruikt kan worden als hulpmiddel bij projectmanagement.
 
-### Gantt-chart = tijdschaal voorstelling
+### Van netwerk naar tijdlijn
 
-In een “tijdschaal voorstelling” worden de activiteiten op verschillende horizontale lijnen voorgesteld als stroken. In het diagram ligt een tijdschaal. De activiteiten worden gerangschikt in stijgende volgorde van eindknooppuntnummer en daarbinnen in stijgende volgorde van beginknooppuntnummer. Elke strook wordt getekend tussen de T$_E$ en de T$_L$ van een activiteit.
+> _"Oké. Maar wanneer moet ík dan beginnen?"_
 
-Deze voorstelling respecteert de algemene regels voor de tijdschaal voorstelling, maar laat eveneens toe:
+Daar heeft je PERT-netwerk geen antwoord op. Een netwerk toont **logica**: wat komt na wat, en wat is kritiek. Het toont geen **kalender**. Je hebt in de vorige sectie zelfs uitdrukkelijk geleerd dat de lengte van een pijl niets zegt over de duur van een activiteit.
 
-- relaties te leggen tussen de activiteiten
-- de vereiste hulpmiddelen aan te geven
-- de voortgang aan te duiden
+Daarvoor bestaat de Gantt-grafiek. Het zijn exact dezelfde activiteiten, maar nu getekend op een tijdschaal.
 
-De relaties tussen de activiteiten worden verduidelijkt door het nummer van het beginknooppunt vooraan en het nummer van het eindknooppunt achteraan boven de strook te schrijven. Bovendien wordt er een stippellijn getrokken door overeenkomstige eind- en beginknooppunten.
+> [!note] DEFINITIE: Gantt-grafiek
+> Een **Gantt-grafiek** (en: _Gantt chart_) is een staafdiagram waarin elke activiteit als een horizontale balk op een tijdschaal staat. De **positie** van de balk toont wanneer de activiteit loopt, de **lengte** van de balk toont hoe lang ze duurt.
 
-Een schuine stippellijn duidt op het feit dat er een speling bestaat. Een verticale stippellijn duidt op de afwezigheid van de speling. Om het “kritieke pad” te volgen vertrekt men van het eindknooppunt van het netwerk en gaat men in de tijd terug langs de stroken en de uitsluitend verticale stippellijnen tot men de tijd “0” bereikt.
+De twee technieken zijn dus geen concurrenten, maar twee helften van hetzelfde verhaal:
 
-Onder elke activiteit kan de werkelijke voortgang van de werken aangeduid worden door een gearceerde strook. Op die manier kan er gecontroleerd worden of alle activiteiten nog binnen het vooropgestelde schema zitten of niet.
+| | PERT-netwerk | Gantt-grafiek |
+| --- | --- | --- |
+| **Beantwoordt** | In welke volgorde? Wat is kritiek? | Wanneer precies? Hoe lang? |
+| **Sterkte** | Afhankelijkheden en logica | Tijd, mensen en voortgang |
+| **Gebruik je vooral** | bij het _opbouwen_ van de planning | bij het _uitvoeren_ en _opvolgen_ |
+| **Toon je aan** | je projectteam | je klant, je opdrachtgever, jezelf |
+
+In de praktijk maak je eerst het netwerk en zet je dat daarna om in een Gantt-grafiek. Dat is precies wat we in deze sectie stap voor stap doen.
 
 > [!info] Geschiedenis
-> Henry Laurence Gantt ontwikkelde in 1917 de Gantt-grafiek. In zijn werk als mechanisch engineer, management consultant en industry advisor werd de Gantt-grafiek gebruikt als een visueel hulpmiddel om de planning en voortgang van een project te laten zien. Op dit moment is het een wereldwijd geaccepteerde standaard, destijds een opzienbarende innovatie. De Gantt-grafiek werd onder andere gebruikt bij grote bouwprojecten als de Hoover Dam in 1931 en het interstate highway network in 1956.
+> Henry Laurence Gantt ontwikkelde zijn grafiek rond 1917 als visueel hulpmiddel om planning en voortgang te tonen. Wat destijds een opzienbarende innovatie was, is vandaag een wereldwijde standaard. De techniek werd onder meer gebruikt bij de bouw van de Hoover Dam (1931) en bij de aanleg van het Amerikaanse interstate highway network (1956). Meer dan honderd jaar later kijk je naar exact hetzelfde principe wanneer je in GitHub Projects of Jira op _roadmap view_ klikt.
 
-### Lay-out
+> [!tip] Eén ding, drie namen
+> Je zal de termen **Gantt-grafiek**, **Gantt-diagram** en **Gantt chart** door elkaar zien staan. Het is hetzelfde. In software (MS Project, Jira, GitHub) heet het altijd _Gantt Chart_. In deze cursus gebruiken we consequent **Gantt-grafiek**.
 
-Een Gantt-grafiek bestaat uit een aantal rijen die ieder een module of taak binnen het project vertegenwoordigen. Meestal staan de eerste modules bovenaan. Op de horizontale as staat de tijd die nodig is voor het totale project. Per project wordt middels een tijdbalk aangegeven welke tijd per module nodig is.
+### Hoe lees je een Gantt-grafiek?
 
-Gecompliceerdere Gantt-grafieken kunnen ook zaken bevatten als milestones en relaties tussen modules (bijvoorbeeld: taak 1 moet afgerond zijn voor taak 3 gestart kan worden).
+Voor je er zelf één tekent, moet je er één kunnen lézen. Een Gantt-grafiek bestaat altijd uit dezelfde zes elementen.
 
 ![](https://i.imgur.com/fiDuEXU.png)
 
-De blauwe balken zijn taken die uitgevoerd moeten worden. De pijlen geven condities aan: een taak die eerst volbracht moet zijn voordat aan de volgende begonnen kan worden. De zwarte ruiten zijn milestones: ijkpunten waarop een bepaalde toestand gereed moet zijn.
+| Element | Hoe ziet het eruit? | Wat betekent het? |
+| --- | --- | --- |
+| **Rij** | één lijn per taak, links de naam | één activiteit uit je netwerk |
+| **Tijdas** | horizontaal, bovenaan | de kalender: uren, dagen, weken of maanden |
+| **Balk** | gekleurde staaf | wanneer de taak start, loopt en eindigt |
+| **Pijl** | verbinding tussen twee balken | een afhankelijkheid: dit moet klaar zijn voor dat kan starten |
+| **Ruit** ◆ | balk zonder lengte | een **mijlpaal**: een moment, geen werk |
+| **Arcering** | streepjes in of boven de balk | de werkelijke voortgang: hoeveel is er al af? |
 
-### Hulpprogramma's
+Twee dingen die studenten het vaakst door elkaar halen:
 
-Er zijn verschillende programma's die gebruikt kunnen worden voor het maken van een Gantt-grafiek. Voor een simpel figuurtje volstaat het om een spreadsheet bepaalde cellen te kleuren. Voor geavanceerdere figuren kunnen programma's als het gratis Open Source Gantt-project, Microsoft Visio, Microsoft Project of de gebruikelijke projectmanagementpakketten gebruikt worden.
-[[@gillinghamWhatMicrosoft2023]]
+- **Rijen lees je van boven naar onder, maar dat is géén volgorde.** De volgorde staat in de pijlen, niet in de rangschikking. Twee balken die naast elkaar in de tijd liggen, lopen tegelijk.
+- **Een lange balk betekent lange _doorlooptijd_, niet veel _werk_.** Een taak "wachten op goedkeuring van de klant" van vijf dagen is een lange balk waar niemand een vinger voor uitsteekt. Op dat verschil komen we straks uitgebreid terug.
 
-### Toewijzing van hulpmiddelen
+### Ons voorbeeld: de ticketapp
 
-Aan elke activiteit kunnen we bepaalde hulpmiddelen toekennen (vb. computers, mensen, …).
+We werken de rest van deze sectie met één klein project, zodat je elk nieuw begrip meteen op iets herkenbaars ziet.
 
-Onder de bestaande “Gantt chart” wordt een extra diagram voorzien waarin we de inzet van de nodige hulpmiddelen in een staafdiagram tekenen. Voor elk nodig hulpmiddel kan zo een apart staafdiagram opgezet worden.
+> [!example] Situatie
+> Je bouwt met je team een kleine webapp waarmee bezoekers online een ticket kopen voor een fuif van Hexion. De fuif is over twee weken. De app moet dus af zijn, én er moet promotie gemaakt zijn, én er moet online betaald kunnen worden.
 
-Over- en onderbezettingen kunnen vervolgens weggewerkt worden, m.a.w. het gebruik van hulpmiddelen kan gespreid worden, door de activiteiten te verschuiven voor zover hun speling dit toelaat. Indien de capaciteit nog steeds overschreden is, na het spreiden van activiteiten, zijn er twee mogelijkheden:
+Uit je analyse rollen zeven activiteiten:
 
-- Ofwel gaat men de doorlooptijd behouden en gaat men extra kosten doen om de capaciteit te verhogen (extra computers aankopen, externe mensen inhuren, …);
-- Ofwel mag men geen bijkomende kosten doen, zodat de speling voor sommige activiteiten wordt overschreden en de einddatum van het project uitgesteld wordt.
+| Taak | Omschrijving | t$_e$ | Voorafgaand |
+| --- | --- | --- | --- |
+| A | Ontwerp: schermen en datamodel | 2 d | – |
+| B | Backend en API bouwen | 5 d | A |
+| C | Frontend bouwen | 3 d | A |
+| D | Betaalprovider: account laten goedkeuren | 4 d | A |
+| E | Integratie en testen | 2 d | B, C, D |
+| F | Deploy en release | 1 d | E |
+| G | Promotie: posters, socials, affiches | 2 d | A (klaar vóór F) |
 
-### Projectkosten
+> [!question] Herken je taak D?
+> Aan taak D werkt niemand. Je dient je aanvraag in en dan wacht je tot de betaalprovider je account goedkeurt. Er verstrijkt tijd, maar er gaat geen mankracht in. Dat is hetzelfde als een [[#Wachttijd|wachttijd]] uit het PERT-gedeelte. Onthoud die taak: verderop zie je hoe je zo'n wachttijd in projectsoftware ingeeft, en die truc heb je straks bij de blokhut nodig.
 
-De projectkosten worden veroorzaakt door het gebruik (mensen, computers, …) of verbruik (papier, elektriciteit, …) van hulpmiddelen. Deze kosten worden per activiteit berekend. Voorlopig gaan we hier niet verder op in.
+### Van PERT naar Gantt in vijf stappen
 
-### Voortgangscontrole
+Dit is de kern van deze sectie. Je vertrekt van je uitgewerkte netwerk en gebruikt letterlijk de getallen die je daar al berekend hebt.
 
-Dit is het moeilijkste deel van projectbeheer. Vooral bij software ontwikkeling is de vooruitgang van de werken moeilijk te controleren. Het is niet voldoende de hoeveelheid werk (aantal instructies) of de gepresteerde tijd op te volgen, men moet ook regelmatig de kwaliteit nagaan. Een slecht ontworpen of geschreven programma zal eventueel moeten herschreven worden, wat de geschatte tijd in aanzienlijke mate kan overschrijden.
+1. **Zet de taken onder elkaar**, in de volgorde waarin ze in het netwerk voorkomen. Links de naam, rechts de ruimte voor de balken.
+2. **Zet de tijdschaal horizontaal.** Kies een eenheid die past bij je project: uren voor een dag werk, dagen voor een projectweek, weken voor een bouwproject.
+3. **Teken elke balk vanaf zijn vroegste start** (de T$_E$ van het beginknooppunt) en maak hem t$_e$ lang.
+4. **Teken de speling achter de balk** in een lichtere kleur, tot aan het laatst toelaatbare einde (de T$_L$ van het eindknooppunt). Die lichte staart toont hoeveel je met die taak mag schuiven.
+5. **Markeer de taken zonder speling.** Dat is je kritieke pad, en dat bepaalt de einddatum.
 
-Een goede methode is samen met de programmeur en op basis van ervaringen met gelijkaardige programma’s regelmatig het percentage van het werk te schatten dat voltooid is. Dit percentage houdt rekening met de hoeveelheid en de moeilijkheidsgraad van het voltooide en nog te presteren werk. Dit percentage wordt op een “Gantt chart” uitgebeeld als een gearceerde strook boven de strook die de geschatte duurtijd voorstelt van de handeling. De verhouding van de lengtes van de stroken geeft het voltooiingpercentage aan.
+Voor de ticketapp levert dat dit op. De rode balken vormen het kritieke pad, de grijze balken tonen de speling:
 
-Op regelmatige tijdstippen wordt een planning gehouden en men stelt dan vast dat de werken gelijk, vooruit of achteruit lopen op de geplande tijden. In het laatste geval (en dit is het meest voorkomende) kan men twee dingen doen:
+```mermaid
+gantt
+    title Ticketapp - planning in dagen
+    dateFormat X
+    axisFormat %d
+    tickInterval 1day
+    section Ticketapp
+    A Ontwerp                 :crit, a, 0, 2d
+    B Backend en API          :crit, b, after a, 5d
+    C Frontend                :active, c, after a, 3d
+    speling C                 :done, sc, after c, 2d
+    D Betaalaccount (wachten) :active, d, after a, 4d
+    speling D                 :done, sd, after d, 1d
+    E Integratie en testen    :crit, e, after b, 2d
+    F Deploy en release       :crit, f, after e, 1d
+    G Promotie                :active, g, after a, 2d
+    speling G                 :done, sg, after g, 5d
+```
 
-- **Terugkoppelen**: men gaat de werken versnellen door de productiviteit van de hulpmiddelen (personeel, computers, …) te verhogen of door hun aantal te vermeerderen, om toch nog de geschatte duurtijd te respecteren.
-- **Vooruitkoppelen**: men gaat op basis van de werkelijke productie, de geschatte tijden herzien en een nieuwe planning uitwerken.
+Lees nu zelf af wat je met een netwerk alleen nooit zo snel had gezien:
 
-Gewoonlijk worden beide acties samen ondernomen. Het meest moeilijke deel is dan de nieuwe tijden en kosten aan de directie en de klant mee te delen.
+- Het project duurt **10 dagen**. Het kritieke pad is **A → B → E → F**: die balken hebben geen enkel lichtgekleurd stukje.
+- **C mag twee dagen uitlopen**, **D één dag**, **G vijf dagen**, zonder dat de release opschuift.
+- Op dag 3 lopen er **vier dingen tegelijk**. Dat betekent iets voor je team, en daar komen we zo op terug.
+- De promotie hoeft **niet** meteen op dag 3 te starten. Dat voelt contra-intuïtief: mensen beginnen graag met wat plezant is.
 
-In het geval dat de werken vooruit lopen (de droom van iedere projectleider), kan men eveneens terugkoppelen door hulpmiddelen vrij te maken voor andere handelingen en vooruitkoppelen door de geschatte tijden te verminderen.
+> [!warning] De verleiding van de speling
+> Speling voelt als vrije tijd. Dat is het niet. Speling is je **buffer tegen tegenslag**. Verbruik je de twee dagen speling van C door pas op dag 5 aan de frontend te beginnen, dan is C plotseling óók kritiek: elke kleine tegenvaller vertraagt vanaf dat moment het hele project. Hoe je bewust met die onzekerheid omgaat, zie je in [[006 Risicomanagement|Risicomanagement]] (hoofdstuk 6).
+
+> [!tip] Handig bij het tekenen op papier
+> Schrijf boven elke balk het begin- en eindknooppuntnummer uit je netwerk (bijvoorbeeld `2 — 5`). Zo vind je elke balk in je netwerk terug en omgekeerd, en zie je meteen of je een activiteit vergeten bent.
+
+### De bouwstenen in projectsoftware
+
+Op papier volstaan balken. Zodra je met MS Project of een vergelijkbaar pakket werkt, kom je vier extra begrippen tegen. Je hebt ze alle vier nodig voor de oefeningen.
+
+#### Samenvattingstaken
+
+Je gaat je taken groeperen, precies zoals in de [[001 Wat is Projectmanagement#Work Breakdown Structure|Work Breakdown Structure]] uit hoofdstuk 1. _Voorbereiding_, _Fundering_, _Dak_ zijn geen taken die iemand uitvoert: het zijn **samenvattingstaken** die de onderliggende taken bundelen.
+
+- Je geeft ze **nooit zelf een duur**. De software berekent die: een samenvattingstaak start bij de eerste subtaak en eindigt bij de laatste.
+- Ze maken je planning leesbaar. Je klant wil "Fundering: 2 dagen" zien, niet twaalf regels detail.
+- In de Gantt-grafiek herken je ze aan een balk met een andere vorm (vaak een dikke haak).
+
+#### Mijlpalen
+
+> [!note] DEFINITIE: Mijlpaal
+> Een **mijlpaal** (en: _milestone_) is een taak met duur nul. Ze kost geen tijd en geen middelen, maar markeert dat iets bereikt is: een fase afgerond, een goedkeuring binnen, een versie opgeleverd.
+
+Een mijlpaal is het Gantt-equivalent van een [[#Knooppunt|knooppunt]] uit je netwerk. Je gebruikt ze om fases af te sluiten en om naar buiten toe te communiceren. "Backend klaar", "app in de store", "eindcontrole gedaan": dat zijn de momenten waarop iemand buiten het team wil weten hoe ver je staat.
+
+Praktisch: laat een volgende fase starten _na de mijlpaal_ van de vorige, niet na de laatste losse taak. Dat houdt je afhankelijkheden overzichtelijk wanneer er later taken bijkomen.
+
+#### Afhankelijkheden: vier types
+
+In je netwerk kon een activiteit alleen starten als de vorige helemaal klaar was. Software laat vier relaties toe. De eerste gebruik je in negen op de tien gevallen.
+
+| Type | Nederlands | Betekenis | Voorbeeld uit je eigen leven |
+| --- | --- | --- | --- |
+| **FS** | Beëindigen–Starten | B start pas als A klaar is | Je kan pas deployen als de tests groen zijn |
+| **SS** | Starten–Starten | B start samen met A | Zodra de inschrijvingen opengaan, staat de helpdesk mee klaar |
+| **FF** | Beëindigen–Beëindigen | B eindigt samen met A | De documentatie moet af zijn wanneer de code af is |
+| **SF** | Starten–Beëindigen | A stopt pas als B start | Het oude systeem gaat pas uit zodra het nieuwe draait |
+
+SF is zeldzaam en zorgt vooral voor verwarring. Kom je in de verleiding om hem te gebruiken, dan is je taakverdeling meestal niet fijn genoeg.
+
+#### Vertraging en overlap
+
+Een afhankelijkheid mag je uitstellen of laten overlappen:
+
+- **Vertraging** (en: _lag_, positief getal): B start pas een tijdje ná A. Je schrijft dat als `FS+2 dagen`.
+- **Overlap** (en: _lead_, negatief getal): B start al vóór A helemaal klaar is. Je schrijft dat als `FS-1 dag`. Handig als je de frontend al kan beginnen wanneer de API voor 80 % vastligt.
+
+> [!important] Zo verdwijnt een wachttijd uit je planning
+> Herinner je taak D uit de ticketapp, en straks de uithardende beton bij de blokhut. Zo'n wachttijd tekende je in PERT als een aparte activiteit. In projectsoftware doe je dat **niet**: je zet er geen lege taak voor, maar je geeft de volgende taak een **vertraging** mee..
+
+#### Kalender: duur is niet hetzelfde als doorlooptijd
+
+Dit is de klassieker waarop iedereen één keer op vastloopt. Je geeft een taak van 8 uur in, en de software zet ze over twee dagen.
+
+Dat komt doordat projectsoftware rekent met een **kalender**: werkdagen van maandag tot vrijdag, van 8:00 tot 17:00, met een middagpauze, en met feestdagen en verlof. Een taak van 8 uur die om 15:00 start, eindigt de volgende ochtend.
+
+- **Duur** = werktijd, uitgedrukt in de eenheid van je kalender.
+- **Doorlooptijd** = kalendertijd van start tot einde, inclusief avonden, weekends en verlof.
+
+Klopt je kalender niet, dan klopt geen enkele datum in je planning. Pas hem dus aan _voor_ je taken ingeeft, niet erna.
+
+### Van balken naar mensen: resources
+
+Tot nu toe ging het alleen over tijd. Maar taken voeren zichzelf niet uit, helaas.
+
+> [!note] DEFINITIE: Resource
+> Een **resource** is alles wat je aan een taak toewijst om ze uit te voeren: mensen, materiaal, machines, licenties, verbruiksgoederen.
+
+#### Duur en werk
+
+Zodra je mensen toewijst, moet je twee begrippen strikt uit elkaar houden:
+
+- **Duur** (en: _duration_): hoe lang de taak loopt. Dit is de lengte van de balk.
+- **Werk** (en: _work_): hoeveel manuren erin gaan.
+
+$\text{Werk} = \text{Duur} \times \text{aantal resources}$
+
+Een taak van 3 dagen met 2 mensen is 6 mandagen werk. Zet je er een derde persoon bij, dan gebeurt er één van twee dingen, en jij bepaalt welke:
+
+> [!definitie] DEFINITIE: vaste duur / vast werk
+> **Vaste duur** (en: _fixed duration_): de taak duurt even lang, ongeacht hoeveel mensen je toewijst. De les Projectmanagement duurt twee uur, of er nu 6 of 35 studenten zitten. Het **werk** stijgt wél: elke extra persoon is twee uur extra.
+>
+> **Vast werk** (en: _fixed work_): de hoeveelheid werk ligt vast, dus meer mensen betekent een kortere duur. 300 testcases manueel doorlopen is 12 uur werk: alleen doe je er anderhalve dag over, met drie mensen vier uur.
+
+Vergaderingen, demo's, opleveringen en inspecties zijn zo goed als altijd **vaste duur**. Uitvoerend werk is meestal **vast werk**.
+
+> [!warning] Meer mensen ≠ sneller klaar
+> De formule hierboven verleidt je tot de conclusie dat je elke taak kan halveren door er iemand bij te zetten. Fred Brooks schreef daar in 1975 al _The Mythical Man-Month_ over, met de beroemdste wet uit de software-engineering: mensen toevoegen aan een project dat achterloopt, maakt het nóg later. Nieuwkomers moeten ingewerkt worden, en elke extra persoon vermenigvuldigt het aantal communicatielijnen. Negen vrouwen krijgen ook geen baby in één maand.
+
+#### Het capaciteitsdiagram
+
+Onder je Gantt-grafiek teken je per resource een staafdiagram: hoeveel wordt er elke dag van gevraagd? Voor onze ticketapp is dat makkelijk. Elke taak heeft één persoon nodig, behalve D (wachten op de betaalprovider, dus niemand). Jullie zijn met **twee**.
+
+```mermaid
+xychart-beta
+    title "Bezetting voor het nivelleren"
+    x-axis [d1, d2, d3, d4, d5, d6, d7, d8, d9, d10]
+    y-axis "Aantal personen" 0 --> 3
+    bar [1, 1, 3, 3, 2, 1, 1, 1, 1, 1]
+    line [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+```
+
+De lijn is je capaciteit: twee mensen. Op dag 3 en 4 lopen B, C en G tegelijk: je hebt drie mensen nodig en je hebt er twee. Dat heet **overbezetting**. Vanaf dag 6 heb je het omgekeerde probleem: **onderbezetting**, want er zit iemand duimen te draaien.
+
+> [!warning] Wat de software je niet vertelt
+> MS Project laat je vrolijk een planning maken waarin één persoon op maandag 26 uur werkt. Overbezetting is geen foutmelding, het is iets wat jij als projectleider moet opmerken. In het capaciteitsdiagram zie je het in één oogopslag.
+
+#### Nivelleren
+
+Overbezetting los je altijd in dezelfde volgorde op.
+
+**Stap 1: verschuif taken binnen hun speling.** Dit kost niks, want je einddatum blijft staan. G heeft vijf dagen speling, dus verhuis je de promotie naar dag 6–7, waar toch iemand met zijn of haar duimen zat te draaien.
+
+```mermaid
+xychart-beta
+    title "Bezetting na het nivelleren"
+    x-axis [d1, d2, d3, d4, d5, d6, d7, d8, d9, d10]
+    y-axis "Aantal personen" 0 --> 3
+    bar [1, 1, 2, 2, 2, 2, 2, 1, 1, 1]
+    line [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+```
+
+Nergens meer dan twee mensen tegelijk, het project duurt nog altijd tien dagen, en de dode momenten zijn opgevuld. Dit is de goedkoopste ingreep die je kan doen, en daarom kijk je er altijd eerst naar.
+
+Volstaat de speling niet, dan blijven er nog twee, minder aangename opties over:
+
+- **Capaciteit bijkopen**: iemand inhuren, extra licenties, overuren. De einddatum blijft, de kosten stijgen.
+- **De einddatum opschuiven**: je verbruikt meer speling dan er is. De kosten blijven, het project loopt uit.
+
+Er is geen derde optie, en dat is geen toeval: je herkent hier de [[001 Wat is Projectmanagement#De Duivelsdriehoek|duivelsdriehoek]] uit hoofdstuk 1. Aan tijd, geld en kwaliteit kan je niet alle drie tegelijk vasthouden. Nivelleren is die driehoek in de praktijk.
+
+### De planning opvolgen
+
+Een planning die je na week één nooit meer opent, is een tekening. Wat een Gantt-grafiek tot een handig werkinstrument maakt, is dat je er de werkelijkheid naast legt.
+
+#### De baseline
+
+> [!note] DEFINITIE: Baseline
+> Een **baseline** (nl: _basislijn_) is een momentopname van je planning, meestal vastgelegd net voor de uitvoering start. Je vergelijkt de werkelijke voortgang, duur en kosten steeds met die baseline.
+
+Zonder baseline kan je nooit zeggen dat je "twee dagen achterloopt", want je hebt niets om mee te vergelijken. En omdat je ze maar één keer goed vastlegt: zorg dat álle geplande kosten en toewijzingen erin zitten vóór je ze bewaart. Wat je nadien toevoegt, verschijnt voor altijd als een afwijking.
+
+#### Voortgang registreren
+
+De voortgang teken je als een gearceerde strook in of boven de balk. Hoe verder de arcering, hoe verder de taak. Loopt een taak achter, dan zie je dat meteen: op de statusdatum staat de arcering links van waar ze zou moeten staan.
+
+Voor het bouwen van een huis is voortgang zichtbaar: de muur staat er of niet. Voor software is dat het lastigste deel van projectbeheer. Aantal regels code of gepresteerde uren zeggen weinig, want slecht geschreven code moet herschreven worden en dan zit je verder van je doel dan voordien.
+
+> [!warning] Het 90 %-syndroom
+> Vraag een developer hoe ver hij staat en het antwoord is "een dag of twee werk, het is 90 % af". Twee weken later is het nog altijd 90 % af. De laatste 10 % (edge cases, foutafhandeling, deployment, dat ene toestel dat weeral 'vreemd' deed) kost vaak evenveel tijd als de eerste 90 %.
+>
+> Daarom werk je met **meetbare tussenresultaten** in plaats van percentages: een mijlpaal is af of niet af, een testcase slaagt of faalt. En daarom is voortgang zonder kwaliteitscontrole waardeloos: zie [[004 Kwaliteitsmanagement|Kwaliteitsmanagement]] (hoofdstuk 4).
+
+#### Bijsturen: terugkoppelen en vooruitkoppelen
+
+Loop je achter (het meest voorkomende geval) dan heb je twee reacties:
+
+- **Terugkoppelen**: je versnelt het werk om de oorspronkelijke planning te halen. Meer of productievere middelen inzetten, of het werk anders organiseren. _Je past de uitvoering aan de planning aan._
+- **Vooruitkoppelen**: je aanvaardt dat je schattingen niet klopten, herziet de resterende tijden en maakt een nieuwe planning. _Je past de planning aan de werkelijkheid aan._
+
+Meestal doe je allebei. Het moeilijkste stuk is niet het rekenwerk, maar het gesprek: nieuwe tijden en kosten uitleggen aan je opdrachtgever.
+
+En loop je vóór op schema (de droom van elke projectleider) dan werkt het net zo: je maakt mensen vrij voor ander werk (terugkoppelen) of je vervroegt je einddatum (vooruitkoppelen).
+
+### Kosten in je planning
+
+Zodra elke taak resources heeft, rekent je planning automatisch kosten uit: gebruik van mensen en machines, verbruik van materiaal, plus vaste kosten per taak. Zo zie je niet alleen wanneer je project klaar is, maar ook wat het gekost zal hebben, en waar je van je budget afwijkt.
+
+We houden het hier bewust bij die vaststelling. Hoe je kosten opbouwt, tegenover baten zet en beslist of een project überhaupt de moeite waard is, zie je in [[005 Kosten en Batenanalyse|Kosten- en batenanalyse]] (hoofdstuk 5).
+
+### Waar de Gantt-grafiek stopt
+
+Een Gantt-grafiek is sterk, maar ze berust op één stevige veronderstelling: **je weet vooraf welke taken er zijn en hoe lang ze duren.**
+
+Voor een blokhut klopt dat. Voor het bouwen van iets wat nog nooit bestaan heeft (en dat is software meestal) veel minder. Verandert de scope halverwege, dan mag je je hele grafiek hertekenen. Het rekenwerk suggereert bovendien een precisie die je schattingen niet hebben: `d7` ziet er zekerder uit dan "ergens volgende week".
+
+Daarom werken softwareteams vaak [[007 Agile Projectmanagement|agile]] (hoofdstuk 7): korte iteraties, en pas gedetailleerd plannen wat kort op de bal ligt. Dat is niet totaal verschillend met wat we hier zien. Een agile team heeft ook een release-datum, een budget en afhankelijkheden met de buitenwereld. In de praktijk zie je beide naast elkaar: een Gantt-grafiek op het niveau van mijlpalen en releases, sprintplanning daarbinnen.
+
+> [!abstract] Kies je techniek
+> **Gantt** werkt goed bij een duidelijke, stabiele scope, veel afhankelijkheden, harde deadlines en externe partijen: bouw, evenementen, migraties, implementatietrajecten.
+> **Agile** werkt beter bij een scope die nog moet groeien, veel onzekerheid en een team dat snel kan bijsturen: productontwikkeling, R\&D, startups.
+
+### Gantt samengevat
+
+Met een Gantt-grafiek zet je je netwerk om in een kalender waarmee je een project kan sturen.
+
+Je vertrekt van je uitgewerkte PERT-netwerk en tekent per activiteit een balk vanaf haar vroegste start, met de speling er lichtjes achter. Taken zonder speling vormen het kritieke pad en bepalen je einddatum.
+
+Daarna verrijk je die grafiek stap voor stap:
+
+1. **Structuur**: groepeer taken onder samenvattingstaken en sluit elke fase af met een mijlpaal.
+2. **Afhankelijkheden**: leg de relaties (meestal FS) en vertaal wachttijden naar een vertraging (`FS+n`).
+3. **Kalender**: stel werkuren, feestdagen en verlof correct in, anders klopt geen enkele datum.
+4. **Resources**: wijs mensen en materiaal toe, en beslis per taak of ze vaste duur of vast werk is.
+5. **Nivelleren**: los overbezetting eerst op met speling, en pas daarna met geld of met een latere einddatum.
+6. **Baseline**: leg de planning vast voor je start.
+7. **Opvolgen**: registreer voortgang, vergelijk met de baseline, en stuur bij door terug te koppelen of vooruit te koppelen.
+
+Maar vergeet zeker niet dat de grafiekniet het project is. Ze is je beste gok, netjes getekend.
+
+### Aan de slag
+
+In de volgende oefening bouw je dit alles op in MS Project. Je begint met een lege planning en eindigt met een grafiek waarin je voortgang en kosten kan opvolgen. Elk begrip uit de opgave heb je hierboven gezien:
+
+| In de opgave lees je … | Dat is … | Zie hierboven |
+| --- | --- | --- |
+| taakniveaus, hoofd- en subtaken | samenvattingstaken (WBS) | [[#Samenvattingstaken\|Samenvattingstaken]] |
+| "taak 9 is geen echte taak, maar een wachttijd" | vertraging: `FS+1 dag` | [[#Vertraging en overlap\|Vertraging en overlap]] |
+| `9BE+1 dag` | afhankelijkheid met vertraging | [[#Afhankelijkheden vier types\|Afhankelijkheden]] |
+| "taak van vaste duur" | fixed duration | [[#Duur en werk\|Duur en werk]] |
+| milestones per fase toevoegen | mijlpalen | [[#Mijlpalen\|Mijlpalen]] |
+| werkuren aanpassen, verlof van Peter | kalender | [[#Kalender duur is niet hetzelfde als doorlooptijd\|Kalender]] |
+| Koen, Jan, Peter, zand, cement | resources | [[#Van balken naar mensen resources\|Resources]] |
+| "kunnen de resources niet efficiënter?" | nivelleren | [[#Nivelleren\|Nivelleren]] |
+| baseline bewaren, voortgang invullen | opvolging | [[#De planning opvolgen\|De planning opvolgen]] |
+
+> [!tip] Werk in versies
+> Bewaar na elke deelopgave een nieuwe versie (`Blokhut - versie 1`, `versie 2`, …). Zo kan je altijd terug, en zie je bij het vergelijken meteen welke ingreep welk effect had op de doorlooptijd.
+
+Er bestaan verschillende programma's om Gantt-grafieken te maken. Voor een eenvoudig schema volstaat het om cellen in een spreadsheet te kleuren. Voor echt planningswerk gebruik je Microsoft Project, het gratis GanttProject, of de planningsmodules van tools als Jira, Asana of GitHub Projects. In deze cursus werken we met MS Project. [[@gillinghamWhatMicrosoft2023]]
 
 ### Oefening blokhut
 

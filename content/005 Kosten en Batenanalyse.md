@@ -2,7 +2,7 @@
 publish: true
 title: 005 Kosten- en batenanalyse
 created: 2026-06-04T11:13:31.731Z
-modified: 2026-08-19T12:09:36.706Z
+modified: 2026-08-19T12:20:09.687Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -492,7 +492,9 @@ De primaire methode voor het beoordelen van investeringen blijft de netto contan
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
 	<iframe src="https://pxl.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=d0b60fe3-1fb1-4814-8e5e-b4ab00c75ac2&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="NPV-and-IRR-explained_720p"></iframe>
 </div>
+
 ## Een uitgewerkt voorbeeld
+
 ![](https://i.imgur.com/ODumMrG.png)
 
 **Electroshop N.V. wil de administratie van het hoofdfiliaal volledig automatiseren.**

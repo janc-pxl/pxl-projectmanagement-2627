@@ -1,0 +1,42 @@
+---
+publish: true
+title: What is Microsoft Project? A Comprehensive Overview
+created: 2026-06-04T11:13:31.734Z
+modified: 2026-06-04T11:13:31.734Z
+---
+
+> [!Cite]
+> Gillingham, Jacob. ‘What Is Microsoft Project? A Comprehensive Overview’. _Invensis Learning Blog_, 16 augustus 2023. <https://www.invensislearning.com/blog/what-is-microsoft-project/>.
+
+---
+
+# Metadata
+
+> [!Properties]
+> **FirstAuthor** Gillingham, Jacob\
+> \~\
+> **Title** What is Microsoft Project? A Comprehensive Overview\
+> **Year** 2023\
+> **Citekey** gillinghamWhatMicrosoft2023\
+> **itemType** blogPost
+
+> [!LINK]
+
+> [!Abstract]
+>
+> Discover what Microsoft Project is, its features, benefits, and how it can enhance your project management skills effectively.
+> .
+
+# Notes
+
+> >
+
+# Annotations
+
+_annotations in the paper_.
+
+### Highlights
+
+### Notes
+
+### Images

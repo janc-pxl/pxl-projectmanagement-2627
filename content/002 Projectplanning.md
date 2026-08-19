@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 002 Projectplanning
-created: 2026-06-05T16:22:37.675+02:00
-modified: 2026-06-05T16:22:37.678+02:00
+created: 2026-06-14T09:36:27.958Z
+modified: 2026-06-14T09:36:27.958Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |

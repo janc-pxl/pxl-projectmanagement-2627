@@ -2,7 +2,7 @@
 publish: true
 title: 003 Extra oefeningen Projectmanagement
 created: 2026-06-04T11:13:31.731Z
-modified: 2026-06-04T11:13:31.731Z
+modified: 2026-08-28T08:27:18.176Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -214,4 +214,4 @@ Ian heeft enkele mock-up’s ontworpen voor de nieuwe website. Voordat hij deze 
 _Je hoeft geen storypoints of prioriteiten toe te kennen aan de stories.\
 Fit criteria en extra informatie is niet nodig. Enkel de beschrijving van de stories zijn voldoende._
 
-- De opdracht mag je uitwerking in een Word-document of een ander tekstbestand.
+- De opdracht mag je uitwerken in een Word-document of een ander tekstbestand.

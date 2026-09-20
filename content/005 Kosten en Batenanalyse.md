@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 005 Kosten- en batenanalyse
-created: 2026-06-04T11:13:31.731Z
-modified: 2026-08-19T12:20:09.687Z
+created: 2026-09-08T10:38:23.401Z
+modified: 2026-09-08T10:38:23.401Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -229,10 +229,10 @@ Besparing kan positief, nul of negatief zijn - net als de reacties op je meme op
 
 Laten we ons nu concentreren op de positieve kant van besparingen. Hier zijn enkele voorbeelden die je kunnen helpen om wat extra te verdienen:
 
-- **Personeelsbesparing**: Dit betekent niet dat je al je werknemers moet ontslaan, maar het kan betekenen dat je de hoeveelheid administratief personeel terugbrengt.
-- **Besparing op onderhoudskosten**: Geen zin meer in die hoge onderhoudskosten? Misschien wordt het tijd om een nieuw systeem te implementeren dat minder onderhoud vereist.
-- **Besparing op computeruitrusting**: Computers zijn duur! Maar wat als je oude computers vervangt door energiezuinige modellen? Dan kun je geld besparen én goed doen voor het milieu.
-- **Zakelijke transacties sneller laten verlopen**: Tijd is geld, dus waarom zou je kostbare tijd verspillen aan trage zakelijke transacties? Een nieuw systeem kan dit proces versnellen en zorgen voor snellere afhandeling.
+- Personeelsbesparing hoeft geen ontslagen te betekenen: vaak volstaat minder administratief personeel.
+- Een nieuw systeem vraagt doorgaans minder onderhoud, dus dalen ook die kosten.
+- Oude computers vervangen door energiezuinige modellen bespaart geld én is beter voor het milieu.
+- Sneller verlopende zakelijke transacties leveren tijdswinst op, en tijd is geld.
 
 Vergeet niet dat deze besparingen in de tijd moeten worden geprojecteerd gedurende de levensduur van het project, dus gebruik een tool als Excel of MS Project om alles bij te houden.
 

@@ -1,8 +1,10 @@
 ---
 publish: true
+category: References
 title: Product Backlog Refinement explained (3/3)
-created: 2026-06-04T11:13:31.736Z
-modified: 2026-06-04T11:13:31.736Z
+authors: van Rooden, Stephan
+year: 2015 
+url: https://www.scrum.org/resources/blog/product-backlog-refinement-explained-33
 ---
 
 # Product Backlog Refinement explained (3/3)

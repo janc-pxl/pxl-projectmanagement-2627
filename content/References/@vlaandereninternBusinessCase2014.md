@@ -1,8 +1,11 @@
 ---
 publish: true
-title: Business Case
-created: 2026-06-04T11:13:31.736Z
-modified: 2026-06-04T11:13:31.737Z
+category: References
+title: "Business Case"
+citekey: "vlaandereninternBusinessCase2014"
+type: literaturenote
+tags: 
+summary: ""
 ---
 
 > [!Cite]

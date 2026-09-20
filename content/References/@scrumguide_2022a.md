@@ -1,8 +1,10 @@
 ---
 publish: true
-title: Scrum takenbord | Scrumguide.nl
-created: 2026-06-04T11:13:31.735Z
-modified: 2026-06-04T11:13:31.735Z
+category: References
+title: "Scrum takenbord | Scrumguide.nl"
+authors: Scrumguide,
+year: 2022 
+url: https://scrumguide.nl/scrumbord/
 ---
 
 # Scrum takenbord | Scrumguide.nl

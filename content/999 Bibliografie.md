@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 999 Bibliografie
-created: 2026-06-04T11:13:31.732Z
-modified: 2026-06-04T11:13:31.732Z
+category: content
+order: "999"
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |

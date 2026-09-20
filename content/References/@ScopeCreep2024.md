@@ -1,8 +1,14 @@
 ---
 publish: true
+category: References
 title: "Scope Creep: Wat is het en hoe krijg je het onder de knie? (Wiki)"
-created: 2026-06-04T11:13:31.732Z
-modified: 2026-06-04T11:13:31.732Z
+citekey: "ScopeCreep2024"
+type: literaturenote
+tags: 
+summary: ""
+year: '2024'
+url: "https://tryve.eu/nl/wiki/scope-creep/"
+authors: ""
 ---
 
 > [!Cite]

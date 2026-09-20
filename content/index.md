@@ -1,8 +1,8 @@
 ---
 publish: true
 title: Inhoud
-created: 2026-06-04T11:13:31.737Z
-modified: 2026-06-04T11:13:31.737Z
+created: 2024-09-10T13:14:37.995Z
+modified: 2025-09-11T13:03:15.408Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |

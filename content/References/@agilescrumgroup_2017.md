@@ -1,8 +1,8 @@
 ---
 publish: true
 title: Wat is Definition of Done? Check de uitleg en voorbeelden (IT & non-IT)
-created: 2026-06-04T11:13:31.733Z
-modified: 2026-06-04T11:13:31.733Z
+created: 2024-09-10T13:14:38.594Z
+modified: 2025-11-13T13:10:59.386Z
 ---
 
 # Wat is Definition of Done? Check de uitleg en voorbeelden (IT & non-IT)

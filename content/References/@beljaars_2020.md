@@ -1,8 +1,14 @@
 ---
 publish: true
-title: Wat is een affiniteitsdiagram?
-created: 2026-06-04T11:13:31.733Z
-modified: 2026-06-04T11:13:31.733Z
+category: References
+title: "Wat is een affiniteitsdiagram?"
+citekey: "beljaars_2020"
+type: literaturenote
+tags: 
+summary: ""
+year: '2020'
+url: "https://www.agile4all.nl/wat-is-een-affiniteitsdiagram/"
+authors: " Beljaars, Peter"
 ---
 
 > [!Cite]

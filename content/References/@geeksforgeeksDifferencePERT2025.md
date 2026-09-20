@@ -1,8 +1,14 @@
 ---
 publish: true
-title: Difference Between PERT and CPM
-created: 2026-06-04T11:13:31.733Z
-modified: 2026-06-04T11:13:31.733Z
+category: References
+title: "Difference Between PERT and CPM"
+citekey: "geeksforgeeksDifferencePERT2025"
+type: literaturenote
+tags: 
+summary: ""
+year: '2025'
+url: "https://www.geeksforgeeks.org/software-engineering/difference-between-pert-and-cpm/"
+authors: " geeksforgeeks"
 ---
 
 > [!Cite]

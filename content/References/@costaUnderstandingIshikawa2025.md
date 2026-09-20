@@ -1,8 +1,14 @@
 ---
 publish: true
-title: Understanding the Ishikawa Diagram | KAIZEN™ Article
-created: 2026-06-04T11:13:31.733Z
-modified: 2026-06-04T11:13:31.733Z
+category: References
+title: "Understanding the Ishikawa Diagram | KAIZEN™ Article"
+citekey: "costaUnderstandingIshikawa2025"
+type: literaturenote
+tags: 
+summary: ""
+year: '2025'
+url: "https://kaizen.com/insights/ishikawa-diagram-root-cause-analysis/"
+authors: " Costa, Ines"
 ---
 
 > [!Cite]

@@ -1,8 +1,14 @@
 ---
 publish: true
-title: 15 Essential Help Desk Metrics & KPIs [+ Best Practices]
-created: 2026-06-04T11:13:31.735Z
-modified: 2026-06-04T11:13:31.735Z
+category: References
+title: "15 Essential Help Desk Metrics & KPIs [+ Best Practices]"
+citekey: "stefanowicz_2024"
+type: literaturenote
+tags: 
+summary: ""
+year: '2024'
+url: "https://www.tidio.com/blog/helpdesk-metrics/"
+authors: " Stefanowicz, Beata"
 ---
 
 > [!Cite]

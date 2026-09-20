@@ -1,8 +1,14 @@
 ---
 publish: true
-title: Stroomdiagram - Een flowchart maakt uw proces inzichtelijk | LeanInfo.nl
-created: 2026-06-04T11:13:31.734Z
-modified: 2026-06-04T11:13:31.734Z
+category: References
+title: "Stroomdiagram - Een flowchart maakt uw proces inzichtelijk | LeanInfo.nl"
+citekey: "leaninfo_2024"
+type: literaturenote
+tags: 
+summary: ""
+year: '2024'
+url: "https://www.leaninfo.nl/stroomdiagram/"
+authors: " Leaninfo"
 ---
 
 > [!Cite]

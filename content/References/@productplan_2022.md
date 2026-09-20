@@ -1,8 +1,10 @@
 ---
 publish: true
-title: User Story
-created: 2026-06-04T11:13:31.735Z
-modified: 2026-06-04T11:13:31.735Z
+category: References
+title: "User Story"
+authors: productplan,
+year: 2022 
+url: https://www.productplan.com/glossary/user-story/
 ---
 
 # User Story

@@ -1,8 +1,8 @@
 ---
 publish: true
 title: Goedgekeurde PracTische vragen over Projectmanagement
-created: 2026-06-04T11:13:31.737Z
-modified: 2026-06-04T11:13:31.737Z
+created: 2024-09-10T13:14:38.755Z
+modified: 2025-11-28T09:04:52.124Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |

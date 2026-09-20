@@ -1,8 +1,10 @@
 ---
 publish: true
-title: Scrum Glossary
-created: 2026-06-04T11:13:31.736Z
-modified: 2026-06-04T11:13:31.736Z
+category: References
+title: "Scrum Glossary"
+authors: Verheyen, Gunther
+year: 2022 
+url: https://scrumglossary.org/
 ---
 
 # Scrum Glossary

@@ -1,8 +1,8 @@
 ---
 publish: true
 title: Netwerkplanning volgens PERT
-created: 2026-06-04T11:13:31.735Z
-modified: 2026-06-04T11:13:31.735Z
+created: 2024-09-10T13:14:38.666Z
+modified: 2026-02-19T10:48:36.749Z
 ---
 
 # Netwerkplanning volgens PERT

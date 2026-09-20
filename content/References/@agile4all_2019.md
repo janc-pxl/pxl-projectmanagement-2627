@@ -1,8 +1,10 @@
 ---
 publish: true
-title: Sprint Planning
-created: 2026-06-04T11:13:31.733Z
-modified: 2026-06-04T11:13:31.733Z
+category: References
+title: "Sprint Planning"
+authors: agile4all,
+year: 2019 
+url: https://www.agile4all.nl/sprint-planning/
 ---
 
 # Sprint Planning

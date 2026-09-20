@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 004 Kwaliteitsmanagement
-created: 2026-02-26T09:19:08.245Z
-modified: 2026-02-26T09:19:08.245Z
+created: 2025-08-26T08:37:01.262Z
+modified: 2026-02-24T08:05:14.993Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |

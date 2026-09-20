@@ -1,8 +1,14 @@
 ---
 publish: true
-title: What is Microsoft Project? A Comprehensive Overview
-created: 2026-06-04T11:13:31.734Z
-modified: 2026-06-04T11:13:31.734Z
+category: References
+title: "What is Microsoft Project? A Comprehensive Overview"
+citekey: "gillinghamWhatMicrosoft2023"
+type: literaturenote
+tags: 
+summary: ""
+year: '2023'
+url: "https://www.invensislearning.com/blog/what-is-microsoft-project/"
+authors: " Gillingham, Jacob"
 ---
 
 > [!Cite]

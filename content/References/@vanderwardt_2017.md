@@ -1,8 +1,10 @@
 ---
 publish: true
+category: References
 title: "Daily Stand-up: 5 tips voor een goede meeting (+checklist download)"
-created: 2026-06-04T11:13:31.736Z
-modified: 2026-06-04T11:13:31.736Z
+authors: van der Wardt, Rik
+year: 2017 
+url: https://agilescrumgroup.nl/5-tips-goede-daily-stand-up-meeting/
 ---
 
 # Daily Stand-up: 5 tips voor een goede meeting (+checklist download)

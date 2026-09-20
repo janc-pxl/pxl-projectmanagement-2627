@@ -1,8 +1,14 @@
 ---
 publish: true
+category: References
 title: "Work Breakdown Structure in Project Management: Short Guide"
-created: 2026-06-04T11:13:31.734Z
-modified: 2026-06-04T11:13:31.734Z
+citekey: "jurcicWorkBreakdown2025"
+type: literaturenote
+tags: 
+summary: ""
+year: '2025'
+url: "https://productive.io/blog/work-breakdown-structure-in-project-management"
+authors: " Jurčić, Marin"
 ---
 
 > [!Cite]

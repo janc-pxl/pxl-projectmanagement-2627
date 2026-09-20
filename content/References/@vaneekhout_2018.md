@@ -1,8 +1,10 @@
 ---
 publish: true
+category: References
 title: "De Gartner Hype Cycle: welke technologie blijft plakken en welke gaat nodeloos ten onder?"
-created: 2026-06-04T11:13:31.736Z
-modified: 2026-06-04T11:13:31.736Z
+authors: van Eekhout, Robert
+year: 2018 
+url: https://robertvaneekhout.nl/2018/04/gartner-hype-cycle-welke-technologie-blijft-plakken-en-welke-gaat-nodeloos
 ---
 
 # De Gartner Hype Cycle: welke technologie blijft plakken en welke gaat nodeloos ten onder?

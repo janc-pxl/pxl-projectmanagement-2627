@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 008 Oefeningen Agile Projectmanagement
-created: 2026-06-04T11:13:31.732Z
-modified: 2026-06-04T11:13:31.732Z
+created: 2025-08-26T08:37:01.281Z
+modified: 2026-05-27T14:12:17.293Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |

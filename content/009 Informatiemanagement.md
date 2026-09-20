@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 009 Informatiemanagement
-created: 2026-06-04T11:13:31.732Z
-modified: 2026-06-04T11:13:31.732Z
+created: 2025-08-26T08:37:01.285Z
+modified: 2025-11-27T08:07:35.581Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |

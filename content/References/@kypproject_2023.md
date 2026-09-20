@@ -1,8 +1,10 @@
 ---
 publish: true
-title: Hoe maak je een projectplanning? | KYP Project
-created: 2026-06-04T11:13:31.734Z
-modified: 2026-06-04T11:13:31.734Z
+category: References
+title: "Hoe maak je een projectplanning? | KYP Project"
+authors: kypproject,
+year: 2023 
+url: https://kypproject.com/nl/blog/hoe-maak-je-een-projectplanning/
 ---
 
 # Hoe maak je een projectplanning? | KYP Project

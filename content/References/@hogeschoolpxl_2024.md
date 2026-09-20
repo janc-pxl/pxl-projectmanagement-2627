@@ -1,8 +1,14 @@
 ---
 publish: true
-title: Kwaliteitszorg
-created: 2026-06-04T11:13:31.734Z
-modified: 2026-06-04T11:13:31.734Z
+category: References
+title: "Kwaliteitszorg"
+citekey: "hogeschoolpxl_2024"
+type: literaturenote
+tags: 
+summary: ""
+year: '2024'
+url: "https://www.pxl.be/Pub/Over-PXL/Kwaliteitszorg.html"
+authors: " Hogeschool PXL, "
 ---
 
 > [!Cite]

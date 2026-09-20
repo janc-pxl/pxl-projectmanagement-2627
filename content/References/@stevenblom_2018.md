@@ -1,8 +1,10 @@
 ---
 publish: true
+category: References
 title: Moeten we kiezen tussen de klant en de medewerker?
-created: 2026-06-04T11:13:31.735Z
-modified: 2026-06-04T11:13:31.736Z
+authors: Steven Blom
+year: 2018 
+url: https://www.blomconsultancy.nl/kiezen-tussen-klant-en-medewerker/
 ---
 
 # Moeten we kiezen tussen de klant en de medewerker?

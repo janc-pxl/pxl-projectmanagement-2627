@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 007 Agile Projectmanagement
-created: 2026-06-04T11:13:31.732Z
-modified: 2026-06-04T11:13:31.732Z
+created: 2025-08-26T08:37:01.277Z
+modified: 2025-12-15T08:25:27.581Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |

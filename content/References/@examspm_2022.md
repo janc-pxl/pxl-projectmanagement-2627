@@ -1,8 +1,10 @@
 ---
 publish: true
-title: Understanding the 7 Basic Quality Tools for your PMP® Exam – ExamsPM.com
-created: 2026-06-04T11:13:31.733Z
-modified: 2026-06-04T11:13:31.733Z
+category: References
+title: "Understanding the 7 Basic Quality Tools for your PMP® Exam – ExamsPM.com"
+authors: ExamsPM,
+year: 2022 
+url: https://www.examspm.com/2016/07/11/understanding-7-basic-quality-tools/
 ---
 
 # Understanding the 7 Basic Quality Tools for your PMP® Exam – ExamsPM.com

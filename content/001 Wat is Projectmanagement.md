@@ -2,7 +2,7 @@
 publish: true
 title: 001 Wat is ProjectManagement?
 created: 2025-08-26T08:37:01.247Z
-modified: 2026-09-20T13:20:34.633Z
+modified: 2026-09-20T14:02:02.087Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -22,7 +22,7 @@ modified: 2026-09-20T13:20:34.633Z
 
 Projectmanagement ontstond in verschillende sectoren waar men complexe en grootschalige projecten moest organiseren. Deze methodiek werd ontwikkeld om chaos te vermijden en resultaten te garanderen binnen tijd en budget.
 
-### Historische wortels
+### Historiek projectmanagement
 
 De belangrijkste sectoren waar projectmanagement zijn oorsprong vond:
 

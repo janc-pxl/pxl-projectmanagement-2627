@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 006 Risicomanagement
-created: 2026-06-04T11:13:31.732Z
-modified: 2026-06-04T11:13:31.732Z
+created: 2025-08-26T08:37:01.271Z
+modified: 2025-11-27T08:06:57.789Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |

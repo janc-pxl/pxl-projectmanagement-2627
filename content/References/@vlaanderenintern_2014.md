@@ -1,8 +1,10 @@
 ---
 publish: true
-title: Business Case
-created: 2026-06-04T11:13:31.737Z
-modified: 2026-06-04T11:13:31.737Z
+category: References
+title: "Business Case"
+authors: vlaanderen intern
+year: 2014 
+url: https://overheid.vlaanderen.be/organisatie/projectmanagement/business-case
 ---
 
 # Business Case

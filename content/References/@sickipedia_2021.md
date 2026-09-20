@@ -1,8 +1,10 @@
 ---
 publish: true
+category: References
 title: Het verschil tussen nauwkeurigheid en reproduceerbaarheid
-created: 2026-06-04T11:13:31.735Z
-modified: 2026-06-04T11:13:31.735Z
+authors: SICKipedia,
+year: 2021 
+url: https://cdn.sick.com/media/content/hcc/hdf/9692943974430.pdf
 ---
 
 # Het verschil tussen nauwkeurigheid en reproduceerbaarheid

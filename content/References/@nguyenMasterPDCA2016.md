@@ -1,8 +1,14 @@
 ---
 publish: true
-title: Master the PDCA Cycle for Effective Improvement - Click to Learn More!
-created: 2026-06-04T11:13:31.734Z
-modified: 2026-06-04T11:13:31.734Z
+category: References
+title: "Master the PDCA Cycle for Effective Improvement - Click to Learn More!"
+citekey: "nguyenMasterPDCA2016"
+type: literaturenote
+tags: 
+summary: ""
+year: '2016'
+url: "https://www.heflo.com/blog/pdca-cycle"
+authors: " Nguyen, Jasmine"
 ---
 
 > [!Cite]

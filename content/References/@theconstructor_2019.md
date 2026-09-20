@@ -1,8 +1,14 @@
 ---
 publish: true
-title: Dummy Activity in Network Analysis
-created: 2026-06-04T11:13:31.736Z
-modified: 2026-06-04T11:13:31.736Z
+category: References
+title: "Dummy Activity in Network Analysis"
+citekey: "theconstructor_2019"
+type: literaturenote
+tags: 
+summary: "> A Dummy activity is a type of operation in a project network which neither requires any time nor any resource. It is an imaginary activity shown in a project network to identify the dependence among operation."
+year: '2019'
+url: "https://theconstructor.org/construction/dummy-activity-network-analysis/31502/"
+authors: " The Constructor"
 ---
 
 > [!Cite]

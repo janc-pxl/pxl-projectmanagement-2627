@@ -1,8 +1,10 @@
 ---
 publish: true
+category: References
 title: What is Velocity in Agile? Charts & Examples | Adobe Workfront
-created: 2026-06-04T11:13:31.733Z
-modified: 2026-06-04T11:13:31.733Z
+authors: Adobe Workfront,
+year: 2022 
+url: https://www.workfront.com/project-management/methodologies/agile/velocity
 ---
 
 # What is Velocity in Agile? Charts & Examples | Adobe Workfront

@@ -1,8 +1,10 @@
 ---
 publish: true
+category: References
 title: What Are The Complete Scrum Artifacts? - Agile - ZenTao
-created: 2026-06-04T11:13:31.737Z
-modified: 2026-06-04T11:13:31.737Z
+authors: ZenTao team,
+year: 2022 
+url: https://www.zentao.pm/blog/What-are-the-complete-Scrum-artifacts-1102.html
 ---
 
 # What Are The Complete Scrum Artifacts? - Agile - ZenTao

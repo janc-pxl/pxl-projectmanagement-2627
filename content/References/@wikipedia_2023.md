@@ -1,8 +1,14 @@
 ---
 publish: true
-title: Ishikawa-diagram
-created: 2026-06-04T11:13:31.737Z
-modified: 2026-06-04T11:13:31.737Z
+category: References
+title: "Ishikawa-diagram"
+citekey: "wikipedia_2023"
+type: literaturenote
+tags: 
+summary: ""
+year: '2023'
+url: "https://nl.wikipedia.org/w/index.php?title=Ishikawa-diagram&oldid=63986119"
+authors: " Wikipedia"
 ---
 
 > [!Cite]

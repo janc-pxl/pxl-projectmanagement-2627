@@ -1,8 +1,14 @@
 ---
 publish: true
-title: What is Poka Yoke? The Ultimate Guide to Manufacturing Mistake-Proofing • FlowFuse
-created: 2026-06-04T11:13:31.735Z
-modified: 2026-06-04T11:13:31.735Z
+category: References
+title: "What is Poka Yoke? The Ultimate Guide to Manufacturing Mistake-Proofing • FlowFuse"
+citekey: "shindeWhatPoka2025"
+type: literaturenote
+tags: 
+summary: ""
+year: '2025'
+url: "https://flowfuse.com/blog/2025/09/poka-yoke-mistake-proofing/"
+authors: " Shinde, Sumit"
 ---
 
 > [!Cite]

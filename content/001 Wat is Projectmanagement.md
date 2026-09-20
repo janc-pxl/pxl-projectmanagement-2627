@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 001 Wat is ProjectManagement?
-created: 2026-06-04T11:13:31.729Z
-modified: 2026-06-04T11:13:31.729Z
+created: 2025-08-26T08:37:01.247Z
+modified: 2026-09-20T13:20:34.633Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |

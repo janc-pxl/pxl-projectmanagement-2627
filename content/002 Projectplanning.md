@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 002 Projectplanning
-created: 2026-06-14T09:36:27.958Z
-modified: 2026-08-19T14:21:31.452Z
+created: 2025-08-26T08:37:01.252Z
+modified: 2026-09-20T13:45:07.665Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -202,7 +202,7 @@ Zo zie je in één oogopslag welke activiteiten kritiek zijn en waar er ruimte z
 
 Je krijgt de theorie pas echt onder de knie door ze zelf toe te passen. Op de oefenpagina loop je spelenderwijs en op je eigen tempo nog eens door alle begrippen en termen. Daarna werk je stap voor stap via oefeningen naar de praktische uitwerking van PERT: je leert een netwerk tekenen, de tijden berekenen en het kritieke pad bepalen.
 
-Maak de oefeningen op [deze pagina](https://janc-pxl.github.io/TeachBertPERT/)
+Maak de oefeningen op Blackboard in 'Module 2: Planning en organisatie' --> 🏆 Oefen zelf: PERT
 
 [![Foo](https://i.imgur.com/o089nFV.png)](https://janc-pxl.github.io/TeachBertPERT/)
 
@@ -221,22 +221,22 @@ Daarvoor bestaat de Gantt-grafiek. Het zijn exact dezelfde activiteiten, maar nu
 > [!note] DEFINITIE: Gantt-grafiek
 > Een **Gantt-grafiek** (en: _Gantt chart_) is een staafdiagram waarin elke activiteit als een horizontale balk op een tijdschaal staat. De **positie** van de balk toont wanneer de activiteit loopt, de **lengte** van de balk toont hoe lang ze duurt.
 
-De twee technieken zijn dus geen concurrenten, maar twee helften van hetzelfde verhaal:
+De twee technieken zijn dus geen concurrenten, maar twee kanten van hetzelfde verhaal:
 
-| | PERT-netwerk | Gantt-grafiek |
-| --- | --- | --- |
-| **Beantwoordt** | In welke volgorde? Wat is kritiek? | Wanneer precies? Hoe lang? |
-| **Sterkte** | Afhankelijkheden en logica | Tijd, mensen en voortgang |
-| **Gebruik je vooral** | bij het _opbouwen_ van de planning | bij het _uitvoeren_ en _opvolgen_ |
-| **Toon je aan** | je projectteam | je klant, je opdrachtgever, jezelf |
+|                       | PERT-netwerk                       | Gantt-grafiek                      |
+| --------------------- | ---------------------------------- | ---------------------------------- |
+| **Beantwoordt**       | In welke volgorde? Wat is kritiek? | Wanneer precies? Hoe lang?         |
+| **Sterkte**           | Afhankelijkheden en logica         | Tijd, mensen en voortgang          |
+| **Gebruik je vooral** | bij het _opbouwen_ van de planning | bij het _uitvoeren_ en _opvolgen_  |
+| **Toon je aan**       | je projectteam                     | je klant, je opdrachtgever, jezelf |
 
-In de praktijk maak je eerst het netwerk en zet je dat daarna om in een Gantt-grafiek. Dat is precies wat we in deze sectie stap voor stap doen.
+In de praktijk maak je eerst het netwerk en zet je dat daarna om in een Gantt-grafiek.
 
 > [!info] Geschiedenis
 > Henry Laurence Gantt ontwikkelde zijn grafiek rond 1917 als visueel hulpmiddel om planning en voortgang te tonen. Wat destijds een opzienbarende innovatie was, is vandaag een wereldwijde standaard. De techniek werd onder meer gebruikt bij de bouw van de Hoover Dam (1931) en bij de aanleg van het Amerikaanse interstate highway network (1956). Meer dan honderd jaar later kijk je naar exact hetzelfde principe wanneer je in GitHub Projects of Jira op _roadmap view_ klikt.
 
 > [!tip] Eén ding, drie namen
-> Je zal de termen **Gantt-grafiek**, **Gantt-diagram** en **Gantt chart** door elkaar zien staan. Het is hetzelfde. In software (MS Project, Jira, GitHub) heet het altijd _Gantt Chart_. In deze cursus gebruiken we consequent **Gantt-grafiek**.
+> Je zal de termen **Gantt-grafiek**, **Gantt-diagram** en **Gantt chart** door elkaar zien staan. Ze betekenen hetzelfde. In software (MS Project, Jira, GitHub) heet het altijd _Gantt Chart_. In deze cursus gebruiken we consequent **Gantt-grafiek**.
 
 ### Hoe lees je een Gantt-grafiek?
 
@@ -256,14 +256,14 @@ Voor je er zelf één tekent, moet je er één kunnen lézen. Een Gantt-grafiek 
 Twee dingen die studenten het vaakst door elkaar halen:
 
 - **Rijen lees je van boven naar onder, maar dat is géén volgorde.** De volgorde staat in de pijlen, niet in de rangschikking. Twee balken die naast elkaar in de tijd liggen, lopen tegelijk.
-- **Een lange balk betekent lange _doorlooptijd_, niet veel _werk_.** Een taak "wachten op goedkeuring van de klant" van vijf dagen is een lange balk waar niemand een vinger voor uitsteekt. Op dat verschil komen we straks uitgebreid terug.
+- **Een lange balk betekent lange _doorlooptijd_, niet "veel _werk_".** Een taak "wachten op goedkeuring van de klant" van vijf dagen is een lange balk waar niemand iets doet. Op dat verschil komen we straks uitgebreid terug.
 
 ### Ons voorbeeld: de ticketapp
 
-We werken de rest van deze sectie met één klein project, zodat je elk nieuw begrip meteen op iets herkenbaars ziet.
+We werken de rest van deze sectie met één klein project, zodat je elk nieuw begrip meteen op iets herkenbaars ziet toegepast.
 
 > [!example] Situatie
-> Je bouwt met je team een kleine webapp waarmee bezoekers online een ticket kopen voor een fuif van Hexion. De fuif is over twee weken. De app moet dus af zijn, én er moet promotie gemaakt zijn, én er moet online betaald kunnen worden.
+> Je bouwt met je team een kleine webapp waarmee bezoekers online een ticket kopen voor een fuif van de studentenvereniging Hexion. De fuif is over twee weken. De app moet dus af zijn, én er moet promotie gemaakt zijn, én er moet online betaald kunnen worden.
 
 Uit je analyse rollen zeven activiteiten:
 
@@ -278,7 +278,7 @@ Uit je analyse rollen zeven activiteiten:
 | G | Promotie: posters, socials, affiches | 2 d | A (klaar vóór F) |
 
 > [!question] Herken je taak D?
-> Aan taak D werkt niemand. Je dient je aanvraag in en dan wacht je tot de betaalprovider je account goedkeurt. Er verstrijkt tijd, maar er gaat geen mankracht in. Dat is hetzelfde als een [[#Wachttijd|wachttijd]] uit het PERT-gedeelte. Onthoud die taak: verderop zie je hoe je zo'n wachttijd in projectsoftware ingeeft, en die truc heb je straks bij de blokhut nodig.
+> Aan taak D werkt niemand. Je dient je aanvraag in en dan wacht je tot de betaalprovider je account goedkeurt. Er gaat tijd voorbij, maar er gaat geen mankracht in. Dat is hetzelfde als een [[#Wachttijd|wachttijd]] uit het PERT-gedeelte. Onthoud die taak: verderop zie je hoe je zo'n wachttijd in projectsoftware ingeeft, en die truc heb je straks bij de oefening van de blokhut nodig.
 
 ### Van PERT naar Gantt in vijf stappen
 
@@ -316,7 +316,7 @@ Lees nu zelf af wat je met een netwerk alleen nooit zo snel had gezien:
 - Het project duurt **10 dagen**. Het kritieke pad is **A → B → E → F**: die balken hebben geen enkel lichtgekleurd stukje.
 - **C mag twee dagen uitlopen**, **D één dag**, **G vijf dagen**, zonder dat de release opschuift.
 - Op dag 3 lopen er **vier dingen tegelijk**. Dat betekent iets voor je team, en daar komen we zo op terug.
-- De promotie hoeft **niet** meteen op dag 3 te starten. Dat voelt contra-intuïtief: mensen beginnen graag met wat plezant is.
+- De promotie hoeft **niet** meteen op dag 3 te starten. Dat voelt onlogisch: mensen beginnen graag met wat plezant is.
 
 > [!warning] De verleiding van de speling
 > Speling voelt als vrije tijd. Dat is het niet. Speling is je **buffer tegen tegenslag**. Verbruik je de twee dagen speling van C door pas op dag 5 aan de frontend te beginnen, dan is C plotseling óók kritiek: elke kleine tegenvaller vertraagt vanaf dat moment het hele project. Hoe je bewust met die onzekerheid omgaat, zie je in [[006 Risicomanagement|Risicomanagement]] (hoofdstuk 6).
@@ -381,7 +381,7 @@ Klopt je kalender niet, dan klopt geen enkele datum in je planning. Pas hem dus 
 
 ### Van balken naar mensen: resources
 
-Tot nu toe ging het alleen over tijd. Maar taken voeren zichzelf niet uit, helaas.
+Tot nu toe ging het alleen over tijd. Maar taken voeren zichzelf niet uit, helaas. (tenzij je kaboutertjes kent)
 
 > [!note] DEFINITIE: Resource
 > Een **resource** is alles wat je aan een taak toewijst om ze uit te voeren: mensen, materiaal, machines, licenties, verbruiksgoederen.
@@ -420,7 +420,7 @@ xychart-beta
     line [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 ```
 
-De lijn is je capaciteit: twee mensen. Op dag 3 en 4 lopen B, C en G tegelijk: je hebt drie mensen nodig en je hebt er twee. Dat heet **overbezetting**. Vanaf dag 6 heb je het omgekeerde probleem: **onderbezetting**, want er zit iemand duimen te draaien.
+De lijn is je capaciteit: twee mensen. Op dag 3 en 4 lopen B, C en G tegelijk: je hebt drie mensen nodig en je hebt er twee. Dat heet **overbezetting**. Vanaf dag 6 heb je het omgekeerde probleem: **onderbezetting**, want er zit iemand met de duimen te draaien.
 
 > [!warning] Wat de software je niet vertelt
 > MS Project laat je vrolijk een planning maken waarin één persoon op maandag 26 uur werkt. Overbezetting is geen foutmelding, het is iets wat jij als projectleider moet opmerken. In het capaciteitsdiagram zie je het in één oogopslag.
@@ -490,7 +490,7 @@ We houden het hier bewust bij die vaststelling. Hoe je kosten opbouwt, tegenover
 
 ### Waar de Gantt-grafiek stopt
 
-Een Gantt-grafiek is sterk, maar ze berust op één stevige veronderstelling: **je weet vooraf welke taken er zijn en hoe lang ze duren.**
+Een Gantt-grafiek is krachtig, maar ze berust op één stevige veronderstelling: **je weet vooraf welke taken er zijn en hoe lang ze duren.**
 
 Voor een blokhut klopt dat. Voor het bouwen van iets wat nog nooit bestaan heeft (en dat is software meestal) veel minder. Verandert de scope halverwege, dan mag je je hele grafiek hertekenen. Het rekenwerk suggereert bovendien een precisie die je schattingen niet hebben: `d7` ziet er zekerder uit dan "ergens volgende week".
 
@@ -516,7 +516,7 @@ Daarna verrijk je die grafiek stap voor stap:
 6. **Baseline**: leg de planning vast voor je start.
 7. **Opvolgen**: registreer voortgang, vergelijk met de baseline, en stuur bij door terug te koppelen of vooruit te koppelen.
 
-Maar vergeet zeker niet dat de grafiekniet het project is. Ze is je beste gok, netjes getekend.
+Maar vergeet zeker niet dat de grafiek niet het project is. Ze is je beste gok, netjes getekend.
 
 ### Aan de slag
 
@@ -545,7 +545,7 @@ Er bestaan verschillende programma's om Gantt-grafieken te maken. Voor een eenvo
 
 ##### Taken en taakniveaus
 
-We willen een blokhut plaatsen in de tuin. De blokhut hebben we gekocht als een bouwpakket. De bouwelementen zullen voorhanden zijn vanaf de leveringsdatum: dinsdag 14 oktober 2025.
+We willen een blokhut plaatsen in de tuin. De blokhut hebben we gekocht als een bouwpakket. De bouwelementen zullen voorhanden zijn vanaf de leveringsdatum: dinsdag 13 oktober 2026.
 
 Materialen die eveneens aangekocht werden zijn zand, kiezelstenen en cement. De blokhut zal gebouwd worden met drie personen, ze zullen beginnen te bouwen op de dag van de levering.
 
@@ -587,7 +587,7 @@ De volgende taken zullen uitgevoerd moeten worden
 
 - Geef de projectgegevens in.
 
-- De vaste startdatum is voorzien op `dinsdag 14 oktober 2025`.
+- De vaste startdatum is voorzien op `dinsdag 13 oktober 2026`.
 
 - De titel van het project, extra informatie, de naam van de auteur en de manager mag je zelf bepalen.
 
@@ -719,7 +719,7 @@ De werkelijke voortgang kan op meerdere manieren aangegeven worden
 
 - Automatisch
 
-  - Zet de statusdatum op 16 oktober 2025 en kies voor automatisch bijwerken. Alle taken worden dan verondersteld om uitgevoerd te zijn binnen de geschatte planning. Deze methode kan natuurlijk alleen gebruikt worden indien de uitvoering vrijwel gelijk loopt met de planning. Indien dit niet zo is, vullen we de gepresteerde werktijden beter zelf aan. Dit laatste zullen we doen voor de rest van de uitvoering.
+  - Zet de statusdatum op 15 oktober 2026 en kies voor automatisch bijwerken. Alle taken worden dan verondersteld om uitgevoerd te zijn binnen de geschatte planning. Deze methode kan natuurlijk alleen gebruikt worden indien de uitvoering vrijwel gelijk loopt met de planning. Indien dit niet zo is, vullen we de gepresteerde werktijden beter zelf aan. Dit laatste zullen we doen voor de rest van de uitvoering.
     - Voeg een voortgangslijn in.
     - Zoek in de projectstatistieken op voor hoeveel procent ons project al voltooid is. Kijk eveneens eens naar de kosten die al gemaakt zijn en de kosten die nog zullen ontstaan.
 

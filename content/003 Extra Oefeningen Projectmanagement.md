@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 003 Extra oefeningen Projectmanagement
-created: 2026-06-04T11:13:31.731Z
-modified: 2026-08-28T08:27:18.176Z
+created: 2025-08-26T08:37:01.257Z
+modified: 2026-09-20T13:27:16.075Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |

@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 000 DE PXL- X-FACTOR, dat tikkeltje meer!
-created: 2026-06-04T11:13:31.729Z
-modified: 2026-06-04T11:13:31.729Z
+created: 2025-08-26T08:37:01.244Z
+modified: 2025-09-11T12:59:26.552Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |

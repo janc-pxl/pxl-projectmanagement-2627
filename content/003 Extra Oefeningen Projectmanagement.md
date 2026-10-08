@@ -2,7 +2,7 @@
 publish: true
 title: 003 Extra oefeningen Projectmanagement
 created: 2025-08-26T08:37:01.257Z
-modified: 2026-09-20T13:27:16.075Z
+modified: 2026-10-08T17:41:53.693Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -44,7 +44,7 @@ Gebruik de [[002 Projectplanning#Tijdsfactor|formule]] uit de cursus om de T<sub
 | ---------- | -------------------------- | ----------- | ---- | --- | ------ |
 | A          | Analyse van het park       | /           | 3    | 5   | 7      |
 | B          | Onderzoek naar dino’s      | A           | 3    | 9   | 15     |
-| C          | CRISPR DNA                 | A           | 3    | 12  | 18     |
+| C          | CRISPR DNA                 | A           | 3    | 12  | 15     |
 | D          | Ontwikkel website          | A           | 8    | 16  | 24     |
 | E          | Incubeer dino’s            | B,C         | 10   | 16  | 22     |
 | F          | Bouw infrastructuur eiland | B           | 10   | 20  | 30     |

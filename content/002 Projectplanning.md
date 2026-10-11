@@ -2,7 +2,7 @@
 publish: true
 title: 002 Projectplanning
 created: 2025-08-26T08:37:01.252Z
-modified: 2026-09-20T13:45:07.665Z
+modified: 2026-10-11T08:48:15.058Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -635,7 +635,7 @@ Tot nu toe hebben we verondersteld te werken met de basiskalender, zoals die sta
 
 Voor onze werklieden dient deze basiskalender aangepast te worden. We beginnen ’s morgens te werken om 8:30 uur en we werken tot 17:00 met een half uur middagpauze.
 
-Donderdag 16 oktober is een collectieve sluitingsdag en daardoor wordt er dan niet gewerkt. Peter neemt, bijkomend, verlof op vrijdag 17 oktober.
+Donderdag 15 oktober is een collectieve sluitingsdag en daardoor wordt er dan niet gewerkt. Peter neemt, bijkomend, verlof op vrijdag 16 oktober.
 
 Hieronder vind je opnieuw de taken, maar nu met de toewijzingen van resources.
 
@@ -725,7 +725,7 @@ De werkelijke voortgang kan op meerdere manieren aangegeven worden
 
 - Manueel
 
-  - Voor de taken die nog uitgevoerd moeten worden op vrijdag 17 oktober, zullen we de voortgang zelf invullen. We veronderstellen dat de tijdsduur van alle taken, behalve voor het plaatsen van de ramen en deuren, correct geschat is. Voor het plaatsen van de ramen en deuren heeft Jan een half uur meer nodig dan voorzien. Het manueel invoeren van gewerkte tijden kan je best doen via de weergave “Taakbeheer”
+  - Voor de taken die nog uitgevoerd moeten worden op vrijdag 16 oktober, zullen we de voortgang zelf invullen. We veronderstellen dat de tijdsduur van alle taken, behalve voor het plaatsen van de ramen en deuren, correct geschat is. Voor het plaatsen van de ramen en deuren heeft Jan een half uur meer nodig dan voorzien. Het manueel invoeren van gewerkte tijden kan je best doen via de weergave “Taakbeheer”
     - Zoek in de projectstatistieken op of er extra kosten gemaakt werden door het extra half uur aan werk.
 
 ##### Beheer van kosten

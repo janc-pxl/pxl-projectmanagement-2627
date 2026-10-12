@@ -2,7 +2,7 @@
 publish: true
 title: 003 Extra oefeningen Projectmanagement
 created: 2025-08-26T08:37:01.257Z
-modified: 2026-10-08T17:41:53.693Z
+modified: 2026-10-12T10:13:20.175Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -70,7 +70,7 @@ John opent zijn MS Project Professional 2021 en voert nu de gegevens uit de besp
 
 ### Projectgegevens
 
-Hij noemt het project _“Digisaurus”_ en wijzigt de startdatum van het project naar maandag 2 februari 2026. Op deze dag starten de activiteiten.
+Hij noemt het project _“Digisaurus”_ en wijzigt de startdatum van het project naar maandag 1 februari 2027. Op deze dag starten de activiteiten.
 
 ### Resources & kalender
 
@@ -83,8 +83,8 @@ De werkdagen starten om **08:00** en eindigen om **17:30**, met dagelijks 90 min
 
 De maand **juli** is vakantie voor iedereen. Deze vakantie plan je in onder de kalender ‘Dinosaur power’.
 
-- Dennis neemt bijkomend verlof op **3 augustus 2026**.
-- Ray neemt bijkomend verlof op **7 augustus 2026**.
+- Dennis neemt bijkomend verlof op 2 augustus 2027.
+- Ray neemt bijkomend verlof op 6 augustus 2027.
 
 Als overzichtstaak start hij met de concrete uitwerking van de <u>Analysefase</u>:
 
@@ -110,7 +110,7 @@ Twee taken dienen nog uitgevoerd te worden:
 - Duid het kritieke pad aan
 - Ken de taken toe
 - Stel de [[002 Projectplanning#Voortgangscontrole en beheer van kosten|baseline]] in over het hele project
-- Update het project zodat je de status toont zoals ze is op 1 januari 2027
+- Update het project zodat je de status toont zoals ze is op 1 januari 2028
 - Maak een notitie bij de laatste mijlpaal met volgende gegevens:
 
 > “Te weinig tijd en zekerheid of er voldoende stroom staat op de schrikdraad. We bekijken dit volgend jaar wel!”

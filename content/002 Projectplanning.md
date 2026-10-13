@@ -2,7 +2,7 @@
 publish: true
 title: 002 Projectplanning
 created: 2025-08-26T08:37:01.252Z
-modified: 2026-10-11T08:48:15.058Z
+modified: 2026-10-13T13:18:12.637Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -386,26 +386,97 @@ Tot nu toe ging het alleen over tijd. Maar taken voeren zichzelf niet uit, helaa
 > [!note] DEFINITIE: Resource
 > Een **resource** is alles wat je aan een taak toewijst om ze uit te voeren: mensen, materiaal, machines, licenties, verbruiksgoederen.
 
-#### Duur en werk
+#### Duur, werk en eenheden
 
-Zodra je mensen toewijst, moet je twee begrippen strikt uit elkaar houden:
+Zodra je mensen toewijst, jongleert je planning met drie waarden in plaats van één. Hou ze strikt uit elkaar, want MS Project doet dat ook.
 
 - **Duur** (en: _duration_): hoe lang de taak loopt. Dit is de lengte van de balk.
-- **Werk** (en: _work_): hoeveel manuren erin gaan.
+- **Werk** (en: _work_): hoeveel manuren er in de taak gaan.
+- **Eenheden** (en: _units_): hoeveel van iemands werktijd je op de taak zet. 100 % betekent dat die persoon er voltijds aan werkt, 50 % de helft van zijn dag, 200 % staat voor twee voltijdse mensen.
 
-$\text{Werk} = \text{Duur} \times \text{aantal resources}$
+De drie hangen samen met één formule:
 
-Een taak van 3 dagen met 2 mensen is 6 mandagen werk. Zet je er een derde persoon bij, dan gebeurt er één van twee dingen, en jij bepaalt welke:
+$\text{Werk} = \text{Duur} \times \text{Eenheden}$
 
-> [!definitie] DEFINITIE: vaste duur / vast werk
-> **Vaste duur** (en: _fixed duration_): de taak duurt even lang, ongeacht hoeveel mensen je toewijst. De les Projectmanagement duurt twee uur, of er nu 6 of 35 studenten zitten. Het **werk** stijgt wél: elke extra persoon is twee uur extra.
+> [!tip] Denk aan een download
+> Deze formule ken je al, in een andere vorm: **bestandsgrootte = tijd × bandbreedte**. Het **werk** is de grootte van het bestand, de **eenheden** zijn je bandbreedte, en de **duur** is hoelang de download loopt. Verdubbel je je bandbreedte, dan is hetzelfde bestand in de helft van de tijd binnen. Zet je een groter bestand op dezelfde lijn, dan duurt het langer.
+
+Een voorbeeld uit de blokhut. _Roofing bevestigen op platen_ duurt 2 uur en Koen werkt er voltijds aan. Het werk is dus 2 uur × 100 % = **2 manuren**.
+
+Nu zet je Jan erbij, ook voltijds. De eenheden springen van 100 % naar 200 %. Maar de formule moet blijven kloppen, dus er moet nog iets mee veranderen: ofwel de duur, ofwel het werk. Allebei kan, en het verschil is groot:
+
+| | Duur | Eenheden | Werk | Wat gebeurt er in de tuin? |
+| --- | --- | --- | --- | --- |
+| **Vertreksituatie** | 2 u | 100 % | 2 manuren | Koen legt de roofing alleen |
+| **A — de duur past zich aan** | **1 u** | 200 % | 2 manuren | Koen en Jan samen op het dak: dezelfde 2 manuren werk, maar in de helft van de tijd klaar |
+| **B — het werk past zich aan** | 2 u | 200 % | **4 manuren** | Ze zijn er met z'n tweeën twee uur mee bezig: even lang klaar als Koen alleen, maar het kost dubbel zoveel manuren — en dus dubbel zoveel loon |
+
+Welke van de twee klopt? Dat hangt af van de taak, niet van de software. Voor roofing leggen is **A** realistisch: met twee handen erbij ben je sneller klaar. Maar neem `Plan bespreken met werklieden`: daar is **B** het juiste antwoord, want een briefing van een uur blijft een uur duren, er zitten alleen meer mensen in de kring. Dezelfde ingreep, een totaal ander gevolg voor je planning én je budget.
+
+MS Project kan dat niet voor je raden. Jij zegt het, per taak, met het **taaktype**.
+
+#### Het taaktype kiezen
+
+> [!note] DEFINITIE: Taaktype
+> Het **taaktype** (en: _task type_) bepaalt welke van de drie waarden — duur, werk of eenheden — MS Project vasthoudt wanneer er iets aan een taak verandert. Je stelt het per taak in door op de taak te dubbelklikken: `Taakgegevens → Geavanceerd → Taaktype` (en: `Task Information → Advanced → Task type`).
+
+Op datzelfde tabblad vind je alles wat met de planning van één taak te maken heeft: het taaktype, de kalender van de taak, de structuurcode (je plaats in de WBS) en het vinkje om er een mijlpaal van te maken. Je zal er in de oefening vaak komen.
+
+Er staan drie types in de keuzelijst, maar je hoeft er maar twee echt te kunnen kiezen. Die twee zijn precies scenario A en scenario B.
+
+##### Vast werk
+
+_Scenario A: het werk ligt vast, de duur past zich aan. Meer mensen, sneller klaar._
+
+Dit kies je voor **uitvoerend werk dat je kan verdelen**: graven, vernissen, roofing leggen, testen, documentatie schrijven. 300 testcases manueel doorlopen is 12 uur werk. Alleen doe je er anderhalve dag over, met drie mensen vier uur. De manuren blijven dezelfde, je verdeelt ze alleen over meer handen.
+
+In de blokhut zie je dat letterlijk gebeuren. `Blokhut vernissen` staat in de eerste opgave op 5 uur. In de opgave van week 4, waar Koen en Jan het samen doen, staat er 2,5 uur. Het werk bleef 5 manuren, de duur halveerde. Dezelfde logica verklaart waarom `Onderdelen uitpakken` van 1,5 u naar 0,75 u gaat en `Uitgraven fundering` van 4 u naar 2 u.
+
+`Roofing bevestigen op platen` zet je dus op **vast werk**.
+
+##### Vaste duur
+
+_Scenario B: de duur ligt vast, het werk past zich aan. Meer mensen, niet sneller, wel duurder._
+
+Dit kies je voor **alles wat in de agenda staat of gewoon niet versnelt door meer handen**: vergaderingen, briefings, demo's, opleveringen, inspecties. Ook wachttijden horen hier thuis, want beton hardt niet sneller uit omdat er meer mensen naar staan te kijken.
+
+De les Projectmanagement duurt twee uur, of er nu 6 of 35 studenten in de klas zitten. Het **werk** stijgt wél: elke extra aanwezige is twee uur extra. Een briefing met vijf man duurt niet korter dan met twee, ze kost alleen meer manuren.
+
+`Plan bespreken met werklieden` en `Eindcontrole voor oplevering` zet je dus op **vaste duur**. Dat staat ook uitdrukkelijk zo in de opgave.
+
+> [!important] Eén vraag volstaat
+> **Word ik hier sneller klaar als er iemand komt helpen?**
 >
-> **Vast werk** (en: _fixed work_): de hoeveelheid werk ligt vast, dus meer mensen betekent een kortere duur. 300 testcases manueel doorlopen is 12 uur werk: alleen doe je er anderhalve dag over, met drie mensen vier uur.
+> - **Ja** → vast werk
+> - **Nee** → vaste duur
+>
+> Meer hoef je niet te onthouden. Elke taak in de blokhut kan je met die ene vraag indelen.
 
-Vergaderingen, demo's, opleveringen en inspecties zijn zo goed als altijd **vaste duur**. Uitvoerend werk is meestal **vast werk**.
+##### Voetnoot: vaste eenheden
+
+In de keuzelijst staat nog een derde type: **vaste eenheden** (en: _fixed units_). Dat is de standaardinstelling, dus elke taak die je intikt zonder iets aan te passen staat zo.
+
+Vaste eenheden betekent dat de _inzet_ van je mensen vastligt. Je hebt gezegd dat Koen voltijds meewerkt, en daar blijft MS Project van af. Blijkt de taak groter dan gedacht, dan duurt ze gewoon langer — Koen gaat niet plots 150 % werken om het op te vangen.
+
+In de praktijk hoef je je daar weinig van aan te trekken. **Staat er maar één persoon op een taak, laat de standaard dan gerust staan**: er valt niets te verdelen, dus scenario A en B leveren hetzelfde op. Pas zodra je mensen bij- of afzet, wordt de keuze tussen vast werk en vaste duur belangrijk — en die maak je met de vraag hierboven.
+
+> [!info]- Voor wie het helemaal wil weten
+> Naast het taaktype staat een vinkje: **Op basis van hoeveelheid werk** (en: _Effort driven_). Dat regelt wat er gebeurt wanneer je een resource _toevoegt_ of _weghaalt_, in plaats van een getal aan te passen. Staat het aan, dan is de hoeveelheid werk de vaste waarde en krimpt de duur (scenario A); staat het uit, dan blijft de duur staan en stijgt het werk (scenario B).
+>
+> Bij taken van het type _vast werk_ staat het altijd aan en kan je het niet uitzetten — daar is het werk per definitie heilig. Bij _vaste duur_ laat je het uit. Zet je de taaktypes zoals hierboven, dan hoef je dit vinkje dus nooit aan te raken. Op een samenvattingstaak bestaat het niet, want die berekent zijn duur uit zijn subtaken.
+>
+> En voor de volledigheid: dit is wat MS Project herberekent wanneer jij één van de drie waarden intypt.
+>
+> | Jij wijzigt … | Vaste eenheden | Vaste duur | Vast werk |
+> | --- | --- | --- | --- |
+> | **Eenheden** | duur | werk | duur |
+> | **Duur** | werk | werk | eenheden |
+> | **Werk** | duur | eenheden | duur |
+>
+> Eén regel vat die negen vakjes samen: wat jij intypt blijft staan, wat het taaktype noemt blijft ook staan, en de derde waarde past zich aan.
 
 > [!warning] Meer mensen ≠ sneller klaar
-> De formule hierboven verleidt je tot de conclusie dat je elke taak kan halveren door er iemand bij te zetten. Fred Brooks schreef daar in 1975 al _The Mythical Man-Month_ over, met de beroemdste wet uit de software-engineering: mensen toevoegen aan een project dat achterloopt, maakt het nóg later. Nieuwkomers moeten ingewerkt worden, en elke extra persoon vermenigvuldigt het aantal communicatielijnen. Negen vrouwen krijgen ook geen baby in één maand.
+> Vast werk verleidt je tot de conclusie dat je elke taak kan halveren door er iemand bij te zetten. Fred Brooks schreef daar in 1975 al _The Mythical Man-Month_ over, met de beroemdste wet uit de software-engineering: mensen toevoegen aan een project dat achterloopt, maakt het nóg later. Nieuwkomers moeten ingewerkt worden, en elke extra persoon vermenigvuldigt het aantal communicatielijnen. Negen vrouwen krijgen ook geen baby in één maand. MS Project rekent braaf verder, maar de werkelijkheid doet dat niet.
 
 #### Het capaciteitsdiagram
 

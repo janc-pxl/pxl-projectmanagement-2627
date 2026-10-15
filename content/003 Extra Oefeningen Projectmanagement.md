@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 003 Extra oefeningen Projectmanagement
-created: 2025-08-26T08:37:01.257Z
-modified: 2026-10-12T10:13:20.175Z
+created: 2026-10-12T10:48:07.038Z
+modified: 2026-10-15T12:04:31.361Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -83,12 +83,12 @@ De werkdagen starten om **08:00** en eindigen om **17:30**, met dagelijks 90 min
 
 De maand **juli** is vakantie voor iedereen. Deze vakantie plan je in onder de kalender ‘Dinosaur power’.
 
-- Dennis neemt bijkomend verlof op 2 augustus 2027.
-- Ray neemt bijkomend verlof op 6 augustus 2027.
+- Dennis neemt bijkomend verlof op **2 augustus 2027**.
+- Ray neemt bijkomend verlof op **6 augustus 2027**.
 
 Als overzichtstaak start hij met de concrete uitwerking van de <u>Analysefase</u>:
 
-De eerste taak in deze fase is _"het plan van aanpak"_ uitwerken. Deze taak van het type [[002 Projectplanning#Vaste duur Vast Werk|vaste duur]], duurt **10 dagen** en alle 5 de teamleden zullen hier aan deelnemen. Zodra het PvA klaar is, start Ray aan de _"risicoanalyse"_, een taak van **10 dagen**. Hij zal John Hammond vragen om hem te helpen bij deze taak zodat deze in de helft van de tijd klaar is. Dennis start op hetzelfde moment al met de _"technische analyse van het park"_. Een taak die hij inschat met een duur van **15 dagen**.
+De eerste taak in deze fase is _"het plan van aanpak"_ uitwerken. Deze taak van het type [[002 Projectplanning#Het taaktype kiezen|vaste duur]], duurt **10 dagen** en alle 5 de teamleden zullen hier aan deelnemen. Zodra het PvA klaar is, start Ray aan de _"risicoanalyse"_, een taak van **10 dagen**. Hij zal John Hammond vragen om hem te helpen bij deze taak zodat deze in de helft van de tijd klaar is. Dennis start op hetzelfde moment al met de _"technische analyse van het park"_. Een taak die hij inschat met een duur van **15 dagen**.
 
 Na de analysefase, volgt de <u>Dinofase</u>:
 
@@ -109,8 +109,8 @@ Twee taken dienen nog uitgevoerd te worden:
 - Voorzie duidelijk de taken, subtaken, milestones met hun duur en volgorde
 - Duid het kritieke pad aan
 - Ken de taken toe
-- Stel de [[002 Projectplanning#Voortgangscontrole en beheer van kosten|baseline]] in over het hele project
-- Update het project zodat je de status toont zoals ze is op 1 januari 2028
+- Stel de [[002 Projectplanning#De planning opvolgen|baseline]] in over het hele project
+- Update het project zodat je de status toont zoals ze is op **1 oktober 2027**
 - Maak een notitie bij de laatste mijlpaal met volgende gegevens:
 
 > “Te weinig tijd en zekerheid of er voldoende stroom staat op de schrikdraad. We bekijken dit volgend jaar wel!”
@@ -126,7 +126,7 @@ Wijzig de duur van _‘Veiligheid park testen’_ van 2 dagen naar **27 dagen**.
     - % voltooid _(% complete)_
     - Vlag10 _(Flag10)_
   - Hernoem kolom Vlag10 naar ‘High Priority task’
-    - Indien het % voltooid werk kleiner of gelijk aan 20% bedraagt, dien je in deze kolom een rode vlag te tonen.
+    - Indien het % voltooid kleiner of gelijk aan 20% bedraagt, dien je in deze kolom een rode vlag te tonen.
   - Stel een voortgangslijn ("progressline") in op de projectstatus datum.
 
 ### Nog meer extra stappen

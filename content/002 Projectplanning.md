@@ -2,7 +2,7 @@
 publish: true
 title: 002 Projectplanning
 created: 2025-08-26T08:37:01.252Z
-modified: 2026-10-13T13:18:12.637Z
+modified: 2026-10-15T10:19:51.137Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -216,12 +216,12 @@ Maak de oefeningen op Blackboard in 'Module 2: Planning en organisatie' --> 🏆
 
 Daar heeft je PERT-netwerk geen antwoord op. Een netwerk toont **logica**: wat komt na wat, en wat is kritiek. Het toont geen **kalender**. Je hebt in de vorige sectie zelfs uitdrukkelijk geleerd dat de lengte van een pijl niets zegt over de duur van een activiteit.
 
-Daarvoor bestaat de Gantt-grafiek. Het zijn exact dezelfde activiteiten, maar nu getekend op een tijdschaal.
+Daarvoor bestaat de Gantt-grafiek. Het zijn dezelfde activiteiten, nu getekend op een tijdschaal.
 
 > [!note] DEFINITIE: Gantt-grafiek
 > Een **Gantt-grafiek** (en: _Gantt chart_) is een staafdiagram waarin elke activiteit als een horizontale balk op een tijdschaal staat. De **positie** van de balk toont wanneer de activiteit loopt, de **lengte** van de balk toont hoe lang ze duurt.
 
-De twee technieken zijn dus geen concurrenten, maar twee kanten van hetzelfde verhaal:
+PERT en Gantt vullen elkaar aan:
 
 |                       | PERT-netwerk                       | Gantt-grafiek                      |
 | --------------------- | ---------------------------------- | ---------------------------------- |
@@ -233,14 +233,14 @@ De twee technieken zijn dus geen concurrenten, maar twee kanten van hetzelfde ve
 In de praktijk maak je eerst het netwerk en zet je dat daarna om in een Gantt-grafiek.
 
 > [!info] Geschiedenis
-> Henry Laurence Gantt ontwikkelde zijn grafiek rond 1917 als visueel hulpmiddel om planning en voortgang te tonen. Wat destijds een opzienbarende innovatie was, is vandaag een wereldwijde standaard. De techniek werd onder meer gebruikt bij de bouw van de Hoover Dam (1931) en bij de aanleg van het Amerikaanse interstate highway network (1956). Meer dan honderd jaar later kijk je naar exact hetzelfde principe wanneer je in GitHub Projects of Jira op _roadmap view_ klikt.
+> Henry Laurence Gantt ontwikkelde zijn grafiek rond 1917 om planning en voortgang zichtbaar te maken. De techniek werd onder meer gebruikt bij de bouw van de Hoover Dam (1931) en bij de aanleg van het Amerikaanse interstate highway network (1956). Klik je vandaag in GitHub Projects of Jira op _roadmap view_, dan kijk je naar hetzelfde principe.
 
 > [!tip] Eén ding, drie namen
 > Je zal de termen **Gantt-grafiek**, **Gantt-diagram** en **Gantt chart** door elkaar zien staan. Ze betekenen hetzelfde. In software (MS Project, Jira, GitHub) heet het altijd _Gantt Chart_. In deze cursus gebruiken we consequent **Gantt-grafiek**.
 
 ### Hoe lees je een Gantt-grafiek?
 
-Voor je er zelf één tekent, moet je er één kunnen lézen. Een Gantt-grafiek bestaat altijd uit dezelfde zes elementen.
+Eerst lezen, dan tekenen. Een Gantt-grafiek bestaat altijd uit dezelfde zes elementen.
 
 ![](https://i.imgur.com/fiDuEXU.png)
 
@@ -256,20 +256,20 @@ Voor je er zelf één tekent, moet je er één kunnen lézen. Een Gantt-grafiek 
 Twee dingen die studenten het vaakst door elkaar halen:
 
 - **Rijen lees je van boven naar onder, maar dat is géén volgorde.** De volgorde staat in de pijlen, niet in de rangschikking. Twee balken die naast elkaar in de tijd liggen, lopen tegelijk.
-- **Een lange balk betekent lange _doorlooptijd_, niet "veel _werk_".** Een taak "wachten op goedkeuring van de klant" van vijf dagen is een lange balk waar niemand iets doet. Op dat verschil komen we straks uitgebreid terug.
+- **Een lange balk betekent lange _doorlooptijd_, niet "veel _werk_".** Een taak "wachten op goedkeuring van de klant" van vijf dagen is een lange balk waar niemand iets doet. Daar komen we straks op terug.
 
 ### Ons voorbeeld: de ticketapp
 
-We werken de rest van deze sectie met één klein project, zodat je elk nieuw begrip meteen op iets herkenbaars ziet toegepast.
+In de rest van deze sectie werken we met één klein project. Zo zie je elk nieuw begrip meteen toegepast.
 
 > [!example] Situatie
-> Je bouwt met je team een kleine webapp waarmee bezoekers online een ticket kopen voor een fuif van de studentenvereniging Hexion. De fuif is over twee weken. De app moet dus af zijn, én er moet promotie gemaakt zijn, én er moet online betaald kunnen worden.
+> Je bouwt met je team een kleine webapp waarmee bezoekers online een ticket kopen voor een fuif van de studentenvereniging Hexion. De fuif is over twee weken. De app moet dus af zijn, én er moet promotie gemaakt zijn, én er moet online betaald kunnen worden. Jullie team bestaat uit twee mensen: Lotte en Wout.
 
 Uit je analyse rollen zeven activiteiten:
 
 | Taak | Omschrijving | t$_e$ | Voorafgaand |
 | --- | --- | --- | --- |
-| A | Ontwerp: schermen en datamodel | 2 d | – |
+| A | Ontwerp: schermen en datamodel | 2 d | / |
 | B | Backend en API bouwen | 5 d | A |
 | C | Frontend bouwen | 3 d | A |
 | D | Betaalprovider: account laten goedkeuren | 4 d | A |
@@ -278,11 +278,11 @@ Uit je analyse rollen zeven activiteiten:
 | G | Promotie: posters, socials, affiches | 2 d | A (klaar vóór F) |
 
 > [!question] Herken je taak D?
-> Aan taak D werkt niemand. Je dient je aanvraag in en dan wacht je tot de betaalprovider je account goedkeurt. Er gaat tijd voorbij, maar er gaat geen mankracht in. Dat is hetzelfde als een [[#Wachttijd|wachttijd]] uit het PERT-gedeelte. Onthoud die taak: verderop zie je hoe je zo'n wachttijd in projectsoftware ingeeft, en die truc heb je straks bij de oefening van de blokhut nodig.
+> Aan taak D werkt niemand. Je dient je aanvraag in en dan wacht je tot de betaalprovider je account goedkeurt. Er gaat tijd voorbij, maar er gaat geen mankracht in. Dat is hetzelfde als een [[#Wachttijd|wachttijd]] uit het PERT-gedeelte. Onthoud die taak: verderop zie je hoe je zo'n wachttijd in projectsoftware ingeeft.
 
 ### Van PERT naar Gantt in vijf stappen
 
-Dit is de kern van deze sectie. Je vertrekt van je uitgewerkte netwerk en gebruikt letterlijk de getallen die je daar al berekend hebt.
+Je vertrekt van je uitgewerkte netwerk en gebruikt de getallen die je daar al berekend hebt.
 
 1. **Zet de taken onder elkaar**, in de volgorde waarin ze in het netwerk voorkomen. Links de naam, rechts de ruimte voor de balken.
 2. **Zet de tijdschaal horizontaal.** Kies een eenheid die past bij je project: uren voor een dag werk, dagen voor een projectweek, weken voor een bouwproject.
@@ -311,7 +311,7 @@ gantt
     speling G                 :done, sg, after g, 5d
 ```
 
-Lees nu zelf af wat je met een netwerk alleen nooit zo snel had gezien:
+Wat lees je hieruit af?
 
 - Het project duurt **10 dagen**. Het kritieke pad is **A → B → E → F**: die balken hebben geen enkel lichtgekleurd stukje.
 - **C mag twee dagen uitlopen**, **D één dag**, **G vijf dagen**, zonder dat de release opschuift.
@@ -322,7 +322,7 @@ Lees nu zelf af wat je met een netwerk alleen nooit zo snel had gezien:
 > Speling voelt als vrije tijd. Dat is het niet. Speling is je **buffer tegen tegenslag**. Verbruik je de twee dagen speling van C door pas op dag 5 aan de frontend te beginnen, dan is C plotseling óók kritiek: elke kleine tegenvaller vertraagt vanaf dat moment het hele project. Hoe je bewust met die onzekerheid omgaat, zie je in [[006 Risicomanagement|Risicomanagement]] (hoofdstuk 6).
 
 > [!tip] Handig bij het tekenen op papier
-> Schrijf boven elke balk het begin- en eindknooppuntnummer uit je netwerk (bijvoorbeeld `2 — 5`). Zo vind je elke balk in je netwerk terug en omgekeerd, en zie je meteen of je een activiteit vergeten bent.
+> Schrijf boven elke balk het begin- en eindknooppuntnummer uit je netwerk (bijvoorbeeld `2 → 5`). Zo vind je elke balk in je netwerk terug en omgekeerd, en zie je meteen of je een activiteit vergeten bent.
 
 ### De bouwstenen in projectsoftware
 
@@ -330,10 +330,10 @@ Op papier volstaan balken. Zodra je met MS Project of een vergelijkbaar pakket w
 
 #### Samenvattingstaken
 
-Je gaat je taken groeperen, precies zoals in de [[001 Wat is Projectmanagement#Work Breakdown Structure|Work Breakdown Structure]] uit hoofdstuk 1. _Voorbereiding_, _Fundering_, _Dak_ zijn geen taken die iemand uitvoert: het zijn **samenvattingstaken** die de onderliggende taken bundelen.
+Je groepeert je taken, zoals in de [[001 Wat is Projectmanagement#Work Breakdown Structure|Work Breakdown Structure]] uit hoofdstuk 1. In de ticketapp zijn _Ontwikkeling_ (B, C en D), _Oplevering_ (E en F) en _Promotie_ (G) geen taken die iemand uitvoert: het zijn **samenvattingstaken** die de onderliggende taken bundelen.
 
 - Je geeft ze **nooit zelf een duur**. De software berekent die: een samenvattingstaak start bij de eerste subtaak en eindigt bij de laatste.
-- Ze maken je planning leesbaar. Je klant wil "Fundering: 2 dagen" zien, niet twaalf regels detail.
+- Ze maken je planning leesbaar. Het bestuur van Hexion wil "Ontwikkeling: 5 dagen" zien, niet twaalf regels detail.
 - In de Gantt-grafiek herken je ze aan een balk met een andere vorm (vaak een dikke haak).
 
 #### Mijlpalen
@@ -366,11 +366,13 @@ Een afhankelijkheid mag je uitstellen of laten overlappen:
 - **Overlap** (en: _lead_, negatief getal): B start al vóór A helemaal klaar is. Je schrijft dat als `FS-1 dag`. Handig als je de frontend al kan beginnen wanneer de API voor 80 % vastligt.
 
 > [!important] Zo verdwijnt een wachttijd uit je planning
-> Herinner je taak D uit de ticketapp, en straks de uithardende beton bij de blokhut. Zo'n wachttijd tekende je in PERT als een aparte activiteit. In projectsoftware doe je dat **niet**: je zet er geen lege taak voor, maar je geeft de volgende taak een **vertraging** mee..
+> Herinner je taak D uit de ticketapp. Zo'n wachttijd tekende je in PERT als een aparte activiteit. In projectsoftware doe je dat **niet**: je zet er geen lege taak voor, maar je geeft de volgende taak een **vertraging** mee.
+>
+> Concreet: Lotte dient de aanvraag bij de betaalprovider in, en de goedkeuring duurt vier dagen. Je maakt dus geen taak "wachten op goedkeuring", maar je laat de taak die de goedkeuring nodig heeft pas starten met `FS+4 dagen` na het indienen. Hetzelfde geldt thuis voor verf die moet drogen voor de tweede laag erop kan.
 
 #### Kalender: duur is niet hetzelfde als doorlooptijd
 
-Dit is de klassieker waarop iedereen één keer op vastloopt. Je geeft een taak van 8 uur in, en de software zet ze over twee dagen.
+Hier loopt iedereen minstens één keer op vast. Je geeft een taak van 8 uur in, en de software spreidt ze over twee dagen.
 
 Dat komt doordat projectsoftware rekent met een **kalender**: werkdagen van maandag tot vrijdag, van 8:00 tot 17:00, met een middagpauze, en met feestdagen en verlof. Een taak van 8 uur die om 15:00 start, eindigt de volgende ochtend.
 
@@ -388,7 +390,7 @@ Tot nu toe ging het alleen over tijd. Maar taken voeren zichzelf niet uit, helaa
 
 #### Duur, werk en eenheden
 
-Zodra je mensen toewijst, jongleert je planning met drie waarden in plaats van één. Hou ze strikt uit elkaar, want MS Project doet dat ook.
+Zodra je mensen toewijst, werkt je planning met drie waarden in plaats van één. Hou ze goed uit elkaar, want MS Project doet dat ook.
 
 - **Duur** (en: _duration_): hoe lang de taak loopt. Dit is de lengte van de balk.
 - **Werk** (en: _work_): hoeveel manuren er in de taak gaan.
@@ -401,48 +403,49 @@ $\text{Werk} = \text{Duur} \times \text{Eenheden}$
 > [!tip] Denk aan een download
 > Deze formule ken je al, in een andere vorm: **bestandsgrootte = tijd × bandbreedte**. Het **werk** is de grootte van het bestand, de **eenheden** zijn je bandbreedte, en de **duur** is hoelang de download loopt. Verdubbel je je bandbreedte, dan is hetzelfde bestand in de helft van de tijd binnen. Zet je een groter bestand op dezelfde lijn, dan duurt het langer.
 
-Een voorbeeld uit de blokhut. _Roofing bevestigen op platen_ duurt 2 uur en Koen werkt er voltijds aan. Het werk is dus 2 uur × 100 % = **2 manuren**.
+Een voorbeeld uit de ticketapp. _C Frontend bouwen_ duurt 3 dagen en Lotte werkt er voltijds aan. Het werk is dus 3 dagen × 100 % = **3 mandagen**.
 
-Nu zet je Jan erbij, ook voltijds. De eenheden springen van 100 % naar 200 %. Maar de formule moet blijven kloppen, dus er moet nog iets mee veranderen: ofwel de duur, ofwel het werk. Allebei kan, en het verschil is groot:
+Nu zet je Wout erbij, ook voltijds. De eenheden springen van 100 % naar 200 %. Maar de formule moet blijven kloppen, dus er moet nog iets mee veranderen: ofwel de duur, ofwel het werk. Allebei kan, en het verschil is groot:
 
-| | Duur | Eenheden | Werk | Wat gebeurt er in de tuin? |
+| | Duur | Eenheden | Werk | Wat gebeurt er in het team? |
 | --- | --- | --- | --- | --- |
-| **Vertreksituatie** | 2 u | 100 % | 2 manuren | Koen legt de roofing alleen |
-| **A — de duur past zich aan** | **1 u** | 200 % | 2 manuren | Koen en Jan samen op het dak: dezelfde 2 manuren werk, maar in de helft van de tijd klaar |
-| **B — het werk past zich aan** | 2 u | 200 % | **4 manuren** | Ze zijn er met z'n tweeën twee uur mee bezig: even lang klaar als Koen alleen, maar het kost dubbel zoveel manuren — en dus dubbel zoveel loon |
+| **Vertreksituatie** | 3 d | 100 % | 3 mandagen | Lotte bouwt de frontend alleen |
+| **A: de duur past zich aan** | **1,5 d** | 200 % | 3 mandagen | Lotte en Wout verdelen de schermen: hetzelfde werk, in de helft van de tijd klaar |
+| **B: het werk past zich aan** | 3 d | 200 % | **6 mandagen** | Ze zijn er met z'n tweeën drie dagen mee bezig: even lang als Lotte alleen, maar het kost dubbel zoveel mandagen, en dus dubbel zoveel loon |
 
-Welke van de twee klopt? Dat hangt af van de taak, niet van de software. Voor roofing leggen is **A** realistisch: met twee handen erbij ben je sneller klaar. Maar neem `Plan bespreken met werklieden`: daar is **B** het juiste antwoord, want een briefing van een uur blijft een uur duren, er zitten alleen meer mensen in de kring. Dezelfde ingreep, een totaal ander gevolg voor je planning én je budget.
+Welke van de twee klopt? Dat hangt af van de taak, niet van de software. Voor de frontend is **A** realistisch: met twee developers kan je de schermen verdelen. Maar stel dat jullie op het einde de app een uur demonstreren aan het bestuur van Hexion. Daar is **B** het juiste antwoord: de demo blijft een uur duren, er zit alleen een extra persoon aan tafel. Dezelfde ingreep heeft dus een heel ander effect op je planning en je budget.
 
 MS Project kan dat niet voor je raden. Jij zegt het, per taak, met het **taaktype**.
 
 #### Het taaktype kiezen
 
 > [!note] DEFINITIE: Taaktype
-> Het **taaktype** (en: _task type_) bepaalt welke van de drie waarden — duur, werk of eenheden — MS Project vasthoudt wanneer er iets aan een taak verandert. Je stelt het per taak in door op de taak te dubbelklikken: `Taakgegevens → Geavanceerd → Taaktype` (en: `Task Information → Advanced → Task type`).
+> Het **taaktype** (en: _task type_) bepaalt welke van de drie waarden (duur, werk of eenheden) MS Project vasthoudt wanneer er iets aan een taak verandert.
 
-Op datzelfde tabblad vind je alles wat met de planning van één taak te maken heeft: het taaktype, de kalender van de taak, de structuurcode (je plaats in de WBS) en het vinkje om er een mijlpaal van te maken. Je zal er in de oefening vaak komen.
+Het handigst stel je het taaktype in via een extra kolom in je Gantt-diagram. Klik met de rechtermuisknop op een kolomkop, kies `Kolom invoegen` en daarna `Type` (en: `Insert Column → Type`). Vanaf dan zie je voor elke taak meteen welk type ze heeft, en pas je het rechtstreeks in de tabel aan, net zoals een duur of een naam. Zo heb je ook in één oogopslag het overzicht: een taak die nog op de standaardinstelling staat, springt meteen in het oog.
 
-Er staan drie types in de keuzelijst, maar je hoeft er maar twee echt te kunnen kiezen. Die twee zijn precies scenario A en scenario B.
+> [!tip] Liever via het menu?
+> Dubbelklik op een taak en kies `Taakgegevens → Geavanceerd → Taaktype` (en: `Task Information → Advanced → Task type`). Dat werkt ook, maar dan per taak en zonder overzicht.
+
+Er staan drie types in de keuzelijst, maar je hebt er maar twee echt nodig. Ze komen overeen met scenario A en B.
 
 ##### Vast werk
 
 _Scenario A: het werk ligt vast, de duur past zich aan. Meer mensen, sneller klaar._
 
-Dit kies je voor **uitvoerend werk dat je kan verdelen**: graven, vernissen, roofing leggen, testen, documentatie schrijven. 300 testcases manueel doorlopen is 12 uur werk. Alleen doe je er anderhalve dag over, met drie mensen vier uur. De manuren blijven dezelfde, je verdeelt ze alleen over meer handen.
+Dit kies je voor **uitvoerend werk dat je kan verdelen**: schermen bouwen, testen, documentatie schrijven, een kot schilderen, het gras afrijden. 300 testcases manueel doorlopen is 12 uur werk. Alleen doe je er anderhalve dag over, met drie mensen vier uur. De manuren blijven dezelfde, je verdeelt ze alleen over meer handen.
 
-In de blokhut zie je dat letterlijk gebeuren. `Blokhut vernissen` staat in de eerste opgave op 5 uur. In de opgave van week 4, waar Koen en Jan het samen doen, staat er 2,5 uur. Het werk bleef 5 manuren, de duur halveerde. Dezelfde logica verklaart waarom `Onderdelen uitpakken` van 1,5 u naar 0,75 u gaat en `Uitgraven fundering` van 4 u naar 2 u.
-
-`Roofing bevestigen op platen` zet je dus op **vast werk**.
+_C Frontend bouwen_ zet je dus op **vast werk**.
 
 ##### Vaste duur
 
 _Scenario B: de duur ligt vast, het werk past zich aan. Meer mensen, niet sneller, wel duurder._
 
-Dit kies je voor **alles wat in de agenda staat of gewoon niet versnelt door meer handen**: vergaderingen, briefings, demo's, opleveringen, inspecties. Ook wachttijden horen hier thuis, want beton hardt niet sneller uit omdat er meer mensen naar staan te kijken.
+Dit kies je voor **alles wat in de agenda staat of gewoon niet versnelt door meer handen**: vergaderingen, briefings, demo's, opleveringen, inspecties. Ook wachttijden horen hier thuis: verf droogt niet sneller omdat er meer mensen naar staan te kijken.
 
 De les Projectmanagement duurt twee uur, of er nu 6 of 35 studenten in de klas zitten. Het **werk** stijgt wél: elke extra aanwezige is twee uur extra. Een briefing met vijf man duurt niet korter dan met twee, ze kost alleen meer manuren.
 
-`Plan bespreken met werklieden` en `Eindcontrole voor oplevering` zet je dus op **vaste duur**. Dat staat ook uitdrukkelijk zo in de opgave.
+De demo voor het bestuur van Hexion zet je dus op **vaste duur**.
 
 > [!important] Eén vraag volstaat
 > **Word ik hier sneller klaar als er iemand komt helpen?**
@@ -450,20 +453,20 @@ De les Projectmanagement duurt twee uur, of er nu 6 of 35 studenten in de klas z
 > - **Ja** → vast werk
 > - **Nee** → vaste duur
 >
-> Meer hoef je niet te onthouden. Elke taak in de blokhut kan je met die ene vraag indelen.
+> Meer hoef je niet te onthouden. Bijna elke taak kan je met die ene vraag indelen.
 
 ##### Voetnoot: vaste eenheden
 
 In de keuzelijst staat nog een derde type: **vaste eenheden** (en: _fixed units_). Dat is de standaardinstelling, dus elke taak die je intikt zonder iets aan te passen staat zo.
 
-Vaste eenheden betekent dat de _inzet_ van je mensen vastligt. Je hebt gezegd dat Koen voltijds meewerkt, en daar blijft MS Project van af. Blijkt de taak groter dan gedacht, dan duurt ze gewoon langer — Koen gaat niet plots 150 % werken om het op te vangen.
+Vaste eenheden betekent dat de _inzet_ van je mensen vastligt. Je hebt gezegd dat Lotte voltijds meewerkt, en daar blijft MS Project van af. Blijkt de taak groter dan gedacht, dan duurt ze gewoon langer. Lotte gaat niet plots 150 % werken om het op te vangen.
 
-In de praktijk hoef je je daar weinig van aan te trekken. **Staat er maar één persoon op een taak, laat de standaard dan gerust staan**: er valt niets te verdelen, dus scenario A en B leveren hetzelfde op. Pas zodra je mensen bij- of afzet, wordt de keuze tussen vast werk en vaste duur belangrijk — en die maak je met de vraag hierboven.
+In de praktijk hoef je je daar weinig van aan te trekken. **Staat er maar één persoon op een taak, laat de standaard dan gerust staan**: er valt niets te verdelen, dus scenario A en B leveren hetzelfde op. Pas zodra je mensen bij- of afzet, wordt de keuze tussen vast werk en vaste duur belangrijk. Die keuze maak je met de vraag hierboven.
 
 > [!info]- Voor wie het helemaal wil weten
 > Naast het taaktype staat een vinkje: **Op basis van hoeveelheid werk** (en: _Effort driven_). Dat regelt wat er gebeurt wanneer je een resource _toevoegt_ of _weghaalt_, in plaats van een getal aan te passen. Staat het aan, dan is de hoeveelheid werk de vaste waarde en krimpt de duur (scenario A); staat het uit, dan blijft de duur staan en stijgt het werk (scenario B).
 >
-> Bij taken van het type _vast werk_ staat het altijd aan en kan je het niet uitzetten — daar is het werk per definitie heilig. Bij _vaste duur_ laat je het uit. Zet je de taaktypes zoals hierboven, dan hoef je dit vinkje dus nooit aan te raken. Op een samenvattingstaak bestaat het niet, want die berekent zijn duur uit zijn subtaken.
+> Bij taken van het type _vast werk_ staat het altijd aan en kan je het niet uitzetten: daar ligt het werk per definitie vast. Bij _vaste duur_ laat je het uit. Zet je de taaktypes zoals hierboven, dan hoef je dit vinkje dus nooit aan te raken. Op een samenvattingstaak bestaat het niet, want die berekent zijn duur uit zijn subtaken.
 >
 > En voor de volledigheid: dit is wat MS Project herberekent wanneer jij één van de drie waarden intypt.
 >
@@ -476,7 +479,7 @@ In de praktijk hoef je je daar weinig van aan te trekken. **Staat er maar één 
 > Eén regel vat die negen vakjes samen: wat jij intypt blijft staan, wat het taaktype noemt blijft ook staan, en de derde waarde past zich aan.
 
 > [!warning] Meer mensen ≠ sneller klaar
-> Vast werk verleidt je tot de conclusie dat je elke taak kan halveren door er iemand bij te zetten. Fred Brooks schreef daar in 1975 al _The Mythical Man-Month_ over, met de beroemdste wet uit de software-engineering: mensen toevoegen aan een project dat achterloopt, maakt het nóg later. Nieuwkomers moeten ingewerkt worden, en elke extra persoon vermenigvuldigt het aantal communicatielijnen. Negen vrouwen krijgen ook geen baby in één maand. MS Project rekent braaf verder, maar de werkelijkheid doet dat niet.
+> Vast werk verleidt je tot de conclusie dat je elke taak kan halveren door er iemand bij te zetten. Fred Brooks schreef daar in 1975 _The Mythical Man-Month_ over. Zijn bekendste stelling: wie mensen toevoegt aan een project dat achterloopt, maakt het nóg later. Nieuwkomers moeten ingewerkt worden, en elke extra persoon zorgt voor extra overleg. Of zoals Brooks het zelf zei: negen vrouwen krijgen ook geen baby in één maand. MS Project rekent braaf verder, de werkelijkheid niet.
 
 #### Het capaciteitsdiagram
 
@@ -518,11 +521,11 @@ Volstaat de speling niet, dan blijven er nog twee, minder aangename opties over:
 - **Capaciteit bijkopen**: iemand inhuren, extra licenties, overuren. De einddatum blijft, de kosten stijgen.
 - **De einddatum opschuiven**: je verbruikt meer speling dan er is. De kosten blijven, het project loopt uit.
 
-Er is geen derde optie, en dat is geen toeval: je herkent hier de [[001 Wat is Projectmanagement#De Duivelsdriehoek|duivelsdriehoek]] uit hoofdstuk 1. Aan tijd, geld en kwaliteit kan je niet alle drie tegelijk vasthouden. Nivelleren is die driehoek in de praktijk.
+Meer opties zijn er niet. Je herkent hier de [[001 Wat is Projectmanagement#De Duivelsdriehoek|duivelsdriehoek]] uit hoofdstuk 1. Tijd, geld en kwaliteit kan je niet alle drie tegelijk vasthouden. Bij nivelleren kies je welke van de drie toegeeft.
 
 ### De planning opvolgen
 
-Een planning die je na week één nooit meer opent, is een tekening. Wat een Gantt-grafiek tot een handig werkinstrument maakt, is dat je er de werkelijkheid naast legt.
+Een planning die je na week één nooit meer opent, is een tekening. Een Gantt-grafiek wordt pas nuttig als je er de werkelijkheid naast legt.
 
 #### De baseline
 
@@ -549,23 +552,23 @@ Loop je achter (het meest voorkomende geval) dan heb je twee reacties:
 - **Terugkoppelen**: je versnelt het werk om de oorspronkelijke planning te halen. Meer of productievere middelen inzetten, of het werk anders organiseren. _Je past de uitvoering aan de planning aan._
 - **Vooruitkoppelen**: je aanvaardt dat je schattingen niet klopten, herziet de resterende tijden en maakt een nieuwe planning. _Je past de planning aan de werkelijkheid aan._
 
-Meestal doe je allebei. Het moeilijkste stuk is niet het rekenwerk, maar het gesprek: nieuwe tijden en kosten uitleggen aan je opdrachtgever.
+Meestal doe je allebei. Het rekenwerk is het makkelijke deel. Moeilijker is het gesprek met je opdrachtgever over de nieuwe timing en kosten.
 
 En loop je vóór op schema (de droom van elke projectleider) dan werkt het net zo: je maakt mensen vrij voor ander werk (terugkoppelen) of je vervroegt je einddatum (vooruitkoppelen).
 
 ### Kosten in je planning
 
-Zodra elke taak resources heeft, rekent je planning automatisch kosten uit: gebruik van mensen en machines, verbruik van materiaal, plus vaste kosten per taak. Zo zie je niet alleen wanneer je project klaar is, maar ook wat het gekost zal hebben, en waar je van je budget afwijkt.
+Zodra elke taak resources heeft, rekent je planning automatisch kosten uit: gebruik van mensen en machines, verbruik van materiaal, plus vaste kosten per taak. Zo zie je wanneer je project klaar is, wat het gekost zal hebben en waar je van je budget afwijkt.
 
-We houden het hier bewust bij die vaststelling. Hoe je kosten opbouwt, tegenover baten zet en beslist of een project überhaupt de moeite waard is, zie je in [[005 Kosten en Batenanalyse|Kosten- en batenanalyse]] (hoofdstuk 5).
+We houden het hier bewust bij die vaststelling. Hoe je kosten opbouwt, tegenover baten zet en beslist of een project de moeite waard is, zie je in [[005 Kosten en Batenanalyse|Kosten- en batenanalyse]] (hoofdstuk 5).
 
 ### Waar de Gantt-grafiek stopt
 
-Een Gantt-grafiek is krachtig, maar ze berust op één stevige veronderstelling: **je weet vooraf welke taken er zijn en hoe lang ze duren.**
+Een Gantt-grafiek steunt op één veronderstelling: **je weet vooraf welke taken er zijn en hoe lang ze duren.**
 
-Voor een blokhut klopt dat. Voor het bouwen van iets wat nog nooit bestaan heeft (en dat is software meestal) veel minder. Verandert de scope halverwege, dan mag je je hele grafiek hertekenen. Het rekenwerk suggereert bovendien een precisie die je schattingen niet hebben: `d7` ziet er zekerder uit dan "ergens volgende week".
+Voor een verhuis of een verbouwing klopt dat. Voor het bouwen van iets wat nog nooit bestaan heeft (en dat is software meestal) veel minder. Verandert de scope halverwege, dan mag je je hele grafiek hertekenen. Het rekenwerk suggereert bovendien een precisie die je schattingen niet hebben: `d7` ziet er zekerder uit dan "ergens volgende week".
 
-Daarom werken softwareteams vaak [[007 Agile Projectmanagement|agile]] (hoofdstuk 7): korte iteraties, en pas gedetailleerd plannen wat kort op de bal ligt. Dat is niet totaal verschillend met wat we hier zien. Een agile team heeft ook een release-datum, een budget en afhankelijkheden met de buitenwereld. In de praktijk zie je beide naast elkaar: een Gantt-grafiek op het niveau van mijlpalen en releases, sprintplanning daarbinnen.
+Daarom werken softwareteams vaak [[007 Agile Projectmanagement|agile]] (hoofdstuk 7): korte iteraties, en pas gedetailleerd plannen wat kort op de bal ligt. Zo ver staat dat niet van wat we hier doen. Een agile team heeft ook een release-datum, een budget en afhankelijkheden met de buitenwereld. In de praktijk zie je beide naast elkaar: een Gantt-grafiek op het niveau van mijlpalen en releases, sprintplanning daarbinnen.
 
 > [!abstract] Kies je techniek
 > **Gantt** werkt goed bij een duidelijke, stabiele scope, veel afhankelijkheden, harde deadlines en externe partijen: bouw, evenementen, migraties, implementatietrajecten.
@@ -591,19 +594,7 @@ Maar vergeet zeker niet dat de grafiek niet het project is. Ze is je beste gok, 
 
 ### Aan de slag
 
-In de volgende oefening bouw je dit alles op in MS Project. Je begint met een lege planning en eindigt met een grafiek waarin je voortgang en kosten kan opvolgen. Elk begrip uit de opgave heb je hierboven gezien:
-
-| In de opgave lees je … | Dat is … | Zie hierboven |
-| --- | --- | --- |
-| taakniveaus, hoofd- en subtaken | samenvattingstaken (WBS) | [[#Samenvattingstaken\|Samenvattingstaken]] |
-| "taak 9 is geen echte taak, maar een wachttijd" | vertraging: `FS+1 dag` | [[#Vertraging en overlap\|Vertraging en overlap]] |
-| `9BE+1 dag` | afhankelijkheid met vertraging | [[#Afhankelijkheden vier types\|Afhankelijkheden]] |
-| "taak van vaste duur" | fixed duration | [[#Duur en werk\|Duur en werk]] |
-| milestones per fase toevoegen | mijlpalen | [[#Mijlpalen\|Mijlpalen]] |
-| werkuren aanpassen, verlof van Peter | kalender | [[#Kalender duur is niet hetzelfde als doorlooptijd\|Kalender]] |
-| Koen, Jan, Peter, zand, cement | resources | [[#Van balken naar mensen resources\|Resources]] |
-| "kunnen de resources niet efficiënter?" | nivelleren | [[#Nivelleren\|Nivelleren]] |
-| baseline bewaren, voortgang invullen | opvolging | [[#De planning opvolgen\|De planning opvolgen]] |
+In de volgende oefening bouw je dit alles zelf op in MS Project, voor een ander project dan de ticketapp. Je begint met een lege planning en eindigt met een grafiek waarin je voortgang en kosten kan opvolgen. Kom je in de opgave een begrip tegen dat je niet meer scherp hebt, blader dan terug naar de theorie hierboven.
 
 > [!tip] Werk in versies
 > Bewaar na elke deelopgave een nieuwe versie (`Blokhut - versie 1`, `versie 2`, …). Zo kan je altijd terug, en zie je bij het vergelijken meteen welke ingreep welk effect had op de doorlooptijd.
@@ -769,65 +760,107 @@ Let, bij het toewijzen van resources, op de bijkomende elementen:
 - Zoek in de projectstatistieken op over hoeveel dagen het project zal uitgestrekt worden.
 - In de projectstatistieken vind je eveneens het aantal uren dat gepresteerd dienen te worden tijdens die periode?
 - Lees in de statistieken af hoeveel de totaal geschatte kost bedraagt van dit bouwproject?
-- Kunnen de resources niet efficiënter toegewezen worden? Omwille van het verlof van Peter worden de taken waaraan Peter toegewezen is lang opgeschort en daardoor is de doorlooptijd van het project groter dan nodig. Verwijder Peter uit de lijst van resources voor deze taken en pas de duur van de taak aan in functie van de wijziging.
+
+###### Is deze planning wel haalbaar?
+
+Je planning staat er, de datums kloppen en de kosten zijn berekend. Blijft één vraag over: **kunnen Koen, Jan en Peter dit werk ook echt uitvoeren?**
+
+Werk de stappen hieronder in volgorde af en noteer telkens je antwoord vóór je verder leest. Loop je vast, klap dan de hint onder die stap open. Probeer het wel eerst zelf.
+
+**Stap 1.** Bekijk je Gantt-diagram. Zie je ergens een waarschuwing dat er iets niet klopt met de inzet van je mensen? Noteer je antwoord.
+
+**Stap 2.** Neem met dat antwoord geen genoegen. Zoek een weergave die niet per **taak** maar per **persoon** toont hoeveel er van iemand gevraagd wordt, en op welk moment.
+
+> [!tip]- Hint bij stap 2
+> Het diagram dat je zoekt heet in deze cursus een _capaciteitsdiagram_. MS Project gebruikt die term niet. Kijk in `Beeld` bij de groep `Resourceweergaven`, en klik ook eens door op `Andere weergaven`.
+
+**Stap 3.** Overloop in die weergave de volledige projectperiode, persoon per persoon. Staat iemand op enig moment boven zijn capaciteit? Noteer voor elk geval wie, op welke dag, op welk uur en door welke taken.
+
+> [!tip]- Hint bij stap 3
+> Zet de tijdschaal fijner dan hele dagen. Over een volledige dag gemeten valt een probleem van één uur weg in het gemiddelde. En kijk niet alleen naar de eerste persoon in de lijst.
+
+**Stap 4.** Je hebt nu iets gevonden dat in stap 1 niet zichtbaar was. Hoe kan dat? Zoek op welke instelling bepaalt wánneer MS Project een overbezetting de moeite van het melden waard vindt. Pas ze aan en kijk daarna opnieuw naar je Gantt-diagram.
+
+> [!tip]- Hint bij stap 4
+> Tabblad `Resource`, groep `Niveau`. De instelling staat bovenaan het venster dat opengaat en gaat over de **periode** waarover MS Project naar overtoewijzingen zoekt. Reken ondertussen uit hoeveel uur die persoon op die dag in totaal werkt, en vergelijk dat met een werkdag van acht uur. Dan snap je waarom het door de mazen van het net glipte.
+
+**Stap 5.** Los de eerste overbezetting op die je gevonden hebt. Welke van de drie ingrepen uit de theorie gebruik je, en wat kost die je? Controleer of je einddatum ongewijzigd blijft.
+
+**Stap 6.** Vond je meer dan één overbezetting? Ontstaan ze allemaal op dezelfde manier? Leg in één zin uit wat het verschil is.
+
+> [!tip]- Hint bij stap 6
+> Bij de ene heb je zelf twee taken naast elkaar gezet. Bij de andere: kijk naar de voorafgaande taken van de taken die op hetzelfde moment starten.
+
+###### En kan het efficiënter?
+
+- Kunnen de resources niet efficiënter toegewezen worden? Door het verlof van Peter blijft een deel van het werk lang liggen en is de doorlooptijd groter dan nodig. Zoek uit welke taken daardoor opgehouden worden, en wat er gebeurt als je Peter daar weghaalt.
+
+> [!tip]- Hint bij de vorige vraag
+> Verwijder Peter uit de lijst van resources voor die taken, en pas de duur van de taak aan in functie van de wijziging. Denk daarbij aan het taaktype: met minder mensen op dezelfde hoeveelheid werk duurt de taak langer.
+
 - Hoeveel bedraagt de doorlooptijd van het totale project, na deze wijzigingen? De totaal gepresteerde uren van Koen, Jan en Peter vind je terug via de weergave `Resource Usage` (nl: `Resourcegebruik`). De kosten van het gebruik van de beschikbare resources vind je in de `Resource Sheet` (nl: `Resourceformulier`) -> Rechtermuis `Costs` (nl: `Kosten`).
-- In grote organisaties wordt aan meerdere projecten tegelijkertijd gewerkt. De resources mogen dan niet toegekend worden aan één project, maar moeten gedeeld worden door alle uitvoerbare projecten. Deze resources worden dan ook niet opgenomen in het project zelf, maar worden ter beschikking gesteld in een resourcepool. Bij het toewijzen van resources aan taken in een project gebruiken de uitvoerbare projecten de resources uit de pool.
 
-##### Voortgangscontrole en beheer van kosten
+##### Voortgangscontrole
 
-Wanneer je tevreden bent met je basisplan kan de planning nu opgeslagen worden met “baseline” (nl: "basislijn") . De voortgang zal, tijdens de uitvoering, steeds vergeleken worden met deze “baseline” of de oorspronkelijke planning.
+Open `Blokhut - versie 2` en bewaar ze als `Blokhut - versie 3`.
 
-> [!definitie] DEFINITIE: Baseline
-> Een baseline (nl: "basislijn") is een snapshot van de planning op een gegeven tijdstip. Typisch ga je een baseline vastleggen bij het begin van een project.
-> De baseline gebruik je dan om afwijkingen te berekenen zoals Baseline Kost en Werk tegenover de Werkelijke Kost en Werk
+###### De basislijn vastleggen
 
-Als de projectplanning bewaard is met baseline moet je de volgende weergaven eens bekijken:
+Ben je tevreden over je planning, leg dan een basislijn vast: `Project → Basislijn instellen → Basislijn instellen…` (en: `Project → Set Baseline → Set Baseline…`). Vanaf nu vergelijkt MS Project alles wat er gebeurt met deze momentopname.
 
-- Vergelijkende Gantt-chart (`Tracking Gantt`)
-- Tabel Afwijkingen (`Variances`) (kies menu `Beeld` en vervolgens `Tabellen`, `Afwijking`)
+Bekijk daarna deze twee weergaven:
 
-De werkelijke voortgang kan op meerdere manieren aangegeven worden
+- `Vergelijkend Gantt-diagram` (en: `Tracking Gantt`)
+- de tabel `Afwijking` (en: `Variance`), via `Beeld → Tabellen → Afwijking`
 
-- Automatisch
+Wat is het verschil met je gewone Gantt-diagram? En waarom staan er in de tabel `Afwijking` voorlopig overal nullen?
 
-  - Zet de statusdatum op 15 oktober 2026 en kies voor automatisch bijwerken. Alle taken worden dan verondersteld om uitgevoerd te zijn binnen de geschatte planning. Deze methode kan natuurlijk alleen gebruikt worden indien de uitvoering vrijwel gelijk loopt met de planning. Indien dit niet zo is, vullen we de gepresteerde werktijden beter zelf aan. Dit laatste zullen we doen voor de rest van de uitvoering.
-    - Voeg een voortgangslijn in.
-    - Zoek in de projectstatistieken op voor hoeveel procent ons project al voltooid is. Kijk eveneens eens naar de kosten die al gemaakt zijn en de kosten die nog zullen ontstaan.
+###### Voortgang automatisch bijwerken
 
-- Manueel
+Het is woensdagavond 14 oktober. Tot nu toe is alles volgens plan verlopen.
 
-  - Voor de taken die nog uitgevoerd moeten worden op vrijdag 16 oktober, zullen we de voortgang zelf invullen. We veronderstellen dat de tijdsduur van alle taken, behalve voor het plaatsen van de ramen en deuren, correct geschat is. Voor het plaatsen van de ramen en deuren heeft Jan een half uur meer nodig dan voorzien. Het manueel invoeren van gewerkte tijden kan je best doen via de weergave “Taakbeheer”
-    - Zoek in de projectstatistieken op of er extra kosten gemaakt werden door het extra half uur aan werk.
+- Zet de statusdatum op 15 oktober 2026: `Project → Statusdatum` (en: `Project → Status Date`).
+- Werk het project bij tot die datum: `Project → Project bijwerken` (en: `Project → Update Project`). Kies `Werk bijwerken als voltooid tot en met` (en: `Update work as complete through`) en laat `Instellen op 0% - 100% voltooid` aangevinkt.
+- Voeg een voortgangslijn toe.
+- Zoek in de projectstatistieken op hoeveel procent van het project voltooid is, welke kosten al gemaakt zijn en welke nog volgen.
+
+Deze snelle methode gaat ervan uit dat alles precies volgens plan liep. Dat gebeurt zelden. Voor de rest van het project vul je de werkelijkheid daarom zelf in.
+
+###### Voortgang zelf invullen
+
+Vrijdag 16 oktober loopt niet helemaal volgens plan. Jan heeft voor `Ramen en deur plaatsen` een half uur meer nodig dan voorzien. Alle andere taken van die dag verlopen zoals gepland.
+
+- Open de weergave `Taakgebruik` (en: `Task Usage`) en voeg de kolom `Werkelijke hoeveelheid werk` (en: `Actual Work`) toe.
+- Zoek uit welke taken er op vrijdag gepland staan. Vul voor elk van die taken, op de rij van elke persoon, het werk in dat die persoon er werkelijk aan besteed heeft.
+- Kost dat extra half uur iets? Zoek het op in de projectstatistieken.
+- Schuift je einddatum op? Leg uit waarom wel of niet.
+- Stel dat het project wél vertraging opliep. Geef één voorbeeld van terugkoppelen en één van vooruitkoppelen.
 
 ##### Beheer van kosten
 
-In de tabel "Costs" (nl: “Kosten”) kan je de geschatte kosten vergelijken met de werkelijke kosten. In ons voorbeeld hebben we een variantie van €15. Deze extra kost is te wijten aan het extra half uurtje werk bij de taak `Plaatsen van ramen en deuren`.
+- Open de tabel `Kosten` (en: `Cost`) via `Beeld → Tabellen → Kosten`. Bij welke taak zie je een afwijking, en hoe groot is ze?
+- Bij `Basislaag planken plaatsen` ben je de nagels en schroeven vergeten. Die kosten €10. Vul dat bedrag in bij `Vaste kosten` (en: `Fixed Cost`) van die taak. Wat gebeurt er met de afwijking? Waarom had je dit liever ingegeven vóór je de basislijn vastlegde?
 
-Stel dat we bij de taak `Basislaag planken plaatsen` niet gerekend hadden op de aankoop van nagels en schroeven. Deze kleine materialen kosten ons €10. Wanneer je die nu gaat toevoegen aan de bovengenoemde taak als vaste kost, zal deze kost in ieder geval als afwijking aangegeven worden. Het is belangrijk om alle voorziene kosten in te geven voor het opslaan van de baseline.
+###### Een waarschuwingslampje voor je budget
 
-Er is ook nog een andere mogelijkheid om de kosten van het project in het oog te houden. We kunnen namelijk de tabel `Gegevensinvoer` zelf uitbreiden met een veld. Hiervoor ga je als volgt te werk:
+In een tabel vol getallen zie je een afwijking snel over het hoofd. Handiger is een rood of groen bolletje naast elke taak. Dat kan alleen niet rechtstreeks op het ingebouwde veld `Afwijking van kosten`: MS Project laat grafische indicatoren enkel toe op **aangepaste velden**. Je maakt dus een aangepast kostenveld dat de afwijking overneemt, en geeft dat veld de bolletjes.
 
-- In de Gantt-chart: Beeld `Tabellen/Gegevensinvoer` (en: `Entry`)
+- Ga in het Gantt-diagram naar de tabel `Gegevensinvoer` (en: `Entry`) via `Beeld → Tabellen → Gegevensinvoer`.
+- Voeg een kolom `Kosten1` (en: `Cost1`) toe.
+- Rechtsklik op de kolomkop, kies `Veldinstellingen` (en: `Field Settings`) en geef als titel `Kostenafwijking`.
+- Rechtsklik opnieuw en kies `Aangepaste velden` (en: `Custom Fields`). Controleer dat bij `Type` de waarde `Kosten` staat en selecteer `Kosten1`.
+- Klik bij `Kenmerken van aangepast veld` op `Formule…` en kies via de knop `Veld` het veld `Afwijking van kosten` (en: `Cost Variance`).
+- Kies bij `Weer te geven waarden` voor `Grafische indicatoren…` (en: `Graphical Indicators`) en stel in:
+  - kleiner dan 0: groene bol
+  - gelijk aan 0: niets
+  - groter dan 0: rode bol
+- Wil je ook een bolletje bij de fasen, kies dan bij `Berekening voor samenvattingsrijen van taken en groepen` voor `Formule gebruiken`.
 
-- Voeg een nieuwe kolom toe en selecteer naam `Kosten1` (en: `Cost1`)
-
-- Klik op de kolomnaam met de rechtermuistoets en kies `veldinstellingen` (en: `Field settings`)
-
-- Kies bij `Veldnaam` voor `Kosten1` (en:`Cost1`) en geef als `Titel` de waarde `Budget`. Veel praktische waarde heeft deze kolom nog niet, je moet immers nog aangeven wat er getoond moet worden.
-
-- Ga staan op de kolom `Budget` en ga via de rechtermuisknop naar `Aangepaste velden` (en:`Custom Fields`). Klik bij `Veld` (en: `Field`) op `Kosten1` (en: `Cost1`). Klik bij `Kenmerken van aangepast veld` (en:`Custom Field Attributes`)  op `formule` en dan de knop `Veld` en verwijs hierin naar het gegeven `Afwijking van kosten` (en: `Cost Variance`).
-
-- Bij `Weer te geven waarde` klik je op de knop `Grafische Indicatoren`. In het venster dat je dan krijgt kan je het volgende weergeven:
-
-  - Indien `Kosten1` kleiner is dan 0, toon je een groene bol.
-  - Indien `Kosten1` gelijk is aan 0, toon je niets.
-  - Indien `Kosten1` groter is dan 0, toon je een rode bol.
-
-Vanaf het moment dat je extra kosten maakt, zie je een waarschuwing onder de vorm van een rode bol, besparingen worden getoond via een groene bol.
+Bij welke taken verschijnt nu een rode bol? Klopt dat met wat je in de tabel `Kosten` vond?
 
 ##### Weergaven, filters, groepen en rapporten
 
-Open de oefening `Blokhut - versie 3` (de eerste versie, waarin je gewerkt hebt zonder resourcepool) en bewaar deze als `Blokhut - versie 4`.
+Open `Blokhut - versie 3` en bewaar ze als `Blokhut - versie 4`.
 
 ###### Weergaven
 

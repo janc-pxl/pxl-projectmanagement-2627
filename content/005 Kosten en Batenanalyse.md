@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 005 Kosten- en batenanalyse
-created: 2025-08-26T08:37:01.266Z
-modified: 2026-10-15T09:08:17.676Z
+category: content
+order: 5
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -544,7 +544,7 @@ De <u>overuren</u> voor het nieuwe systeem worden geraamd als volgt:
 - **€30** in het 2<sup>de</sup> jaar
 - **€50** voor de volgende jaren
 
-Het project start in januari 2026 en moet in december 2030 afgewerkt zijn.
+Het project start in januari 2027 en moet in december 2031 afgewerkt zijn.
 
 #### Gevraagd
 
@@ -587,7 +587,7 @@ Samen vormen de besparingen en andere opbrengsten de 'Totaal Opbrengsten'.
 
 We kunnen deze bedragen actualiseren, met uitzondering van het beginjaar, om de cumulatieve geactualiseerde baten te berekenen. Door aan het begin de initiële investeringskosten (eenmalige kosten) af te trekken, krijgen we aan het einde de netto contante waarde (NCW). Omdat de NCW positief is, blijkt het project een rendabele investering te zijn.
 
-| Project Calculatieformulier | 2026        | 2027        | 2028        | 2029        | 2030    |
+| Project Calculatieformulier | 2027        | 2028        | 2029        | 2030        | 2031    |
 |-----------------------------|-------------|-------------|-------------|-------------|---------|
 | EENMALIGE KOSTEN            |             |             |             |             |         |
 | Systeemontwikkeling         | €6.250      |             |             |             |         |

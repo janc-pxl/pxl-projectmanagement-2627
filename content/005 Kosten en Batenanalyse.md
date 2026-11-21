@@ -1,8 +1,8 @@
 ---
 publish: true
 title: 005 Kosten- en batenanalyse
-category: content
-order: 5
+created: 2025-08-26T08:37:01.266Z
+modified: 2026-10-26T07:34:49.863Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |

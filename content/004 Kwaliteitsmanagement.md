@@ -2,7 +2,7 @@
 publish: true
 title: 004 Kwaliteitsmanagement
 created: 2025-08-26T08:37:01.262Z
-modified: 2026-02-24T08:05:14.993Z
+modified: 2026-11-21T08:28:58.831Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -446,66 +446,9 @@ Bijvoorbeeld:
 
 ### Oefeningen
 
-**Oefening 1:**
+zie Blackboard
 
-Het correlatiediagram toont de gemiddelde hoeveelheid verkeer en de gemiddelde snelheid op een autostrade gedurende 50 dagen
-![](https://i.imgur.com/1LAxvq8.png)
-Welke uitspraak beschrijft best de relatie tussen gemiddelde hoeveelheid verkeer en de gemiddelde snelheid?
-
-- A. Als de hoeveelheid verkeer stijgt, stijgt de snelheid.
-- B. Als de hoeveelheid verkeer stijgt, daalt de snelheid.
-- C. Als de hoeveelheid verkeer stijgt, stijgt de snelheid in eerste instantie, maar vervolgens daalt ze.
-- D. Als de hoeveelheid verkeer stijgt, daalt de snelheid in eerste instantie, maar later versnelt ze.
-
-**Oefening 2:**
-
-Gebruik het onderstaande correlatiediagram om de vraag te beantwoorden
-![](https://i.imgur.com/eBp3bKI.png)
-
-Het politiekantoor van Zichen-Zussen-Bolder noteerde voor de voorbije 8 weken het aantal mensen dat parkeerboetes uitschreef (_Number of Ticket Writers_) en het aantal boetes gegeven (_Number of Tickets Issued_).
-Welke uitspraak is waar?
-
-- A. Meer mensen die parkeerboetes uitschrijven betekent minder boetes.
-- B. Er werden elke week 50 boetes gegeven.
-- C. Indien er 10 mensen parkeerboetes uitschrijven, geeft men 800 boetes.
-- D. Meer mensen die parkeerboetes uitschrijven betekent meer boetes.
-
-**Oefening 3**
-
-De tabel toont het aantal studenten in een basketbalteam en het aantal vrije worpen elke student maakte tijdens de training
-
-| aantal studenten                | 7   | 2   | 6   | 4   | 5   | 3   | 1   |
-| ------------------------------- | --- | --- | --- | --- | --- | --- | --- |
-| aantal vrije worpen per student | 3   | 1   | 6   | 7   | 2   | 4   | 3    |
-
-Gebruik onderstaande grid om de uitkomst te tekenen
-
-![](https://i.imgur.com/nquoRHF.png)
-
-Gebaseerd op deze info, kies welke uitspraak het beste de relatie tussen aantal studenten en aantal vrije worpen beschrijft?
-
-- A. Positief lineair
-- B. Geen relatie
-- C. Negatief lineair
-- D. Kwadratisch
-
-**Oefening 4**
-
-Voor welk correlatiediagram zou de formule $y=\frac{1}{2}x + 2$ een best passende lijn beschrijven?
-
-![](https://i.imgur.com/q7i0yXx.png)
-
-**Oefening 5**
-
-Als de hoeveelheid wolven in België toeneemt, neemt het aantal herten af.
-Welke twee variabelen zien we in deze uitspraak?
-Hebben ze een positieve, negatieve of geen correlatie?
-
-**Oefening 6**
-
-Beschrijf een aantal correlaties die je zeker wil onderzoeken voor de Hogeschool PXL en voeg toe of je denkt dat er een positieve, negatieve of geen correlatie is.
-
-**Oefening 7**
+**Oefening (thuis)**
 
 ![](https://i.imgur.com/LWHXrZD.png)
 

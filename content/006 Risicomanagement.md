@@ -2,7 +2,7 @@
 publish: true
 title: 006 Risicomanagement
 created: 2025-08-26T08:37:01.271Z
-modified: 2025-11-27T08:06:57.789Z
+modified: 2026-10-21T14:26:57.032Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -23,7 +23,7 @@ modified: 2025-11-27T08:06:57.789Z
 Het doel van een risicoanalyse is het bepalen van de kans dat een dreiging zich voordoet en de gevolgen daarvan:
 
 > [!definition] DEFINITIE: Risico
-> Risico = Kans x Gevolg
+> Risico = Kans x Gevolg (impact)
 
 De risicoanalyse is de eerste stap binnen het risicomanagementproces.
 

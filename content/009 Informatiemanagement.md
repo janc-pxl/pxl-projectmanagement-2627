@@ -2,7 +2,7 @@
 publish: true
 title: 009 Informatiemanagement
 created: 2025-08-26T08:37:01.285Z
-modified: 2025-11-27T08:07:35.581Z
+modified: 2026-11-08T10:25:10.508Z
 ---
 
 | Projectmanagement | © Hogeschool PXL                                                                                                         |
@@ -366,7 +366,7 @@ Het gehele procescluster Opstellen IV-organisatiestrategie kan van harte worden 
 
 BiSL is een standaard in het publieke domein sinds 2005, die wordt beheerd door de ASL BiSL Foundation, voorheen ASL Foundation. Anders dan frameworks als ASL en ITIL richt BiSL zich niet op ICT-organisaties (supply), maar juist op de gebruikersorganisatie (demand). In dit framework staat beschreven, hoe een gebruikersorganisatie ervoor kan zorgen dat informatievoorziening adequaat werkt, hoe men behoeften in het bedrijfsproces vertaalt naar ICT-oplossingen en niet-ICT-oplossingen, hoe men de informatievoorziening en ICT-dienstverlening vanuit een gebruiksoptiek stuurt en hoe men de informatievoorziening op lange termijn vormgeeft. Het is derhalve voor alle organisaties bestemd.
 
-Het BiSL raamwerk omvat 23 taken op richtinggevend, sturend en uitvoerend niveau en wordt ondersteund door een aantal best practices, waarmee men invulling kan geven aan functioneel beheer en informatiemanagement binnen een organisatie. Het raamwerk wordt al door diverse grote Nederlandse organisaties gebruikt en toegepast en sluit aan op de procesframeworks SLA en ITIL.
+Het BiSL raamwerk omvat 23 taken op richtinggevend, sturend en uitvoerend niveau en wordt ondersteund door een aantal best practices, waarmee men invulling kan geven aan functioneel beheer en informatiemanagement binnen een organisatie. Het raamwerk wordt al door diverse grote Nederlandse organisaties gebruikt en toegepast en sluit aan op de procesframeworks ASL en ITIL.
 
 ### De positie van BiSL
 
@@ -376,9 +376,9 @@ Men onderscheidt in de ICT drie vormen van beheer (beheerdomeinen):
 
 Richt zich op het in stand houden, beheren en onderhoud van de IT-infrastructuur en heeft ITIL als standaard. De IT-infrastructuur is de basis waarop applicaties kunnen draaien en bestaat uit het netwerk, de computers en operating systems en overige randapparatuur.
 
-#### Applicatiebeheer (SLA en ITIL)
+#### Applicatiebeheer (ASL en ITIL)
 
-Onder dit beheer wordt verstaan het in stand houden van de bedrijfsapplicaties en gegevensverzamelingen van de organisatie. Applicatiebeheer houdt zich bezig met de creatie, beheer en wijzigen van applicaties naar aanleiding van geconstateerde fouten of veranderende technische of functionele eisen. SLA is hiervoor de standaard. SLA is nieuwer dan en deels geïnspireerd door ITIL.
+Onder dit beheer wordt verstaan het in stand houden van de bedrijfsapplicaties en gegevensverzamelingen van de organisatie. Applicatiebeheer houdt zich bezig met de creatie, beheer en wijzigen van applicaties naar aanleiding van geconstateerde fouten of veranderende technische of functionele eisen. ASL is hiervoor de standaard. ASL is nieuwer dan en deels geïnspireerd door ITIL.
 
 #### Functioneel beheer (BiSL)
 
